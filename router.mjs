@@ -8,7 +8,23 @@ const router = express.Router();
 router.get("/", async (req, res) => {
 	let collection = await db.collection("aplicacoes");
 	let results = await collection
-		.find({ code: "AP20", date: { $gte: "2023-07-01" } })
+		.find(
+			{ status: "sought", date: { $gte: "2023-07-01" } },
+			{
+				code: 1,
+				date: 1,
+				end_date: 1,
+				input_movimentations: 1,
+				observations: 1,
+				progresses: 1,
+				plantations: 1,
+				_id: 0,
+				charge: 0,
+				responsible: 0
+			}
+		)
+		.limit(60)
+		// .find({ code: "AP20", date: { $gte: "2023-07-01" } })
 		// .find({ date: { $gte: "2023-07-01" } })
 		.toArray();
 	res.send(results).status(200);
