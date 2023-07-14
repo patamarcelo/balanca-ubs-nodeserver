@@ -3,7 +3,7 @@ import cors from "cors";
 import "./loadEnvironment.mjs";
 import defensivos from "./router.mjs";
 
-const PORT = process.env.PORT || 5050;
+const PORT = process.env.PORT || 3000;
 const app = express();
 
 app.use(cors());
