@@ -10,7 +10,7 @@ router.get("/", async (req, res) => {
 	let results = await collection
 		.find({
 			$and: [{ "plantations.plantation.harvest_name": "2023/2024" }],
-			$or: [{ status: "sought" }, { date: { $gte: "2023-07-01" } }]
+			$or: [{ status: "sought" }, { date: { $gte: "2023-07-10" } }]
 		})
 		.limit(200)
 		// .find({ code: "AP20", date: { $gte: "2023-07-01" } })
