@@ -6,11 +6,13 @@ const router = express.Router();
 
 // This section will help you get a list of all the records.
 router.get("/", async (req, res) => {
+	console.log("gerando os dados solicitados");
 	let collection = await db.collection("aplicacoes");
 	let results = await collection
 		.find({
 			$and: [{ "plantations.plantation.harvest_name": "2023/2024" }],
-			$or: [{ status: "sought" }, { date: { $gte: "2023-07-10" } }]
+			// $or: [{ date: { $gte: "2023-07-14" } }]
+			$or: [{ status: "sought" }, { date: { $gte: "2023-07-17" } }]
 		})
 		.limit(200)
 		// .find({ code: "AP20", date: { $gte: "2023-07-01" } })
