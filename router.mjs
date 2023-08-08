@@ -2,17 +2,37 @@ import express from "express";
 import db from "./mongo-con.js";
 import { ObjectId } from "mongodb";
 
+// import { appCheckVerification } from "./firebase-service.js";
+
 const router = express.Router();
 
 // This section will help you get a list of all the records.
+// router.get("/", [appCheckVerification], async (req, res) => {
 router.get("/", async (req, res) => {
 	console.log("gerando os dados solicitados");
+	console.log("Access Token firebase: ,", req.header("X-Firebase-AppCheck"));
 	let collection = await db.collection("aplicacoes");
 	let results = await collection
 		.find({
 			$and: [{ "plantations.plantation.harvest_name": "2023/2024" }],
 			// $or: [{ date: { $gte: "2023-07-14" } }]
 			$or: [{ status: "sought" }, { date: { $gte: "2023-07-17" } }]
+		})
+		.limit(200)
+		// .find({ code: "AP20", date: { $gte: "2023-07-01" } })
+		// .find({ date: { $gte: "2023-07-01" } })
+		.toArray();
+	res.send(results).status(200);
+});
+
+router.get("/datadetail", async (req, res) => {
+	console.log("gerando os dados solicitados para tabela do farmbox");
+	console.log("Access Token firebase: ,", req.header("X-Firebase-AppCheck"));
+	let collection = await db.collection("aplicacoes");
+	let results = await collection
+		.find({
+			$and: [{ "plantations.plantation.harvest_name": "2023/2024" }]
+			// $or: [{ status: "sought" }, { date: { $gte: "2023-07-17" } }]
 		})
 		.limit(200)
 		// .find({ code: "AP20", date: { $gte: "2023-07-01" } })
