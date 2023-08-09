@@ -34,7 +34,6 @@ router.get("/datadetail", async (req, res) => {
 			$and: [{ "plantations.plantation.harvest_name": "2023/2024" }]
 			// $or: [{ status: "sought" }, { date: { $gte: "2023-07-17" } }]
 		})
-		.limit(200)
 		// .find({ code: "AP20", date: { $gte: "2023-07-01" } })
 		// .find({ date: { $gte: "2023-07-01" } })
 		.toArray();
