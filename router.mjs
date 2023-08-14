@@ -18,7 +18,6 @@ router.get("/", async (req, res) => {
 			// $or: [{ date: { $gte: "2023-07-14" } }]
 			$or: [{ status: "sought" }, { date: { $gte: "2023-07-17" } }]
 		})
-		.limit(200)
 		// .find({ code: "AP20", date: { $gte: "2023-07-01" } })
 		// .find({ date: { $gte: "2023-07-01" } })
 		.toArray();
