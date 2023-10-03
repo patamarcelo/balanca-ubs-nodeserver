@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
 		.find({
 			$and: [{ "plantations.plantation.harvest_name": "2023/2024" }],
 			// $or: [{ date: { $gte: "2023-07-14" } }]
-			$or: [{ status: "sought" }, { date: { $gte: "2023-07-17" } }]
+			$or: [{ status: "sought" }, { date: { $gte: "2023-09-10" } }]
 		})
 		// .find({ code: "AP20", date: { $gte: "2023-07-01" } })
 		// .find({ date: { $gte: "2023-07-01" } })
