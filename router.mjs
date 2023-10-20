@@ -9,6 +9,9 @@ const router = express.Router();
 // This section will help you get a list of all the records.
 // router.get("/", [appCheckVerification], async (req, res) => {
 router.get("/", async (req, res) => {
+	const today = new Date();
+	const getDay = new Date(new Date().setDate(today.getDate() - 30));
+	const formatDay = getDay.toISOString().split("T")[0];
 	console.log("gerando os dados solicitados");
 	console.log("Access Token firebase: ,", req.header("X-Firebase-AppCheck"));
 	let collection = await db.collection("aplicacoes");
@@ -16,12 +19,29 @@ router.get("/", async (req, res) => {
 		.find({
 			$and: [{ "plantations.plantation.harvest_name": "2023/2024" }],
 			// $or: [{ date: { $gte: "2023-07-14" } }]
-			$or: [{ status: "sought" }, { date: { $gte: "2023-09-11" } }]
+			$or: [{ status: "sought" }, { date: { $gte: formatDay } }]
 		})
 		// .find({ code: "AP20", date: { $gte: "2023-07-01" } })
 		// .find({ date: { $gte: "2023-07-01" } })
 		.toArray();
 	res.send(results).status(200);
+});
+
+router.get("/pluviometria", async (req, res) => {
+	let collection = await db.collection("pluviometria");
+	// console.log(req.query);
+	// console.log(req.query.qua);
+	let results = await collection
+		// .find({
+		// 	$and: [{ date: { $gte: "2023-10-08" } }]
+		// })
+		.find()
+		.toArray();
+	const data = {
+		quantidade: results.length,
+		result: results
+	};
+	res.send(data).status(200);
 });
 
 router.get("/datadetail", async (req, res) => {

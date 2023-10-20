@@ -3,3 +3,5 @@ ChaveAccesso.json
 *node_modules
 firebase-service.js
 .DS_Store
+
+*teste.js
