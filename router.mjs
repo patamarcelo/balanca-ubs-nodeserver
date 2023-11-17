@@ -14,10 +14,16 @@ router.get("/", async (req, res) => {
 	const formatDay = getDay.toISOString().split("T")[0];
 	console.log("gerando os dados solicitados");
 	console.log("Access Token firebase: ,", req.header("X-Firebase-AppCheck"));
+	const { safra, ciclo } = req.query.safraCiclo;
+	console.log("Safra: ", safra, "Ciclo: ", ciclo);
 	let collection = await db.collection("aplicacoes");
 	let results = await collection
 		.find({
-			$and: [{ "plantations.plantation.harvest_name": "2023/2024" }],
+			$and: [
+				{
+					"plantations.plantation.harvest_name": safra
+				}
+			],
 			// $or: [{ date: { $gte: "2023-07-14" } }]
 			$or: [{ status: "sought" }, { date: { $gte: formatDay } }]
 		})
