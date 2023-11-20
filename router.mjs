@@ -16,7 +16,7 @@ router.get("/", async (req, res) => {
 	console.log("Access Token firebase: ,", req.header("X-Firebase-AppCheck"));
 	const { safra, ciclo } = req.query.safraCiclo;
 	console.log("Safra: ", safra, "Ciclo: ", ciclo);
-	let collection = await db.collection("aplicacoes");
+	let collection = db.collection("aplicacoes");
 	let results = await collection
 		.find({
 			$and: [
@@ -31,17 +31,20 @@ router.get("/", async (req, res) => {
 		// .find({ date: { $gte: "2023-07-01" } })
 		.toArray();
 	res.send(results).status(200);
+	console.log("Dados gerados com sucessoso");
 });
 
 router.get("/pluviometria", async (req, res) => {
-	let collection = await db.collection("pluviometria");
+	let collection = db.collection("pluviometria");
 	// console.log(req.query);
 	// console.log(req.query.qua);
+	const today = new Date();
+	const getDay = new Date(new Date().setDate(today.getDate() - 8));
+	const formatDay = getDay.toISOString().split("T")[0];
 	let results = await collection
-		// .find({
-		// 	$and: [{ date: { $gte: "2023-10-08" } }]
-		// })
-		.find()
+		.find({
+			$and: [{ date: { $gte: formatDay } }]
+		})
 		.toArray();
 	const data = {
 		quantidade: results.length,
@@ -53,10 +56,14 @@ router.get("/pluviometria", async (req, res) => {
 router.get("/datadetail", async (req, res) => {
 	console.log("gerando os dados solicitados para tabela do farmbox");
 	console.log("Access Token firebase: ,", req.header("X-Firebase-AppCheck"));
-	let collection = await db.collection("aplicacoes");
+	let collection = db.collection("aplicacoes");
+	const { safra, ciclo } = req.query.safraCiclo;
 	let results = await collection
 		.find({
-			$and: [{ "plantations.plantation.harvest_name": "2023/2024" }]
+			$and: [
+				{ "plantations.plantation.harvest_name": safra },
+				{ "plantations.plantation.cycle": parseInt(ciclo) }
+			]
 			// $or: [{ status: "sought" }, { date: { $gte: "2023-07-17" } }]
 		})
 		// .find({ code: "AP20", date: { $gte: "2023-07-01" } })
