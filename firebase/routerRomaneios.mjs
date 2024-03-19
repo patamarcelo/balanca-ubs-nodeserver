@@ -23,6 +23,7 @@ router.post('/upload-romaneio', async (req, res) => {
     const docRef = doc(db, TABLES_FIREBASE.truckmove, dataId)
     const docSend = await getDoc(docRef)
     const docSendData = docSend.data()
+    console.log('docSendData: ', docSendData)
 
     const response = {
         ...docSendData,
