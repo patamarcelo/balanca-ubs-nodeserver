@@ -24,14 +24,19 @@ router.post('/upload-romaneio', async (req, res) => {
     const docSend = await getDoc(docRef)
     const docSendData = docSend.data()
     console.log('docSendData: ', docSendData)
+    if (!docSendData) {
+        res.status(404).send(`Documento não encontrando: ${dataId}`)
+    } else {
 
-    const response = {
-        ...docSendData,
-        id: dataId
+
+        const response = {
+            ...docSendData,
+            id: dataId
+        }
+        console.log('response Here: ', response)
+
+        res.send(response).status(200)
     }
-    console.log('response Here: ', response)
-
-    res.send(response).status(200)
 
 })
 router.post('/update-romaneio-from-protheus', async (req, res) => {
