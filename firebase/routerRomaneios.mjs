@@ -8,9 +8,13 @@ import { db } from './firebase.js'
 const router = express.Router()
 
 router.get('/', async (req, res) => {
-    const data = await getDocsFire()
-    console.log('pegando os dados: ', data.length)
-    res.send(data).status(200)
+    try {
+        const data = await getDocsFire()
+        console.log('pegando os dados: ', data.length)
+        res.send(data).status(200)
+    } catch (error) {
+        console.log('Error : ', error)
+    }
 })
 
 router.post('/upload-romaneio', async (req, res) => {
@@ -31,7 +35,7 @@ router.post('/upload-romaneio', async (req, res) => {
 })
 router.post('/update-romaneio-from-protheus', async (req, res) => {
     const data = await req.body
-    
+
     try {
         const docRef = doc(db, TABLES_FIREBASE.truckmove, data.id)
         const oldDoc = await getDoc(docRef)
