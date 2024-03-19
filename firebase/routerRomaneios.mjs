@@ -19,7 +19,7 @@ router.get('/', async (req, res) => {
 
 router.post('/upload-romaneio', async (req, res) => {
     console.log(req)
-    const dataId = await req.body.data
+    const dataId = await req.body.id
     const docRef = doc(db, TABLES_FIREBASE.truckmove, dataId)
     const docSend = await getDoc(docRef)
     const docSendData = docSend.data()
@@ -30,7 +30,7 @@ router.post('/upload-romaneio', async (req, res) => {
     }
     console.log('response Here: ', response)
 
-    res.send(response.id).status(200)
+    res.send(response).status(200)
 
 })
 router.post('/update-romaneio-from-protheus', async (req, res) => {
