@@ -7,17 +7,40 @@ import { db } from './firebase.js'
 
 const router = express.Router()
 
-router.get('/', async (req, res) => {
+
+
+function isAuth(req, res, next) {
+    console.log('header: ', req.headers.authorization)
+    if (req.headers.authorization === 'Token ' + process.env.NODE_APP_DJANGO_TOKEN) {
+        console.log('usuário permitido')
+        next()
+    } else {
+        return res.status(401).json({
+            error: 'Sem Permissão'
+        })
+    }
+}
+// router.use((req,res,next) => {
+//     const auth = true
+//     if(!auth){
+//         return res.status(401).json({
+//             error: 'usuário não está autorizado'
+//         })
+//     }
+//     next()
+// })
+
+router.get('/', isAuth, async (req, res) => {
     try {
         const data = await getDocsFire()
-        console.log('pegando os dados: ', data.length)
+        // console.log('pegando os dados: ', data.length)
         res.send(data).status(200)
     } catch (error) {
         console.log('Error : ', error)
     }
 })
 
-router.post('/upload-romaneio', async (req, res) => {
+router.post('/upload-romaneio',isAuth, async (req, res) => {
     console.log(req)
     const dataId = await req.body.id
     const docRef = doc(db, TABLES_FIREBASE.truckmove, dataId)

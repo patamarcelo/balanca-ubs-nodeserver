@@ -21,7 +21,7 @@ export const getDocsFire = async () => {
 			console.log('Sem Dados para a consulta')
 		} else {
 			products.forEach((doc) => {
-				console.log('registro: ', doc.data())
+				// console.log('registro: ', doc.data())
 				newProducts.push(doc.data())
 			})
 		}
