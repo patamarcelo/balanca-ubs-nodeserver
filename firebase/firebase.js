@@ -21,7 +21,6 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-console.log('iniciando o APP: ', app)
 
 export const storage = getStorage(app);
 
