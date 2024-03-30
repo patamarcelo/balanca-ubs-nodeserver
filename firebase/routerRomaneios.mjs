@@ -46,29 +46,6 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 	const docSend = await getDoc(docRef);
 	const docSendData = docSend.data();
 
-	const parcelasObjFiltered = [
-		{
-			variedade: "424",
-			colheita: false,
-			safra: "2023/2024",
-			ciclo: 3,
-			caixas: 4,
-			cultura: "Arroz",
-			parcela: "A01",
-			id_plantio: 8792
-		},
-		{
-			variedade: "424",
-			colheita: false,
-			safra: "2023/2024",
-			ciclo: 3,
-			caixas: 4,
-			cultura: "Arroz",
-			parcela: "A01",
-			id_plantio: 8792
-		}
-	];
-
 	let formatSendData = {};
 	if (!docSendData) {
 		res.status(404).send(`Documento não encontrando: ${dataId}`);
@@ -140,6 +117,16 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 
 		console.log("response", response);
 		res.send(response).status(200);
+
+		if (response.codTicketPro) {
+			const forTicket = parseInt(response.codTicketPro);
+
+			const updates = {
+				ticket: forTicket
+			};
+
+			const result = await updateDoc(docRef, updates);
+		}
 	}
 });
 router.post("/update-romaneio-from-protheus", async (req, res) => {
