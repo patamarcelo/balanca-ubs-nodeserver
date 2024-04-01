@@ -153,31 +153,31 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 		//response OBJ TO SEND TO PROTHEUS
 		res.send(responseToSend).status(200);
 
-		// try {
-		// 	const httpsAgent = new https.Agent({
-		// 		rejectUnauthorized: false,
-		// 	});
-		// 	var requestOptions = {
-		// 		method: "POST",
-		// 		headers: {
-		// 			Accept: "application/json",
-		// 			"Content-Type": "application/json",
-		// 			Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
-		// 			"Access-Control-Allow-Origin": "*"
-		// 		},
-		// 		body: responseToSend,
-		// 		redirect: "follow",
-		// 		agent: httpsAgent,
-		// 	};
+		try {
+			const httpsAgent = new https.Agent({
+				rejectUnauthorized: false,
+			});
+			var requestOptions = {
+				method: "POST",
+				headers: {
+					Accept: "application/json",
+					"Content-Type": "application/json",
+					Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
+					"Access-Control-Allow-Origin": "*"
+				},
+				body: JSON.stringify(responseToSend),
+				redirect: "follow",
+				agent: httpsAgent,
+			};
 
-		// 	const repsonseFromProtheus = await fetch(
-		// 		"https://api.diamanteagricola.com.br:8089/rest/TICKETAPI/attTicket/",
-		// 		requestOptions
-		// 	);
-		// 	console.log("resposta do Protheus", repsonseFromProtheus)
-		// } catch (error) {
-		// 	console.log("Erro ao enviar os dados para o protheus", error);
-		// }
+			const repsonseFromProtheus = await fetch(
+				"https://api.diamanteagricola.com.br:8089/rest/TICKETAPI/attTicket/",
+				requestOptions
+			);
+			console.log("resposta do Protheus", repsonseFromProtheus)
+		} catch (error) {
+			console.log("Erro ao enviar os dados para o protheus", error);
+		}
 
 		if (response.codTicketPro) {
 			const forTicket = parseInt(response.codTicketPro);
