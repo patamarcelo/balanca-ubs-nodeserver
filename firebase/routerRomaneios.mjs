@@ -191,7 +191,7 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 		}
 	}
 });
-router.post("/update-romaneio-from-protheus", async (req, res) => {
+router.post("/update-romaneio-from-protheus",isAuth,  async (req, res) => {
 	const data = await req.body;
 
 	try {
