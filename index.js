@@ -21,10 +21,11 @@ app.use("/defensivos", defensivos);
 app.use("/romaneios", romaneios);
 
 app.get("/", async (req, res) => {
+	console.log('requisição da porta regular: ', req)
 	// const data = await axios(config)
 	// 	.then((resp) => resp.data)
 	// 	.catch((e) => e);
-	data = { data: 1 };
+	const data = { data: 1 };
 
 	res.json(data);
 });
