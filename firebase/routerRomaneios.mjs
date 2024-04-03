@@ -124,35 +124,43 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 		// AJUSTE PARA REGULAR O NUMERO DO ROMANEIO
 		console.log("response :", response.relatorioColheita);
 		console.log("lastNumber :", lastOne.relatorioColheita);
-		if (
-			Number(response.relatorioColheita) === Number(lastOne.relatorioColheita)
-		) {
-			console.log(
-				"tudo certo, romaneio registrado corretamente com o número : ",
-				response.relatorioColheita
-			);
-			newNumber = Number(response.relatorioColheita);
+
+		if (process.env.NODE_ENV === "production") {
+			console.log('estamos na producao')
+			if (
+				Number(response.relatorioColheita) === Number(lastOne.relatorioColheita)
+			) {
+				console.log(
+					"tudo certo, romaneio registrado corretamente com o número : ",
+					response.relatorioColheita
+				);
+				newNumber = Number(response.relatorioColheita);
+			} else {
+				const newNumberAdjust = Number(lastOne.relatorioColheita) + 1;
+				console.log("novo número Ajustado", newNumberAdjust);
+				const updates = {
+					relatorioColheita: newNumberAdjust
+				};
+				const result = await updateDoc(docRef, updates);
+				console.log('reult of Serverhandler: ', result)
+				newNumber = newNumberAdjust;
+			}
 		} else {
-			const newNumberAdjust = Number(lastOne.relatorioColheita) + 1;
-			console.log("novo número Ajustado", newNumberAdjust);
-			const updates = {
-				relatorioColheita: newNumberAdjust
-			};
-			const result = await updateDoc(docRef, updates);
-			console.log('reult of Serverhandler: ', result)
-			newNumber = newNumberAdjust;
+			console.log('estamos na desenvolvimento')
 		}
 
-		
+
+
+
 		// AJUSTE PARA REGULAR O NUMERO DO ROMANEIO
 		const responseToSend = {
 			...response,
 			relatorioColheita: newNumber
 		};
-		
+
 		//response OBJ TO SEND TO PROTHEUS
 		res.send(responseToSend).status(200);
-		
+
 		if (response.codTicketPro) {
 			const forTicket = parseInt(response.codTicketPro);
 
@@ -191,12 +199,12 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 			console.log("Erro ao enviar os dados para o protheus", error);
 		}
 
-		
 
-		
+
+
 	}
 });
-router.post("/update-romaneio-from-protheus",isAuth,  async (req, res) => {
+router.post("/update-romaneio-from-protheus", isAuth, async (req, res) => {
 	const data = await req.body;
 	console.log('Data vindo do protheus: ', data)
 
