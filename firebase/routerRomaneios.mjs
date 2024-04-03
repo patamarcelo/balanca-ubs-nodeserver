@@ -138,16 +138,31 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 			const updates = {
 				relatorioColheita: newNumberAdjust
 			};
-			const result = await updateDoc(docRef, updates);
-			console.log('reult of Serverhandler: ', result)
-			newNumber = newNumberAdjust;
+			// const result = await updateDoc(docRef, updates);
+			// console.log('reult of Serverhandler: ', result)
+			// newNumber = newNumberAdjust;
 		}
+
+		//response OBJ TO SEND TO PROTHEUS
+		res.send(responseToSend).status(200);
+		
 
 		// AJUSTE PARA REGULAR O NUMERO DO ROMANEIO
 		const responseToSend = {
 			...response,
 			relatorioColheita: newNumber
 		};
+
+		if (response.codTicketPro) {
+			const forTicket = parseInt(response.codTicketPro);
+
+			const updates = {
+				ticket: forTicket
+			};
+
+			const result = await updateDoc(docRef, updates);
+			console.log("reult of Serverhandler: ", result);
+		}
 
 
 		try {
@@ -176,19 +191,9 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 			console.log("Erro ao enviar os dados para o protheus", error);
 		}
 
-		if (response.codTicketPro) {
-			const forTicket = parseInt(response.codTicketPro);
+		
 
-			const updates = {
-				ticket: forTicket
-			};
-
-			const result = await updateDoc(docRef, updates);
-			console.log("reult of Serverhandler: ", result);
-		}
-
-		//response OBJ TO SEND TO PROTHEUS
-		res.send(responseToSend).status(200);
+		
 	}
 });
 router.post("/update-romaneio-from-protheus",isAuth,  async (req, res) => {
