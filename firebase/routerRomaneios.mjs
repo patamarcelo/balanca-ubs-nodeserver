@@ -138,9 +138,9 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 			const updates = {
 				relatorioColheita: newNumberAdjust
 			};
-			// const result = await updateDoc(docRef, updates);
-			// console.log('reult of Serverhandler: ', result)
-			// newNumber = newNumberAdjust;
+			const result = await updateDoc(docRef, updates);
+			console.log('reult of Serverhandler: ', result)
+			newNumber = newNumberAdjust;
 		}
 
 		//response OBJ TO SEND TO PROTHEUS
