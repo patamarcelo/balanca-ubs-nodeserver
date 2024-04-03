@@ -193,6 +193,7 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 });
 router.post("/update-romaneio-from-protheus",isAuth,  async (req, res) => {
 	const data = await req.body;
+	console.log('Data vindo do protheus: ', data)
 
 	try {
 		const docRef = doc(db, TABLES_FIREBASE.truckmove, data.id);
@@ -208,6 +209,7 @@ router.post("/update-romaneio-from-protheus",isAuth,  async (req, res) => {
 			console.log("old Peso Bruto: ", oldDocData.pesoBruto);
 			pesoBruto = Number(oldDocData.pesoBruto);
 		} else if (Number(data.pesoBruto) > 0) {
+			console.log('Novo Peso Bruto Atualizado')
 			pesoBruto = Number(data.pesoBruto);
 		}
 
@@ -215,12 +217,14 @@ router.post("/update-romaneio-from-protheus",isAuth,  async (req, res) => {
 			console.log("old Peso Tara: ", oldDocData.tara);
 			pesoTara = Number(oldDocData.tara);
 		} else if (Number(data.pesoTara) > 0) {
+			console.log('Novo Peso Tara Atualizado')
 			pesoTara = Number(data.pesoTara);
 		}
 
 		if (Number(pesoTara) > 0 && Number(pesoBruto) > 0) {
 			pesoLiquido = pesoBruto - pesoTara;
 			saida = new Date();
+			console.log('Novo Peso Líquido e Data de saída atualizado')
 		}
 
 		const updates = {
