@@ -161,18 +161,6 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 		//response OBJ TO SEND TO PROTHEUS
 		res.send(responseToSend).status(200);
 
-		if (response.codTicketPro) {
-			const forTicket = parseInt(response.codTicketPro);
-
-			const updates = {
-				ticket: forTicket
-			};
-
-			const result = await updateDoc(docRef, updates);
-			console.log("reult of Serverhandler: ", result);
-		}
-
-
 		try {
 			const httpsAgent = new https.Agent({
 				rejectUnauthorized: false,
@@ -199,7 +187,16 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 			console.log("Erro ao enviar os dados para o protheus", error);
 		}
 
+		if (response.codTicketPro) {
+			const forTicket = parseInt(response.codTicketPro);
 
+			const updates = {
+				ticket: forTicket
+			};
+
+			const result = await updateDoc(docRef, updates);
+			console.log("reult of Serverhandler: ", result);
+		}
 
 
 	}
