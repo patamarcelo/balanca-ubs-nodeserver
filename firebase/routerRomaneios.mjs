@@ -143,16 +143,16 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 			newNumber = newNumberAdjust;
 		}
 
-		//response OBJ TO SEND TO PROTHEUS
-		res.send(responseToSend).status(200);
 		
-
 		// AJUSTE PARA REGULAR O NUMERO DO ROMANEIO
 		const responseToSend = {
 			...response,
 			relatorioColheita: newNumber
 		};
-
+		
+		//response OBJ TO SEND TO PROTHEUS
+		res.send(responseToSend).status(200);
+		
 		if (response.codTicketPro) {
 			const forTicket = parseInt(response.codTicketPro);
 
