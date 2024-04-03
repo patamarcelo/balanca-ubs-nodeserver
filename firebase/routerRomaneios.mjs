@@ -150,9 +150,6 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 		};
 
 
-		//response OBJ TO SEND TO PROTHEUS
-		res.send(responseToSend).status(200);
-
 		try {
 			const httpsAgent = new https.Agent({
 				rejectUnauthorized: false,
@@ -189,6 +186,9 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 			const result = await updateDoc(docRef, updates);
 			console.log("reult of Serverhandler: ", result);
 		}
+
+		//response OBJ TO SEND TO PROTHEUS
+		res.send(responseToSend).status(200);
 	}
 });
 router.post("/update-romaneio-from-protheus",isAuth,  async (req, res) => {
