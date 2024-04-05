@@ -10,6 +10,9 @@ import { getAndGenerateIdFirebase } from "./utils.js";
 import fetch from "node-fetch";
 import https from 'https'
 
+import dataParcelas from './parcelas.js'
+const { projetos } = dataParcelas
+
 
 const router = express.Router();
 
@@ -155,12 +158,27 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 		}
 
 
+		// AJUSTE PARA INCLUIR ID DO PROJETO
+		const getProjName = (data) => data.nome === response.fazendaOrigem
+		const newData = projetos.find(getProjName)
+		if(newData){
+			console.log('Projeto Origem : ', newData?.nome)
+			console.log('Projeto Origem id: ', newData?.id_d)
+			const updates = {
+				fazendaOrigemProtheusId: newData?.id_d
+			};
+
+			const result = await updateDoc(docRef, updates);
+			console.log("reult of Serverhandler: ", result);
+		}
 
 
 		// AJUSTE PARA REGULAR O NUMERO DO ROMANEIO
 		const responseToSend = {
 			...response,
-			relatorioColheita: newNumber
+			relatorioColheita: newNumber,
+			fazendaOrigemProtheusId: newData?.id_d
+
 		};
 
 		//response OBJ TO SEND TO PROTHEUS
