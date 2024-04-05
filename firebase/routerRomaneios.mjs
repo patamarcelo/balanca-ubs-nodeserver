@@ -11,7 +11,7 @@ import fetch from "node-fetch";
 import https from 'https'
 
 import dataParcelas from './parcelas.js'
-const { projetos } = dataParcelas
+const { projetos , dados} = dataParcelas
 
 
 const router = express.Router();
@@ -53,7 +53,17 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 	const dataId = await req.body.id;
 	const docRef = doc(db, TABLES_FIREBASE.truckmove, dataId);
 	const docSend = await getDoc(docRef);
-	const docSendData = docSend.data();
+	let docSendData = docSend.data();
+
+	if(docSendData.parcelasNovas.length === 1){
+		const parcela = docSendData.parcelasNovas[0]
+		const newParcelaObj = dados[docSendData.fazendaOrigem][parcela]
+		const newAdjust = {...newParcelaObj, parcela}
+		docSendData = {...docSendData, parcelasObjFiltered: [newAdjust]}
+	}
+
+	
+
 
 	const lastOne = await getAndGenerateIdFirebase();
 	// lastOne.forEach((e) => {
