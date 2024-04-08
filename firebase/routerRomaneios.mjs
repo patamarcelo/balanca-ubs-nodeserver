@@ -315,6 +315,7 @@ router.post("/update-romaneio-from-protheus", isAuth, async (req, res) => {
 		let pesoLiquido = "";
 		let saida = "";
 		let dataEntrada = false 
+		let newEntrada = ""
 
 		if (Number(oldDocData.pesoBruto) > 0) {
 			console.log("old Peso Bruto: ", oldDocData.pesoBruto);
@@ -324,7 +325,7 @@ router.post("/update-romaneio-from-protheus", isAuth, async (req, res) => {
 			pesoBruto = Number(data.pesoBruto);
 			if(Number(data.pesoBruto) > 0 && Number(data.pesoTara) === 0){
 				dataEntrada = true
-				const newEntrada = new Date()
+				newEntrada = new Date()
 			}
 		}
 
