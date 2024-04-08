@@ -314,6 +314,7 @@ router.post("/update-romaneio-from-protheus", isAuth, async (req, res) => {
 		let pesoTara = "";
 		let pesoLiquido = "";
 		let saida = "";
+		let dataEntrada = false 
 
 		if (Number(oldDocData.pesoBruto) > 0) {
 			console.log("old Peso Bruto: ", oldDocData.pesoBruto);
@@ -321,6 +322,10 @@ router.post("/update-romaneio-from-protheus", isAuth, async (req, res) => {
 		} else if (Number(data.pesoBruto) > 0) {
 			console.log('Novo Peso Bruto Atualizado')
 			pesoBruto = Number(data.pesoBruto);
+			if(Number(data.pesoBruto) > 0 && Number(data.pesoTara) === 0){
+				dataEntrada = true
+				const newEntrada = new Date()
+			}
 		}
 
 		if (Number(oldDocData.tara) > 0) {
@@ -341,13 +346,15 @@ router.post("/update-romaneio-from-protheus", isAuth, async (req, res) => {
 			...(Number(pesoTara) > 0 && { tara: pesoTara }),
 			...(Number(pesoBruto) > 0 && { pesoBruto: pesoBruto }),
 			...(Number(pesoLiquido) > 0 && { liquido: pesoLiquido }),
-			...(Number(pesoLiquido) > 0 && { saida: saida })
+			...(Number(pesoLiquido) > 0 && { saida: saida }),
+			...(dataEntrada === true && {entrada: newEntrada})
 		};
 
 		const result = await updateDoc(docRef, updates);
 		const updatedDoc = await getDoc(docRef);
 		const newDoc = updatedDoc.data();
 		res.send(newDoc).status(200);
+		dataEntrada = false
 	} catch (err) {
 		res.send("Erro ao alterar os pesos: ", err).status(400);
 	}
