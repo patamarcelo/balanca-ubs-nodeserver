@@ -11,7 +11,7 @@ import fetch from "node-fetch";
 import https from 'https'
 
 import dataParcelas from './parcelas.js'
-const { projetos , dados} = dataParcelas
+const { projetos, dados } = dataParcelas
 
 
 const router = express.Router();
@@ -40,6 +40,8 @@ function isAuth(req, res, next) {
 // })
 
 router.get("/", isAuth, async (req, res) => {
+	const lastOne = await getAndGenerateIdFirebase(10);
+	console.log('last one')
 	try {
 		const data = await getDocsFire();
 		// console.log('pegando os dados: ', data.length)
@@ -55,14 +57,44 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 	const docSend = await getDoc(docRef);
 	let docSendData = docSend.data();
 
-	if(docSendData.parcelasNovas.length === 1){
+	if (docSendData.parcelasNovas.length === 1) {
 		const parcela = docSendData.parcelasNovas[0]
 		const newParcelaObj = dados[docSendData.fazendaOrigem][parcela]
-		const newAdjust = {...newParcelaObj, parcela}
-		docSendData = {...docSendData, parcelasObjFiltered: [newAdjust]}
+		const newAdjust = { ...newParcelaObj, parcela }
+		docSendData = { ...docSendData, parcelasObjFiltered: [newAdjust] }
+	} else {
+		console.log('mais de 1 parcela')
+		// logic here to handle when update value of obj comparing two arrays and if it is diff
+		const one = docSendData.parcelasNovas
+		console.log('Parcelas Novas: ', one)
+		const two = docSendData.parcelasObjFiltered.map((data) => data.parcela)
+		console.log('parcelasObjFilt', two)
+		
+		// // Sort both arrays
+		const sortedOne = one.sort((a,b) => a.localeCompare(b))
+		const sortedTwo = two.sort((a,b) => a.localeCompare(b));
+
+		// // Convert arrays to strings and compare them
+		const stringOne = sortedOne.toString();
+		const stringTwo = sortedTwo.toString();
+
+		// // Check if the strings are equal
+		const areEqual = stringOne === stringTwo;
+
+		if (areEqual) {
+			console.log("The arrays contain the same elements.");
+		} else {
+			console.log("Os Arrays Enviados não são iguais, vamos corrigilos...");
+			const newArrayToAdd = []
+			one.forEach(element => {
+				const getCorretObjs = dados[docSendData.fazendaOrigem][element]
+				newArrayToAdd.push({...getCorretObjs, parcela: element})
+			});
+			docSendData = {...docSendData, parcelasObjFiltered: newArrayToAdd}
+		}
 	}
 
-	
+
 
 
 	const lastOne = await getAndGenerateIdFirebase();
@@ -171,7 +203,7 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 		// AJUSTE PARA INCLUIR ID DO PROJETO
 		const getProjName = (data) => data.nome === response.fazendaOrigem
 		const newData = projetos.find(getProjName)
-		if(newData){
+		if (newData) {
 			console.log('Projeto Origem : ', newData?.nome)
 			console.log('Projeto Origem id: ', newData?.id_d)
 			const updates = {
@@ -236,7 +268,7 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 });
 
 
-router.get("/get-from-srd", isAuth, async (req,res) =>{
+router.get("/get-from-srd", isAuth, async (req, res) => {
 	const { dtIni, dtFim } = req.query.paramsQuery;
 
 	try {
@@ -264,7 +296,7 @@ router.get("/get-from-srd", isAuth, async (req,res) =>{
 	} catch (error) {
 		console.log("Erro ao enviar os dados para o protheus", error);
 		res.send(err).status(400)
-	}	
+	}
 })
 
 

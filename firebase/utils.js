@@ -7,14 +7,14 @@ import { db } from "./firebase.js";
 let start = new Date('2017-01-01');
 
 
-export const getAndGenerateIdFirebase = async () => {
+export const getAndGenerateIdFirebase = async (quantity = 4) => {
 	const q = query(
 		collection(db, "truckmove"),
 		where("syncDate", "!=", null),
 		orderBy("syncDate", "desc"),
 		where("appDate", ">", start),
 		orderBy("appDate", "desc"),
-		limit(4)
+		limit(quantity)
 	);
 	const querySnapshot = await getDocs(q);
 	let allData = [];
