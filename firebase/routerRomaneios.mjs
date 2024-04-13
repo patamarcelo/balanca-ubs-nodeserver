@@ -284,8 +284,10 @@ router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 	const docRef = doc(db, TABLES_FIREBASE.truckmove, dataId);
 	const docSend = await getDoc(docRef);
 	let docSendData = docSend.data();
-
-	if (docSendData.parcelasNovas.length === 1) {
+	if(!docSendData){
+		console.log('documento não encontrado: ', dataId)
+	} else {
+	if (docSendData?.parcelasNovas.length === 1) {
 		const parcela = docSendData.parcelasNovas[0]
 		const newParcelaObj = dados[docSendData.fazendaOrigem][parcela]
 		const newAdjust = { ...newParcelaObj, parcela }
@@ -293,7 +295,7 @@ router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 	} else {
 		console.log('mais de 1 parcela')
 		// logic here to handle when update value of obj comparing two arrays and if it is diff
-		const one = docSendData.parcelasNovas
+		const one = docSendData?.parcelasNovas
 		console.log('Parcelas Novas: ', one)
 		const two = docSendData.parcelasObjFiltered.map((data) => data.parcela)
 		console.log('parcelasObjFilt', two)
@@ -320,6 +322,7 @@ router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 			});
 			docSendData = {...docSendData, parcelasObjFiltered: newArrayToAdd}
 		}
+	}
 	}
 
 
