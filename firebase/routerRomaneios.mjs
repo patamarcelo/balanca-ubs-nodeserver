@@ -280,6 +280,7 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 });
 
 router.post("/updated-romaneio-data", isAuth, async (req, res) => {
+	console.log('Editando o documento pela nova opção do sistema, direto para o protheus')
 	const dataId = await req.body.id;
 	const docRef = doc(db, TABLES_FIREBASE.truckmove, dataId);
 	const docSend = await getDoc(docRef);
