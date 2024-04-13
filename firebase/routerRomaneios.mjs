@@ -133,6 +133,13 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 					...docSendData,
 					parcelasObjFiltered: adjustPercent
 				};
+
+
+				const updates = {
+					parcelasObjFiltered: adjustPercent
+				};
+				const result = await updateDoc(docRef, updates);
+
 			} else {
 				const adjustPercent = getData.map((data, i) => {
 					const parcePercent = (1 / totalLen * 100).toFixed(0);
@@ -146,6 +153,10 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 				};
 
 				console.log("adjust PercentHereL ", adjustPercent);
+				const updates = {
+					parcelasObjFiltered: adjustPercent
+				};
+				const result = await updateDoc(docRef, updates);
 			}
 		} else {
 			const totalCaixas = getData.reduce((acc, curr) => acc + curr.caixas, 0);
@@ -158,6 +169,7 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 				...docSendData,
 				parcelasObjFiltered: adjustPercent
 			};
+
 		}
 
 		const response = {
@@ -267,9 +279,196 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 	}
 });
 
+router.post("/updated-romaneio-data", isAuth, async (req, res) => {
+	const dataId = await req.body.id;
+	const docRef = doc(db, TABLES_FIREBASE.truckmove, dataId);
+	const docSend = await getDoc(docRef);
+	let docSendData = docSend.data();
+
+	if (docSendData.parcelasNovas.length === 1) {
+		const parcela = docSendData.parcelasNovas[0]
+		const newParcelaObj = dados[docSendData.fazendaOrigem][parcela]
+		const newAdjust = { ...newParcelaObj, parcela }
+		docSendData = { ...docSendData, parcelasObjFiltered: [newAdjust] }
+	} else {
+		console.log('mais de 1 parcela')
+		// logic here to handle when update value of obj comparing two arrays and if it is diff
+		const one = docSendData.parcelasNovas
+		console.log('Parcelas Novas: ', one)
+		const two = docSendData.parcelasObjFiltered.map((data) => data.parcela)
+		console.log('parcelasObjFilt', two)
+		
+		// // Sort both arrays
+		const sortedOne = one.sort((a,b) => a.localeCompare(b))
+		const sortedTwo = two.sort((a,b) => a.localeCompare(b));
+
+		// // Convert arrays to strings and compare them
+		const stringOne = sortedOne.toString();
+		const stringTwo = sortedTwo.toString();
+
+		// // Check if the strings are equal
+		const areEqual = stringOne === stringTwo;
+
+		if (areEqual) {
+			console.log("The arrays contain the same elements.");
+		} else {
+			console.log("Os Arrays Enviados não são iguais, vamos corrigilos...");
+			const newArrayToAdd = []
+			one.forEach(element => {
+				const getCorretObjs = dados[docSendData.fazendaOrigem][element]
+				newArrayToAdd.push({...getCorretObjs, parcela: element})
+			});
+			docSendData = {...docSendData, parcelasObjFiltered: newArrayToAdd}
+		}
+	}
+
+
+	let formatSendData = {};
+	if (!docSendData) {
+		res.status(404).send(`Documento não encontrando: ${dataId}`);
+	} else {
+		const getData = docSendData.parcelasObjFiltered;
+		console.log("getData: ", getData);
+		const exist = data => data.caixas === undefined || data.caixas === 0;
+		const som0eUndefined = getData.some(exist);
+
+		if (som0eUndefined) {
+			const totalLen = getData.length;
+			let adjustPercent;
+
+			if (totalLen % 2 !== 0 && getData.length > 1) {
+				let total = 0;
+				adjustPercent = getData.map((data, i) => {
+					let parcePercent;
+					if (i + 1 === getData.length) {
+						console.log("último elemento", data);
+						parcePercent = Number(100 - total);
+					} else {
+						parcePercent = (1 / totalLen * 100).toFixed(0);
+						total += Number(parcePercent);
+					}
+					return { ...data, parcePercent: Number(parcePercent) };
+				});
+
+				formatSendData = {
+					...docSendData,
+					parcelasObjFiltered: adjustPercent
+				};
+
+
+				const updates = {
+					parcelasObjFiltered: adjustPercent
+				};
+				const result = await updateDoc(docRef, updates);
+
+			} else {
+				const adjustPercent = getData.map((data, i) => {
+					const parcePercent = (1 / totalLen * 100).toFixed(0);
+
+					return { ...data, parcePercent: Number(parcePercent) };
+				});
+
+				formatSendData = {
+					...docSendData,
+					parcelasObjFiltered: adjustPercent
+				};
+
+				console.log("adjust PercentHereL ", adjustPercent);
+				const updates = {
+					parcelasObjFiltered: adjustPercent
+				};
+				const result = await updateDoc(docRef, updates);
+			}
+		} else {
+			const totalCaixas = getData.reduce((acc, curr) => acc + curr.caixas, 0);
+			const adjustPercent = getData.map(data => {
+				const parcePercent = (data.caixas / totalCaixas * 100).toFixed(2);
+				return { ...data, parcePercent: Number(parcePercent) };
+			});
+			console.log("adjust PercentHereL ", adjustPercent);
+			formatSendData = {
+				...docSendData,
+				parcelasObjFiltered: adjustPercent
+			};
+
+		}
+
+		const response = {
+			...formatSendData,
+			id: dataId
+		};
+
+		// AJUSTE PARA INCLUIR ID DO PROJETO
+		const getProjName = (data) => data.nome === response.fazendaOrigem
+		const newData = projetos.find(getProjName)
+		if (newData) {
+			console.log('Projeto Origem : ', newData?.nome)
+			console.log('Projeto Origem id: ', newData?.id_d)
+			const updates = {
+				fazendaOrigemProtheusId: newData?.id_d
+			};
+
+			const result = await updateDoc(docRef, updates);
+			console.log("reult of Serverhandler: ", result);
+		}
+
+
+		// AJUSTE PARA REGULAR O NUMERO DO ROMANEIO
+		const responseToSend = {
+			...response,
+			fazendaOrigemProtheusId: newData?.id_d
+
+		};
+
+		//response OBJ TO SEND TO PROTHEUS
+		res.send(responseToSend).status(200);
+
+		try {
+			const httpsAgent = new https.Agent({
+				rejectUnauthorized: false,
+			});
+			var requestOptions = {
+				method: "POST",
+				headers: {
+					Accept: "application/json",
+					"Content-Type": "application/json",
+					Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
+					"Access-Control-Allow-Origin": "*"
+				},
+				body: JSON.stringify(responseToSend),
+				redirect: "follow",
+				agent: httpsAgent,
+			};
+
+			const repsonseFromProtheus = await fetch(
+				"https://api.diamanteagricola.com.br:8089/rest/TICKETAPI/attTicket/",
+				requestOptions
+			);
+			console.log("resposta do Protheus", repsonseFromProtheus)
+		} catch (error) {
+			console.log("Erro ao enviar os dados para o protheus", error);
+		}
+
+		if (response.codTicketPro) {
+			const forTicket = parseInt(response.codTicketPro);
+
+			const updates = {
+				ticket: forTicket
+			};
+
+			const result = await updateDoc(docRef, updates);
+			console.log("reult of Serverhandler: ", result);
+		}
+
+
+	}
+});
+
+
 
 router.get("/get-from-srd", isAuth, async (req, res) => {
 	const { dtIni, dtFim } = req.query.paramsQuery;
+	console.log('Dados do SRD Sendo coletados')
 
 	try {
 		const httpsAgent = new https.Agent({
@@ -293,6 +492,7 @@ router.get("/get-from-srd", isAuth, async (req, res) => {
 		);
 		const dataFromP = await repsonseFromProtheus.json()
 		res.send(dataFromP).status(200)
+		console.log('Dados Coletados com sucesso')
 	} catch (error) {
 		console.log("Erro ao enviar os dados para o protheus", error);
 		res.send(err).status(400)
