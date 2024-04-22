@@ -72,6 +72,27 @@ router.get("/datadetail", async (req, res) => {
 	res.send(results).status(200);
 });
 
+router.get("/data-detail-plantio", async (req, res) => {
+	console.log("Access Token firebase: ,", req.header("X-Firebase-AppCheck"));
+	let collection = db.collection("aplicacoes");
+	console.log('safff', req.query)
+	// const { safra, ciclo } = req.query.safraCiclo;
+	const { safra, ciclo } = req.query;
+	let results = await collection
+		.find({
+			inputs: { $elemMatch: { "input.name": "Colheita de Grãos " } },
+			plantations: {
+				$elemMatch: {
+					"plantation.harvest_name": safra,
+					"plantation.cycle": parseInt(ciclo)
+				}
+			}
+		})
+		.toArray();
+		// .explain("executionStats")
+	res.send(results).status(200);
+});
+
 // This section will help you get a single record by id
 router.get("/:id", async (req, res) => {
 	let collection = await db.collection("records");
