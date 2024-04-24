@@ -1,7 +1,7 @@
 import express from "express";
 import { getDocsFire } from "./actions.js";
 
-import { collection, addDoc, doc, updateDoc, getDoc } from "firebase/firestore";
+import { collection, addDoc, doc, updateDoc, getDoc, writeBatch } from "firebase/firestore";
 import { TABLES_FIREBASE } from "./firebase.typestables.js";
 import { db } from "./firebase.js";
 
@@ -504,6 +504,43 @@ router.get("/get-from-srd", isAuth, async (req, res) => {
 })
 
 
+router.post('/update-status-protheus-uploaded', isAuth, async(req, res) => {
+	const data = await req.body
+	console.log('data from django: ', data)
+	if(data.length > 0){
+		data.forEach(element => {
+			console.log('id vindo do django: ', element)
+		});
+	}
+const  updateFieldsInDocuments = async (idsArray, updatedFields) => {
+
+    const batch = writeBatch(db);
+    // Iterate over the array of document IDs
+    idsArray.forEach((docId) => {
+        const docRef = doc(db, TABLES_FIREBASE.truckmove, docId);
+        // Update specific fields in each document
+        batch.update(docRef, updatedFields);
+    });
+    // Commit the batch
+    await batch.commit();
+}
+
+// Usag
+const fieldsToUpdate = {
+    uploadedToProtheus: true,
+};
+
+updateFieldsInDocuments(data, fieldsToUpdate)
+    .then(() => {
+        console.log('Campos Alterados com sucesso recebidos do Django....');
+    })
+    .catch((error) => {
+        console.error('Erro ao alterar os documentos vindo do Django...:', error);
+    });
+
+
+	res.send('Dados recebidos com sucesso...').status(200)
+})
 
 router.post("/update-romaneio-from-protheus", isAuth, async (req, res) => {
 	const data = await req.body;

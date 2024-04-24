@@ -77,7 +77,7 @@ router.get("/data-detail-plantio", async (req, res) => {
 	let collection = db.collection("aplicacoes");
 	console.log('safff', req.query)
 	// const { safra, ciclo } = req.query.safraCiclo;
-	const { safra, ciclo } = req.query;
+	const { safra, ciclo } = req.query.safraCiclo
 	let results = await collection
 		.find({
 			inputs: { $elemMatch: { "input.name": "Colheita de Grãos " } },
@@ -90,7 +90,8 @@ router.get("/data-detail-plantio", async (req, res) => {
 		})
 		.toArray();
 		// .explain("executionStats")
-	res.send(results).status(200);
+	if (!results) res.send("Not found").status(404);
+	else res.send(results).status(200);
 });
 
 // This section will help you get a single record by id
