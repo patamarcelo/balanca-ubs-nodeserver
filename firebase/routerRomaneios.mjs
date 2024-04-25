@@ -1,17 +1,35 @@
 import express from "express";
-import { getDocsFire } from "./actions.js";
+import {
+	getDocsFire
+} from "./actions.js";
 
-import { collection, addDoc, doc, updateDoc, getDoc, writeBatch } from "firebase/firestore";
-import { TABLES_FIREBASE } from "./firebase.typestables.js";
-import { db } from "./firebase.js";
+import {
+	collection,
+	addDoc,
+	doc,
+	updateDoc,
+	getDoc,
+	writeBatch
+} from "firebase/firestore";
+import {
+	TABLES_FIREBASE
+} from "./firebase.typestables.js";
+import {
+	db
+} from "./firebase.js";
 
-import { getAndGenerateIdFirebase } from "./utils.js";
+import {
+	getAndGenerateIdFirebase
+} from "./utils.js";
 
 import fetch from "node-fetch";
 import https from 'https'
 
 import dataParcelas from './parcelas.js'
-const { projetos, dados } = dataParcelas
+const {
+	projetos,
+	dados
+} = dataParcelas
 
 
 const router = express.Router();
@@ -60,8 +78,14 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 	if (docSendData.parcelasNovas.length === 1) {
 		const parcela = docSendData.parcelasNovas[0]
 		const newParcelaObj = dados[docSendData.fazendaOrigem][parcela]
-		const newAdjust = { ...newParcelaObj, parcela }
-		docSendData = { ...docSendData, parcelasObjFiltered: [newAdjust] }
+		const newAdjust = {
+			...newParcelaObj,
+			parcela
+		}
+		docSendData = {
+			...docSendData,
+			parcelasObjFiltered: [newAdjust]
+		}
 	} else {
 		console.log('mais de 1 parcela')
 		// logic here to handle when update value of obj comparing two arrays and if it is diff
@@ -69,10 +93,10 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 		console.log('Parcelas Novas: ', one)
 		const two = docSendData.parcelasObjFiltered.map((data) => data.parcela)
 		console.log('parcelasObjFilt', two)
-		
+
 		// // Sort both arrays
-		const sortedOne = one.sort((a,b) => a.localeCompare(b))
-		const sortedTwo = two.sort((a,b) => a.localeCompare(b));
+		const sortedOne = one.sort((a, b) => a.localeCompare(b))
+		const sortedTwo = two.sort((a, b) => a.localeCompare(b));
 
 		// // Convert arrays to strings and compare them
 		const stringOne = sortedOne.toString();
@@ -88,9 +112,15 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 			const newArrayToAdd = []
 			one.forEach(element => {
 				const getCorretObjs = dados[docSendData.fazendaOrigem][element]
-				newArrayToAdd.push({...getCorretObjs, parcela: element})
+				newArrayToAdd.push({
+					...getCorretObjs,
+					parcela: element
+				})
 			});
-			docSendData = {...docSendData, parcelasObjFiltered: newArrayToAdd}
+			docSendData = {
+				...docSendData,
+				parcelasObjFiltered: newArrayToAdd
+			}
 		}
 	}
 
@@ -126,7 +156,10 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 						parcePercent = (1 / totalLen * 100).toFixed(0);
 						total += Number(parcePercent);
 					}
-					return { ...data, parcePercent: Number(parcePercent) };
+					return {
+						...data,
+						parcePercent: Number(parcePercent)
+					};
 				});
 
 				formatSendData = {
@@ -144,7 +177,10 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 				const adjustPercent = getData.map((data, i) => {
 					const parcePercent = (1 / totalLen * 100).toFixed(0);
 
-					return { ...data, parcePercent: Number(parcePercent) };
+					return {
+						...data,
+						parcePercent: Number(parcePercent)
+					};
 				});
 
 				formatSendData = {
@@ -162,7 +198,10 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 			const totalCaixas = getData.reduce((acc, curr) => acc + curr.caixas, 0);
 			const adjustPercent = getData.map(data => {
 				const parcePercent = (data.caixas / totalCaixas * 100).toFixed(2);
-				return { ...data, parcePercent: Number(parcePercent) };
+				return {
+					...data,
+					parcePercent: Number(parcePercent)
+				};
 			});
 			console.log("adjust PercentHereL ", adjustPercent);
 			formatSendData = {
@@ -216,10 +255,10 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 		const getProjName = (data) => data.nome === response.fazendaOrigem
 		const newData = projetos.find(getProjName)
 		if (newData) {
-			console.log('Projeto Origem : ', newData?.nome)
-			console.log('Projeto Origem id: ', newData?.id_d)
+			console.log('Projeto Origem : ', newData ? .nome)
+			console.log('Projeto Origem id: ', newData ? .id_d)
 			const updates = {
-				fazendaOrigemProtheusId: newData?.id_d
+				fazendaOrigemProtheusId: newData ? .id_d
 			};
 
 			const result = await updateDoc(docRef, updates);
@@ -231,7 +270,7 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 		const responseToSend = {
 			...response,
 			relatorioColheita: newNumber,
-			fazendaOrigemProtheusId: newData?.id_d
+			fazendaOrigemProtheusId: newData ? .id_d
 
 		};
 
@@ -285,45 +324,57 @@ router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 	const docRef = doc(db, TABLES_FIREBASE.truckmove, dataId);
 	const docSend = await getDoc(docRef);
 	let docSendData = docSend.data();
-	if(!docSendData){
+	if (!docSendData) {
 		console.log('documento não encontrado: ', dataId)
 	} else {
-	if (docSendData?.parcelasNovas.length === 1) {
-		const parcela = docSendData.parcelasNovas[0]
-		const newParcelaObj = dados[docSendData.fazendaOrigem][parcela]
-		const newAdjust = { ...newParcelaObj, parcela }
-		docSendData = { ...docSendData, parcelasObjFiltered: [newAdjust] }
-	} else {
-		console.log('mais de 1 parcela')
-		// logic here to handle when update value of obj comparing two arrays and if it is diff
-		const one = docSendData?.parcelasNovas
-		console.log('Parcelas Novas: ', one)
-		const two = docSendData.parcelasObjFiltered.map((data) => data.parcela)
-		console.log('parcelasObjFilt', two)
-		
-		// // Sort both arrays
-		const sortedOne = one.sort((a,b) => a.localeCompare(b))
-		const sortedTwo = two.sort((a,b) => a.localeCompare(b));
-
-		// // Convert arrays to strings and compare them
-		const stringOne = sortedOne.toString();
-		const stringTwo = sortedTwo.toString();
-
-		// // Check if the strings are equal
-		const areEqual = stringOne === stringTwo;
-
-		if (areEqual) {
-			console.log("The arrays contain the same elements.");
+		if (docSendData ? .parcelasNovas.length === 1) {
+			const parcela = docSendData.parcelasNovas[0]
+			const newParcelaObj = dados[docSendData.fazendaOrigem][parcela]
+			const newAdjust = {
+				...newParcelaObj,
+				parcela
+			}
+			docSendData = {
+				...docSendData,
+				parcelasObjFiltered: [newAdjust]
+			}
 		} else {
-			console.log("Os Arrays Enviados não são iguais, vamos corrigilos...");
-			const newArrayToAdd = []
-			one.forEach(element => {
-				const getCorretObjs = dados[docSendData.fazendaOrigem][element]
-				newArrayToAdd.push({...getCorretObjs, parcela: element})
-			});
-			docSendData = {...docSendData, parcelasObjFiltered: newArrayToAdd}
+			console.log('mais de 1 parcela')
+			// logic here to handle when update value of obj comparing two arrays and if it is diff
+			const one = docSendData ? .parcelasNovas
+			console.log('Parcelas Novas: ', one)
+			const two = docSendData.parcelasObjFiltered.map((data) => data.parcela)
+			console.log('parcelasObjFilt', two)
+
+			// // Sort both arrays
+			const sortedOne = one.sort((a, b) => a.localeCompare(b))
+			const sortedTwo = two.sort((a, b) => a.localeCompare(b));
+
+			// // Convert arrays to strings and compare them
+			const stringOne = sortedOne.toString();
+			const stringTwo = sortedTwo.toString();
+
+			// // Check if the strings are equal
+			const areEqual = stringOne === stringTwo;
+
+			if (areEqual) {
+				console.log("The arrays contain the same elements.");
+			} else {
+				console.log("Os Arrays Enviados não são iguais, vamos corrigilos...");
+				const newArrayToAdd = []
+				one.forEach(element => {
+					const getCorretObjs = dados[docSendData.fazendaOrigem][element]
+					newArrayToAdd.push({
+						...getCorretObjs,
+						parcela: element
+					})
+				});
+				docSendData = {
+					...docSendData,
+					parcelasObjFiltered: newArrayToAdd
+				}
+			}
 		}
-	}
 	}
 
 
@@ -351,7 +402,10 @@ router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 						parcePercent = (1 / totalLen * 100).toFixed(0);
 						total += Number(parcePercent);
 					}
-					return { ...data, parcePercent: Number(parcePercent) };
+					return {
+						...data,
+						parcePercent: Number(parcePercent)
+					};
 				});
 
 				formatSendData = {
@@ -369,7 +423,10 @@ router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 				const adjustPercent = getData.map((data, i) => {
 					const parcePercent = (1 / totalLen * 100).toFixed(0);
 
-					return { ...data, parcePercent: Number(parcePercent) };
+					return {
+						...data,
+						parcePercent: Number(parcePercent)
+					};
 				});
 
 				formatSendData = {
@@ -387,7 +444,10 @@ router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 			const totalCaixas = getData.reduce((acc, curr) => acc + curr.caixas, 0);
 			const adjustPercent = getData.map(data => {
 				const parcePercent = (data.caixas / totalCaixas * 100).toFixed(2);
-				return { ...data, parcePercent: Number(parcePercent) };
+				return {
+					...data,
+					parcePercent: Number(parcePercent)
+				};
 			});
 			console.log("adjust PercentHereL ", adjustPercent);
 			formatSendData = {
@@ -406,10 +466,10 @@ router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 		const getProjName = (data) => data.nome === response.fazendaOrigem
 		const newData = projetos.find(getProjName)
 		if (newData) {
-			console.log('Projeto Origem : ', newData?.nome)
-			console.log('Projeto Origem id: ', newData?.id_d)
+			console.log('Projeto Origem : ', newData ? .nome)
+			console.log('Projeto Origem id: ', newData ? .id_d)
 			const updates = {
-				fazendaOrigemProtheusId: newData?.id_d
+				fazendaOrigemProtheusId: newData ? .id_d
 			};
 
 			const result = await updateDoc(docRef, updates);
@@ -420,7 +480,7 @@ router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 		// AJUSTE PARA REGULAR O NUMERO DO ROMANEIO
 		const responseToSend = {
 			...response,
-			fazendaOrigemProtheusId: newData?.id_d
+			fazendaOrigemProtheusId: newData ? .id_d
 
 		};
 
@@ -471,7 +531,10 @@ router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 
 
 router.get("/get-from-srd", isAuth, async (req, res) => {
-	const { dtIni, dtFim } = req.query.paramsQuery;
+	const {
+		dtIni,
+		dtFim
+	} = req.query.paramsQuery;
 	console.log('Dados do SRD Sendo coletados')
 
 	try {
@@ -504,39 +567,70 @@ router.get("/get-from-srd", isAuth, async (req, res) => {
 })
 
 
-router.post('/update-status-protheus-uploaded', isAuth, async(req, res) => {
+router.post('/update-status-protheus-uploaded', isAuth, async (req, res) => {
 	const data = await req.body
 	console.log('data from django: ', data)
-	if(data.length > 0){
+	if (data.length > 0) {
 		data.forEach(element => {
 			console.log('id vindo do django: ', element)
 		});
 	}
-const  updateFieldsInDocuments = async (idsArray, updatedFields) => {
+	const updateFieldsInDocuments = async (idsArray, updatedFields) => {
 
-    const batch = writeBatch(db);
-    // Iterate over the array of document IDs
-    idsArray.forEach((docId) => {
-        const docRef = doc(db, TABLES_FIREBASE.truckmove, docId);
-        // Update specific fields in each document
-        batch.update(docRef, updatedFields);
-    });
-    // Commit the batch
-    await batch.commit();
-}
+		const batch = writeBatch(db);
 
-// Usag
-const fieldsToUpdate = {
-    uploadedToProtheus: true,
-};
+		// Array to store errors
+		const errors = []
 
-updateFieldsInDocuments(data, fieldsToUpdate)
-    .then(() => {
-        console.log('Campos Alterados com sucesso recebidos do Django....');
-    })
-    .catch((error) => {
-        console.error('Erro ao alterar os documentos vindo do Django...:', error);
-    });
+		// Iterate over the array of document IDs
+		idsArray.forEach((docId) => {
+			const docRef = doc(db, TABLES_FIREBASE.truckmove, docId);
+
+			// Update specific fields in each document
+			batch.update(docRef, updatedFields);
+		});
+
+		try {
+			// Commit the batch
+			await batch.commit();
+		} catch (error) {
+
+			// If an error occurs, handle it
+			console.error('Error updating fields:', error);
+
+			// Check for specific errors, e.g., document not found
+			if (error.code === 'not-found') {
+				errors.push({
+					docId: error.docId,
+					message: 'Document not found'
+				});
+			} else {
+				// For other errors, you can handle them accordingly
+				errors.push({
+					docId: error.docId,
+					message: error.message
+				});
+			}
+		}
+		return errors
+	}
+
+	// Usag
+	const fieldsToUpdate = {
+		uploadedToProtheus: true,
+	};
+
+	updateFieldsInDocuments(data, fieldsToUpdate)
+		.then((errors) => {
+			if (errors.length === 0) {
+				console.log('Campos Alterados com sucesso recebidos do Django....');
+			} else {
+				console.error('Errors encountered during update:', errors);
+			}
+		})
+		.catch((error) => {
+			console.error('Erro ao alterar os documentos vindo do Django...:', error);
+		});
 
 
 	res.send('Dados recebidos com sucesso...').status(200)
@@ -555,7 +649,7 @@ router.post("/update-romaneio-from-protheus", isAuth, async (req, res) => {
 		let pesoTara = "";
 		let pesoLiquido = "";
 		let saida = "";
-		let dataEntrada = false 
+		let dataEntrada = false
 		let newEntrada = ""
 
 		if (Number(oldDocData.pesoBruto) > 0) {
@@ -564,7 +658,7 @@ router.post("/update-romaneio-from-protheus", isAuth, async (req, res) => {
 		} else if (Number(data.pesoBruto) > 0) {
 			console.log('Novo Peso Bruto Atualizado')
 			pesoBruto = Number(data.pesoBruto);
-			if(Number(data.pesoBruto) > 0 && Number(data.pesoTara) === 0){
+			if (Number(data.pesoBruto) > 0 && Number(data.pesoTara) === 0) {
 				dataEntrada = true
 				newEntrada = new Date()
 			}
@@ -585,11 +679,21 @@ router.post("/update-romaneio-from-protheus", isAuth, async (req, res) => {
 		}
 
 		const updates = {
-			...(Number(pesoTara) > 0 && { tara: pesoTara }),
-			...(Number(pesoBruto) > 0 && { pesoBruto: pesoBruto }),
-			...(Number(pesoLiquido) > 0 && { liquido: pesoLiquido }),
-			...(Number(pesoLiquido) > 0 && { saida: saida }),
-			...(dataEntrada === true && {entrada: newEntrada})
+			...(Number(pesoTara) > 0 && {
+				tara: pesoTara
+			}),
+			...(Number(pesoBruto) > 0 && {
+				pesoBruto: pesoBruto
+			}),
+			...(Number(pesoLiquido) > 0 && {
+				liquido: pesoLiquido
+			}),
+			...(Number(pesoLiquido) > 0 && {
+				saida: saida
+			}),
+			...(dataEntrada === true && {
+				entrada: newEntrada
+			})
 		};
 
 		const result = await updateDoc(docRef, updates);
@@ -601,5 +705,22 @@ router.post("/update-romaneio-from-protheus", isAuth, async (req, res) => {
 		res.send("Erro ao alterar os pesos: ", err).status(400);
 	}
 });
+
+router.post('/delete-romaneio-from-protheus', isAuth, async (req, res) => {
+	const data = await req.body;
+	console.log('Data vindo do protheus: ', data)
+	try {
+		const docRef = doc(db, TABLES_FIREBASE.truckmove, data.id);
+		const oldDoc = await getDoc(docRef);
+		const oldDocData = oldDoc.data();
+		console.log('Documento encontrado para ser deletado: ', oldDocData)
+		if (oldDocData) {
+			res.send('Documento excluído com sucesso...').status(200)
+		}
+	} catch (err) {
+		res.send("Erro ao deletar o documento: ", err).status(400);
+
+	}
+})
 
 export default router;
