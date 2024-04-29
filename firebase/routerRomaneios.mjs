@@ -5,7 +5,7 @@ import { collection, addDoc, doc, updateDoc, getDoc, writeBatch } from "firebase
 import { TABLES_FIREBASE } from "./firebase.typestables.js";
 import { db } from "./firebase.js";
 
-import { getAndGenerateIdFirebase } from "./utils.js";
+import { getAndGenerateIdFirebase, getAndGenerateIdFirebaseBeforeLast } from "./utils.js";
 
 import fetch from "node-fetch";
 import https from 'https'
@@ -193,7 +193,8 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 				);
 				newNumber = Number(response.relatorioColheita);
 			} else {
-				const newNumberAdjust = Number(lastOne.relatorioColheita) + 1;
+				const beforelastOne = await getAndGenerateIdFirebaseBeforeLast();
+				const newNumberAdjust = Number(beforelastOne.relatorioColheita) + 1;
 				console.log("novo número Ajustado", newNumberAdjust);
 				const updates = {
 					relatorioColheita: newNumberAdjust
