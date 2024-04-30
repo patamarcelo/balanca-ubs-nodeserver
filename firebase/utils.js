@@ -16,7 +16,7 @@ import {
 let start = new Date('2017-01-01');
 
 
-export const getAndGenerateIdFirebase = async (quantity = 4) => {
+export const getAndGenerateIdFirebase = async (quantity = 5) => {
 	const q = query(
 		collection(db, "truckmove"),
 		where("syncDate", "!=", null),
@@ -37,10 +37,14 @@ export const getAndGenerateIdFirebase = async (quantity = 4) => {
 	newSort.forEach((ele) => {
 		console.log(ele.relatorioColheita, '=>', ele.syncDate.toDate().toLocaleString('pt-BR'))
 	})
-	return newSort[0];
+
+	const sortByRomaneio = newSort.sort((a, b) => a.relatorioColheita - b.relatorioColheita);
+	const lastElement = sortByRomaneio[sortByRomaneio.length - 1]
+
+	return lastElement;
 };
 
-export const getAndGenerateIdFirebaseBeforeLast = async (quantity = 4) => {
+export const getAndGenerateIdFirebaseBeforeLast = async (quantity = 7) => {
 	const q = query(
 		collection(db, "truckmove"),
 		where("syncDate", "!=", null),
