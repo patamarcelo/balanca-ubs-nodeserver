@@ -1,8 +1,17 @@
-
-
-import { collection, addDoc } from "firebase/firestore";
-import { query, orderBy, getDocs, limit, where } from "firebase/firestore";
-import { db } from "./firebase.js";
+import {
+	collection,
+	addDoc
+} from "firebase/firestore";
+import {
+	query,
+	orderBy,
+	getDocs,
+	limit,
+	where
+} from "firebase/firestore";
+import {
+	db
+} from "./firebase.js";
 
 let start = new Date('2017-01-01');
 
@@ -24,14 +33,14 @@ export const getAndGenerateIdFirebase = async (quantity = 4) => {
 		allData.push(doc.data());
 	});
 
-	const newSort = allData.sort((b,a) => a.syncDate.toMillis() - b.syncDate.toMillis() || b.appDate.toMillis() - a.appDate.toMillis())
+	const newSort = allData.sort((b, a) => a.syncDate.toMillis() - b.syncDate.toMillis() || b.appDate.toMillis() - a.appDate.toMillis())
 	newSort.forEach((ele) => {
 		console.log(ele.relatorioColheita, '=>', ele.syncDate.toDate().toLocaleString('pt-BR'))
 	})
 	return newSort[0];
 };
 
-export const getAndGenerateIdFirebaseBeforeLast = async (quantity = 2) => {
+export const getAndGenerateIdFirebaseBeforeLast = async (quantity = 4) => {
 	const q = query(
 		collection(db, "truckmove"),
 		where("syncDate", "!=", null),
@@ -48,9 +57,14 @@ export const getAndGenerateIdFirebaseBeforeLast = async (quantity = 2) => {
 		allData.push(doc.data());
 	});
 
-	const newSort = allData.sort((b,a) => a.syncDate.toMillis() - b.syncDate.toMillis() || b.appDate.toMillis() - a.appDate.toMillis())
-	newSort.forEach((ele) => {
-		console.log(ele.relatorioColheita, 'befora last =>', ele.syncDate.toDate().toLocaleString('pt-BR'))
+	const newSort = allData.sort((b, a) => a.syncDate.toMillis() - b.syncDate.toMillis() || b.appDate.toMillis() - a.appDate.toMillis())
+	const sortByRomaneio = newSort.sort((a, b) => a.relatorioColheita - b.relatorioColheita);
+
+	sortByRomaneio.forEach((ele) => {
+		console.log(ele.relatorioColheita, 'before last =>', ele.syncDate.toDate().toLocaleString('pt-BR'))
 	})
-	return newSort[1];
+
+	const lastElement = sortByRomaneio[sortByRomaneio.length - 1]
+
+	return lastElement;
 };

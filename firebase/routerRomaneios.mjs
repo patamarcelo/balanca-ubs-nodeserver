@@ -193,6 +193,7 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 				);
 				newNumber = Number(response.relatorioColheita);
 			} else {
+				console.log("Gerando os últimos resultados de romaneios, para ajustar o número")
 				const beforelastOne = await getAndGenerateIdFirebaseBeforeLast();
 				const newNumberAdjust = Number(beforelastOne.relatorioColheita) + 1;
 				console.log("novo número Ajustado", newNumberAdjust);
