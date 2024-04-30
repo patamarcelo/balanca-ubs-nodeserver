@@ -240,6 +240,8 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 		//response OBJ TO SEND TO PROTHEUS
 		res.send(responseToSend).status(200);
 
+		console.log('Dados enviados ao Protheus: ', responseToSend)
+
 		try {
 			const httpsAgent = new https.Agent({
 				rejectUnauthorized: false,
