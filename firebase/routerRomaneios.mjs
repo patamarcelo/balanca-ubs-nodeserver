@@ -263,7 +263,9 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 				"https://api.diamanteagricola.com.br:8089/rest/TICKETAPI/attTicket/",
 				requestOptions
 			);
-			console.log("resposta do Protheus", repsonseFromProtheus)
+			const dataFrom = await repsonseFromProtheus.json()
+			console.log("resposta do Protheus", repsonseFromProtheus.status)
+			console.log('resposta do Protheus', dataFrom)
 		} catch (error) {
 			console.log("Erro ao enviar os dados para o protheus", error);
 		}
