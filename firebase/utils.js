@@ -43,7 +43,7 @@ export const getAndGenerateIdFirebase = async (quantity = 5) => {
 	sortByRomaneio.forEach((doc) => {
 		console.log('order => ', doc.relatorioColheita,)
 	})
-	console.log('order => Last of array: ', sortByRomaneio[sortByRomaneio.length - 1])
+	console.log('order => Last of array: ', sortByRomaneio[sortByRomaneio.length - 1]?.relatorioColheita)
 
 	const lastElement = sortByRomaneio[sortByRomaneio.length - 1]
 
