@@ -35,10 +35,16 @@ export const getAndGenerateIdFirebase = async (quantity = 5) => {
 
 	const newSort = allData.sort((b, a) => a.syncDate.toMillis() - b.syncDate.toMillis() || b.appDate.toMillis() - a.appDate.toMillis())
 	newSort.forEach((ele) => {
-		console.log(ele.relatorioColheita, '=>', ele.syncDate.toDate().toLocaleString('pt-BR'))
+		console.log(ele.relatorioColheita, ' order =>', ele.syncDate.toDate().toLocaleString('pt-BR'))
 	})
 
 	const sortByRomaneio = newSort.sort((a, b) => a.relatorioColheita - b.relatorioColheita);
+	
+	sortByRomaneio.forEach((doc) => {
+		console.log('order => ', doc.relatorioColheita,)
+	})
+	console.log('order => Last of array: ', sortByRomaneio[sortByRomaneio.length - 1])
+
 	const lastElement = sortByRomaneio[sortByRomaneio.length - 1]
 
 	return lastElement;
@@ -65,7 +71,7 @@ export const getAndGenerateIdFirebaseBeforeLast = async (quantity = 7) => {
 	const sortByRomaneio = newSort.sort((a, b) => a.relatorioColheita - b.relatorioColheita);
 
 	sortByRomaneio.forEach((ele) => {
-		console.log(ele.relatorioColheita, 'before last =>', ele.syncDate.toDate().toLocaleString('pt-BR'))
+		console.log(ele.relatorioColheita, 'order before last =>', ele.syncDate.toDate().toLocaleString('pt-BR'))
 	})
 
 	const lastElement = sortByRomaneio[sortByRomaneio.length - 1]
