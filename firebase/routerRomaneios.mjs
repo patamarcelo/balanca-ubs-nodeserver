@@ -185,7 +185,7 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 		if (process.env.NODE_ENV === "production") {
 			console.log('estamos na producao')
 			if (
-				Number(response.relatorioColheita) >= Number(lastOne.relatorioColheita)
+				Number(response.relatorioColheita) == Number(lastOne.relatorioColheita)
 			) {
 				console.log(
 					"tudo certo, romaneio registrado corretamente com o número : ",
