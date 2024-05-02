@@ -266,6 +266,10 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 			const dataFrom = await repsonseFromProtheus.json()
 			console.log("resposta do Protheus", repsonseFromProtheus.status)
 			console.log('resposta do Protheus', dataFrom)
+			if(repsonseFromProtheus.status !== 201 || repsonseFromProtheus.status !== 200){
+				console.log('Erro ao salvar os dados no Protheus, ')
+				return
+			}
 		} catch (error) {
 			console.log("Erro ao enviar os dados para o protheus", error);
 		}
