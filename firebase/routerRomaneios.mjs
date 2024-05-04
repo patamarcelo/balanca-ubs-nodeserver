@@ -266,7 +266,7 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 			const dataFrom = await repsonseFromProtheus.json()
 			console.log("resposta do Protheus", repsonseFromProtheus.status)
 			console.log('resposta do Protheus', dataFrom)
-			if(repsonseFromProtheus.status !== 201 ){
+			if (repsonseFromProtheus.status !== 201) {
 				console.log('Erro ao salvar os dados no Protheus, ')
 				return
 			}
@@ -481,9 +481,9 @@ router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 
 
 router.get("/get-from-srd", isAuth, async (req, res) => {
-	const { dtIni, dtFim } = req.query.paramsQuery;
-	console.log('Dados do SRD Sendo coletados')
+	const { dtIni, dtFim, ticket } = req.query.paramsQuery;
 
+	console.log('Dados do SRD Sendo coletados')
 	try {
 		const httpsAgent = new https.Agent({
 			rejectUnauthorized: false,
@@ -499,9 +499,15 @@ router.get("/get-from-srd", isAuth, async (req, res) => {
 			redirect: "follow",
 			agent: httpsAgent,
 		};
+		let url;
+		if (ticket.length > 0) {
+			url = `https://api.diamanteagricola.com.br:8089/rest/ticketapi/get_tickets?dtIni=${dtIni}&dtFim=${dtFim}&ticket=${ticket}`
+		} else {
+			url = `https://api.diamanteagricola.com.br:8089/rest/ticketapi/get_tickets?dtIni=${dtIni}&dtFim=${dtFim}`
+		}
 
 		const repsonseFromProtheus = await fetch(
-			`https://api.diamanteagricola.com.br:8089/rest/ticketapi/get_tickets?dtIni=${dtIni}&dtFim=${dtFim}`,
+			url,
 			requestOptions
 		);
 		const dataFromP = await repsonseFromProtheus.json()
@@ -642,16 +648,17 @@ router.post("/update-romaneio-from-protheus", isAuth, async (req, res) => {
 router.post('/delete-romaneio-from-protheus', isAuth, async (req, res) => {
 	const data = await req.body;
 	console.log('Data vindo do protheus: ', data)
-	
+
 	const updates = {
 		uploadedToProtheus: false,
 		liquido: 1,
 		userDeleted: data?.usuario_exclusao ? data?.usuario_exclusao : 'usuário não informado',
-		dateDeleted: new Date()
+		dateDeleted: new Date(),
+		saida: new Date()
 	};
-	
+
 	console.log('updates from protheus: ', updates)
-	
+
 
 	try {
 		// get documentRef
@@ -661,10 +668,10 @@ router.post('/delete-romaneio-from-protheus', isAuth, async (req, res) => {
 		const oldDoc = await getDoc(docRef);
 		const oldDocData = oldDoc.data();
 		console.log('Documento encontrado para ser deletado: ', oldDocData)
-		
+
 		//update the document
 		const result = await updateDoc(docRef, updates);
-		console.log( 'resultado da alteração: ', result)
+		console.log('resultado da alteração: ', result)
 
 		if (oldDocData) {
 			res.status(200).send('Documento excluído com sucesso...')
