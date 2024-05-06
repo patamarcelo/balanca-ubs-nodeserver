@@ -660,27 +660,27 @@ router.post('/delete-romaneio-from-protheus', isAuth, async (req, res) => {
 	console.log('updates from protheus: ', updates)
 
 
-	try {
-		// get documentRef
-		const docRef = doc(db, TABLES_FIREBASE.truckmove, data.id);
+	// try {
+	// 	// get documentRef
+	// 	const docRef = doc(db, TABLES_FIREBASE.truckmove, data.id);
 
-		// get document to print it
-		const oldDoc = await getDoc(docRef);
-		const oldDocData = oldDoc.data();
-		console.log('Documento encontrado para ser deletado: ', oldDocData)
+	// 	// get document to print it
+	// 	const oldDoc = await getDoc(docRef);
+	// 	const oldDocData = oldDoc.data();
+	// 	console.log('Documento encontrado para ser deletado: ', oldDocData)
 
-		//update the document
-		const result = await updateDoc(docRef, updates);
-		console.log('resultado da alteração: ', result)
+	// 	//update the document
+	// 	const result = await updateDoc(docRef, updates);
+	// 	console.log('resultado da alteração: ', result)
 
-		if (oldDocData) {
-			res.status(200).send('Documento excluído com sucesso...')
-		}
-	} catch (err) {
-		console.log("erro ao deletar o documentO :, ", err)
-		res.status(400).send("Erro ao deletar o documento: ", err);
+	// 	if (oldDocData) {
+	// 		res.status(200).send('Documento excluído com sucesso...')
+	// 	}
+	// } catch (err) {
+	// 	console.log("erro ao deletar o documentO :, ", err)
+	// 	res.status(400).send("Erro ao deletar o documento: ", err);
 
-	}
+	// }
 })
 
 export default router;
