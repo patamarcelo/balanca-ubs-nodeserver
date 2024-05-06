@@ -649,38 +649,58 @@ router.post('/delete-romaneio-from-protheus', isAuth, async (req, res) => {
 	const data = await req.body;
 	console.log('Data vindo do protheus: ', data)
 
-	const updates = {
-		uploadedToProtheus: false,
-		liquido: 1,
-		userDeleted: data?.usuario_exclusao ? data?.usuario_exclusao : 'usuário não informado',
-		dateDeleted: new Date(),
-		saida: new Date()
-	};
+	
 
-	console.log('updates from protheus: ', updates)
+	try {
+		// get documentRef
+		const docRef = doc(db, TABLES_FIREBASE.truckmove, data.id);
+
+		// get document to print it
+		const oldDoc = await getDoc(docRef);
+		const oldDocData = oldDoc.data();
+		console.log('Documento encontrado para ser deletado: ', oldDocData)
+
+		let bruto = oldDocData?.pesoBruto
+		let tara = oldDocData?.tara
+		
+		if(bruto > 0){
+			console.log('manter Bruto')
+		} else {
+			bruto = 2
+		}
+		
+		if(tara > 0){
+			console.log('manter tara')
+		} else {
+			tara = 1
+		}
+
+		const updates = {
+			uploadedToProtheus: false,
+			liquido: 1,
+			userDeleted: data?.usuario_exclusao ? data?.usuario_exclusao : 'usuário não informado',
+			dateDeleted: new Date(),
+			saida: new Date(),
+			tara: tara,
+			pesoBruto: bruto
+		};
+	
+		console.log('updates from protheus: ', updates)
+	
 
 
-	// try {
-	// 	// get documentRef
-	// 	const docRef = doc(db, TABLES_FIREBASE.truckmove, data.id);
+		//update the document
+		const result = await updateDoc(docRef, updates);
+		console.log('resultado da alteração: ', result)
 
-	// 	// get document to print it
-	// 	const oldDoc = await getDoc(docRef);
-	// 	const oldDocData = oldDoc.data();
-	// 	console.log('Documento encontrado para ser deletado: ', oldDocData)
+		if (oldDocData) {
+			res.status(200).send('Documento excluído com sucesso...')
+		}
+	} catch (err) {
+		console.log("erro ao deletar o documentO :, ", err)
+		res.status(400).send("Erro ao deletar o documento: ", err);
 
-	// 	//update the document
-	// 	const result = await updateDoc(docRef, updates);
-	// 	console.log('resultado da alteração: ', result)
-
-	// 	if (oldDocData) {
-	// 		res.status(200).send('Documento excluído com sucesso...')
-	// 	}
-	// } catch (err) {
-	// 	console.log("erro ao deletar o documentO :, ", err)
-	// 	res.status(400).send("Erro ao deletar o documento: ", err);
-
-	// }
+	}
 })
 
 export default router;
