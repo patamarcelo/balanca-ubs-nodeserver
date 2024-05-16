@@ -35,8 +35,7 @@ router.get("/", async (req, res) => {
 					$gte: formatDay
 				}
 			}]
-		},
-		{
+		}, {
 			projection: {
 				charge: 0, // Exclude the 'charge' field from the result,
 				"inputs.plantations_costs": 0,
@@ -92,8 +91,7 @@ router.get("/datadetail", async (req, res) => {
 				}
 			]
 			// $or: [{ status: "sought" }, { date: { $gte: "2023-07-17" } }]
-		},
-		{
+		}, {
 			projection: {
 				charge: 0, // Exclude the 'charge' field from the result,
 				"inputs.plantations_costs": 0,
@@ -112,7 +110,7 @@ router.get("/data-detail-plantio", async (req, res) => {
 	let collection = db.collection("aplicacoes");
 	console.log('safff', req.query)
 	// const { safra, ciclo } = req.query
-	
+
 	const {
 		safra,
 		ciclo
@@ -130,16 +128,14 @@ router.get("/data-detail-plantio", async (req, res) => {
 					"plantation.cycle": parseInt(ciclo)
 				}
 			}
-		},
-		{
+		}, {
 			projection: {
 				charge: 0, // Exclude the 'charge' field from the result,
 				"inputs.plantations_costs": 0,
 				"plantations.plantation.plot": 0,
 				"plantations.plantation.geo_points": 0,
 			}
-		}
-	)
+		})
 		.toArray();
 	// .explain("executionStats")
 	if (!results) res.send("Not found").status(404);
@@ -155,26 +151,22 @@ router.get("/data-open-apps", async (req, res) => {
 
 	let results = await collection
 		.find({
-				$or: [{
-						"plantations.plantation.harvest_name": safra_2023_2024
-					},
-					{
-						"plantations.plantation.harvest_name": safra_2024_2025
-					},
-
-				],
-				$and: [{
-					status: "sought"
-				}]
-			},
-			{
-				projection: {
-					charge: 0, // Exclude the 'charge' field from the result,
-					"inputs.plantations_costs": 0,
-					"plantations.plantation.plot": 0,
-					"plantations.plantation.geo_points": 0,
-				}
-			})
+			$or: [{
+					"plantations.plantation.harvest_name": safra_2023_2024
+				},
+				{
+					"plantations.plantation.harvest_name": safra_2024_2025
+				},
+			],
+			status: "sought"
+		}, {
+			projection: {
+				charge: 0, // Exclude the 'charge' field from the result,
+				"inputs.plantations_costs": 0,
+				"plantations.plantation.plot": 0,
+				"plantations.plantation.geo_points": 0,
+			}
+		})
 		.toArray();
 	res.send(results).status(200)
 
