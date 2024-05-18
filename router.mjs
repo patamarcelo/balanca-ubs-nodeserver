@@ -171,6 +171,36 @@ router.get("/data-open-apps", async (req, res) => {
 	res.send(results).status(200)
 
 })
+router.get("/data-open-apps-only-bio", async (req, res) => {
+	console.log('pegando dados das aplicacoes em aberto de biológicos')
+	let collection = db.collection('aplicacoes');
+	const safra_2023_2024 = "2023/2024"
+	const safra_2024_2025 = "2024/2025"
+	let results = await collection
+		.find({
+			$or: [{
+					"plantations.plantation.harvest_name": safra_2023_2024
+				},
+				{
+					"plantations.plantation.harvest_name": safra_2024_2025
+				},
+			],
+			$and: [{
+				"inputs.input.input_type_name": 'Biológico'
+			},
+		],
+			status: "sought",
+		}, {
+			projection: {
+				charge: 0, // Exclude the 'charge' field from the result,
+				"inputs.plantations_costs": 0,
+				"plantations.plantation.plot": 0,
+				"plantations.plantation.geo_points": 0,
+			}
+		})
+		.toArray();
+	res.send(results).status(200)
+})
 
 // This section will help you get a single record by id
 router.get("/:id", async (req, res) => {
