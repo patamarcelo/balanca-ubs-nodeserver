@@ -519,6 +519,7 @@ router.get("/get-from-srd", isAuth, async (req, res) => {
 	}
 })
 router.get("/get-defensivos-from-srd", isAuth, async (req, res) => {
+	const { products } = req.query.paramsQuery;
 	
 	console.log('Dados dos estoques do SRD Sendo coletados')
 	try {
@@ -536,8 +537,12 @@ router.get("/get-defensivos-from-srd", isAuth, async (req, res) => {
 			redirect: "follow",
 			agent: httpsAgent,
 		};
+		let url = `https://api.diamanteagricola.com.br:8089/rest/ticketapi/get_saldo_produtos`
 		
-		const url = `https://api.diamanteagricola.com.br:8089/rest/ticketapi/get_saldo_produtos`
+		if(products === 'bio'){
+			url+= `?grupo_produto=0072`
+			console.log('new url', url)
+		}
 
 		const repsonseFromProtheus = await fetch(
 			url,
