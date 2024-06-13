@@ -6,7 +6,101 @@ import {
 
 // import { appCheckVerification } from "./firebase-service.js";
 
+
+// import { createRequire } from 'module';
+// const require = createRequire(import.meta.url);
+// const dataFetch = require('./prods-open.json');
+
+
 const router = express.Router();
+
+const dictColor = (data) =>{
+	if(data < 0.50){
+		return '#E4D00A'
+	} 
+	if(data < 1){
+		return 'blue'
+	} 
+	if(data === 1) return 'green'
+	if(data > 1) return 'red'
+}
+
+const fillColor = (solicitado, aplicado) => {
+	if(solicitado === aplicado){
+		return 'green'
+	}
+	if(aplicado > 0){
+		return '#E4D00A'
+	}
+	if(aplicado === 0){
+		return 'red'
+	}
+	return 'blue'
+}
+
+const colorDict = [
+	{
+		tipo: "Inseticida",
+		color: "rgb(218,78,75)"
+	},
+	{
+		tipo: "Herbicida",
+		color: "rgb(166,166,54)"
+	},
+	{
+		tipo: "Adjuvante",
+		color: "rgb(136,171,172)"
+	},
+	{
+		tipo: "Óleo",
+		color: "rgb(120,161,144)"
+	},
+	{
+		tipo: "Micronutrientes",
+		color: "rgb(118,192,226)"
+	},
+	{
+		tipo: "Fungicida",
+		color: "rgb(238,165,56)"
+	},
+	{
+		tipo: "Fertilizante",
+		color: "rgb(76,180,211)"
+	},
+	{
+		tipo: "Nutrição ",
+		color: "rgb(87,77,109)"
+	},
+	{
+		tipo: "Biológico",
+		color: "rgb(69,133,255)"
+	}
+];
+
+const getColorChip = (data) => {
+	const folt = colorDict.filter((tipo) => tipo.tipo === data);
+	if (folt.length > 0) {
+		return folt[0].color;
+	} else {
+		return "rgb(255,255,255,0.1)";
+	}
+};
+
+function isAuth(req, res, next) {
+	if (
+		req.headers.authorization ===
+		"Token " + process.env.NODE_APP_DJANGO_TOKEN
+	) {
+		console.log("usuário permitido");
+		next();
+	} else {
+		return res.status(401).json({
+			error: "Sem Permissão"
+		});
+	}
+}
+
+
 
 // This section will help you get a list of all the records.
 // router.get("/", [appCheckVerification], async (req, res) => {
@@ -171,6 +265,117 @@ router.get("/data-open-apps", async (req, res) => {
 	res.send(results).status(200)
 
 })
+
+router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
+	console.log('pegando dados das aplicacoes em aberto')
+	let collection = db.collection('aplicacoes');
+	const safra_2023_2024 = "2023/2024"
+	const safra_2024_2025 = "2024/2025"
+
+	let results = await collection
+		.find({
+			$or: [{
+					"plantations.plantation.harvest_name": safra_2023_2024
+				},
+				{
+					"plantations.plantation.harvest_name": safra_2024_2025
+				},
+			],
+			status: "sought"
+		}, {
+			projection: {
+				charge: 0, // Exclude the 'charge' field from the result,
+				"inputs.plantations_costs": 0,
+				"plantations.plantation.plot": 0,
+				"plantations.plantation.geo_points": 0,
+			}
+		})
+		.toArray();
+	// const results = dataFetch
+	const formatedArr = results.map((data) => {
+		const operation = data.inputs.filter((input) => input.input.input_type_name === 'Operação')
+		const apNumber = data.code
+		const idAp = data.id
+		const farmName = data.plantations[0].plantation.farm_name
+		const safra = data.plantations[0].plantation.harvest_name
+		const ciclo = data.plantations[0].plantation.cycle
+		const safraCicloOrder = Number(safra.replace('/', '') + ciclo)
+		const dateAp = data.date
+		const operationResult = operation ? operation[0].input.name.trim() : 'Sem Operação'
+		const products = data.inputs.map((input) => {
+			const colorChip = getColorChip(input.input.input_type_name)
+			return ({
+				product: input.input.name,
+				type: input.input.input_type_name,
+				quantidadeSolicitada: input.sought_quantity,
+				doseSolicitada: input.sought_dosage_value,
+				colorChip
+			})
+		})
+
+		const parcelas = data.plantations.map((plantation) => {
+			const parcela = plantation.plantation.name
+			const areaSolicitada = plantation.sought_area
+			const areaAplicada = plantation.applied_area
+			const parcelaId = plantation.id
+			
+			const fillColorParce = fillColor(areaSolicitada, areaAplicada)
+
+			return ({
+				parcela, 
+				areaSolicitada,
+				areaAplicada,
+				parcelaId,
+				fillColorParce
+			})
+		})
+
+
+		const sortedParcelas = parcelas.sort((a,b) => a.parcela.localeCompare(b.parcela)).sort((a,b) => a.fillColorParce.localeCompare(b.fillColorParce))
+		const areaTotalSolicitada = parcelas.reduce((acc, curr) => acc += curr.areaSolicitada,0)
+		const areaTotalAplicada = parcelas.reduce((acc, curr) => acc += curr.areaAplicada,0)
+		const saldoAplicar = areaTotalSolicitada - areaTotalAplicada
+
+		const percent = parseFloat((areaTotalAplicada / areaTotalSolicitada).toFixed(2))
+
+		const percentColor = dictColor(percent)
+
+		return ({
+			idAp: idAp,
+			code: apNumber,
+			safra,
+			ciclo,
+			safraCicloOrder,
+			farmName,
+			dateAp,
+			operation: operationResult,
+			areaSolicitada: areaTotalSolicitada,
+			areaAplicada: areaTotalAplicada,
+			saldoAreaAplicar: saldoAplicar,
+			percent,
+			percentColor,
+			parcelas: sortedParcelas,
+			prods: products,
+		})
+	})
+	console.log('results: ', formatedArr)
+	const sortResult = formatedArr
+	.sort((a,b) => a.idAp - b.idAp)
+	.sort((a,b) => a.safraCicloOrder - b.safraCicloOrder)
+	.sort((a,b) => a.farmName.localeCompare(b.farmName))
+
+	const onlyFarms = sortResult.map((data) => data.farmName)
+	const setFarms = [...new Set(onlyFarms)]
+
+	const response = {
+		farms: setFarms,
+		data: sortResult
+	}
+
+	res.send(response).status(200)
+})
+
+
 router.get("/data-open-apps-only-bio", async (req, res) => {
 	console.log('pegando dados das aplicacoes em aberto de biológicos')
 	let collection = db.collection('aplicacoes');
