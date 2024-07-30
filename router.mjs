@@ -302,7 +302,13 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 		const ciclo = data.plantations[0].plantation.cycle
 		const safraCicloOrder = Number(safra.replace('/', '') + ciclo)
 		const dateAp = data.date
-		const operationResult = operation ? operation[0].input.name.trim() : 'Sem Operação'
+		console.log('Operation: ', operation)
+		let operationResult;
+		if(operation[0].input){
+			operationResult = operation ? operation[0].input.name.trim() : 'Sem Operação'
+		} else {
+			operationResult = 'Sem Operação Identificada'
+		}
 		const products = data.inputs.map((input) => {
 			const colorChip = getColorChip(input.input.input_type_name)
 			return ({
