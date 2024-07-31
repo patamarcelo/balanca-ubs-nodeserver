@@ -292,8 +292,8 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 		})
 		.toArray();
 	// const results = dataFetch
-	const formatedArr = results.map(async (data) => {
-		const operation = await data.inputs.filter((input) => input.input.input_type_name === 'Operação')
+	const formatedArr = results.map( (data) => {
+		const operation = data.inputs.filter((input) => input.input.input_type_name === 'Operação')
 		const apNumber = data.code
 		const idAp = data.id
 		const farmName = data.plantations[0].plantation.farm_name
@@ -302,14 +302,7 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 		const ciclo = data.plantations[0].plantation.cycle
 		const safraCicloOrder = Number(safra.replace('/', '') + ciclo)
 		const dateAp = data.date
-		console.log('Operation: ', operation[0])
-		console.log('Operation: ', operation[0]?.input)
-		let operationResult;
-		if(operation[0]?.input){
-			operationResult = operation ? operation[0].input.name.trim() : 'Sem Operação'
-		} else {
-			operationResult = 'Sem Operação Identificada'
-		}
+		const operationResult = operation ? operation[0]?.input?.name.trim() : 'Sem Operação'
 		const products = data.inputs.map((input) => {
 			const colorChip = getColorChip(input.input.input_type_name)
 			return ({
