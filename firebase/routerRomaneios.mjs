@@ -52,6 +52,7 @@ router.get("/", isAuth, async (req, res) => {
 });
 
 router.post("/upload-romaneio", isAuth, async (req, res) => {
+	print('uploading romaneio')
 	const dataId = await req.body.id;
 	const docRef = doc(db, TABLES_FIREBASE.truckmove, dataId);
 	const docSend = await getDoc(docRef);
