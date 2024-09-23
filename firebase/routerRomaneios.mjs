@@ -557,6 +557,44 @@ router.get("/get-defensivos-from-srd", isAuth, async (req, res) => {
 		res.send(err).status(400)
 	}
 })
+router.get("/get-open-pre-st-srd", isAuth, async (req, res) => {
+	const { products } = req.query.paramsQuery;
+	
+	console.log('Dados das pre ST do SRD Sendo coletados')
+	try {
+		const httpsAgent = new https.Agent({
+			rejectUnauthorized: false,
+		});
+		var requestOptions = {
+			method: "GET",
+			headers: {
+				Accept: "application/json",
+				"Content-Type": "application/json",
+				Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
+				"Access-Control-Allow-Origin": "*"
+			},
+			redirect: "follow",
+			agent: httpsAgent,
+		};
+		let url = `https://api.diamanteagricola.com.br:8089/rest/apisolicitacao/`
+		
+		if(products === 'bio'){
+			url+= `?grupo_produto=0072`
+			console.log('new url', url)
+		}
+
+		const repsonseFromProtheus = await fetch(
+			url,
+			requestOptions
+		);
+		const dataFromP = await repsonseFromProtheus.json()
+		res.send(dataFromP).status(200)
+		console.log('dados das pr st enviados com sucesso')
+	} catch (error) {
+		console.log("Erro ao pegar os dados do protheus", error);
+		res.send(err).status(400)
+	}
+})
 
 
 router.post('/update-status-protheus-uploaded', isAuth, async (req, res) => {
