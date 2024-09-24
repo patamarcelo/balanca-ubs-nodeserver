@@ -558,7 +558,7 @@ router.get("/get-defensivos-from-srd", isAuth, async (req, res) => {
 	}
 })
 router.get("/get-open-pre-st-srd", isAuth, async (req, res) => {
-	const { products } = req.query.paramsQuery;
+	const { status } = req.query;
 	
 	console.log('Dados das pre ST do SRD Sendo coletados')
 	try {
@@ -578,8 +578,8 @@ router.get("/get-open-pre-st-srd", isAuth, async (req, res) => {
 		};
 		let url = `https://api.diamanteagricola.com.br:8089/rest/apisolicitacao/`
 		
-		if(products === 'bio'){
-			url+= `?grupo_produto=0072`
+		if(status === 'aberto'){
+			url+= `?status=aberto`
 			console.log('new url', url)
 		}
 
