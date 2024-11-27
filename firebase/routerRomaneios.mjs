@@ -540,7 +540,7 @@ router.get("/get-defensivos-from-srd", isAuth, async (req, res) => {
 		let url = `https://api.diamanteagricola.com.br:8089/rest/ticketapi/get_saldo_produtos`
 		
 		if(products === 'bio'){
-			url+= `?grupo_produto=0072`
+			url+= `?grupo_produto=0072,0078,0079,0080,0081,0082,0083,0084,0085,0086`
 			console.log('new url', url)
 		}
 
@@ -591,7 +591,7 @@ router.get("/get-open-pre-st-srd", isAuth, async (req, res) => {
 		console.log('dados das pr st enviados com sucesso')
 	} catch (error) {
 		console.log("Erro ao pegar os dados do protheus", error);
-		res.send(err).status(400)
+		res.send(error).status(400)
 	}
 })
 
