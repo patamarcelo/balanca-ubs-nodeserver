@@ -56,6 +56,12 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 	const docRef = doc(db, TABLES_FIREBASE.truckmove, dataId);
 	const docSend = await getDoc(docRef);
 	let docSendData = docSend.data();
+	const newParcelas = docSendData?.parcelasObjFiltered?.map((data) => data.parcela).sort((a,b) => a?.parcela.localeCompare(b.parcela))
+	
+	docSendData = {
+		...docSendData, 
+		parcelasNovas: newParcelas
+	}
 
 	if (docSendData.parcelasNovas.length === 1) {
 		const parcela = docSendData.parcelasNovas[0]

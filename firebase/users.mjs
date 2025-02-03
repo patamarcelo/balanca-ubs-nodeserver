@@ -18,28 +18,16 @@ function isAuth(req, res, next) {
 		});
 	}
 }
-// router.use((req,res,next) => {
-//     const auth = true
-//     if(!auth){
-//         return res.status(401).json({
-//             error: 'usuário não está autorizado'
-//         })
-//     }
-//     next()
-// })
 router.post('/check-user', async (req, res) => {
     try {
         const { uid } = req.body;
-
         if (!uid) {
             return res.status(400).json({ error: 'UID is required' });
         }
-
         console.log('uid: ', uid)
         getAuth().getUser(uid)
             .then(userRecord => {
                 console.log('User data:', userRecord.toJSON())
-                // Check if user is active
                 // Check if user is active
                 if (userRecord.disabled) {
                     // User is not active
