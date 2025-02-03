@@ -56,10 +56,8 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 	const docRef = doc(db, TABLES_FIREBASE.truckmove, dataId);
 	const docSend = await getDoc(docRef);
 	let docSendData = docSend.data();
-	console.log('get pacelas here:::::', docSendData)
-	const newParcelas = docSendData?.parcelasObjFiltered?.map((data) => data.parcela)
-	console.log('new parcelas here::::', newParcelas)
 	
+	const newParcelas = docSendData?.parcelasObjFiltered?.map((data) => data.parcela)
 	docSendData = {
 		...docSendData, 
 		parcelasNovas: newParcelas
