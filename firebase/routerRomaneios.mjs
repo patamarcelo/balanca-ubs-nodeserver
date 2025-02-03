@@ -62,6 +62,11 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 		...docSendData, 
 		parcelasNovas: newParcelas
 	}
+	const updateParcelasNovas = {
+		parcelasNovas: newParcelas
+	}
+	const resultParcelasNovas = await updateDoc(docRef, updateParcelasNovas);
+	console.log("reult of update parcelasNovas: ", resultParcelasNovas);
 
 	if (docSendData.parcelasNovas.length === 1) {
 		const parcela = docSendData.parcelasNovas[0]
