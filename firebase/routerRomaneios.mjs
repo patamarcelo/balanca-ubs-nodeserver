@@ -56,17 +56,18 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 	const docRef = doc(db, TABLES_FIREBASE.truckmove, dataId);
 	const docSend = await getDoc(docRef);
 	let docSendData = docSend.data();
-	const newParcelas = docSendData?.parcelasObjFiltered?.map((data) => data.parcela).sort((a,b) => a?.parcela.localeCompare(b.parcela))
+	console.log('get pacelas here:::::', docSendData)
+	// const newParcelas = docSendData?.parcelasObjFiltered?.map((data) => data.parcela).sort((a,b) => a?.parcela.localeCompare(b.parcela))
 	
-	docSendData = {
-		...docSendData, 
-		parcelasNovas: newParcelas
-	}
-	const updateParcelasNovas = {
-		parcelasNovas: newParcelas
-	}
-	const resultParcelasNovas = await updateDoc(docRef, updateParcelasNovas);
-	console.log("reult of update parcelasNovas: ", resultParcelasNovas);
+	// docSendData = {
+	// 	...docSendData, 
+	// 	parcelasNovas: newParcelas
+	// }
+	// const updateParcelasNovas = {
+	// 	parcelasNovas: newParcelas
+	// }
+	// const resultParcelasNovas = await updateDoc(docRef, updateParcelasNovas);
+	// console.log("reult of update parcelasNovas: ", resultParcelasNovas);
 
 	if (docSendData.parcelasNovas.length === 1) {
 		const parcela = docSendData.parcelasNovas[0]
