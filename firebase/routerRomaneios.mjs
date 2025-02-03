@@ -57,17 +57,18 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 	const docSend = await getDoc(docRef);
 	let docSendData = docSend.data();
 	console.log('get pacelas here:::::', docSendData)
-	// const newParcelas = docSendData?.parcelasObjFiltered?.map((data) => data.parcela).sort((a,b) => a?.parcela.localeCompare(b.parcela))
+	const newParcelas = docSendData?.parcelasObjFiltered?.map((data) => data.parcela)
+	console.log('new parcelas here::::', newParcelas)
 	
-	// docSendData = {
-	// 	...docSendData, 
-	// 	parcelasNovas: newParcelas
-	// }
-	// const updateParcelasNovas = {
-	// 	parcelasNovas: newParcelas
-	// }
-	// const resultParcelasNovas = await updateDoc(docRef, updateParcelasNovas);
-	// console.log("reult of update parcelasNovas: ", resultParcelasNovas);
+	docSendData = {
+		...docSendData, 
+		parcelasNovas: newParcelas
+	}
+	const updateParcelasNovas = {
+		parcelasNovas: newParcelas
+	}
+	const resultParcelasNovas = await updateDoc(docRef, updateParcelasNovas);
+	console.log("reult of update parcelasNovas: ", resultParcelasNovas);
 
 	if (docSendData.parcelasNovas.length === 1) {
 		const parcela = docSendData.parcelasNovas[0]
