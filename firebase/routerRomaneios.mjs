@@ -58,13 +58,26 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 	let docSendData = docSend.data();
 	
 	const newParcelas = docSendData?.parcelasObjFiltered?.map((data) => data.parcela)
+	const variedadeCultura = docSendData?.parcelasObjFiltered.map((data) => {
+		return ({
+			cultura: data.cultura,
+			variedade: data.variedade
+		})
+	})
+
 	docSendData = {
 		...docSendData, 
-		parcelasNovas: newParcelas
+		parcelasNovas: newParcelas,
+		mercadoria: variedadeCultura[0]?.variedade,
+		cultura: variedadeCultura[0]?.variedade
 	}
+
 	const updateParcelasNovas = {
-		parcelasNovas: newParcelas
+		parcelasNovas: newParcelas,
+		mercadoria: variedadeCultura[0]?.variedade,
+		cultura: variedadeCultura[0]?.variedade
 	}
+	
 	const resultParcelasNovas = await updateDoc(docRef, updateParcelasNovas);
 	console.log("reult of update parcelasNovas: ", resultParcelasNovas);
 
