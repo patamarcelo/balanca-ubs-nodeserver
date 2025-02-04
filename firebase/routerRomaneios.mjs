@@ -69,13 +69,13 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 		...docSendData, 
 		parcelasNovas: newParcelas,
 		mercadoria: variedadeCultura[0]?.variedade,
-		cultura: variedadeCultura[0]?.variedade
+		cultura: variedadeCultura[0]?.cultura
 	}
 
 	const updateParcelasNovas = {
 		parcelasNovas: newParcelas,
 		mercadoria: variedadeCultura[0]?.variedade,
-		cultura: variedadeCultura[0]?.variedade
+		cultura: variedadeCultura[0]?.cultura
 	}
 	
 	const resultParcelasNovas = await updateDoc(docRef, updateParcelasNovas);
