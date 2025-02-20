@@ -319,6 +319,10 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 			const areaSolicitada = plantation.sought_area
 			const areaAplicada = plantation.applied_area
 			const parcelaId = plantation.id
+			const variedade = plantation.plantation.variety_name
+			const cultura = plantation.plantation.culture_name
+			const date = plantation.plantation.date
+			const date_prev_colheita = plantation.plantation.harvest_prediction_date
 			
 			const fillColorParce = fillColor(areaSolicitada, areaAplicada)
 
@@ -327,7 +331,12 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 				areaSolicitada,
 				areaAplicada,
 				parcelaId,
-				fillColorParce
+				fillColorParce,
+				variedade,
+				cultura,
+				date,
+				date_prev_colheita
+				
 			})
 		})
 
