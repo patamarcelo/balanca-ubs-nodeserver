@@ -539,7 +539,7 @@ router.get("/get-from-srd", isAuth, async (req, res) => {
 		console.log('Dados Coletados com sucesso')
 	} catch (error) {
 		console.log("Erro ao enviar os dados para o protheus", error);
-		res.send(err).status(400)
+		res.send(error).status(400)
 	}
 })
 router.get("/get-defensivos-from-srd", isAuth, async (req, res) => {
@@ -577,7 +577,7 @@ router.get("/get-defensivos-from-srd", isAuth, async (req, res) => {
 		console.log('Dados de saldos dos estoques Coletados com sucesso')
 	} catch (error) {
 		console.log("Erro ao enviar os dados para o protheus", error);
-		res.send(err).status(400)
+		res.send(error).status(400)
 	}
 })
 router.get("/get-open-pre-st-srd", isAuth, async (req, res) => {
