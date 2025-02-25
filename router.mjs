@@ -242,14 +242,15 @@ router.get("/data-open-apps", async (req, res) => {
 	let collection = db.collection('aplicacoes');
 	const safra_2023_2024 = "2023/2024"
 	const safra_2024_2025 = "2024/2025"
+	const safra_2025_2026 = "2025/2026"
 
 	let results = await collection
 		.find({
 			$or: [{
-					"plantations.plantation.harvest_name": safra_2023_2024
+					"plantations.plantation.harvest_name": safra_2024_2025
 				},
 				{
-					"plantations.plantation.harvest_name": safra_2024_2025
+					"plantations.plantation.harvest_name": safra_2025_2026
 				},
 			],
 			status: "sought"
@@ -271,14 +272,15 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 	let collection = db.collection('aplicacoes');
 	const safra_2023_2024 = "2023/2024"
 	const safra_2024_2025 = "2024/2025"
+	const safra_2025_2026 = "2025/2026"
 
 	let results = await collection
 		.find({
 			$or: [{
-					"plantations.plantation.harvest_name": safra_2023_2024
+					"plantations.plantation.harvest_name": safra_2024_2025
 				},
 				{
-					"plantations.plantation.harvest_name": safra_2024_2025
+					"plantations.plantation.harvest_name": safra_2025_2026
 				},
 			],
 			status: "sought"
@@ -394,13 +396,15 @@ router.get("/data-open-apps-only-bio", async (req, res) => {
 	let collection = db.collection('aplicacoes');
 	const safra_2023_2024 = "2023/2024"
 	const safra_2024_2025 = "2024/2025"
+	const safra_2025_2026 = "2025/2026"
+
 	let results = await collection
 		.find({
 			$or: [{
-					"plantations.plantation.harvest_name": safra_2023_2024
+					"plantations.plantation.harvest_name": safra_2024_2025
 				},
 				{
-					"plantations.plantation.harvest_name": safra_2024_2025
+					"plantations.plantation.harvest_name": safra_2025_2026
 				},
 			],
 			$and: [{
