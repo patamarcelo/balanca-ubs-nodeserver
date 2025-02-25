@@ -14,25 +14,25 @@ import {
 
 const router = express.Router();
 
-const dictColor = (data) =>{
-	if(data < 0.50){
+const dictColor = (data) => {
+	if (data < 0.50) {
 		return '#E4D00A'
-	} 
-	if(data < 1){
+	}
+	if (data < 1) {
 		return 'blue'
-	} 
-	if(data === 1) return 'green'
-	if(data > 1) return 'red'
+	}
+	if (data === 1) return 'green'
+	if (data > 1) return 'red'
 }
 
 const fillColor = (solicitado, aplicado) => {
-	if(solicitado === aplicado){
+	if (solicitado === aplicado) {
 		return 'green'
 	}
-	if(aplicado > 0){
+	if (aplicado > 0) {
 		return '#E4D00A'
 	}
-	if(aplicado === 0){
+	if (aplicado === 0) {
 		return 'red'
 	}
 	return 'blue'
@@ -116,25 +116,34 @@ router.get("/", async (req, res) => {
 	} = req.query.safraCiclo;
 	console.log("Safra: ", safra, "Ciclo: ", ciclo);
 	let collection = db.collection("aplicacoes");
+	const safra_2025_2026 = "2025/2026"
 	let results = await collection
 		.find({
-			$and: [{
-				"plantations.plantation.harvest_name": safra
-			}],
-			// $or: [{ date: { $gte: "2023-07-14" } }]
-			$or: [{
-				status: "sought"
-			}, {
-				date: {
-					$gte: formatDay
+			$and: [
+				{
+					$or: [
+						{
+							"plantations.plantation.harvest_name": safra
+						}, {
+							"plantations.plantation.harvest_name": safra_2025_2026
+						}
+					]
+				}, {
+					$or: [{
+						status: "sought"
+					}, {
+						date: {
+							$gte: formatDay
+						}
+					}]
 				}
-			}]
+			]
 		}, {
 			projection: {
 				charge: 0, // Exclude the 'charge' field from the result,
 				"inputs.plantations_costs": 0,
 				"plantations.plantation.plot": 0,
-				"plantations.plantation.geo_points": 0,
+				"plantations.plantation.geo_points": 0
 			}
 		})
 		// .find({ code: "AP20", date: { $gte: "2023-07-01" } })
@@ -178,11 +187,11 @@ router.get("/datadetail", async (req, res) => {
 	let results = await collection
 		.find({
 			$and: [{
-					"plantations.plantation.harvest_name": safra
-				},
-				{
-					"plantations.plantation.cycle": parseInt(ciclo)
-				}
+				"plantations.plantation.harvest_name": safra
+			},
+			{
+				"plantations.plantation.cycle": parseInt(ciclo)
+			}
 			]
 			// $or: [{ status: "sought" }, { date: { $gte: "2023-07-17" } }]
 		}, {
@@ -247,11 +256,11 @@ router.get("/data-open-apps", async (req, res) => {
 	let results = await collection
 		.find({
 			$or: [{
-					"plantations.plantation.harvest_name": safra_2024_2025
-				},
-				{
-					"plantations.plantation.harvest_name": safra_2025_2026
-				},
+				"plantations.plantation.harvest_name": safra_2024_2025
+			},
+			{
+				"plantations.plantation.harvest_name": safra_2025_2026
+			},
 			],
 			status: "sought"
 		}, {
@@ -277,11 +286,11 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 	let results = await collection
 		.find({
 			$or: [{
-					"plantations.plantation.harvest_name": safra_2024_2025
-				},
-				{
-					"plantations.plantation.harvest_name": safra_2025_2026
-				},
+				"plantations.plantation.harvest_name": safra_2024_2025
+			},
+			{
+				"plantations.plantation.harvest_name": safra_2025_2026
+			},
 			],
 			status: "sought"
 		}, {
@@ -294,7 +303,7 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 		})
 		.toArray();
 	// const results = dataFetch
-	const formatedArr = results.map( (data) => {
+	const formatedArr = results.map((data) => {
 		const operation = data.inputs.filter((input) => input.input.input_type_name === 'Operação')
 		const apNumber = data.code
 		const idAp = data.id
@@ -326,11 +335,11 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 			const cultura = plantation.plantation.culture_name
 			const date = plantation.plantation.date
 			const date_prev_colheita = plantation.plantation.harvest_prediction_date
-			
+
 			const fillColorParce = fillColor(areaSolicitada, areaAplicada)
 
 			return ({
-				parcela, 
+				parcela,
 				areaSolicitada,
 				areaAplicada,
 				parcelaId,
@@ -339,14 +348,14 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 				cultura,
 				date,
 				date_prev_colheita
-				
+
 			})
 		})
 
 
-		const sortedParcelas = parcelas.sort((a,b) => a.parcela.localeCompare(b.parcela)).sort((a,b) => a.fillColorParce.localeCompare(b.fillColorParce))
-		const areaTotalSolicitada = parcelas.reduce((acc, curr) => acc += curr.areaSolicitada,0)
-		const areaTotalAplicada = parcelas.reduce((acc, curr) => acc += curr.areaAplicada,0)
+		const sortedParcelas = parcelas.sort((a, b) => a.parcela.localeCompare(b.parcela)).sort((a, b) => a.fillColorParce.localeCompare(b.fillColorParce))
+		const areaTotalSolicitada = parcelas.reduce((acc, curr) => acc += curr.areaSolicitada, 0)
+		const areaTotalAplicada = parcelas.reduce((acc, curr) => acc += curr.areaAplicada, 0)
 		const saldoAplicar = areaTotalSolicitada - areaTotalAplicada
 
 		const percent = parseFloat((areaTotalAplicada / areaTotalSolicitada).toFixed(2))
@@ -375,9 +384,9 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 	})
 	console.log('results: ', formatedArr)
 	const sortResult = formatedArr
-	.sort((a,b) => a.idAp - b.idAp)
-	.sort((a,b) => a.safraCicloOrder - b.safraCicloOrder)
-	.sort((a,b) => a.farmName.localeCompare(b.farmName))
+		.sort((a, b) => a.idAp - b.idAp)
+		.sort((a, b) => a.safraCicloOrder - b.safraCicloOrder)
+		.sort((a, b) => a.farmName.localeCompare(b.farmName))
 
 	const onlyFarms = sortResult.map((data) => data.farmName)
 	const setFarms = [...new Set(onlyFarms)]
@@ -401,16 +410,16 @@ router.get("/data-open-apps-only-bio", async (req, res) => {
 	let results = await collection
 		.find({
 			$or: [{
-					"plantations.plantation.harvest_name": safra_2024_2025
-				},
-				{
-					"plantations.plantation.harvest_name": safra_2025_2026
-				},
+				"plantations.plantation.harvest_name": safra_2024_2025
+			},
+			{
+				"plantations.plantation.harvest_name": safra_2025_2026
+			},
 			],
 			$and: [{
 				"inputs.input.input_type_name": 'Biológico'
 			},
-		],
+			],
 			status: "sought",
 		}, {
 			projection: {
