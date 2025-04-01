@@ -266,6 +266,8 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 
 		console.log('Dados enviados ao Protheus: ', responseToSend)
 
+		let updates = {};
+
 		try {
 			const httpsAgent = new https.Agent({
 				rejectUnauthorized: false,
@@ -294,24 +296,34 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 				console.log('Erro ao salvar os dados no Protheus, ')
 				return
 			}
+			if(repsonseFromProtheus.status === 201){
+				const {peso_tara, peso_bruto } = dataFrom
+				if(peso_tara && peso_tara > 0){
+					console.log('pesoTara from Protheus: ', peso_tara)
+					updates.tara = peso_tara
+				}
+				if(peso_bruto && peso_bruto > 0){
+					console.log('pesoBruto from Protheus: ', peso_bruto)
+					updates.pesoBruto = peso_bruto
+				}
+				if(peso_bruto > 0 && peso_tara > 0){
+					const liquido = peso_bruto - peso_tara
+					updates.pesoLiquido = liquido
+				}
+			}
 		} catch (error) {
 			console.log("Erro ao enviar os dados para o protheus", error);
 		}
 
 		if (response.codTicketPro) {
 			const forTicket = parseInt(response.codTicketPro);
-
-			const updates = {
-				ticket: forTicket
-			};
-
+				updates.ticket = forTicket
+			}
 			const result = await updateDoc(docRef, updates);
 			console.log("reult of Serverhandler: ", result);
 		}
-
-
 	}
-});
+);
 
 router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 	console.log('Editando o documento pela nova opção do sistema, direto para o protheus')
@@ -461,6 +473,8 @@ router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 		//response OBJ TO SEND TO PROTHEUS
 		res.send(responseToSend).status(200);
 
+		let updates = {};
+
 		try {
 			const httpsAgent = new https.Agent({
 				rejectUnauthorized: false,
@@ -482,7 +496,32 @@ router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 				"https://api.diamanteagricola.com.br:8089/rest/TICKETAPI/attTicket/",
 				requestOptions
 			);
-			console.log("resposta do Protheus", repsonseFromProtheus)
+			
+			const dataFrom = await repsonseFromProtheus.json()
+			
+			console.log("resposta do Protheus", repsonseFromProtheus.status)
+			console.log('resposta do Protheus', dataFrom)
+			
+			if (repsonseFromProtheus.status !== 201) {
+				console.log('Erro ao salvar os dados no Protheus, ')
+				return
+			}
+			if(repsonseFromProtheus.status === 201){
+				const {peso_tara, peso_bruto } = dataFrom
+				if(peso_tara && peso_tara > 0){
+					console.log('pesoTara from Protheus: ', peso_tara)
+					updates.tara = peso_tara
+				}
+				if(peso_bruto && peso_bruto > 0){
+					console.log('pesoBruto from Protheus: ', peso_bruto)
+					updates.pesoBruto = peso_bruto
+				}
+				if(peso_bruto && peso_bruto > 0 && peso_tara && peso_tara > 0){
+					const liquido = peso_bruto - peso_tara
+					updates.pesoLiquido = liquido
+				}
+			}
+
 		} catch (error) {
 			console.log("Erro ao enviar os dados para o protheus", error);
 		}
@@ -490,9 +529,7 @@ router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 		if (response.codTicketPro) {
 			const forTicket = parseInt(response.codTicketPro);
 
-			const updates = {
-				ticket: forTicket
-			};
+			updates.ticket = forTicket
 
 			const result = await updateDoc(docRef, updates);
 			console.log("reult of Serverhandler: ", result);
