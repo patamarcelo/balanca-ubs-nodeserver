@@ -310,6 +310,10 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 					const liquido = peso_bruto - peso_tara
 					updates.liquido = liquido
 				}
+				if(!docSendData.saida){
+					console.log('sem saída informada : ', docSendData)
+					updates.saida = new Date()
+				}
 			}
 		} catch (error) {
 			console.log("Erro ao enviar os dados para o protheus", error);
@@ -518,7 +522,11 @@ router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 				}
 				if(peso_bruto && peso_bruto > 0 && peso_tara && peso_tara > 0){
 					const liquido = peso_bruto - peso_tara
-					updates.pesoLiquido = liquido
+					updates.liquido = liquido
+				}
+				if(!docSendData.saida){
+					console.log('sem saída informada : ', docSendData)
+					updates.saida = new Date()
 				}
 			}
 
