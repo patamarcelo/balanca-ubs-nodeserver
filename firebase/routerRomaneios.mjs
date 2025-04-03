@@ -308,7 +308,7 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 				}
 				if(peso_bruto > 0 && peso_tara > 0){
 					const liquido = peso_bruto - peso_tara
-					updates.pesoLiquido = liquido
+					updates.liquido = liquido
 				}
 			}
 		} catch (error) {
