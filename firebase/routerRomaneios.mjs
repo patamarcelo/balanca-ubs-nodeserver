@@ -309,10 +309,10 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 				if(peso_bruto > 0 && peso_tara > 0){
 					const liquido = peso_bruto - peso_tara
 					updates.liquido = liquido
-				}
-				if(!docSendData.saida){
-					console.log('sem saída informada : ', docSendData)
-					updates.saida = new Date()
+					if(!docSendData.saida){
+						console.log('sem saída informada : ', docSendData)
+						updates.saida = new Date()
+					}
 				}
 			}
 		} catch (error) {
@@ -523,11 +523,12 @@ router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 				if(peso_bruto && peso_bruto > 0 && peso_tara && peso_tara > 0){
 					const liquido = peso_bruto - peso_tara
 					updates.liquido = liquido
+					if(!docSendData.saida){
+						console.log('sem saída informada : ', docSendData)
+						updates.saida = new Date()
+					}
 				}
-				if(!docSendData.saida){
-					console.log('sem saída informada : ', docSendData)
-					updates.saida = new Date()
-				}
+				
 			}
 
 		} catch (error) {
