@@ -211,7 +211,6 @@ router.get("/datadetail", async (req, res) => {
 router.get("/data-detail-plantio", async (req, res) => {
 	console.log("Access Token firebase: ,", req.header("X-Firebase-AppCheck"));
 	let collection = db.collection("aplicacoes");
-	console.log('safff', req.query)
 	// const { safra, ciclo } = req.query
 
 	const {
@@ -382,7 +381,6 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 			prods: products,
 		})
 	})
-	console.log('results: ', formatedArr)
 	const sortResult = formatedArr
 		.sort((a, b) => a.idAp - b.idAp)
 		.sort((a, b) => a.safraCicloOrder - b.safraCicloOrder)
