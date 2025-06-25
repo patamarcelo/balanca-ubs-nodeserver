@@ -56,7 +56,7 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 	const docRef = doc(db, TABLES_FIREBASE.truckmove, dataId);
 	const docSend = await getDoc(docRef);
 	let docSendData = docSend.data();
-	
+
 	const newParcelas = docSendData?.parcelasObjFiltered?.map((data) => data.parcela)
 	const variedadeCultura = docSendData?.parcelasObjFiltered.map((data) => {
 		return ({
@@ -66,7 +66,7 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 	})
 
 	docSendData = {
-		...docSendData, 
+		...docSendData,
 		parcelasNovas: newParcelas,
 		mercadoria: variedadeCultura[0]?.variedade,
 		cultura: variedadeCultura[0]?.cultura
@@ -77,7 +77,7 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 		mercadoria: variedadeCultura[0]?.variedade,
 		cultura: variedadeCultura[0]?.cultura
 	}
-	
+
 	const resultParcelasNovas = await updateDoc(docRef, updateParcelasNovas);
 	console.log("reult of update parcelasNovas: ", resultParcelasNovas);
 
@@ -267,66 +267,67 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 		console.log('Dados enviados ao Protheus: ', responseToSend)
 
 		let updates = {};
+		if (responseToSend?.filialPro && responseToSend?.codTicketPro) {
+			try {
+				const httpsAgent = new https.Agent({
+					rejectUnauthorized: false,
+				});
+				var requestOptions = {
+					method: "POST",
+					headers: {
+						Accept: "application/json",
+						"Content-Type": "application/json",
+						Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
+						"Access-Control-Allow-Origin": "*"
+					},
+					body: JSON.stringify(responseToSend),
+					redirect: "follow",
+					agent: httpsAgent,
+				};
 
-		try {
-			const httpsAgent = new https.Agent({
-				rejectUnauthorized: false,
-			});
-			var requestOptions = {
-				method: "POST",
-				headers: {
-					Accept: "application/json",
-					"Content-Type": "application/json",
-					Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
-					"Access-Control-Allow-Origin": "*"
-				},
-				body: JSON.stringify(responseToSend),
-				redirect: "follow",
-				agent: httpsAgent,
-			};
-
-			const repsonseFromProtheus = await fetch(
-				"https://api.diamanteagricola.com.br:8089/rest/TICKETAPI/attTicket/",
-				requestOptions
-			);
-			const dataFrom = await repsonseFromProtheus.json()
-			console.log("resposta do Protheus", repsonseFromProtheus.status)
-			console.log('resposta do Protheus', dataFrom)
-			if (repsonseFromProtheus.status !== 201) {
-				console.log('Erro ao salvar os dados no Protheus, ')
-				return
-			}
-			if(repsonseFromProtheus.status === 201){
-				const {peso_tara, peso_bruto } = dataFrom
-				if(peso_tara && peso_tara > 0){
-					console.log('pesoTara from Protheus: ', peso_tara)
-					updates.tara = peso_tara
+				const repsonseFromProtheus = await fetch(
+					"https://api.diamanteagricola.com.br:8089/rest/TICKETAPI/attTicket/",
+					requestOptions
+				);
+				const dataFrom = await repsonseFromProtheus.json()
+				console.log("resposta do Protheus", repsonseFromProtheus.status)
+				console.log('resposta do Protheus', dataFrom)
+				if (repsonseFromProtheus.status !== 201) {
+					console.log('Erro ao salvar os dados no Protheus, ')
+					return
 				}
-				if(peso_bruto && peso_bruto > 0){
-					console.log('pesoBruto from Protheus: ', peso_bruto)
-					updates.pesoBruto = peso_bruto
-				}
-				if(peso_bruto > 0 && peso_tara > 0){
-					const liquido = peso_bruto - peso_tara
-					updates.liquido = liquido
-					if(!docSendData.saida){
-						console.log('sem saída informada : ', docSendData)
-						updates.saida = new Date()
+				if (repsonseFromProtheus.status === 201) {
+					const { peso_tara, peso_bruto } = dataFrom
+					if (peso_tara && peso_tara > 0) {
+						console.log('pesoTara from Protheus: ', peso_tara)
+						updates.tara = peso_tara
+					}
+					if (peso_bruto && peso_bruto > 0) {
+						console.log('pesoBruto from Protheus: ', peso_bruto)
+						updates.pesoBruto = peso_bruto
+					}
+					if (peso_bruto > 0 && peso_tara > 0) {
+						const liquido = peso_bruto - peso_tara
+						updates.liquido = liquido
+						if (!docSendData.saida) {
+							console.log('sem saída informada : ', docSendData)
+							updates.saida = new Date()
+						}
 					}
 				}
+			} catch (error) {
+				console.log("Erro ao enviar os dados para o protheus", error);
 			}
-		} catch (error) {
-			console.log("Erro ao enviar os dados para o protheus", error);
 		}
 
 		if (response.codTicketPro) {
 			const forTicket = parseInt(response.codTicketPro);
-				updates.ticket = forTicket
-			}
-			const result = await updateDoc(docRef, updates);
-			console.log("reult of Serverhandler: ", result);
+			updates.ticket = forTicket
 		}
+		const result = await updateDoc(docRef, updates);
+		console.log("reult of Serverhandler: ", result);
 	}
+}
 );
 
 router.post("/updated-romaneio-data", isAuth, async (req, res) => {
@@ -479,60 +480,64 @@ router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 
 		let updates = {};
 
-		try {
-			const httpsAgent = new https.Agent({
-				rejectUnauthorized: false,
-			});
-			var requestOptions = {
-				method: "POST",
-				headers: {
-					Accept: "application/json",
-					"Content-Type": "application/json",
-					Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
-					"Access-Control-Allow-Origin": "*"
-				},
-				body: JSON.stringify(responseToSend),
-				redirect: "follow",
-				agent: httpsAgent,
-			};
+		if (responseToSend?.filialPro && responseToSend?.codTicketPro) {
 
-			const repsonseFromProtheus = await fetch(
-				"https://api.diamanteagricola.com.br:8089/rest/TICKETAPI/attTicket/",
-				requestOptions
-			);
-			
-			const dataFrom = await repsonseFromProtheus.json()
-			
-			console.log("resposta do Protheus", repsonseFromProtheus.status)
-			console.log('resposta do Protheus', dataFrom)
-			
-			if (repsonseFromProtheus.status !== 201) {
-				console.log('Erro ao salvar os dados no Protheus, ')
-				return
-			}
-			if(repsonseFromProtheus.status === 201){
-				const {peso_tara, peso_bruto } = dataFrom
-				if(peso_tara && peso_tara > 0){
-					console.log('pesoTara from Protheus: ', peso_tara)
-					updates.tara = peso_tara
+
+			try {
+				const httpsAgent = new https.Agent({
+					rejectUnauthorized: false,
+				});
+				var requestOptions = {
+					method: "POST",
+					headers: {
+						Accept: "application/json",
+						"Content-Type": "application/json",
+						Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
+						"Access-Control-Allow-Origin": "*"
+					},
+					body: JSON.stringify(responseToSend),
+					redirect: "follow",
+					agent: httpsAgent,
+				};
+
+				const repsonseFromProtheus = await fetch(
+					"https://api.diamanteagricola.com.br:8089/rest/TICKETAPI/attTicket/",
+					requestOptions
+				);
+
+				const dataFrom = await repsonseFromProtheus.json()
+
+				console.log("resposta do Protheus", repsonseFromProtheus.status)
+				console.log('resposta do Protheus', dataFrom)
+
+				if (repsonseFromProtheus.status !== 201) {
+					console.log('Erro ao salvar os dados no Protheus, ')
+					return
 				}
-				if(peso_bruto && peso_bruto > 0){
-					console.log('pesoBruto from Protheus: ', peso_bruto)
-					updates.pesoBruto = peso_bruto
-				}
-				if(peso_bruto && peso_bruto > 0 && peso_tara && peso_tara > 0){
-					const liquido = peso_bruto - peso_tara
-					updates.liquido = liquido
-					if(!docSendData.saida){
-						console.log('sem saída informada : ', docSendData)
-						updates.saida = new Date()
+				if (repsonseFromProtheus.status === 201) {
+					const { peso_tara, peso_bruto } = dataFrom
+					if (peso_tara && peso_tara > 0) {
+						console.log('pesoTara from Protheus: ', peso_tara)
+						updates.tara = peso_tara
 					}
-				}
-				
-			}
+					if (peso_bruto && peso_bruto > 0) {
+						console.log('pesoBruto from Protheus: ', peso_bruto)
+						updates.pesoBruto = peso_bruto
+					}
+					if (peso_bruto && peso_bruto > 0 && peso_tara && peso_tara > 0) {
+						const liquido = peso_bruto - peso_tara
+						updates.liquido = liquido
+						if (!docSendData.saida) {
+							console.log('sem saída informada : ', docSendData)
+							updates.saida = new Date()
+						}
+					}
 
-		} catch (error) {
-			console.log("Erro ao enviar os dados para o protheus", error);
+				}
+
+			} catch (error) {
+				console.log("Erro ao enviar os dados para o protheus", error);
+			}
 		}
 
 		if (response.codTicketPro) {
@@ -590,7 +595,7 @@ router.get("/get-from-srd", isAuth, async (req, res) => {
 })
 router.get("/get-defensivos-from-srd", isAuth, async (req, res) => {
 	const { products } = req.query.paramsQuery;
-	
+
 	console.log('Dados dos estoques do SRD Sendo coletados')
 	try {
 		const httpsAgent = new https.Agent({
@@ -608,9 +613,9 @@ router.get("/get-defensivos-from-srd", isAuth, async (req, res) => {
 			agent: httpsAgent,
 		};
 		let url = `https://api.diamanteagricola.com.br:8089/rest/ticketapi/get_saldo_produtos`
-		
-		if(products === 'bio'){
-			url+= `?grupo_produto=0072,0078,0079,0080,0081,0082,0083,0084,0085,0086`
+
+		if (products === 'bio') {
+			url += `?grupo_produto=0072,0078,0079,0080,0081,0082,0083,0084,0085,0086`
 			console.log('new url', url)
 		}
 
@@ -628,7 +633,7 @@ router.get("/get-defensivos-from-srd", isAuth, async (req, res) => {
 })
 router.get("/get-open-pre-st-srd", isAuth, async (req, res) => {
 	const { status } = req.query;
-	
+
 	console.log('Dados das pre ST do SRD Sendo coletados')
 	try {
 		const httpsAgent = new https.Agent({
@@ -646,9 +651,9 @@ router.get("/get-open-pre-st-srd", isAuth, async (req, res) => {
 			agent: httpsAgent,
 		};
 		let url = `https://api.diamanteagricola.com.br:8089/rest/apisolicitacao/`
-		
-		if(status === 'aberto'){
-			url+= `?status=aberto`
+
+		if (status === 'aberto') {
+			url += `?status=aberto`
 			console.log('new url', url)
 		}
 
@@ -795,7 +800,7 @@ router.post('/delete-romaneio-from-protheus', isAuth, async (req, res) => {
 	const data = await req.body;
 	console.log('Data vindo do protheus: ', data)
 
-	
+
 
 	try {
 		// get documentRef
@@ -808,14 +813,14 @@ router.post('/delete-romaneio-from-protheus', isAuth, async (req, res) => {
 
 		let bruto = oldDocData?.pesoBruto
 		let tara = oldDocData?.tara
-		
-		if(bruto > 0){
+
+		if (bruto > 0) {
 			console.log('manter Bruto')
 		} else {
 			bruto = 2
 		}
-		
-		if(tara > 0){
+
+		if (tara > 0) {
 			console.log('manter tara')
 		} else {
 			tara = 1
@@ -830,9 +835,9 @@ router.post('/delete-romaneio-from-protheus', isAuth, async (req, res) => {
 			tara: tara,
 			pesoBruto: bruto
 		};
-	
+
 		console.log('updates from protheus: ', updates)
-	
+
 
 
 		//update the document

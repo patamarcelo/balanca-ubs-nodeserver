@@ -180,15 +180,24 @@ router.get("/datadetail", async (req, res) => {
 	console.log("gerando os dados solicitados para tabela do farmbox");
 	console.log("Access Token firebase: ,", req.header("X-Firebase-AppCheck"));
 	let collection = db.collection("aplicacoes");
+	const safra_2023_2024 = "2023/2024"
+	const safra_2024_2025 = "2024/2025"
+	const safra_2025_2026 = "2025/2026"
+	
 	const {
 		safra,
 		ciclo
 	} = req.query.safraCiclo;
 	let results = await collection
 		.find({
-			$and: [{
-				"plantations.plantation.harvest_name": safra
+			$or: [{
+				"plantations.plantation.harvest_name": safra_2024_2025
 			},
+			{
+				"plantations.plantation.harvest_name": safra_2025_2026
+			},
+			],
+			$and: [
 			{
 				"plantations.plantation.cycle": parseInt(ciclo)
 			}
