@@ -1,66 +1,91 @@
 const parcelas = {
     "msg": "Consulta realizada com sucesso!!",
-    "total_return": 434,
+    "total_return": 488,
     "resumo_safra": [
         {
             "talhao__fazenda__nome": "Projeto Benção de Deus",
-            "variedade__cultura__cultura": "Arroz",
-            "area_total": 4600.58
+            "variedade__cultura__cultura": "Feijão",
+            "area_total": 2438.38
         },
         {
             "talhao__fazenda__nome": "Projeto Cacíque",
-            "variedade__cultura__cultura": "Arroz",
-            "area_total": 460.98
+            "variedade__cultura__cultura": "Soja",
+            "area_total": 455.1
         },
         {
             "talhao__fazenda__nome": "Projeto Campo Guapo",
-            "variedade__cultura__cultura": "Arroz",
-            "area_total": 799.71
+            "variedade__cultura__cultura": "Feijão",
+            "area_total": 2328.12
+        },
+        {
+            "talhao__fazenda__nome": "Projeto Campo Guapo",
+            "variedade__cultura__cultura": "Soja",
+            "area_total": 832.54
         },
         {
             "talhao__fazenda__nome": "Projeto Capivara",
-            "variedade__cultura__cultura": "Arroz",
-            "area_total": 714.83
+            "variedade__cultura__cultura": "Feijão",
+            "area_total": 249.3
+        },
+        {
+            "talhao__fazenda__nome": "Projeto Capivara",
+            "variedade__cultura__cultura": "Soja",
+            "area_total": 437.18
         },
         {
             "talhao__fazenda__nome": "Projeto Cervo",
-            "variedade__cultura__cultura": "Arroz",
-            "area_total": 1638.42
-        },
-        {
-            "talhao__fazenda__nome": "Projeto Fazendinha",
-            "variedade__cultura__cultura": "Arroz",
-            "area_total": 107.24
+            "variedade__cultura__cultura": "Feijão",
+            "area_total": 1681.12
         },
         {
             "talhao__fazenda__nome": "Projeto Jacaré",
-            "variedade__cultura__cultura": "Arroz",
-            "area_total": 1534.86
+            "variedade__cultura__cultura": "Feijão",
+            "area_total": 147.65
+        },
+        {
+            "talhao__fazenda__nome": "Projeto Jacaré",
+            "variedade__cultura__cultura": "Soja",
+            "area_total": 1243.17
         },
         {
             "talhao__fazenda__nome": "Projeto Lago Verde",
-            "variedade__cultura__cultura": "Arroz",
-            "area_total": 1434.42
+            "variedade__cultura__cultura": "Feijão",
+            "area_total": 683.71
+        },
+        {
+            "talhao__fazenda__nome": "Projeto Lago Verde",
+            "variedade__cultura__cultura": "Soja",
+            "area_total": 157.54
         },
         {
             "talhao__fazenda__nome": "Projeto Safira",
-            "variedade__cultura__cultura": "Arroz",
-            "area_total": 1089.24
+            "variedade__cultura__cultura": "Feijão",
+            "area_total": 826.59
         },
         {
             "talhao__fazenda__nome": "Projeto Santa Maria",
-            "variedade__cultura__cultura": "Arroz",
-            "area_total": 679.1
+            "variedade__cultura__cultura": "Feijão",
+            "area_total": 469.65
+        },
+        {
+            "talhao__fazenda__nome": "Projeto Santa Maria",
+            "variedade__cultura__cultura": "Soja",
+            "area_total": 218.63
         },
         {
             "talhao__fazenda__nome": "Projeto Tucano",
-            "variedade__cultura__cultura": "Arroz",
-            "area_total": 567.72
+            "variedade__cultura__cultura": "Feijão",
+            "area_total": 29.64
+        },
+        {
+            "talhao__fazenda__nome": "Projeto Tucano",
+            "variedade__cultura__cultura": "Soja",
+            "area_total": 508.43
         },
         {
             "talhao__fazenda__nome": "Projeto Tuiuiu",
-            "variedade__cultura__cultura": "Arroz",
-            "area_total": 718.11
+            "variedade__cultura__cultura": "Feijão",
+            "area_total": 655.47
         }
     ],
     "fazenda_grupo_projetos": [
@@ -280,7 +305,7 @@ const parcelas = {
         {
             "talhao__fazenda__nome": "Projeto Benção de Deus",
             "talhao__fazenda__fazenda__nome": "Fazenda Benção de Deus",
-            "count": 89
+            "count": 51
         },
         {
             "talhao__fazenda__nome": "Projeto Cacíque",
@@ -290,3552 +315,3977 @@ const parcelas = {
         {
             "talhao__fazenda__nome": "Projeto Campo Guapo",
             "talhao__fazenda__fazenda__nome": "Fazenda Campo Guapo",
-            "count": 11
+            "count": 107
         },
         {
             "talhao__fazenda__nome": "Projeto Capivara",
             "talhao__fazenda__fazenda__nome": "Fazenda Diamante",
-            "count": 21
+            "count": 19
         },
         {
             "talhao__fazenda__nome": "Projeto Cervo",
             "talhao__fazenda__fazenda__nome": "Fazenda Diamante",
-            "count": 81
-        },
-        {
-            "talhao__fazenda__nome": "Projeto Fazendinha",
-            "talhao__fazenda__fazenda__nome": "Fazenda Fazendinha",
-            "count": 3
+            "count": 88
         },
         {
             "talhao__fazenda__nome": "Projeto Jacaré",
             "talhao__fazenda__fazenda__nome": "Fazenda Diamante",
-            "count": 35
+            "count": 37
         },
         {
             "talhao__fazenda__nome": "Projeto Lago Verde",
             "talhao__fazenda__fazenda__nome": "Fazenda Lago Verde",
-            "count": 55
+            "count": 46
         },
         {
             "talhao__fazenda__nome": "Projeto Safira",
             "talhao__fazenda__fazenda__nome": "Fazenda Campo Guapo",
-            "count": 19
+            "count": 14
         },
         {
             "talhao__fazenda__nome": "Projeto Santa Maria",
             "talhao__fazenda__fazenda__nome": "Fazenda Santa Maria",
-            "count": 25
+            "count": 29
         },
         {
             "talhao__fazenda__nome": "Projeto Tucano",
             "talhao__fazenda__fazenda__nome": "Fazenda Diamante",
-            "count": 28
+            "count": 31
         },
         {
             "talhao__fazenda__nome": "Projeto Tuiuiu",
             "talhao__fazenda__fazenda__nome": "Fazenda Diamante",
-            "count": 37
+            "count": 36
         }
     ],
     "Area Total dos Talhoes Plantados": {
-        "area_colheita__sum": 14345.21
+        "area_colheita__sum": 13362.22
     },
     "dados": {
         "Projeto Benção de Deus": {
             "A01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13460
+                "id_plantio": 16181
+            },
+            "A01b": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16767
             },
             "A02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13461
+                "id_plantio": 16182
+            },
+            "A02b": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16768
             },
             "A03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13462
+                "id_plantio": 16184
+            },
+            "A03b": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16769
             },
             "A04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13463
+                "id_plantio": 16183
             },
-            "A07": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A705",
+            "A04b": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13466
-            },
-            "A08": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A705",
-                "finalizado_colheita": false,
-                "id_plantio": 13467
-            },
-            "A09": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A705",
-                "finalizado_colheita": false,
-                "id_plantio": 13468
-            },
-            "A10": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A705",
-                "finalizado_colheita": false,
-                "id_plantio": 13469
-            },
-            "A11": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A705",
-                "finalizado_colheita": false,
-                "id_plantio": 13470
-            },
-            "A12": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A705",
-                "finalizado_colheita": false,
-                "id_plantio": 13471
-            },
-            "A13": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A705",
-                "finalizado_colheita": false,
-                "id_plantio": 13472
+                "id_plantio": 16770
             },
             "B01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13473
+                "id_plantio": 16185
+            },
+            "B01b": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16771
             },
             "B02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13474
+                "id_plantio": 16186
+            },
+            "B02r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16786
             },
             "B03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13475
-            },
-            "B04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 15581
-            },
-            "B04a": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 15623
-            },
-            "B13": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13483
-            },
-            "B14": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13484
-            },
-            "B15": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13485
-            },
-            "B16": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13486
-            },
-            "B17": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13487
-            },
-            "B18": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13488
-            },
-            "B19": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13489
-            },
-            "B20": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13490
-            },
-            "B21": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13491
-            },
-            "B22": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13492
-            },
-            "B23": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13493
-            },
-            "B24": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13494
-            },
-            "B25": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13495
+                "id_plantio": 16187
             },
             "B26": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13496
-            },
-            "B27": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13497
+                "id_plantio": 16141
             },
             "B28": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13498
+                "id_plantio": 16119
             },
             "B29": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13499
-            },
-            "B30": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13500
-            },
-            "B31": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13501
-            },
-            "B32": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13502
-            },
-            "B33": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13503
-            },
-            "B34": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13504
-            },
-            "B35": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13505
-            },
-            "B36": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13506
-            },
-            "B37": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13507
-            },
-            "B38": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13508
-            },
-            "B39": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13509
-            },
-            "B40": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13510
-            },
-            "B41": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13511
-            },
-            "B42": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A705",
-                "finalizado_colheita": false,
-                "id_plantio": 13512
-            },
-            "B43": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A705",
-                "finalizado_colheita": false,
-                "id_plantio": 13513
+                "id_plantio": 16120
             },
             "C01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "BRS 902",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13514
+                "id_plantio": 16157
             },
             "C02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "BRS 902",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13515
+                "id_plantio": 16158
             },
             "C03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13516
+                "id_plantio": 16159
             },
             "C04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13517
+                "id_plantio": 16160
             },
             "C05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "BRS 902",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13518
+                "id_plantio": 16161
             },
             "C06": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A705",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13519
+                "id_plantio": 16162
             },
             "C07": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "BRS 902",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13520
+                "id_plantio": 16163
             },
             "C08": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13521
+                "id_plantio": 16164
             },
             "C09": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13522
+                "id_plantio": 16165
             },
             "C10": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13523
+                "id_plantio": 16166
             },
             "C11": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13524
+                "id_plantio": 16167
             },
             "C12": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13525
+                "id_plantio": 16168
             },
             "C13": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13526
+                "id_plantio": 16169
             },
             "C14": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13527
+                "id_plantio": 16170
             },
             "C15": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13528
+                "id_plantio": 16117
             },
             "C16": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13529
+                "id_plantio": 16116
             },
             "C17": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13530
+                "id_plantio": 16171
             },
             "C18": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13531
+                "id_plantio": 16172
             },
             "C19": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13532
+                "id_plantio": 16115
             },
             "C20": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13533
+                "id_plantio": 16118
             },
             "C21": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13534
+                "id_plantio": 16114
             },
             "D01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13535
-            },
-            "D01a": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 15633
+                "id_plantio": 16105
             },
             "D02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13536
+                "id_plantio": 16112
             },
             "D03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13537
+                "id_plantio": 16113
             },
             "D04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13538
+                "id_plantio": 16109
             },
             "D05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13539
+                "id_plantio": 16110
             },
             "D05a": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15625
+                "id_plantio": 16776
             },
             "D06": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13540
+                "id_plantio": 16106
             },
             "D07": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13541
+                "id_plantio": 16111
             },
-            "D08": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A705",
+            "D07a": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13542
-            },
-            "D08a": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
-                "finalizado_colheita": false,
-                "id_plantio": 15634
-            },
-            "D09": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13543
-            },
-            "D09a": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A705",
-                "finalizado_colheita": false,
-                "id_plantio": 15628
+                "id_plantio": 16773
             },
             "D10": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13544
-            },
-            "D11": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
-                "finalizado_colheita": false,
-                "id_plantio": 13545
-            },
-            "D12": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A705",
-                "finalizado_colheita": false,
-                "id_plantio": 13546
+                "id_plantio": 16107
             },
             "E01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13547
+                "id_plantio": 16176
             },
             "E02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13548
+                "id_plantio": 16177
             },
-            "E03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+            "E02a": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13549
+                "id_plantio": 16792
             },
-            "E04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+            "E02b": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13550
-            },
-            "E04a": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
-                "finalizado_colheita": false,
-                "id_plantio": 13551
+                "id_plantio": 16800
             }
         },
         "Projeto Cacíque": {
             "A01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13800
+                "id_plantio": 15787
             },
             "A02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13801
+                "id_plantio": 15788
             },
             "A03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13803
+                "id_plantio": 15789
             },
             "A04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13802
+                "id_plantio": 15790
             },
             "A05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13804
+                "id_plantio": 15791
             },
             "A06": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13828
+                "id_plantio": 15792
             },
             "A07": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13805
+                "id_plantio": 15793
             },
             "A08": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13806
+                "id_plantio": 15794
             },
             "A09": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13807
+                "id_plantio": 15796
             },
             "A10": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13808
+                "id_plantio": 15795
             },
             "A11": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13809
+                "id_plantio": 15797
             },
             "A12": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13810
+                "id_plantio": 15798
             },
             "A13": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13829
+                "id_plantio": 15799
             },
             "A14": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13811
+                "id_plantio": 15800
             },
             "A15": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13812
+                "id_plantio": 15801
             },
             "B01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13813
+                "id_plantio": 15802
             },
             "B02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13815
+                "id_plantio": 15803
             },
             "B03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13814
+                "id_plantio": 15804
             },
             "B04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13816
+                "id_plantio": 15805
             },
             "B05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13817
+                "id_plantio": 15806
             },
             "B06": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13818
+                "id_plantio": 15807
             },
             "B07": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13819
+                "id_plantio": 15808
             },
             "B08": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13820
+                "id_plantio": 15809
             },
             "B09": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13821
+                "id_plantio": 15810
             },
             "B10": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13822
+                "id_plantio": 15812
             },
             "B11": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13823
+                "id_plantio": 15811
             },
             "B12": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13824
+                "id_plantio": 15813
             },
             "B13": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13825
+                "id_plantio": 15814
             },
             "B14": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13826
+                "id_plantio": 15815
             },
             "B15": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
                 "finalizado_colheita": false,
-                "id_plantio": 13827
+                "id_plantio": 15816
             }
         },
         "Projeto Campo Guapo": {
-            "J01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+            "A01": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13942
+                "id_plantio": 15732
+            },
+            "A01r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16736
+            },
+            "A01ra": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16772
+            },
+            "A02": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 15733
+            },
+            "A02r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16737
+            },
+            "A03": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 15735
+            },
+            "A03r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16738
+            },
+            "A04": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 15734
+            },
+            "A04r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16739
+            },
+            "B01": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 15642
+            },
+            "B02": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 15643
+            },
+            "B03": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 15644
+            },
+            "B04": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 15645
+            },
+            "B05": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
+                "finalizado_colheita": false,
+                "id_plantio": 15646
+            },
+            "B06": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
+                "finalizado_colheita": false,
+                "id_plantio": 15647
+            },
+            "C01": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 15648
+            },
+            "C02": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 15649
+            },
+            "C03": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 15650
+            },
+            "C04": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 15651
+            },
+            "C05": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
+                "finalizado_colheita": false,
+                "id_plantio": 15653
+            },
+            "C06": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
+                "finalizado_colheita": false,
+                "id_plantio": 15652
+            },
+            "D01": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 15736
+            },
+            "D01r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16740
+            },
+            "D02": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 15737
+            },
+            "D02r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16741
+            },
+            "D03": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 15738
+            },
+            "D03r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16742
+            },
+            "D04": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 15739
+            },
+            "D04r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16743
+            },
+            "D05": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 15740
+            },
+            "D05r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16744
+            },
+            "D06": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 15741
+            },
+            "D06r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16745
+            },
+            "D07": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 15742
+            },
+            "D07r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16746
+            },
+            "D08": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 15743
+            },
+            "D08r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16747
+            },
+            "D09": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 15745
+            },
+            "D09r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16748
+            },
+            "D10": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 15744
+            },
+            "D10r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16749
+            },
+            "E01": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
+                "finalizado_colheita": false,
+                "id_plantio": 15667
+            },
+            "E02": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
+                "finalizado_colheita": false,
+                "id_plantio": 15668
+            },
+            "E03": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
+                "finalizado_colheita": false,
+                "id_plantio": 15669
+            },
+            "E04": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
+                "finalizado_colheita": false,
+                "id_plantio": 15670
+            },
+            "E05": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
+                "finalizado_colheita": false,
+                "id_plantio": 15671
+            },
+            "E06": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
+                "finalizado_colheita": false,
+                "id_plantio": 15672
+            },
+            "E07": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
+                "finalizado_colheita": false,
+                "id_plantio": 15673
+            },
+            "E08": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
+                "finalizado_colheita": false,
+                "id_plantio": 15674
+            },
+            "E09": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
+                "finalizado_colheita": false,
+                "id_plantio": 15675
+            },
+            "E09r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
+                "finalizado_colheita": false,
+                "id_plantio": 16735
+            },
+            "E10": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
+                "finalizado_colheita": false,
+                "id_plantio": 15676
+            },
+            "E10r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16789
+            },
+            "F01": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
+                "finalizado_colheita": false,
+                "id_plantio": 15654
+            },
+            "F02": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
+                "finalizado_colheita": false,
+                "id_plantio": 15655
+            },
+            "F03": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
+                "finalizado_colheita": false,
+                "id_plantio": 15656
+            },
+            "F04": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
+                "finalizado_colheita": false,
+                "id_plantio": 15657
+            },
+            "F05": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
+                "finalizado_colheita": false,
+                "id_plantio": 15658
+            },
+            "F06": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
+                "finalizado_colheita": false,
+                "id_plantio": 15659
+            },
+            "F07": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
+                "finalizado_colheita": false,
+                "id_plantio": 15660
+            },
+            "F08": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
+                "finalizado_colheita": false,
+                "id_plantio": 15661
+            },
+            "F09": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
+                "finalizado_colheita": false,
+                "id_plantio": 15662
+            },
+            "F10": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
+                "finalizado_colheita": false,
+                "id_plantio": 15664
+            },
+            "F11": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 88022",
+                "finalizado_colheita": false,
+                "id_plantio": 15663
+            },
+            "F12": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
+                "finalizado_colheita": false,
+                "id_plantio": 15665
+            },
+            "F12r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16787
+            },
+            "F13": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
+                "finalizado_colheita": false,
+                "id_plantio": 15666
+            },
+            "F13r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16788
+            },
+            "G01": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
+                "finalizado_colheita": false,
+                "id_plantio": 15677
+            },
+            "G02": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 15678
+            },
+            "G03": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 15679
+            },
+            "G04": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 15680
+            },
+            "G05": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 15681
+            },
+            "G06": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 15682
+            },
+            "G07": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 15683
+            },
+            "G08": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 15684
+            },
+            "H01": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
+                "finalizado_colheita": false,
+                "id_plantio": 15685
+            },
+            "H02": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
+                "finalizado_colheita": false,
+                "id_plantio": 15686
+            },
+            "H03": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
+                "finalizado_colheita": false,
+                "id_plantio": 15687
+            },
+            "H04": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 15688
+            },
+            "H05": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 15689
+            },
+            "H06": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 15690
+            },
+            "H07": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 15691
+            },
+            "H08": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 15692
+            },
+            "H09": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 15693
+            },
+            "H10": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 15694
+            },
+            "H11": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
+                "finalizado_colheita": false,
+                "id_plantio": 15695
+            },
+            "H12": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
+                "finalizado_colheita": false,
+                "id_plantio": 15696
+            },
+            "H13": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
+                "finalizado_colheita": false,
+                "id_plantio": 15697
+            },
+            "H14": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
+                "finalizado_colheita": false,
+                "id_plantio": 15698
+            },
+            "H15": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
+                "finalizado_colheita": false,
+                "id_plantio": 15699
+            },
+            "H16": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
+                "finalizado_colheita": false,
+                "id_plantio": 15700
+            },
+            "I": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
+                "finalizado_colheita": false,
+                "id_plantio": 15701
+            },
+            "Ia": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
+                "finalizado_colheita": false,
+                "id_plantio": 15702
+            },
+            "Iar": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
+                "finalizado_colheita": false,
+                "id_plantio": 16750
+            },
+            "Iarb": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16777
+            },
+            "J01": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
+                "finalizado_colheita": false,
+                "id_plantio": 15730
             },
             "J01a": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 15627
-            },
-            "J01b": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
-                "finalizado_colheita": false,
-                "id_plantio": 15629
+                "id_plantio": 16763
             },
             "J02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13952
+                "id_plantio": 15731
             },
             "J02a": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 15556
+                "id_plantio": 16733
             },
             "J02b": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 15557
+                "id_plantio": 16734
+            },
+            "J02br": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16765
             },
             "L01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13953
+                "id_plantio": 15726
             },
             "L02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13951
+                "id_plantio": 15727
             },
             "L03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13943
+                "id_plantio": 15728
             },
             "L04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13945
+                "id_plantio": 15729
             },
             "L05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13946
+                "id_plantio": 16778
             }
         },
         "Projeto Capivara": {
             "A01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
                 "finalizado_colheita": false,
-                "id_plantio": 13552
+                "id_plantio": 15852
             },
             "B01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
                 "finalizado_colheita": false,
-                "id_plantio": 13558
+                "id_plantio": 15853
             },
             "C01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
                 "finalizado_colheita": false,
-                "id_plantio": 13565
+                "id_plantio": 15854
             },
             "D01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
                 "finalizado_colheita": false,
-                "id_plantio": 13571
-            },
-            "D01a": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Arroz 9005",
-                "finalizado_colheita": false,
-                "id_plantio": 15632
+                "id_plantio": 15855
             },
             "E01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13577
+                "id_plantio": 15836
             },
             "E02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13578
+                "id_plantio": 15837
             },
             "E03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13579
+                "id_plantio": 15838
             },
             "E04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13582
+                "id_plantio": 15839
             },
             "E05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13581
+                "id_plantio": 15840
             },
             "F01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13580
+                "id_plantio": 15841
             },
             "F02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13583
+                "id_plantio": 15842
             },
             "F03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13584
+                "id_plantio": 15843
             },
             "F04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13585
+                "id_plantio": 15844
             },
             "F05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13586
+                "id_plantio": 15845
             },
             "F06": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13587
+                "id_plantio": 15846
             },
             "F07": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13588
+                "id_plantio": 15847
             },
             "F08": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13589
+                "id_plantio": 15848
             },
             "F09": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13590
+                "id_plantio": 15849
             },
             "F10": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13591
-            },
-            "F11": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
-                "finalizado_colheita": false,
-                "id_plantio": 13592
+                "id_plantio": 15850
             }
         },
         "Projeto Cervo": {
             "A01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13719
+                "id_plantio": 15954
             },
             "A02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13720
+                "id_plantio": 15955
             },
             "A03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13721
+                "id_plantio": 15956
             },
             "A04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13722
+                "id_plantio": 15957
             },
             "A05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13723
+                "id_plantio": 15958
             },
             "A06": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13724
+                "id_plantio": 15959
             },
             "A07": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13725
+                "id_plantio": 15960
             },
             "A08": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13726
+                "id_plantio": 15961
             },
             "A09": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13727
+                "id_plantio": 15962
             },
             "A10": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13728
+                "id_plantio": 15963
             },
             "A11": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13729
+                "id_plantio": 15964
             },
             "A12": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13730
+                "id_plantio": 15965
             },
             "B01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13731
+                "id_plantio": 15966
             },
             "B02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13733
+                "id_plantio": 15967
             },
             "B03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13732
+                "id_plantio": 15968
             },
             "B04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13735
+                "id_plantio": 15969
             },
             "B05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13734
+                "id_plantio": 15970
             },
             "B06": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13736
+                "id_plantio": 15971
             },
             "B07": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13739
+                "id_plantio": 15972
             },
             "B08": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13738
+                "id_plantio": 15973
             },
             "B09": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13737
+                "id_plantio": 15974
             },
             "B10": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13741
+                "id_plantio": 15975
             },
             "B11": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13740
+                "id_plantio": 15976
             },
             "B12": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13742
+                "id_plantio": 15977
             },
             "B13": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13743
+                "id_plantio": 15978
             },
             "B14": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13744
+                "id_plantio": 15979
             },
             "B15": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13745
+                "id_plantio": 15980
             },
             "B16": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13746
+                "id_plantio": 15981
             },
             "B17": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13747
+                "id_plantio": 15982
             },
             "B18": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13748
+                "id_plantio": 15983
             },
             "B19": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "BRS 902",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13749
+                "id_plantio": 15984
             },
             "B20": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "BRS 902",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13750
+                "id_plantio": 15985
             },
             "C01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13751
+                "id_plantio": 15986
             },
             "C02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13752
+                "id_plantio": 15987
             },
             "C03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13753
+                "id_plantio": 15988
             },
             "C04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13754
+                "id_plantio": 15989
             },
             "C05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13756
+                "id_plantio": 15990
             },
             "C06": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13755
+                "id_plantio": 15991
             },
             "C07": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13757
+                "id_plantio": 15992
             },
             "C08": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13758
+                "id_plantio": 15993
             },
             "C09": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13759
+                "id_plantio": 15994
             },
             "C10": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13760
+                "id_plantio": 15995
             },
             "C11": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13761
+                "id_plantio": 15996
             },
             "C12": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13763
+                "id_plantio": 15997
             },
             "D01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13762
+                "id_plantio": 15998
             },
             "D02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13764
+                "id_plantio": 15999
             },
             "D03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13766
+                "id_plantio": 16000
             },
             "D04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13765
+                "id_plantio": 16001
             },
             "D05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13767
+                "id_plantio": 16002
             },
             "D06": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13768
+                "id_plantio": 16003
             },
             "D07": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13769
+                "id_plantio": 16004
             },
             "D08": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13770
+                "id_plantio": 16005
             },
             "D09": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13771
+                "id_plantio": 16006
             },
             "D10": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13798
+                "id_plantio": 16007
             },
             "D11": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13799
+                "id_plantio": 16008
             },
             "D12": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13772
+                "id_plantio": 16009
             },
             "D13": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13773
+                "id_plantio": 16010
             },
             "D14": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "BRS 902",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13776
+                "id_plantio": 16011
             },
             "D15": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "BRS 902",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13774
+                "id_plantio": 16012
             },
             "E01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13775
+                "id_plantio": 16013
+            },
+            "E01r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16793
             },
             "E02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13777
+                "id_plantio": 16014
+            },
+            "E02r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16794
             },
             "E03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13778
+                "id_plantio": 16015
+            },
+            "E03r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16795
             },
             "E04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13779
+                "id_plantio": 16016
+            },
+            "E04r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16796
             },
             "E05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13780
+                "id_plantio": 16017
+            },
+            "E05r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16797
             },
             "E06": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13782
+                "id_plantio": 16018
+            },
+            "E06r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16798
             },
             "E07": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13781
+                "id_plantio": 16019
+            },
+            "E07r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16799
             },
             "E08": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13783
+                "id_plantio": 16020
             },
             "E09": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13785
+                "id_plantio": 16021
             },
             "E10": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13784
+                "id_plantio": 16022
             },
             "E11": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13786
+                "id_plantio": 16023
             },
             "E12": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13787
+                "id_plantio": 16024
             },
             "E13": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13788
+                "id_plantio": 16025
             },
             "E14": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13789
+                "id_plantio": 16026
             },
             "F01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13790
+                "id_plantio": 16027
             },
             "F02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13791
+                "id_plantio": 16028
             },
             "F03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13794
+                "id_plantio": 16029
             },
             "F04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13792
+                "id_plantio": 16030
             },
             "F05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13793
+                "id_plantio": 16031
             },
             "F06": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13795
+                "id_plantio": 16032
             },
             "F07": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13796
+                "id_plantio": 16033
             },
             "F08": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13797
-            }
-        },
-        "Projeto Fazendinha": {
-            "B01a": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
-                "finalizado_colheita": false,
-                "id_plantio": 15591
-            },
-            "B02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
-                "finalizado_colheita": false,
-                "id_plantio": 15589
-            },
-            "C05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
-                "finalizado_colheita": false,
-                "id_plantio": 15590
+                "id_plantio": 16034
             }
         },
         "Projeto Jacaré": {
             "14": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 89109",
                 "finalizado_colheita": false,
-                "id_plantio": 13593
+                "id_plantio": 15882
+            },
+            "14a": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 16774
+            },
+            "14b": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 16790
             },
             "15": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 89109",
                 "finalizado_colheita": false,
-                "id_plantio": 13594
+                "id_plantio": 15883
+            },
+            "15a": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 16762
             },
             "16": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
                 "finalizado_colheita": false,
-                "id_plantio": 13595
+                "id_plantio": 15885
             },
             "17": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
                 "finalizado_colheita": false,
-                "id_plantio": 13596
+                "id_plantio": 15884
             },
             "18": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
                 "finalizado_colheita": false,
-                "id_plantio": 13598
+                "id_plantio": 15886
             },
             "19": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
                 "finalizado_colheita": false,
-                "id_plantio": 13597
-            },
-            "20": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
-                "finalizado_colheita": false,
-                "id_plantio": 13599
-            },
-            "A01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
-                "finalizado_colheita": false,
-                "id_plantio": 13600
-            },
-            "A01a": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
-                "finalizado_colheita": false,
-                "id_plantio": 15631
+                "id_plantio": 15887
             },
             "A02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13601
+                "id_plantio": 15857
             },
             "A03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13602
+                "id_plantio": 15858
             },
             "A04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja ANsc 84 141",
                 "finalizado_colheita": false,
-                "id_plantio": 13603
+                "id_plantio": 15862
             },
             "A05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja ANsc 84 141",
                 "finalizado_colheita": false,
-                "id_plantio": 13605
+                "id_plantio": 15863
             },
             "A06": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja ANsc 84 141",
                 "finalizado_colheita": false,
-                "id_plantio": 13604
+                "id_plantio": 15864
             },
             "A07": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 80111",
                 "finalizado_colheita": false,
-                "id_plantio": 13606
+                "id_plantio": 15865
             },
             "A08": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 80111",
                 "finalizado_colheita": false,
-                "id_plantio": 13607
+                "id_plantio": 15866
             },
             "A09": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 89109",
                 "finalizado_colheita": false,
-                "id_plantio": 13608
+                "id_plantio": 15867
             },
             "A10": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 89109",
                 "finalizado_colheita": false,
-                "id_plantio": 13609
+                "id_plantio": 15868
             },
             "A11": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 89109",
                 "finalizado_colheita": false,
-                "id_plantio": 13610
+                "id_plantio": 15869
             },
             "A12": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 89109",
                 "finalizado_colheita": false,
-                "id_plantio": 13611
+                "id_plantio": 15870
             },
             "A13": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 89109",
                 "finalizado_colheita": false,
-                "id_plantio": 13612
-            },
-            "B01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
-                "finalizado_colheita": false,
-                "id_plantio": 13614
+                "id_plantio": 15871
             },
             "B02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13613
+                "id_plantio": 15860
             },
             "B03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13615
+                "id_plantio": 15861
             },
             "B04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 89109",
                 "finalizado_colheita": false,
-                "id_plantio": 13616
+                "id_plantio": 15872
             },
             "B05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 89109",
                 "finalizado_colheita": false,
-                "id_plantio": 13618
+                "id_plantio": 15873
             },
             "B06": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 89109",
                 "finalizado_colheita": false,
-                "id_plantio": 13617
+                "id_plantio": 15874
             },
             "B07": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 89109",
                 "finalizado_colheita": false,
-                "id_plantio": 13620
+                "id_plantio": 15875
             },
             "B08": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 89109",
                 "finalizado_colheita": false,
-                "id_plantio": 13619
+                "id_plantio": 15876
             },
             "B09": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 89109",
                 "finalizado_colheita": false,
-                "id_plantio": 13624
+                "id_plantio": 15877
             },
             "B10": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 89109",
                 "finalizado_colheita": false,
-                "id_plantio": 13622
+                "id_plantio": 15878
+            },
+            "B10a": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16791
             },
             "B11": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 89109",
                 "finalizado_colheita": false,
-                "id_plantio": 13621
+                "id_plantio": 15879
             },
             "B12": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 89109",
                 "finalizado_colheita": false,
-                "id_plantio": 13625
+                "id_plantio": 15881
             },
             "B12a": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
                 "finalizado_colheita": false,
-                "id_plantio": 14182
+                "id_plantio": 16781
             },
             "B13": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 89109",
                 "finalizado_colheita": false,
-                "id_plantio": 13623
+                "id_plantio": 15880
+            },
+            "B13a": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 16764
+            },
+            "B13b": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 16766
             }
         },
         "Projeto Lago Verde": {
             "A01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13978
+                "id_plantio": 16057
             },
             "A02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13979
+                "id_plantio": 16058
             },
             "A03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13980
+                "id_plantio": 16059
             },
             "A04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13981
+                "id_plantio": 16060
             },
             "A05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13982
+                "id_plantio": 16061
             },
             "A06": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13983
+                "id_plantio": 16062
             },
             "A07": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13984
+                "id_plantio": 16063
             },
             "A08": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13985
+                "id_plantio": 16064
             },
             "A09": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13986
+                "id_plantio": 16065
             },
             "A10": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13987
+                "id_plantio": 16066
             },
             "A11": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13988
+                "id_plantio": 16067
             },
             "A12": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13989
+                "id_plantio": 16068
             },
             "A13": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13990
+                "id_plantio": 16069
             },
             "A14": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 13991
+                "id_plantio": 16090
             },
             "A15": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 13992
+                "id_plantio": 16091
             },
             "A16": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13993
+                "id_plantio": 16092
             },
             "A17": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13994
+                "id_plantio": 16070
             },
             "A18": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13995
+                "id_plantio": 16071
             },
             "A19": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 14028
+                "id_plantio": 16072
             },
             "A20": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13996
+                "id_plantio": 16073
             },
             "A21": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13997
+                "id_plantio": 16074
             },
             "A22": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13998
+                "id_plantio": 16088
             },
             "A23": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13999
+                "id_plantio": 16089
             },
             "A24": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 14000
+                "id_plantio": 16085
             },
             "A25": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 14001
+                "id_plantio": 16086
             },
             "A26": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 14002
+                "id_plantio": 16087
             },
             "A27": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 14026
+                "id_plantio": 16075
             },
             "A28": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Arroz 9005",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 14003
+                "id_plantio": 16076
             },
             "A29": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Arroz 9005",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 14004
+                "id_plantio": 16082
             },
             "A30": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Arroz 9005",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 14005
+                "id_plantio": 16083
             },
             "A31": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Arroz 9005",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 14006
+                "id_plantio": 16084
             },
             "B01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 14007
+                "id_plantio": 16093
             },
             "B02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 14008
+                "id_plantio": 16094
             },
             "B02a": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 14033
+                "id_plantio": 16753
             },
             "B03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 14009
+                "id_plantio": 16095
             },
             "B04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Arroz 9005",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 14010
+                "id_plantio": 16096
             },
             "B05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Arroz 9005",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 14011
+                "id_plantio": 16097
             },
             "B06": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Arroz 9005",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 14012
+                "id_plantio": 16101
             },
             "B07": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Arroz 9005",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 14013
+                "id_plantio": 16098
             },
             "B08": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Arroz 9005",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 14014
+                "id_plantio": 16099
             },
             "B09": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Arroz 9005",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 14015
+                "id_plantio": 16100
             },
             "B10": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "A706",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 14016
+                "id_plantio": 16077
             },
             "B10a": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Arroz 9005",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 14031
-            },
-            "B10b": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Arroz 9005",
-                "finalizado_colheita": false,
-                "id_plantio": 15630
+                "id_plantio": 16754
             },
             "B11": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Arroz 9005",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 14017
+                "id_plantio": 16079
             },
             "B12": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Arroz 9005",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 14018
+                "id_plantio": 16755
             },
             "B13": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Arroz 9005",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 14019
-            },
-            "C01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
-                "finalizado_colheita": false,
-                "id_plantio": 14020
-            },
-            "C01a": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
-                "finalizado_colheita": false,
-                "id_plantio": 15593
-            },
-            "C01b": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
-                "finalizado_colheita": false,
-                "id_plantio": 15621
-            },
-            "C01d": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
-                "finalizado_colheita": false,
-                "id_plantio": 15622
-            },
-            "C02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
-                "finalizado_colheita": false,
-                "id_plantio": 14021
-            },
-            "E01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
-                "finalizado_colheita": false,
-                "id_plantio": 14023
-            },
-            "E02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
-                "finalizado_colheita": false,
-                "id_plantio": 15592
-            },
-            "F": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
-                "finalizado_colheita": false,
-                "id_plantio": 14024
+                "id_plantio": 16078
             }
         },
         "Projeto Safira": {
             "A01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13872
+                "id_plantio": 15817
+            },
+            "A01r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16780
             },
             "A02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13867
+                "id_plantio": 15818
+            },
+            "A02r": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16779
             },
             "B01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13870
+                "id_plantio": 15819
             },
             "B02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13869
+                "id_plantio": 15820
             },
             "C01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13834
+                "id_plantio": 15821
             },
             "C02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13835
+                "id_plantio": 15822
             },
             "D01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13839
+                "id_plantio": 15823
             },
             "D02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13838
+                "id_plantio": 15824
             },
             "E01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 13865
-            },
-            "E02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
-                "finalizado_colheita": false,
-                "id_plantio": 13842
+                "id_plantio": 15825
             },
             "F01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13843
-            },
-            "F02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
-                "finalizado_colheita": false,
-                "id_plantio": 13844
-            },
-            "F02a": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
-                "finalizado_colheita": false,
-                "id_plantio": 15626
+                "id_plantio": 15827
             },
             "G01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13849
-            },
-            "G01a": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
-                "finalizado_colheita": false,
-                "id_plantio": 15620
-            },
-            "G02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
-                "finalizado_colheita": false,
-                "id_plantio": 13852
+                "id_plantio": 15829
             },
             "H01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13863
-            },
-            "H01a": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
-                "finalizado_colheita": false,
-                "id_plantio": 15613
-            },
-            "H02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
-                "finalizado_colheita": false,
-                "id_plantio": 13856
+                "id_plantio": 15831
             }
         },
         "Projeto Santa Maria": {
             "A01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja SDC 25",
                 "finalizado_colheita": false,
-                "id_plantio": 13956
+                "id_plantio": 16035
             },
             "A02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja SDC 25",
                 "finalizado_colheita": false,
-                "id_plantio": 13957
-            },
-            "A02a": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
-                "finalizado_colheita": false,
-                "id_plantio": 15624
+                "id_plantio": 16036
             },
             "A03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13958
+                "id_plantio": 16037
             },
             "A04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13959
+                "id_plantio": 16038
             },
             "A05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Comp 192",
                 "finalizado_colheita": false,
-                "id_plantio": 13960
+                "id_plantio": 16039
             },
             "A05a": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 15618
+                "id_plantio": 16757
             },
             "A06": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Comp 192",
                 "finalizado_colheita": false,
-                "id_plantio": 13961
+                "id_plantio": 16040
+            },
+            "A06a": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
+                "finalizado_colheita": false,
+                "id_plantio": 16756
             },
             "A07": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13962
+                "id_plantio": 16041
+            },
+            "A07a": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Comp 192",
+                "finalizado_colheita": false,
+                "id_plantio": 16752
             },
             "A08": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13963
+                "id_plantio": 16042
             },
             "B11": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13964
+                "id_plantio": 16043
             },
             "B12": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13965
+                "id_plantio": 16044
             },
             "B13": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13966
+                "id_plantio": 16045
             },
             "B14": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13967
+                "id_plantio": 16046
             },
             "B21": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13968
+                "id_plantio": 16047
             },
             "B22": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13969
+                "id_plantio": 16048
+            },
+            "B22a": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
+                "finalizado_colheita": false,
+                "id_plantio": 16751
             },
             "B23": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13970
-            },
-            "B23a": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
-                "finalizado_colheita": false,
-                "id_plantio": 15619
+                "id_plantio": 16049
             },
             "B24": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13971
+                "id_plantio": 16050
             },
             "B25": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13972
+                "id_plantio": 16051
             },
             "B31": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13973
+                "id_plantio": 16052
             },
             "B32": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Comp 192",
                 "finalizado_colheita": false,
-                "id_plantio": 13974
+                "id_plantio": 16053
             },
             "B33": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Comp 192",
                 "finalizado_colheita": false,
-                "id_plantio": 13975
+                "id_plantio": 16054
+            },
+            "B33a": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja SDC 25",
+                "finalizado_colheita": false,
+                "id_plantio": 16760
+            },
+            "B33b": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
+                "finalizado_colheita": false,
+                "id_plantio": 16761
             },
             "C01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13976
+                "id_plantio": 16055
             },
             "C02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13977
+                "id_plantio": 16056
+            },
+            "C02a": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
+                "finalizado_colheita": false,
+                "id_plantio": 16759
             }
         },
         "Projeto Tucano": {
             "A02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83011 RR",
                 "finalizado_colheita": false,
-                "id_plantio": 13627
+                "id_plantio": 15926
             },
             "A03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83011 RR",
                 "finalizado_colheita": false,
-                "id_plantio": 13626
+                "id_plantio": 15927
             },
             "A04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83011 RR",
                 "finalizado_colheita": false,
-                "id_plantio": 13628
+                "id_plantio": 15928
             },
             "A05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83011 RR",
                 "finalizado_colheita": false,
-                "id_plantio": 13630
+                "id_plantio": 15929
             },
             "A06": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83011 RR",
                 "finalizado_colheita": false,
-                "id_plantio": 13629
+                "id_plantio": 15930
             },
             "A08": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83011 RR",
                 "finalizado_colheita": false,
-                "id_plantio": 13632
+                "id_plantio": 15938
             },
             "A09": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83011 RR",
                 "finalizado_colheita": false,
-                "id_plantio": 13633
+                "id_plantio": 15939
             },
             "A10": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83011 RR",
                 "finalizado_colheita": false,
-                "id_plantio": 13634
+                "id_plantio": 15931
             },
             "A11": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 79029 RR",
                 "finalizado_colheita": false,
-                "id_plantio": 13635
+                "id_plantio": 15932
+            },
+            "A11a": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16723
             },
             "A19": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 79029 RR",
                 "finalizado_colheita": false,
-                "id_plantio": 13640
+                "id_plantio": 15940
+            },
+            "A19a": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16729
             },
             "A20": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 79029 RR",
                 "finalizado_colheita": false,
-                "id_plantio": 13641
+                "id_plantio": 15941
+            },
+            "A20a": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 16731
             },
             "A21": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 79029 RR",
                 "finalizado_colheita": false,
-                "id_plantio": 13642
+                "id_plantio": 15942
             },
             "B01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83011 RR",
                 "finalizado_colheita": false,
-                "id_plantio": 13643
+                "id_plantio": 15943
             },
             "B02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83011 RR",
                 "finalizado_colheita": false,
-                "id_plantio": 13644
+                "id_plantio": 15944
             },
             "B03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83011 RR",
                 "finalizado_colheita": false,
-                "id_plantio": 13646
+                "id_plantio": 15945
             },
             "B04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83011 RR",
                 "finalizado_colheita": false,
-                "id_plantio": 13645
+                "id_plantio": 15933
             },
             "B05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83011 RR",
                 "finalizado_colheita": false,
-                "id_plantio": 13647
+                "id_plantio": 15934
             },
             "B06": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
                 "finalizado_colheita": false,
-                "id_plantio": 13648
+                "id_plantio": 15935
             },
             "B07": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
                 "finalizado_colheita": false,
-                "id_plantio": 13649
+                "id_plantio": 15950
             },
             "B09": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
                 "finalizado_colheita": false,
-                "id_plantio": 13650
+                "id_plantio": 15951
             },
             "B10": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 79029 RR",
                 "finalizado_colheita": false,
-                "id_plantio": 13651
+                "id_plantio": 15946
             },
             "B11": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
                 "finalizado_colheita": false,
-                "id_plantio": 13653
+                "id_plantio": 15936
             },
             "B12": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 79029 RR",
                 "finalizado_colheita": false,
-                "id_plantio": 13652
+                "id_plantio": 15947
             },
             "B13": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
                 "finalizado_colheita": false,
-                "id_plantio": 13654
+                "id_plantio": 15937
             },
             "B14": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 79029 RR",
                 "finalizado_colheita": false,
-                "id_plantio": 13655
+                "id_plantio": 15948
             },
             "B15": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 79029 RR",
                 "finalizado_colheita": false,
-                "id_plantio": 13656
+                "id_plantio": 15949
             },
             "B16": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 79029 RR",
                 "finalizado_colheita": false,
-                "id_plantio": 13657
+                "id_plantio": 15952
             },
             "B17": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "424",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 79029 RR",
                 "finalizado_colheita": false,
-                "id_plantio": 13658
+                "id_plantio": 15953
             }
         },
         "Projeto Tuiuiu": {
             "A01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13716
+                "id_plantio": 15889
             },
             "A02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13661
+                "id_plantio": 15890
             },
             "A03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13662
+                "id_plantio": 15891
             },
             "A04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13660
+                "id_plantio": 15895
             },
             "A05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13663
+                "id_plantio": 15894
             },
             "A06": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13664
-            },
-            "A07": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
-                "finalizado_colheita": false,
-                "id_plantio": 13665
+                "id_plantio": 15892
             },
             "A08": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13666
+                "id_plantio": 15896
             },
             "A09": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13668
+                "id_plantio": 15897
             },
             "A10": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13667
+                "id_plantio": 15898
             },
             "B01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13691
+                "id_plantio": 15920
             },
             "B02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13692
+                "id_plantio": 15921
             },
             "B03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13717
+                "id_plantio": 15925
             },
             "B04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13693
+                "id_plantio": 15922
             },
             "B05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13694
+                "id_plantio": 15923
             },
             "B06": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13695
+                "id_plantio": 15924
             },
             "C01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13697
+                "id_plantio": 15913
             },
             "C02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13696
+                "id_plantio": 15914
             },
             "C03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13699
+                "id_plantio": 15915
             },
             "C04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13700
+                "id_plantio": 15916
             },
             "C05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13698
+                "id_plantio": 15917
             },
             "C06": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13701
+                "id_plantio": 15918
             },
             "C07": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13702
+                "id_plantio": 15919
             },
             "D01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13703
+                "id_plantio": 15906
             },
             "D02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13704
+                "id_plantio": 15907
             },
             "D03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13706
+                "id_plantio": 15908
             },
             "D04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13705
+                "id_plantio": 15909
             },
             "D05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13718
+                "id_plantio": 15912
             },
             "D06": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13707
+                "id_plantio": 15910
             },
             "D07": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "502",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13708
+                "id_plantio": 15911
             },
             "E01": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13709
+                "id_plantio": 15899
             },
             "E02": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 13710
+                "id_plantio": 15900
             },
             "E03": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13711
+                "id_plantio": 15901
             },
             "E04": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13712
+                "id_plantio": 15902
             },
             "E05": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13714
+                "id_plantio": 15903
             },
             "E06": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13713
+                "id_plantio": 15904
             },
             "E07": {
-                "safra": "2024/2025",
-                "ciclo": 3,
-                "cultura": "Arroz",
-                "variedade": "Pampeira",
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Feijão",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 13715
+                "id_plantio": 15905
             }
         }
     }
