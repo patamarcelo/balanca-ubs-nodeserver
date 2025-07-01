@@ -316,6 +316,7 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 		const apNumber = data.code
 		const idAp = data.id
 		const farmName = data.plantations[0].plantation.farm_name
+		const farmId = data.plantations[0].plantation.farm.id
 		const cultura = data.plantations[0].plantation.culture_name
 		const safra = data.plantations[0].plantation.harvest_name
 		const ciclo = data.plantations[0].plantation.cycle
@@ -377,6 +378,7 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 			ciclo,
 			safraCicloOrder,
 			farmName,
+			farmId,
 			cultura,
 			dateAp,
 			endDateAp,
