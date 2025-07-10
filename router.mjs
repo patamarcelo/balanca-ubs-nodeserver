@@ -315,6 +315,12 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 		})
 		.toArray();
 	// const results = dataFetch
+
+	const getUnitFormat = {
+		'l_ha': 'L/Ha',
+		'kg_ha': "Kg/Ha",
+		"un_ha": 'Un/Ha'
+	}
 	const formatedArr = results.map((data) => {
 		const operation = data.inputs.filter((input) => input.input.input_type_name === 'Operação')
 		const apNumber = data.code
@@ -335,6 +341,7 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 				type: input.input.input_type_name,
 				quantidadeSolicitada: input.sought_quantity,
 				doseSolicitada: input.sought_dosage_value,
+				unit: getUnitFormat[input.input.dosage_unit] || '',
 				colorChip
 			})
 		})
