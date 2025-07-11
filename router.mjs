@@ -40,6 +40,10 @@ const fillColor = (solicitado, aplicado) => {
 
 const colorDict = [
 	{
+		tipo: "Acaricida",
+		color: "rgba(221,129,83)",
+	},
+	{
 		tipo: "Inseticida",
 		color: "rgb(218,78,75)"
 	},
