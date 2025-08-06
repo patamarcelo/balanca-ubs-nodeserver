@@ -330,6 +330,83 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 }
 );
 
+router.post("/resend-to-protheus", isAuth, async (req, res) => {
+	const dataId = await req.body.id;
+	const docRef = doc(db, TABLES_FIREBASE.truckmove, dataId);
+	const docSend = await getDoc(docRef);
+	let responseToSend = docSend.data();
+
+	let updates = {};
+	console.log('reenviando dados para o protheus: ', responseToSend)
+	if (responseToSend?.filialPro && responseToSend?.codTicketPro) {
+		try {
+			const httpsAgent = new https.Agent({
+				rejectUnauthorized: false,
+			});
+			var requestOptions = {
+				method: "POST",
+				headers: {
+					Accept: "application/json",
+					"Content-Type": "application/json",
+					Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
+					"Access-Control-Allow-Origin": "*"
+				},
+				body: JSON.stringify(responseToSend),
+				redirect: "follow",
+				agent: httpsAgent,
+			};
+
+			const repsonseFromProtheus = await fetch(
+				"https://api.diamanteagricola.com.br:8089/rest/TICKETAPI/attTicket/",
+				requestOptions
+			);
+			const dataFrom = await repsonseFromProtheus.json()
+			console.log("resposta do Protheus", repsonseFromProtheus.status)
+			console.log('resposta do Protheus', dataFrom)
+			if (repsonseFromProtheus.status !== 201) {
+				console.log('Erro ao salvar os dados no Protheus, ')
+				return res.status(500).json({ error: "Erro ao enviar dados para o Protheus" });
+			}
+
+			if (repsonseFromProtheus.status === 201) {
+				const { peso_tara, peso_bruto } = dataFrom
+				if (peso_tara && peso_tara > 0) {
+					console.log('pesoTara from Protheus: ', peso_tara)
+					updates.tara = peso_tara
+				}
+				if (peso_bruto && peso_bruto > 0) {
+					console.log('pesoBruto from Protheus: ', peso_bruto)
+					updates.pesoBruto = peso_bruto
+				}
+				if (peso_bruto > 0 && peso_tara > 0) {
+					const liquido = peso_bruto - peso_tara
+					updates.liquido = liquido
+					if (!docSendData.saida) {
+						console.log('sem saída informada : ', docSendData)
+						updates.saida = new Date()
+					}
+				}
+
+				// Se houver atualizações, salva no Firestore
+				if (Object.keys(updates).length > 0) {
+					await updateDoc(docRef, updates);
+					console.log("Dados atualizados com sucesso no Firestore:", updates);
+				}
+				return res.status(200).json({
+					message: "Dados reenviados com sucesso",
+					updates,
+					protheusResponse: dataFrom,
+				});
+			}
+		} catch (error) {
+			console.log("Erro ao enviar os dados para o protheus", error);
+			return res.status(500).json({ error: "Erro interno ao reenviar dados" });
+		}
+	} else {
+		return res.status(400).json({ error: "FilialPro ou codTicketPro não encontrados" });
+	}
+});
+
 router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 	console.log('Editando o documento pela nova opção do sistema, direto para o protheus')
 	const dataId = await req.body.id;
