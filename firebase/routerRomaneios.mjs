@@ -334,79 +334,239 @@ router.post("/resend-to-protheus", isAuth, async (req, res) => {
 	const dataId = await req.body.id;
 	const docRef = doc(db, TABLES_FIREBASE.truckmove, dataId);
 	const docSend = await getDoc(docRef);
-	let responseToSend = docSend.data();
+	let docSendData = docSend.data();
 
-	let updates = {};
-	console.log('reenviando dados para o protheus: ', responseToSend)
-	if (responseToSend?.filialPro && responseToSend?.codTicketPro) {
-		try {
-			const httpsAgent = new https.Agent({
-				rejectUnauthorized: false,
+	const newParcelas = docSendData?.parcelasObjFiltered?.map((data) => data.parcela)
+	const variedadeCultura = docSendData?.parcelasObjFiltered.map((data) => {
+		return ({
+			cultura: data.cultura,
+			variedade: data.variedade
+		})
+	})
+
+	docSendData = {
+		...docSendData,
+		parcelasNovas: newParcelas,
+		mercadoria: variedadeCultura[0]?.variedade,
+		cultura: variedadeCultura[0]?.cultura
+	}
+
+	const updateParcelasNovas = {
+		parcelasNovas: newParcelas,
+		mercadoria: variedadeCultura[0]?.variedade,
+		cultura: variedadeCultura[0]?.cultura
+	}
+
+	const resultParcelasNovas = await updateDoc(docRef, updateParcelasNovas);
+	console.log("reult of update parcelasNovas: ", resultParcelasNovas);
+
+	if (docSendData.parcelasNovas.length === 1) {
+		const parcela = docSendData.parcelasNovas[0]
+		const newParcelaObj = dados[docSendData.fazendaOrigem][parcela]
+		const newAdjust = { ...newParcelaObj, parcela }
+		docSendData = { ...docSendData, parcelasObjFiltered: [newAdjust] }
+	} else {
+		console.log('mais de 1 parcela')
+		// logic here to handle when update value of obj comparing two arrays and if it is diff
+		const one = docSendData.parcelasNovas
+		console.log('Parcelas Novas: ', one)
+		const two = docSendData.parcelasObjFiltered.map((data) => data.parcela)
+		console.log('parcelasObjFilt', two)
+
+		// // Sort both arrays
+		const sortedOne = one.sort((a, b) => a.localeCompare(b))
+		const sortedTwo = two.sort((a, b) => a.localeCompare(b));
+
+		// // Convert arrays to strings and compare them
+		const stringOne = sortedOne.toString();
+		const stringTwo = sortedTwo.toString();
+
+		// // Check if the strings are equal
+		const areEqual = stringOne === stringTwo;
+
+		if (areEqual) {
+			console.log("The arrays contain the same elements.");
+		} else {
+			console.log("Os Arrays Enviados não são iguais, vamos corrigilos...");
+			const newArrayToAdd = []
+			one.forEach(element => {
+				const getCorretObjs = dados[docSendData.fazendaOrigem][element]
+				newArrayToAdd.push({ ...getCorretObjs, parcela: element })
 			});
-			var requestOptions = {
-				method: "POST",
-				headers: {
-					Accept: "application/json",
-					"Content-Type": "application/json",
-					Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
-					"Access-Control-Allow-Origin": "*"
-				},
-				body: JSON.stringify(responseToSend),
-				redirect: "follow",
-				agent: httpsAgent,
+			docSendData = { ...docSendData, parcelasObjFiltered: newArrayToAdd }
+		}
+	}
+
+
+
+
+
+	let formatSendData = {};
+	if (!docSendData) {
+		res.status(404).send(`Documento não encontrando: ${dataId}`);
+	} else {
+		const getData = docSendData.parcelasObjFiltered;
+		console.log("getData: ", getData);
+		const exist = data => data.caixas === undefined || data.caixas === 0;
+		const som0eUndefined = getData.some(exist);
+
+		if (som0eUndefined) {
+			const totalLen = getData.length;
+			let adjustPercent;
+
+			if (totalLen % 2 !== 0 && getData.length > 1) {
+				let total = 0;
+				adjustPercent = getData.map((data, i) => {
+					let parcePercent;
+					if (i + 1 === getData.length) {
+						console.log("último elemento", data);
+						parcePercent = Number(100 - total);
+					} else {
+						parcePercent = (1 / totalLen * 100).toFixed(0);
+						total += Number(parcePercent);
+					}
+					return { ...data, parcePercent: Number(parcePercent) };
+				});
+
+				formatSendData = {
+					...docSendData,
+					parcelasObjFiltered: adjustPercent
+				};
+
+
+				const updates = {
+					parcelasObjFiltered: adjustPercent
+				};
+				const result = await updateDoc(docRef, updates);
+
+			} else {
+				const adjustPercent = getData.map((data, i) => {
+					const parcePercent = (1 / totalLen * 100).toFixed(0);
+
+					return { ...data, parcePercent: Number(parcePercent) };
+				});
+
+				formatSendData = {
+					...docSendData,
+					parcelasObjFiltered: adjustPercent
+				};
+
+				console.log("adjust PercentHereL ", adjustPercent);
+				const updates = {
+					parcelasObjFiltered: adjustPercent
+				};
+				const result = await updateDoc(docRef, updates);
+			}
+		} else {
+			const totalCaixas = getData.reduce((acc, curr) => acc + curr.caixas, 0);
+			const adjustPercent = getData.map(data => {
+				const parcePercent = (data.caixas / totalCaixas * 100).toFixed(2);
+				return { ...data, parcePercent: Number(parcePercent) };
+			});
+			console.log("adjust PercentHereL ", adjustPercent);
+			formatSendData = {
+				...docSendData,
+				parcelasObjFiltered: adjustPercent
 			};
 
-			const repsonseFromProtheus = await fetch(
-				"https://api.diamanteagricola.com.br:8089/rest/TICKETAPI/attTicket/",
-				requestOptions
-			);
-			const dataFrom = await repsonseFromProtheus.json()
-			console.log("resposta do Protheus", repsonseFromProtheus.status)
-			console.log('resposta do Protheus', dataFrom)
-			if (repsonseFromProtheus.status !== 201) {
-				console.log('Erro ao salvar os dados no Protheus, ')
-				return res.status(500).json({ error: "Erro ao enviar dados para o Protheus" });
-			}
+		}
 
-			if (repsonseFromProtheus.status === 201) {
-				const { peso_tara, peso_bruto } = dataFrom
-				if (peso_tara && peso_tara > 0) {
-					console.log('pesoTara from Protheus: ', peso_tara)
-					updates.tara = peso_tara
+		const response = {
+			...formatSendData,
+			id: dataId
+		};
+
+
+		// AJUSTE PARA INCLUIR ID DO PROJETO
+		const getProjName = (data) => data.nome === response.fazendaOrigem
+		const newData = projetos.find(getProjName)
+		if (newData) {
+			console.log('Projeto Origem : ', newData?.nome)
+			console.log('Projeto Origem id: ', newData?.id_d)
+			const updates = {
+				fazendaOrigemProtheusId: newData?.id_d
+			};
+
+			const result = await updateDoc(docRef, updates);
+			console.log("reult of Serverhandler: ", result);
+		}
+
+
+		// AJUSTE PARA REGULAR O NUMERO DO ROMANEIO
+		const responseToSend = {
+			...response,
+			fazendaOrigemProtheusId: newData?.id_d
+
+		};
+
+		//response OBJ TO SEND TO PROTHEUS
+		res.send(responseToSend).status(200);
+
+		console.log('Dados enviados ao Protheus: ', responseToSend)
+
+		let updates = {};
+		if (responseToSend?.filialPro && responseToSend?.codTicketPro) {
+			try {
+				const httpsAgent = new https.Agent({
+					rejectUnauthorized: false,
+				});
+				var requestOptions = {
+					method: "POST",
+					headers: {
+						Accept: "application/json",
+						"Content-Type": "application/json",
+						Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
+						"Access-Control-Allow-Origin": "*"
+					},
+					body: JSON.stringify(responseToSend),
+					redirect: "follow",
+					agent: httpsAgent,
+				};
+
+				const repsonseFromProtheus = await fetch(
+					"https://api.diamanteagricola.com.br:8089/rest/TICKETAPI/attTicket/",
+					requestOptions
+				);
+				const dataFrom = await repsonseFromProtheus.json()
+				console.log("resposta do Protheus", repsonseFromProtheus.status)
+				console.log('resposta do Protheus', dataFrom)
+				if (repsonseFromProtheus.status !== 201) {
+					console.log('Erro ao salvar os dados no Protheus, ')
+					return
 				}
-				if (peso_bruto && peso_bruto > 0) {
-					console.log('pesoBruto from Protheus: ', peso_bruto)
-					updates.pesoBruto = peso_bruto
-				}
-				if (peso_bruto > 0 && peso_tara > 0) {
-					const liquido = peso_bruto - peso_tara
-					updates.liquido = liquido
-					if (!docSendData.saida) {
-						console.log('sem saída informada : ', docSendData)
-						updates.saida = new Date()
+				if (repsonseFromProtheus.status === 201) {
+					const { peso_tara, peso_bruto } = dataFrom
+					if (peso_tara && peso_tara > 0) {
+						console.log('pesoTara from Protheus: ', peso_tara)
+						updates.tara = peso_tara
+					}
+					if (peso_bruto && peso_bruto > 0) {
+						console.log('pesoBruto from Protheus: ', peso_bruto)
+						updates.pesoBruto = peso_bruto
+					}
+					if (peso_bruto > 0 && peso_tara > 0) {
+						const liquido = peso_bruto - peso_tara
+						updates.liquido = liquido
+						if (!docSendData.saida) {
+							console.log('sem saída informada : ', docSendData)
+							updates.saida = new Date()
+						}
 					}
 				}
-
-				// Se houver atualizações, salva no Firestore
-				if (Object.keys(updates).length > 0) {
-					await updateDoc(docRef, updates);
-					console.log("Dados atualizados com sucesso no Firestore:", updates);
-				}
-				return res.status(200).json({
-					message: "Dados reenviados com sucesso",
-					updates,
-					protheusResponse: dataFrom,
-				});
+			} catch (error) {
+				console.log("Erro ao enviar os dados para o protheus", error);
 			}
-		} catch (error) {
-			console.log("Erro ao enviar os dados para o protheus", error);
-			return res.status(500).json({ error: "Erro interno ao reenviar dados" });
 		}
-	} else {
-		return res.status(400).json({ error: "FilialPro ou codTicketPro não encontrados" });
-	}
-});
 
+		if (response.codTicketPro) {
+			const forTicket = parseInt(response.codTicketPro);
+			updates.ticket = forTicket
+		}
+		const result = await updateDoc(docRef, updates);
+		console.log("reult of Serverhandler: ", result);
+	}
+}
+);
 router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 	console.log('Editando o documento pela nova opção do sistema, direto para o protheus')
 	const dataId = await req.body.id;
