@@ -278,7 +278,8 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 						Accept: "application/json",
 						"Content-Type": "application/json",
 						Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
-						"Access-Control-Allow-Origin": "*"
+						"Access-Control-Allow-Origin": "*",
+						"tenantid": "02"
 					},
 					body: JSON.stringify(responseToSend),
 					redirect: "follow",
@@ -516,7 +517,8 @@ router.post("/resend-to-protheus", isAuth, async (req, res) => {
 						Accept: "application/json",
 						"Content-Type": "application/json",
 						Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
-						"Access-Control-Allow-Origin": "*"
+						"Access-Control-Allow-Origin": "*",
+						"tenantid": "02"
 					},
 					body: JSON.stringify(responseToSend),
 					redirect: "follow",
@@ -730,7 +732,8 @@ router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 						Accept: "application/json",
 						"Content-Type": "application/json",
 						Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
-						"Access-Control-Allow-Origin": "*"
+						"Access-Control-Allow-Origin": "*",
+						"tenantid": "02"
 					},
 					body: JSON.stringify(responseToSend),
 					redirect: "follow",
@@ -806,7 +809,8 @@ router.get("/get-from-srd", isAuth, async (req, res) => {
 				Accept: "application/json",
 				"Content-Type": "application/json",
 				Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
-				"Access-Control-Allow-Origin": "*"
+				"Access-Control-Allow-Origin": "*",
+				"tenantid": "02"
 			},
 			redirect: "follow",
 			agent: httpsAgent,
@@ -844,7 +848,8 @@ router.get("/get-defensivos-from-srd", isAuth, async (req, res) => {
 				Accept: "application/json",
 				"Content-Type": "application/json",
 				Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
-				"Access-Control-Allow-Origin": "*"
+				"Access-Control-Allow-Origin": "*",
+				"tenantid": "02"
 			},
 			redirect: "follow",
 			agent: httpsAgent,
@@ -882,7 +887,8 @@ router.get("/get-open-pre-st-srd", isAuth, async (req, res) => {
 				Accept: "application/json",
 				"Content-Type": "application/json",
 				Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
-				"Access-Control-Allow-Origin": "*"
+				"Access-Control-Allow-Origin": "*",
+				"tenantid": "02"
 			},
 			redirect: "follow",
 			agent: httpsAgent,
