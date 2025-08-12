@@ -121,7 +121,9 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 
 
 
-	const lastOne = await getAndGenerateIdFirebase();
+	// const lastOne = await getAndGenerateIdFirebase();
+	const { beforeLastElement, lastElement } = await getAndGenerateIdFirebase(5, start);
+
 	// lastOne.forEach((e) => {
 	// 	console.log('últimos ROmaneios: ', e.relatorioColheita, e.syncDate.toDate().toLocaleTimeString())
 	// })
@@ -201,35 +203,61 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 			id: dataId
 		};
 
+		// let newNumber;
+		// // AJUSTE PARA REGULAR O NUMERO DO ROMANEIO
+		// console.log("response :", response.relatorioColheita);
+		// console.log("lastNumber :", lastOne.relatorioColheita);
+
+		// if (process.env.NODE_ENV === "production") {
+		// 	console.log('estamos na producao')
+		// 	if (
+		// 		Number(response.relatorioColheita) == Number(lastOne.relatorioColheita)
+		// 	) {
+		// 		console.log(
+		// 			"tudo certo, romaneio registrado corretamente com o número : ",
+		// 			response.relatorioColheita
+		// 		);
+		// 		newNumber = Number(response.relatorioColheita);
+		// 	} else {
+		// 		console.log("Gerando os últimos resultados de romaneios, para ajustar o número")
+		// 		const beforelastOne = await getAndGenerateIdFirebaseBeforeLast();
+		// 		const newNumberAdjust = Number(beforelastOne.relatorioColheita) + 1;
+		// 		console.log("novo número Ajustado", newNumberAdjust);
+		// 		const updates = {
+		// 			relatorioColheita: newNumberAdjust
+		// 		};
+		// 		const result = await updateDoc(docRef, updates);
+		// 		console.log('reult of Serverhandler: ', result)
+		// 		newNumber = newNumberAdjust;
+		// 	}
+		// } else {
+		// 	console.log('estamos na desenvolvimento')
+		// }
+
+		// Depois, ajuste do número do romaneio
+		console.log("response.relatorioColheita :", response.relatorioColheita);
+		console.log("lastElement.relatorioColheita :", lastElement?.relatorioColheita);
+
 		let newNumber;
-		// AJUSTE PARA REGULAR O NUMERO DO ROMANEIO
-		console.log("response :", response.relatorioColheita);
-		console.log("lastNumber :", lastOne.relatorioColheita);
 
 		if (process.env.NODE_ENV === "production") {
-			console.log('estamos na producao')
-			if (
-				Number(response.relatorioColheita) == Number(lastOne.relatorioColheita)
-			) {
-				console.log(
-					"tudo certo, romaneio registrado corretamente com o número : ",
-					response.relatorioColheita
-				);
+			if (Number(response.relatorioColheita) === Number(lastElement?.relatorioColheita)) {
+				console.log("Romaneio registrado corretamente com o número: ", response.relatorioColheita);
 				newNumber = Number(response.relatorioColheita);
 			} else {
-				console.log("Gerando os últimos resultados de romaneios, para ajustar o número")
-				const beforelastOne = await getAndGenerateIdFirebaseBeforeLast();
-				const newNumberAdjust = Number(beforelastOne.relatorioColheita) + 1;
-				console.log("novo número Ajustado", newNumberAdjust);
-				const updates = {
-					relatorioColheita: newNumberAdjust
-				};
+				console.log("Ajustando número do romaneio...");
+				const newNumberAdjust = beforeLastElement
+					? Number(beforeLastElement.relatorioColheita) + 1
+					: Number(lastElement?.relatorioColheita || 0) + 1;
+
+				const updates = { relatorioColheita: newNumberAdjust };
 				const result = await updateDoc(docRef, updates);
-				console.log('reult of Serverhandler: ', result)
+				console.log("Resultado do ajuste no banco: ", result);
+
 				newNumber = newNumberAdjust;
 			}
 		} else {
-			console.log('estamos na desenvolvimento')
+			console.log("Estamos em desenvolvimento, não ajustando número");
 		}
 
 
