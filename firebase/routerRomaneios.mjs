@@ -122,7 +122,7 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 
 
 	// const lastOne = await getAndGenerateIdFirebase();
-	const { beforeLastElement, lastElement } = await getAndGenerateIdFirebase(5, start);
+	const { beforeLastElement, lastElement } = await getAndGenerateIdFirebase(5);
 
 	// lastOne.forEach((e) => {
 	// 	console.log('últimos ROmaneios: ', e.relatorioColheita, e.syncDate.toDate().toLocaleTimeString())

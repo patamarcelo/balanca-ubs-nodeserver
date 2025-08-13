@@ -13,7 +13,7 @@ import {
 	db
 } from "./firebase.js";
 
-let start = new Date('2017-01-01');
+let start = new Date('2024-01-01');
 
 
 // export const getAndGenerateIdFirebase = async (quantity = 5) => {
@@ -50,7 +50,7 @@ let start = new Date('2017-01-01');
 // 	return lastElement;
 // };
 
-export const getAndGenerateIdFirebase = async (quantity = 5, start) => {
+export const getAndGenerateIdFirebase = async (quantity = 5) => {
 	const q = query(
 		collection(db, "truckmove"),
 		where("syncDate", "!=", null),
