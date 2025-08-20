@@ -592,8 +592,15 @@ router.post("/resend-to-protheus", isAuth, async (req, res) => {
 			const forTicket = parseInt(response.codTicketPro);
 			updates.ticket = forTicket
 		}
-		const result = await updateDoc(docRef, updates);
-		console.log("reult of Serverhandler: ", result);
+		await updateDoc(docRef, updates);
+
+		const updatedSnap = await getDoc(docRef);
+
+		if (updatedSnap.exists()) {
+			console.log("Updated data Serverhandler:", updatedSnap.data());
+		} else {
+			console.log("No such document Serverhandler!");
+		}
 	}
 }
 );
