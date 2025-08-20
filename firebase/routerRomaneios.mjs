@@ -353,8 +353,15 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 			const forTicket = parseInt(response.codTicketPro);
 			updates.ticket = forTicket
 		}
-		const result = await updateDoc(docRef, updates);
-		console.log("reult of Serverhandler: ", result);
+		await updateDoc(docRef, updates);
+
+		const result = await getDoc(docRef);
+
+		if (result.exists()) {
+			console.log("Updated data Serverhandler upload-romaneio:", result.data());
+		} else {
+			console.log("No such document Serverhandler  upload-romaneio!");
+		}
 	}
 }
 );
@@ -386,8 +393,16 @@ router.post("/resend-to-protheus", isAuth, async (req, res) => {
 		cultura: variedadeCultura[0]?.cultura
 	}
 
-	const resultParcelasNovas = await updateDoc(docRef, updateParcelasNovas);
-	console.log("reult of update parcelasNovas: ", resultParcelasNovas);
+
+	await updateDoc(docRef, updateParcelasNovas);
+
+	const resultParcelasNovas = await getDoc(docRef);
+
+	if (resultParcelasNovas.exists()) {
+		console.log("reult of update parcelasNovas:", resultParcelasNovas.data());
+	} else {
+		console.log("No such document of reult of update parcelasNovas!");
+	}
 
 	if (docSendData.parcelasNovas.length === 1) {
 		const parcela = docSendData.parcelasNovas[0]
