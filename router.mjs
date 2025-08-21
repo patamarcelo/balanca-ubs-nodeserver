@@ -196,20 +196,22 @@ router.get("/datadetail", async (req, res) => {
 		safra,
 		ciclo
 	} = req.query.safraCiclo;
+	console.log('safra request: ', safra)
 	let results = await collection
 		.find({
-			$or: [{
-				"plantations.plantation.harvest_name": safra_2024_2025
-			},
+			$or: [
+			// 	{
+			// 	"plantations.plantation.harvest_name": safra_2024_2025
+			// },
 			{
-				"plantations.plantation.harvest_name": safra_2025_2026
+				"plantations.plantation.harvest_name": safra
 			},
 			],
-			$and: [
-			{
-				"plantations.plantation.cycle": parseInt(ciclo)
-			}
-			]
+			// $and: [
+			// {
+			// 	"plantations.plantation.cycle": parseInt(ciclo)
+			// }
+			// ]
 			// $or: [{ status: "sought" }, { date: { $gte: "2023-07-17" } }]
 		}, {
 			projection: {
