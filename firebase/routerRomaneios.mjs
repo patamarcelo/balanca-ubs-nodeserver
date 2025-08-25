@@ -60,22 +60,22 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 	const newParcelas = docSendData?.parcelasObjFiltered?.map((data) => data.parcela)
 	const variedadeCultura = docSendData?.parcelasObjFiltered.map((data) => {
 		return ({
-			cultura: data.cultura,
-			variedade: data.variedade
+			cultura: data.cultura || null,
+			variedade: data.variedade || null
 		})
 	})
 
 	docSendData = {
 		...docSendData,
 		parcelasNovas: newParcelas,
-		mercadoria: variedadeCultura[0]?.variedade,
-		cultura: variedadeCultura[0]?.cultura
+		mercadoria: variedadeCultura[0]?.variedade || null,
+		cultura: variedadeCultura[0]?.cultura || null
 	}
 
 	const updateParcelasNovas = {
 		parcelasNovas: newParcelas,
-		mercadoria: variedadeCultura[0]?.variedade,
-		cultura: variedadeCultura[0]?.cultura
+		mercadoria: variedadeCultura[0]?.variedade || null,
+		cultura: variedadeCultura[0]?.cultura || null
 	}
 
 	const resultParcelasNovas = await updateDoc(docRef, updateParcelasNovas);
@@ -375,22 +375,22 @@ router.post("/resend-to-protheus", isAuth, async (req, res) => {
 	const newParcelas = docSendData?.parcelasObjFiltered?.map((data) => data.parcela)
 	const variedadeCultura = docSendData?.parcelasObjFiltered.map((data) => {
 		return ({
-			cultura: data.cultura,
-			variedade: data.variedade
+			cultura: data.cultura || null,
+			variedade: data.variedade || null
 		})
 	})
 
 	docSendData = {
 		...docSendData,
 		parcelasNovas: newParcelas,
-		mercadoria: variedadeCultura[0]?.variedade,
-		cultura: variedadeCultura[0]?.cultura
+		mercadoria: variedadeCultura[0]?.variedade || null,
+		cultura: variedadeCultura[0]?.cultura || null
 	}
 
 	const updateParcelasNovas = {
 		parcelasNovas: newParcelas,
-		mercadoria: variedadeCultura[0]?.variedade,
-		cultura: variedadeCultura[0]?.cultura
+		mercadoria: variedadeCultura[0]?.variedade || null,
+		cultura: variedadeCultura[0]?.cultura || null
 	}
 
 
