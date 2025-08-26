@@ -2156,7 +2156,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15838,
                 "plantio_descontinuado": false
             },
@@ -2374,7 +2374,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15964,
                 "plantio_descontinuado": false
             },
@@ -2940,7 +2940,7 @@ const parcelas = {
                 "safra": "2025/2026",
                 "ciclo": 1,
                 "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
                 "id_plantio": 16020,
                 "plantio_descontinuado": false
@@ -3004,7 +3004,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16027,
                 "plantio_descontinuado": false
             },
@@ -3013,7 +3013,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16028,
                 "plantio_descontinuado": false
             },
@@ -3022,7 +3022,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16029,
                 "plantio_descontinuado": false
             },
@@ -4591,7 +4591,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Caupi",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15896,
                 "plantio_descontinuado": false
             },
