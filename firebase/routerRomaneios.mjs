@@ -326,9 +326,9 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 					return
 				}
 				if (repsonseFromProtheus.status === 201) {
-					const { peso_tara, peso_bruto, porcentagem_umidade, porcentagem_impureza } = dataFrom
-					updates.umidade = porcentagem_umidade ?? ""
-					updates.impureza = porcentagem_impureza ?? ""
+					const { peso_tara, peso_bruto, porcentagem_umidade, porcentagem_impureza, porcentagemimpureza, porcentagemumidade } = dataFrom
+					updates.umidade = porcentagem_umidade ?? porcentagemumidade ?? ""
+					updates.impureza = porcentagem_impureza ?? porcentagemimpureza ?? ""
 					if (peso_tara && peso_tara > 0) {
 						console.log('pesoTara from Protheus: ', peso_tara)
 						updates.tara = peso_tara
@@ -582,9 +582,10 @@ router.post("/resend-to-protheus", isAuth, async (req, res) => {
 					return
 				}
 				if (repsonseFromProtheus.status === 201) {
-					const { peso_tara, peso_bruto, porcentagem_umidade, porcentagem_impureza } = dataFrom
-					updates.umidade = porcentagem_umidade ?? ""
-					updates.impureza = porcentagem_impureza ?? ""
+					const { peso_tara, peso_bruto, porcentagem_umidade, porcentagem_impureza, porcentagemimpureza, porcentagemumidade } = dataFrom
+					updates.umidade = porcentagem_umidade ?? porcentagemumidade ?? ""
+					updates.impureza = porcentagem_impureza ?? porcentagemimpureza ?? ""
+
 					if (peso_tara && peso_tara > 0) {
 						console.log('pesoTara from Protheus: ', peso_tara)
 						updates.tara = peso_tara
@@ -809,9 +810,10 @@ router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 					return
 				}
 				if (repsonseFromProtheus.status === 201) {
-					const { peso_tara, peso_bruto, porcentagem_umidade, porcentagem_impureza } = dataFrom
-					updates.umidade = porcentagem_umidade ?? ""
-					updates.impureza = porcentagem_impureza ?? ""
+					const { peso_tara, peso_bruto, porcentagem_umidade, porcentagem_impureza, porcentagemimpureza, porcentagemumidade } = dataFrom
+					updates.umidade = porcentagem_umidade ?? porcentagemumidade ?? ""
+					updates.impureza = porcentagem_impureza ?? porcentagemimpureza ?? ""
+
 					if (peso_tara && peso_tara > 0) {
 						console.log('pesoTara from Protheus: ', peso_tara)
 						updates.tara = peso_tara
@@ -866,7 +868,7 @@ router.get("/get-from-srd", isAuth, async (req, res) => {
 				"Content-Type": "application/json",
 				Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
 				"Access-Control-Allow-Origin": "*",
-				"tenantid": "02"
+				"tenantId": "02"
 			},
 			redirect: "follow",
 			agent: httpsAgent,
@@ -884,7 +886,7 @@ router.get("/get-from-srd", isAuth, async (req, res) => {
 		);
 		const dataFromP = await repsonseFromProtheus.json()
 		res.send(dataFromP).status(200)
-		console.log('Dados Coletados com sucesso')
+		console.log('Dados Coletados com sucesso', dataFromP)
 	} catch (error) {
 		console.log("Erro ao enviar os dados para o protheus", error);
 		res.send(error).status(400)
@@ -1077,8 +1079,15 @@ router.post("/update-romaneio-from-protheus", isAuth, async (req, res) => {
 		}
 
 		const updates = {
-			...((Number(data?.porcentagem_impureza)) > 0 && { impureza: data?.porcentagem_impureza }),
-			...((Number(data?.porcentagem_umidade)) > 0 && { umidade: data?.porcentagem_umidade }),
+			// ...((Number(data?.porcentagem_impureza)) > 0 && { impureza: data?.porcentagem_impureza }),
+			// ...((Number(data?.porcentagem_umidade)) > 0 && { umidade: data?.porcentagem_umidade }),
+
+			...((Number(data?.porcentagem_impureza ?? data?.porcentagemimpureza)) > 0 && {
+				impureza: data?.porcentagem_impureza ?? data?.porcentagemimpureza
+			}),
+			...((Number(data?.porcentagem_umidade ?? data?.porcentagemumidade)) > 0 && {
+				umidade: data?.porcentagem_umidade ?? data?.porcentagemumidade
+			}),
 			...(Number(pesoTara) > 0 && { tara: pesoTara }),
 			...(Number(pesoBruto) > 0 && { pesoBruto: pesoBruto }),
 			...(Number(pesoLiquido) > 0 && { liquido: pesoLiquido }),
