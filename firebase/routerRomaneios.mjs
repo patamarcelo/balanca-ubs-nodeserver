@@ -886,7 +886,7 @@ router.get("/get-from-srd", isAuth, async (req, res) => {
 		);
 		const dataFromP = await repsonseFromProtheus.json()
 		res.send(dataFromP).status(200)
-		console.log('Dados Coletados com sucesso', dataFromP)
+		console.log('Dados Coletados com sucesso do srd')
 	} catch (error) {
 		console.log("Erro ao enviar os dados para o protheus", error);
 		res.send(error).status(400)

@@ -23,7 +23,6 @@ app.use("/romaneios", romaneios);
 app.use('/users', users)
 
 app.get("/", async (req, res) => {
-	console.log('requisição da porta regular: ', req)
 	// const data = await axios(config)
 	// 	.then((resp) => resp.data)
 	// 	.catch((e) => e);
