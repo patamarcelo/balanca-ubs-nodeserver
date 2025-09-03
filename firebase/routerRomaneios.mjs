@@ -1050,6 +1050,7 @@ router.post("/update-romaneio-from-protheus", isAuth, async (req, res) => {
 		let pesoLiquido = "";
 		let saida = "";
 		let dataEntrada = false
+		let dataSaida = false
 		let newEntrada = ""
 
 		if (Number(oldDocData.pesoBruto) > 0) {
@@ -1059,8 +1060,10 @@ router.post("/update-romaneio-from-protheus", isAuth, async (req, res) => {
 			console.log('Novo Peso Bruto Atualizado')
 			pesoBruto = Number(data.pesoBruto);
 			if (Number(data.pesoBruto) > 0 && Number(data.pesoTara) === 0) {
-				dataEntrada = true
-				newEntrada = new Date()
+				if(!oldDocData.entrada){
+					dataEntrada = true
+					newEntrada = new Date()
+				}
 			}
 		}
 
@@ -1074,8 +1077,11 @@ router.post("/update-romaneio-from-protheus", isAuth, async (req, res) => {
 
 		if (Number(pesoTara) > 0 && Number(pesoBruto) > 0) {
 			pesoLiquido = pesoBruto - pesoTara;
-			saida = new Date();
-			console.log('Novo Peso Líquido e Data de saída atualizado')
+			if(!oldDocData.saida){
+				dataSaida = true
+				saida = new Date();
+				console.log('Novo Peso Líquido e Data de saída atualizado')
+			}
 		}
 
 		const updates = {
@@ -1091,7 +1097,7 @@ router.post("/update-romaneio-from-protheus", isAuth, async (req, res) => {
 			...(Number(pesoTara) > 0 && { tara: pesoTara }),
 			...(Number(pesoBruto) > 0 && { pesoBruto: pesoBruto }),
 			...(Number(pesoLiquido) > 0 && { liquido: pesoLiquido }),
-			...(Number(pesoLiquido) > 0 && { saida: saida }),
+			...(dataSaida === true && { saida: saida }),
 			...(dataEntrada === true && { entrada: newEntrada })
 		};
 
