@@ -327,8 +327,11 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 				}
 				if (repsonseFromProtheus.status === 201) {
 					const { peso_tara, peso_bruto, porcentagem_umidade, porcentagem_impureza, porcentagemimpureza, porcentagemumidade } = dataFrom
-					updates.umidade = porcentagem_umidade ?? porcentagemumidade ?? ""
-					updates.impureza = porcentagem_impureza ?? porcentagemimpureza ?? ""
+
+					if(porcentagem_umidade > 0 || porcentagemumidade > 0){
+						updates.umidade = porcentagem_umidade ?? porcentagemumidade ?? ""
+						updates.impureza = porcentagem_impureza ?? porcentagemimpureza ?? ""
+					}
 					if (peso_tara && peso_tara > 0) {
 						console.log('pesoTara from Protheus: ', peso_tara)
 						updates.tara = peso_tara
