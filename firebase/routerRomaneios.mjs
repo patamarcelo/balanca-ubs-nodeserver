@@ -1063,10 +1063,8 @@ router.post("/update-romaneio-from-protheus", isAuth, async (req, res) => {
 			console.log('Novo Peso Bruto Atualizado')
 			pesoBruto = Number(data.pesoBruto);
 			if (Number(data.pesoBruto) > 0 && Number(data.pesoTara) === 0) {
-				if(!oldDocData.entrada){
-					dataEntrada = true
-					newEntrada = new Date()
-				}
+				dataEntrada = true
+				newEntrada = new Date()
 			}
 		}
 
