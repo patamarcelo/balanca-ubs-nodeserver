@@ -4859,3 +4859,5 @@ const parcelas = {
         }
     }
 }
+
+export default parcelas
