@@ -467,7 +467,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16185,
                 "plantio_descontinuado": false
             },
@@ -485,7 +485,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16186,
                 "plantio_descontinuado": false
             },
@@ -494,7 +494,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16786,
                 "plantio_descontinuado": false
             },
@@ -503,7 +503,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16187,
                 "plantio_descontinuado": false
             },
@@ -539,7 +539,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Caupi",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16157,
                 "plantio_descontinuado": false
             },
@@ -548,7 +548,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Caupi",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16158,
                 "plantio_descontinuado": false
             },
@@ -575,7 +575,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Caupi",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16161,
                 "plantio_descontinuado": false
             },
@@ -593,7 +593,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Caupi",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16163,
                 "plantio_descontinuado": false
             },
@@ -755,7 +755,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Caupi",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16109,
                 "plantio_descontinuado": false
             },
@@ -773,7 +773,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16776,
                 "plantio_descontinuado": false
             },
@@ -782,7 +782,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16106,
                 "plantio_descontinuado": false
             },
@@ -791,7 +791,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Caupi",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16111,
                 "plantio_descontinuado": false
             },
@@ -800,7 +800,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16773,
                 "plantio_descontinuado": false
             },
@@ -809,7 +809,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16107,
                 "plantio_descontinuado": false
             },
@@ -827,7 +827,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16177,
                 "plantio_descontinuado": false
             },
@@ -836,7 +836,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16792,
                 "plantio_descontinuado": false
             },
@@ -845,7 +845,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16800,
                 "plantio_descontinuado": false
             }
@@ -910,7 +910,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "Soja 88022",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15793,
                 "plantio_descontinuado": false
             },
@@ -919,7 +919,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "Soja 88022",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15794,
                 "plantio_descontinuado": false
             },
@@ -928,7 +928,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "Soja 88022",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15796,
                 "plantio_descontinuado": false
             },
@@ -946,7 +946,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "Soja 88022",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15797,
                 "plantio_descontinuado": false
             },
@@ -1137,7 +1137,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16736,
                 "plantio_descontinuado": false
             },
@@ -1146,7 +1146,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16772,
                 "plantio_descontinuado": false
             },
@@ -1164,7 +1164,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16737,
                 "plantio_descontinuado": false
             },
@@ -1182,7 +1182,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16738,
                 "plantio_descontinuado": false
             },
@@ -1326,7 +1326,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16740,
                 "plantio_descontinuado": false
             },
@@ -1488,7 +1488,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16749,
                 "plantio_descontinuado": false
             },
@@ -1713,7 +1713,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16787,
                 "plantio_descontinuado": false
             },
@@ -1731,7 +1731,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16788,
                 "plantio_descontinuado": false
             },
@@ -1983,7 +1983,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16777,
                 "plantio_descontinuado": false
             },
@@ -2037,7 +2037,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16765,
                 "plantio_descontinuado": false
             },
@@ -2046,7 +2046,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15726,
                 "plantio_descontinuado": false
             },
@@ -2055,7 +2055,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15727,
                 "plantio_descontinuado": false
             },
@@ -2064,7 +2064,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15728,
                 "plantio_descontinuado": false
             },
@@ -2082,7 +2082,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16778,
                 "plantio_descontinuado": false
             }
@@ -2102,7 +2102,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16802,
                 "plantio_descontinuado": false
             },
@@ -2165,7 +2165,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15839,
                 "plantio_descontinuado": false
             },
@@ -2174,7 +2174,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15840,
                 "plantio_descontinuado": false
             },
@@ -2273,7 +2273,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15851,
                 "plantio_descontinuado": false
             }
@@ -2383,7 +2383,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15965,
                 "plantio_descontinuado": false
             },
@@ -2527,7 +2527,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15981,
                 "plantio_descontinuado": false
             },
@@ -2536,7 +2536,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15982,
                 "plantio_descontinuado": false
             },
@@ -2545,7 +2545,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15983,
                 "plantio_descontinuado": false
             },
@@ -2554,7 +2554,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15984,
                 "plantio_descontinuado": false
             },
@@ -2652,7 +2652,7 @@ const parcelas = {
                 "safra": "2025/2026",
                 "ciclo": 1,
                 "cultura": "Feijão",
-                "variedade": "Mungo Verde",
+                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
                 "id_plantio": 15995,
                 "plantio_descontinuado": false
@@ -2662,7 +2662,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15996,
                 "plantio_descontinuado": false
             },
@@ -2671,7 +2671,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15997,
                 "plantio_descontinuado": false
             },
@@ -2797,7 +2797,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16011,
                 "plantio_descontinuado": false
             },
@@ -2806,7 +2806,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16012,
                 "plantio_descontinuado": false
             },
@@ -2824,7 +2824,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16793,
                 "plantio_descontinuado": false
             },
@@ -2842,7 +2842,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16794,
                 "plantio_descontinuado": false
             },
@@ -2860,7 +2860,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16795,
                 "plantio_descontinuado": false
             },
@@ -2878,7 +2878,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16796,
                 "plantio_descontinuado": false
             },
@@ -2896,7 +2896,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16797,
                 "plantio_descontinuado": false
             },
@@ -2914,7 +2914,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16798,
                 "plantio_descontinuado": false
             },
@@ -2932,7 +2932,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16799,
                 "plantio_descontinuado": false
             },
@@ -2941,7 +2941,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16020,
                 "plantio_descontinuado": false
             },
@@ -2997,7 +2997,7 @@ const parcelas = {
                 "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
                 "id_plantio": 16026,
-                "plantio_descontinuado": false
+                "plantio_descontinuado": true
             },
             "F01": {
                 "safra": "2025/2026",
@@ -3031,7 +3031,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16030,
                 "plantio_descontinuado": false
             },
@@ -3040,7 +3040,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16031,
                 "plantio_descontinuado": false
             },
@@ -3049,7 +3049,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16032,
                 "plantio_descontinuado": false
             },
@@ -3058,7 +3058,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16033,
                 "plantio_descontinuado": false
             },
@@ -3067,7 +3067,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16034,
                 "plantio_descontinuado": false
             }
@@ -3082,6 +3082,24 @@ const parcelas = {
                 "id_plantio": 15882,
                 "plantio_descontinuado": false
             },
+            "14a": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 16774,
+                "plantio_descontinuado": false
+            },
+            "14b": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 16790,
+                "plantio_descontinuado": false
+            },
             "15": {
                 "safra": "2025/2026",
                 "ciclo": 1,
@@ -3089,6 +3107,15 @@ const parcelas = {
                 "variedade": "Soja 89109",
                 "finalizado_colheita": false,
                 "id_plantio": 15883,
+                "plantio_descontinuado": false
+            },
+            "15a": {
+                "safra": "2025/2026",
+                "ciclo": 1,
+                "cultura": "Soja",
+                "variedade": "Soja 83022",
+                "finalizado_colheita": false,
+                "id_plantio": 16762,
                 "plantio_descontinuado": false
             },
             "16": {
@@ -3132,35 +3159,8 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15888,
-                "plantio_descontinuado": false
-            },
-            "14a": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 16774,
-                "plantio_descontinuado": false
-            },
-            "14b": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 16790,
-                "plantio_descontinuado": false
-            },
-            "15a": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 16762,
                 "plantio_descontinuado": false
             },
             "A02": {
@@ -3213,7 +3213,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "Soja 80111",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15865,
                 "plantio_descontinuado": false
             },
@@ -3222,7 +3222,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "Soja 80111",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15866,
                 "plantio_descontinuado": false
             },
@@ -3375,7 +3375,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16801,
                 "plantio_descontinuado": false
             },
@@ -3503,7 +3503,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Caupi",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16065,
                 "plantio_descontinuado": false
             },
@@ -3512,7 +3512,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Caupi",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16066,
                 "plantio_descontinuado": false
             },
@@ -3548,7 +3548,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "FTR 4262 IPRO",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16090,
                 "plantio_descontinuado": false
             },
@@ -3557,7 +3557,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "FTR 4262 IPRO",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16091,
                 "plantio_descontinuado": false
             },
@@ -3566,7 +3566,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16092,
                 "plantio_descontinuado": false
             },
@@ -3593,7 +3593,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Caupi",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16072,
                 "plantio_descontinuado": false
             },
@@ -3620,7 +3620,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16088,
                 "plantio_descontinuado": false
             },
@@ -3629,7 +3629,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16089,
                 "plantio_descontinuado": false
             },
@@ -3638,7 +3638,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "FTR 4262 IPRO",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16085,
                 "plantio_descontinuado": false
             },
@@ -3647,7 +3647,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "FTR 4262 IPRO",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16086,
                 "plantio_descontinuado": false
             },
@@ -3656,7 +3656,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "FTR 4262 IPRO",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16087,
                 "plantio_descontinuado": false
             },
@@ -3683,7 +3683,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "FTR 4262 IPRO",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16082,
                 "plantio_descontinuado": false
             },
@@ -3692,7 +3692,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "FTR 4262 IPRO",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16083,
                 "plantio_descontinuado": false
             },
@@ -3701,7 +3701,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "FTR 4262 IPRO",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16084,
                 "plantio_descontinuado": false
             },
@@ -3728,7 +3728,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16753,
                 "plantio_descontinuado": false
             },
@@ -3746,7 +3746,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16096,
                 "plantio_descontinuado": false
             },
@@ -3755,7 +3755,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16097,
                 "plantio_descontinuado": false
             },
@@ -3764,7 +3764,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "FTR 4262 IPRO",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16101,
                 "plantio_descontinuado": false
             },
@@ -3782,7 +3782,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16099,
                 "plantio_descontinuado": false
             },
@@ -3791,7 +3791,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "FTR 4262 IPRO",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16100,
                 "plantio_descontinuado": false
             },
@@ -3809,7 +3809,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "FTR 4262 IPRO",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16754,
                 "plantio_descontinuado": false
             },
@@ -3818,7 +3818,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Caupi",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16079,
                 "plantio_descontinuado": false
             },
@@ -3827,7 +3827,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Caupi",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16755,
                 "plantio_descontinuado": false
             },
@@ -3836,7 +3836,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Caupi",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16078,
                 "plantio_descontinuado": false
             }
@@ -3919,7 +3919,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15821,
                 "plantio_descontinuado": false
             },
@@ -3928,7 +3928,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15822,
                 "plantio_descontinuado": false
             },
@@ -3937,7 +3937,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15823,
                 "plantio_descontinuado": false
             },
@@ -3946,7 +3946,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15824,
                 "plantio_descontinuado": false
             },
@@ -3955,7 +3955,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15825,
                 "plantio_descontinuado": false
             },
@@ -3993,7 +3993,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "Soja SDC 25",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16035,
                 "plantio_descontinuado": false
             },
@@ -4002,7 +4002,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "Soja SDC 25",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16036,
                 "plantio_descontinuado": false
             },
@@ -4029,7 +4029,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "Comp 192",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16039,
                 "plantio_descontinuado": false
             },
@@ -4047,7 +4047,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "Comp 192",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16040,
                 "plantio_descontinuado": false
             },
@@ -4065,7 +4065,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Caupi",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16041,
                 "plantio_descontinuado": false
             },
@@ -4074,7 +4074,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "Comp 192",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16752,
                 "plantio_descontinuado": false
             },
@@ -4164,7 +4164,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Caupi",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16050,
                 "plantio_descontinuado": false
             },
@@ -4173,7 +4173,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Caupi",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16051,
                 "plantio_descontinuado": false
             },
@@ -4191,7 +4191,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "Comp 192",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16053,
                 "plantio_descontinuado": false
             },
@@ -4200,7 +4200,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "Comp 192",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16054,
                 "plantio_descontinuado": false
             },
@@ -4209,7 +4209,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Soja",
                 "variedade": "Soja SDC 25",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 16760,
                 "plantio_descontinuado": false
             },
@@ -4807,7 +4807,7 @@ const parcelas = {
                 "ciclo": 1,
                 "cultura": "Feijão",
                 "variedade": "Caupi",
-                "finalizado_colheita": false,
+                "finalizado_colheita": true,
                 "id_plantio": 15900,
                 "plantio_descontinuado": false
             },
@@ -4854,10 +4854,8 @@ const parcelas = {
                 "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
                 "id_plantio": 15905,
-                "plantio_descontinuado": false
+                "plantio_descontinuado": true
             }
         }
     }
 }
-
-export default parcelas
