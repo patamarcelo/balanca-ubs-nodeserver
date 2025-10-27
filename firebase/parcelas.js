@@ -1,91 +1,66 @@
 const parcelas = {
     "msg": "Consulta realizada com sucesso!!",
-    "total_return": 497,
+    "total_return": 306,
     "resumo_safra": [
         {
             "talhao__fazenda__nome": "Projeto Benção de Deus",
+            "variedade__cultura__cultura": "Soja",
+            "area_total": 1073.76
+        },
+        {
+            "talhao__fazenda__nome": "Projeto Benção de Deus",
             "variedade__cultura__cultura": "Feijão",
-            "area_total": 2540.15
+            "area_total": 1195.95
         },
         {
             "talhao__fazenda__nome": "Projeto Cacíque",
-            "variedade__cultura__cultura": "Soja",
-            "area_total": 455.1
+            "variedade__cultura__cultura": "Feijão",
+            "area_total": 460.98
         },
         {
             "talhao__fazenda__nome": "Projeto Campo Guapo",
             "variedade__cultura__cultura": "Feijão",
-            "area_total": 2318.02
-        },
-        {
-            "talhao__fazenda__nome": "Projeto Campo Guapo",
-            "variedade__cultura__cultura": "Soja",
-            "area_total": 832.54
-        },
-        {
-            "talhao__fazenda__nome": "Projeto Capivara",
-            "variedade__cultura__cultura": "Feijão",
-            "area_total": 263.87
-        },
-        {
-            "talhao__fazenda__nome": "Projeto Capivara",
-            "variedade__cultura__cultura": "Soja",
-            "area_total": 437.18
+            "area_total": 368.39
         },
         {
             "talhao__fazenda__nome": "Projeto Cervo",
             "variedade__cultura__cultura": "Feijão",
-            "area_total": 1666.17
+            "area_total": 389.78
+        },
+        {
+            "talhao__fazenda__nome": "Projeto Eldorado",
+            "variedade__cultura__cultura": "Feijão",
+            "area_total": 466.54
         },
         {
             "talhao__fazenda__nome": "Projeto Jacaré",
             "variedade__cultura__cultura": "Feijão",
-            "area_total": 192.39
-        },
-        {
-            "talhao__fazenda__nome": "Projeto Jacaré",
-            "variedade__cultura__cultura": "Soja",
-            "area_total": 1243.17
+            "area_total": 1334.33
         },
         {
             "talhao__fazenda__nome": "Projeto Lago Verde",
             "variedade__cultura__cultura": "Feijão",
-            "area_total": 680.71
+            "area_total": 916.59
         },
         {
-            "talhao__fazenda__nome": "Projeto Lago Verde",
+            "talhao__fazenda__nome": "Projeto Ouro Verde",
             "variedade__cultura__cultura": "Soja",
-            "area_total": 157.54
+            "area_total": 477.39
         },
         {
             "talhao__fazenda__nome": "Projeto Safira",
             "variedade__cultura__cultura": "Feijão",
-            "area_total": 779.15
-        },
-        {
-            "talhao__fazenda__nome": "Projeto Santa Maria",
-            "variedade__cultura__cultura": "Feijão",
-            "area_total": 461.72
-        },
-        {
-            "talhao__fazenda__nome": "Projeto Santa Maria",
-            "variedade__cultura__cultura": "Soja",
-            "area_total": 224.51
+            "area_total": 718.61
         },
         {
             "talhao__fazenda__nome": "Projeto Tucano",
             "variedade__cultura__cultura": "Feijão",
-            "area_total": 29.64
-        },
-        {
-            "talhao__fazenda__nome": "Projeto Tucano",
-            "variedade__cultura__cultura": "Soja",
-            "area_total": 508.43
+            "area_total": 474.27
         },
         {
             "talhao__fazenda__nome": "Projeto Tuiuiu",
-            "variedade__cultura__cultura": "Feijão",
-            "area_total": 655.47
+            "variedade__cultura__cultura": "Soja",
+            "area_total": 612.21
         }
     ],
     "fazenda_grupo_projetos": [
@@ -305,7 +280,7 @@ const parcelas = {
         {
             "talhao__fazenda__nome": "Projeto Benção de Deus",
             "talhao__fazenda__fazenda__nome": "Fazenda Benção de Deus",
-            "count": 54
+            "count": 43
         },
         {
             "talhao__fazenda__nome": "Projeto Cacíque",
@@ -315,4549 +290,2829 @@ const parcelas = {
         {
             "talhao__fazenda__nome": "Projeto Campo Guapo",
             "talhao__fazenda__fazenda__nome": "Fazenda Campo Guapo",
-            "count": 107
-        },
-        {
-            "talhao__fazenda__nome": "Projeto Capivara",
-            "talhao__fazenda__fazenda__nome": "Fazenda Diamante",
-            "count": 21
+            "count": 11
         },
         {
             "talhao__fazenda__nome": "Projeto Cervo",
             "talhao__fazenda__fazenda__nome": "Fazenda Diamante",
-            "count": 88
+            "count": 21
+        },
+        {
+            "talhao__fazenda__nome": "Projeto Eldorado",
+            "talhao__fazenda__fazenda__nome": "Fazenda Eldorado",
+            "count": 35
         },
         {
             "talhao__fazenda__nome": "Projeto Jacaré",
             "talhao__fazenda__fazenda__nome": "Fazenda Diamante",
-            "count": 39
+            "count": 30
         },
         {
             "talhao__fazenda__nome": "Projeto Lago Verde",
             "talhao__fazenda__fazenda__nome": "Fazenda Lago Verde",
-            "count": 46
+            "count": 44
+        },
+        {
+            "talhao__fazenda__nome": "Projeto Ouro Verde",
+            "talhao__fazenda__fazenda__nome": "Parcerias",
+            "count": 24
         },
         {
             "talhao__fazenda__nome": "Projeto Safira",
             "talhao__fazenda__fazenda__nome": "Fazenda Campo Guapo",
-            "count": 16
-        },
-        {
-            "talhao__fazenda__nome": "Projeto Santa Maria",
-            "talhao__fazenda__fazenda__nome": "Fazenda Santa Maria",
-            "count": 29
+            "count": 9
         },
         {
             "talhao__fazenda__nome": "Projeto Tucano",
             "talhao__fazenda__fazenda__nome": "Fazenda Diamante",
-            "count": 31
+            "count": 26
         },
         {
             "talhao__fazenda__nome": "Projeto Tuiuiu",
             "talhao__fazenda__fazenda__nome": "Fazenda Diamante",
-            "count": 36
+            "count": 33
         }
     ],
     "Area Total dos Talhoes Plantados": {
-        "area_colheita__sum": 13445.76
+        "area_colheita__sum": 8488.8
     },
     "dados": {
         "Projeto Benção de Deus": {
-            "A01": {
+            "A08": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16181,
-                "plantio_descontinuado": true
-            },
-            "A01b": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 16767,
-                "plantio_descontinuado": true
-            },
-            "A02": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16182,
+                "id_plantio": 17628,
                 "plantio_descontinuado": false
             },
-            "A02b": {
+            "A09": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16768,
-                "plantio_descontinuado": true
+                "id_plantio": 17629,
+                "plantio_descontinuado": false
             },
-            "A02r": {
+            "A10": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16782,
+                "id_plantio": 17630,
                 "plantio_descontinuado": false
             },
-            "A03": {
+            "A11": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16184,
-                "plantio_descontinuado": false
-            },
-            "A03b": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16769,
-                "plantio_descontinuado": true
+                "id_plantio": 17631,
+                "plantio_descontinuado": false
             },
-            "A03r": {
+            "A12": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16783,
+                "id_plantio": 17632,
                 "plantio_descontinuado": false
             },
-            "A04": {
+            "A13": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16183,
-                "plantio_descontinuado": false
-            },
-            "A04b": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16770,
-                "plantio_descontinuado": true
-            },
-            "A04r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 16784,
-                "plantio_descontinuado": false
-            },
-            "B01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16185,
-                "plantio_descontinuado": false
-            },
-            "B01b": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 16771,
-                "plantio_descontinuado": true
-            },
-            "B02": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16186,
-                "plantio_descontinuado": false
-            },
-            "B02r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16786,
-                "plantio_descontinuado": false
-            },
-            "B03": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16187,
-                "plantio_descontinuado": false
-            },
-            "B26": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 16141,
-                "plantio_descontinuado": false
-            },
-            "B28": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 16119,
-                "plantio_descontinuado": false
-            },
-            "B29": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 16120,
+                "id_plantio": 17633,
                 "plantio_descontinuado": false
             },
             "C01": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": true,
-                "id_plantio": 16157,
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17636,
                 "plantio_descontinuado": false
             },
             "C02": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": true,
-                "id_plantio": 16158,
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17672,
                 "plantio_descontinuado": false
             },
             "C03": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16159,
+                "id_plantio": 17673,
                 "plantio_descontinuado": false
             },
             "C04": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16160,
+                "id_plantio": 17674,
                 "plantio_descontinuado": false
             },
             "C05": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": true,
-                "id_plantio": 16161,
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17675,
                 "plantio_descontinuado": false
             },
             "C06": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16162,
+                "id_plantio": 17637,
                 "plantio_descontinuado": false
             },
             "C07": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": true,
-                "id_plantio": 16163,
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17676,
                 "plantio_descontinuado": false
             },
             "C08": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16164,
+                "id_plantio": 17677,
                 "plantio_descontinuado": false
             },
             "C09": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16165,
+                "id_plantio": 17678,
                 "plantio_descontinuado": false
             },
             "C10": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16166,
+                "id_plantio": 17679,
                 "plantio_descontinuado": false
             },
             "C11": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16167,
+                "id_plantio": 17680,
                 "plantio_descontinuado": false
             },
             "C12": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16168,
+                "id_plantio": 17681,
                 "plantio_descontinuado": false
             },
             "C13": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16169,
+                "id_plantio": 17682,
                 "plantio_descontinuado": false
             },
             "C14": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16170,
+                "id_plantio": 17683,
                 "plantio_descontinuado": false
             },
             "C15": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16117,
+                "id_plantio": 17684,
                 "plantio_descontinuado": false
             },
             "C16": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16116,
+                "id_plantio": 17685,
                 "plantio_descontinuado": false
             },
             "C17": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16171,
+                "id_plantio": 17686,
                 "plantio_descontinuado": false
             },
             "C18": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16172,
+                "id_plantio": 17687,
                 "plantio_descontinuado": false
             },
             "C19": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16115,
+                "id_plantio": 17688,
                 "plantio_descontinuado": false
             },
             "C20": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16118,
-                "plantio_descontinuado": false
-            },
-            "C21": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 16114,
+                "id_plantio": 17689,
                 "plantio_descontinuado": false
             },
             "D01": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16105,
+                "id_plantio": 17693,
                 "plantio_descontinuado": false
             },
             "D02": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16112,
+                "id_plantio": 17691,
                 "plantio_descontinuado": false
             },
             "D03": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16113,
+                "id_plantio": 17692,
                 "plantio_descontinuado": false
             },
             "D04": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": true,
-                "id_plantio": 16109,
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17694,
                 "plantio_descontinuado": false
             },
             "D05": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16110,
+                "id_plantio": 17423,
                 "plantio_descontinuado": false
             },
             "D05a": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16776,
+                "finalizado_colheita": false,
+                "id_plantio": 17958,
                 "plantio_descontinuado": false
             },
             "D06": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16106,
+                "finalizado_colheita": false,
+                "id_plantio": 17422,
                 "plantio_descontinuado": false
             },
             "D07": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": true,
-                "id_plantio": 16111,
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17421,
                 "plantio_descontinuado": false
             },
             "D07a": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16773,
+                "finalizado_colheita": false,
+                "id_plantio": 17953,
                 "plantio_descontinuado": false
             },
             "D10": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16107,
+                "finalizado_colheita": false,
+                "id_plantio": 17424,
+                "plantio_descontinuado": false
+            },
+            "D10a": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17425,
                 "plantio_descontinuado": false
             },
             "E01": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16176,
+                "id_plantio": 17220,
                 "plantio_descontinuado": false
             },
             "E02": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16177,
+                "finalizado_colheita": false,
+                "id_plantio": 17219,
                 "plantio_descontinuado": false
             },
             "E02a": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16792,
+                "finalizado_colheita": false,
+                "id_plantio": 17956,
                 "plantio_descontinuado": false
             },
-            "E02b": {
+            "E03": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16800,
+                "finalizado_colheita": false,
+                "id_plantio": 17221,
+                "plantio_descontinuado": false
+            },
+            "E04": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17222,
+                "plantio_descontinuado": false
+            },
+            "E04a": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17223,
                 "plantio_descontinuado": false
             }
         },
         "Projeto Cacíque": {
             "A01": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15787,
+                "id_plantio": 17226,
                 "plantio_descontinuado": false
             },
             "A02": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15788,
+                "id_plantio": 17227,
                 "plantio_descontinuado": false
             },
             "A03": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15789,
+                "id_plantio": 17228,
                 "plantio_descontinuado": false
             },
             "A04": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15790,
+                "id_plantio": 17229,
                 "plantio_descontinuado": false
             },
             "A05": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15791,
+                "id_plantio": 17230,
                 "plantio_descontinuado": false
             },
             "A06": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15792,
+                "id_plantio": 17231,
                 "plantio_descontinuado": false
             },
             "A07": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": true,
-                "id_plantio": 15793,
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17232,
                 "plantio_descontinuado": false
             },
             "A08": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": true,
-                "id_plantio": 15794,
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17233,
                 "plantio_descontinuado": false
             },
             "A09": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": true,
-                "id_plantio": 15796,
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17234,
                 "plantio_descontinuado": false
             },
             "A10": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15795,
+                "id_plantio": 17235,
                 "plantio_descontinuado": false
             },
             "A11": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": true,
-                "id_plantio": 15797,
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17236,
                 "plantio_descontinuado": false
             },
             "A12": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15798,
+                "id_plantio": 17237,
                 "plantio_descontinuado": false
             },
             "A13": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15799,
+                "id_plantio": 17238,
                 "plantio_descontinuado": false
             },
             "A14": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15800,
+                "id_plantio": 17240,
                 "plantio_descontinuado": false
             },
             "A15": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15801,
+                "id_plantio": 17239,
                 "plantio_descontinuado": false
             },
             "B01": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15802,
+                "id_plantio": 17241,
                 "plantio_descontinuado": false
             },
             "B02": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15803,
+                "id_plantio": 17242,
                 "plantio_descontinuado": false
             },
             "B03": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15804,
+                "id_plantio": 17243,
                 "plantio_descontinuado": false
             },
             "B04": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15805,
+                "id_plantio": 17244,
                 "plantio_descontinuado": false
             },
             "B05": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15806,
+                "id_plantio": 17245,
                 "plantio_descontinuado": false
             },
             "B06": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15807,
+                "id_plantio": 17246,
                 "plantio_descontinuado": false
             },
             "B07": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15808,
+                "id_plantio": 17247,
                 "plantio_descontinuado": false
             },
             "B08": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15809,
+                "id_plantio": 17248,
                 "plantio_descontinuado": false
             },
             "B09": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15810,
+                "id_plantio": 17249,
                 "plantio_descontinuado": false
             },
             "B10": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15812,
+                "id_plantio": 17250,
                 "plantio_descontinuado": false
             },
             "B11": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15811,
+                "id_plantio": 17251,
                 "plantio_descontinuado": false
             },
             "B12": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15813,
+                "id_plantio": 17252,
                 "plantio_descontinuado": false
             },
             "B13": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15814,
+                "id_plantio": 17253,
                 "plantio_descontinuado": false
             },
             "B14": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15815,
+                "id_plantio": 17254,
                 "plantio_descontinuado": false
             },
             "B15": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15816,
+                "id_plantio": 17255,
                 "plantio_descontinuado": false
             }
         },
         "Projeto Campo Guapo": {
-            "A01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 15732,
-                "plantio_descontinuado": true
-            },
-            "A01r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16736,
-                "plantio_descontinuado": false
-            },
-            "A01ra": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16772,
-                "plantio_descontinuado": false
-            },
-            "A02": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 15733,
-                "plantio_descontinuado": true
-            },
-            "A02r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16737,
-                "plantio_descontinuado": false
-            },
-            "A03": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 15735,
-                "plantio_descontinuado": true
-            },
-            "A03r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16738,
-                "plantio_descontinuado": false
-            },
-            "A04": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 15734,
-                "plantio_descontinuado": true
-            },
-            "A04r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 16739,
-                "plantio_descontinuado": false
-            },
-            "B01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 15642,
-                "plantio_descontinuado": false
-            },
-            "B02": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 15643,
-                "plantio_descontinuado": false
-            },
-            "B03": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 15644,
-                "plantio_descontinuado": false
-            },
-            "B04": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 15645,
-                "plantio_descontinuado": false
-            },
-            "B05": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15646,
-                "plantio_descontinuado": false
-            },
-            "B06": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15647,
-                "plantio_descontinuado": false
-            },
-            "C01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 15648,
-                "plantio_descontinuado": false
-            },
-            "C02": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 15649,
-                "plantio_descontinuado": false
-            },
-            "C03": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 15650,
-                "plantio_descontinuado": false
-            },
-            "C04": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 15651,
-                "plantio_descontinuado": false
-            },
-            "C05": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15653,
-                "plantio_descontinuado": false
-            },
-            "C06": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15652,
-                "plantio_descontinuado": false
-            },
-            "D01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 15736,
-                "plantio_descontinuado": true
-            },
-            "D01r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16740,
-                "plantio_descontinuado": false
-            },
-            "D02": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 15737,
-                "plantio_descontinuado": true
-            },
-            "D02r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 16741,
-                "plantio_descontinuado": true
-            },
-            "D03": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 15738,
-                "plantio_descontinuado": true
-            },
-            "D03r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 16742,
-                "plantio_descontinuado": true
-            },
-            "D04": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 15739,
-                "plantio_descontinuado": true
-            },
-            "D04r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 16743,
-                "plantio_descontinuado": true
-            },
-            "D05": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 15740,
-                "plantio_descontinuado": true
-            },
-            "D05r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 16744,
-                "plantio_descontinuado": true
-            },
-            "D06": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 15741,
-                "plantio_descontinuado": true
-            },
-            "D06r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 16745,
-                "plantio_descontinuado": true
-            },
-            "D07": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 15742,
-                "plantio_descontinuado": true
-            },
-            "D07r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 16746,
-                "plantio_descontinuado": true
-            },
-            "D08": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 15743,
-                "plantio_descontinuado": true
-            },
-            "D08r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 16747,
-                "plantio_descontinuado": true
-            },
-            "D09": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 15745,
-                "plantio_descontinuado": true
-            },
-            "D09r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 16748,
-                "plantio_descontinuado": true
-            },
-            "D10": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 15744,
-                "plantio_descontinuado": true
-            },
-            "D10r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16749,
-                "plantio_descontinuado": false
-            },
-            "E01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": false,
-                "id_plantio": 15667,
-                "plantio_descontinuado": false
-            },
-            "E02": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": false,
-                "id_plantio": 15668,
-                "plantio_descontinuado": false
-            },
-            "E03": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": false,
-                "id_plantio": 15669,
-                "plantio_descontinuado": false
-            },
-            "E04": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": false,
-                "id_plantio": 15670,
-                "plantio_descontinuado": false
-            },
-            "E05": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": false,
-                "id_plantio": 15671,
-                "plantio_descontinuado": false
-            },
-            "E06": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": false,
-                "id_plantio": 15672,
-                "plantio_descontinuado": false
-            },
-            "E07": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": false,
-                "id_plantio": 15673,
-                "plantio_descontinuado": false
-            },
-            "E08": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": false,
-                "id_plantio": 15674,
-                "plantio_descontinuado": false
-            },
-            "E09": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15675,
-                "plantio_descontinuado": true
-            },
-            "E09r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": false,
-                "id_plantio": 16735,
-                "plantio_descontinuado": false
-            },
-            "E10": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15676,
-                "plantio_descontinuado": true
-            },
-            "E10r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 16789,
-                "plantio_descontinuado": false
-            },
-            "F01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": false,
-                "id_plantio": 15654,
-                "plantio_descontinuado": false
-            },
-            "F02": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": false,
-                "id_plantio": 15655,
-                "plantio_descontinuado": false
-            },
-            "F03": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": false,
-                "id_plantio": 15656,
-                "plantio_descontinuado": false
-            },
-            "F04": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": false,
-                "id_plantio": 15657,
-                "plantio_descontinuado": false
-            },
-            "F05": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": false,
-                "id_plantio": 15658,
-                "plantio_descontinuado": false
-            },
-            "F06": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": false,
-                "id_plantio": 15659,
-                "plantio_descontinuado": false
-            },
-            "F07": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": false,
-                "id_plantio": 15660,
-                "plantio_descontinuado": false
-            },
-            "F08": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": false,
-                "id_plantio": 15661,
-                "plantio_descontinuado": false
-            },
-            "F09": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": false,
-                "id_plantio": 15662,
-                "plantio_descontinuado": false
-            },
-            "F10": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": false,
-                "id_plantio": 15664,
-                "plantio_descontinuado": false
-            },
-            "F11": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 88022",
-                "finalizado_colheita": false,
-                "id_plantio": 15663,
-                "plantio_descontinuado": false
-            },
             "F12": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15665,
-                "plantio_descontinuado": true
-            },
-            "F12r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16787,
+                "finalizado_colheita": false,
+                "id_plantio": 17599,
                 "plantio_descontinuado": false
             },
             "F13": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15666,
-                "plantio_descontinuado": true
-            },
-            "F13r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16788,
+                "finalizado_colheita": false,
+                "id_plantio": 17600,
                 "plantio_descontinuado": false
             },
             "G01": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": true,
-                "id_plantio": 15677,
-                "plantio_descontinuado": false
-            },
-            "G02": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15678,
-                "plantio_descontinuado": false
-            },
-            "G03": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 15679,
-                "plantio_descontinuado": false
-            },
-            "G04": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 15680,
-                "plantio_descontinuado": false
-            },
-            "G05": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 15681,
-                "plantio_descontinuado": false
-            },
-            "G06": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 15682,
-                "plantio_descontinuado": false
-            },
-            "G07": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 15683,
-                "plantio_descontinuado": false
-            },
-            "G08": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 15684,
+                "id_plantio": 17264,
                 "plantio_descontinuado": false
             },
             "H01": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": true,
-                "id_plantio": 15685,
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17261,
                 "plantio_descontinuado": false
             },
             "H02": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": true,
-                "id_plantio": 15686,
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17263,
                 "plantio_descontinuado": false
             },
             "H03": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": true,
-                "id_plantio": 15687,
-                "plantio_descontinuado": false
-            },
-            "H04": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15688,
-                "plantio_descontinuado": false
-            },
-            "H05": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 15689,
-                "plantio_descontinuado": false
-            },
-            "H06": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 15690,
-                "plantio_descontinuado": false
-            },
-            "H07": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 15691,
-                "plantio_descontinuado": false
-            },
-            "H08": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 15692,
-                "plantio_descontinuado": false
-            },
-            "H09": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 15693,
-                "plantio_descontinuado": false
-            },
-            "H10": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 15694,
-                "plantio_descontinuado": false
-            },
-            "H11": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15695,
-                "plantio_descontinuado": false
-            },
-            "H12": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15696,
-                "plantio_descontinuado": false
-            },
-            "H13": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15697,
-                "plantio_descontinuado": false
-            },
-            "H14": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15698,
-                "plantio_descontinuado": false
-            },
-            "H15": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15699,
-                "plantio_descontinuado": false
-            },
-            "H16": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15700,
+                "id_plantio": 17262,
                 "plantio_descontinuado": false
             },
             "I": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": true,
-                "id_plantio": 15701,
-                "plantio_descontinuado": false
-            },
-            "Ia": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15702,
-                "plantio_descontinuado": true
-            },
-            "Iar": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16750,
-                "plantio_descontinuado": false
-            },
-            "Iarb": {
-                "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16777,
-                "plantio_descontinuado": false
-            },
-            "J01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 15730,
-                "plantio_descontinuado": false
-            },
-            "J01a": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 16763,
-                "plantio_descontinuado": false
-            },
-            "J02": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15731,
-                "plantio_descontinuado": false
-            },
-            "J02a": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 16733,
-                "plantio_descontinuado": false
-            },
-            "J02b": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 16734,
-                "plantio_descontinuado": true
-            },
-            "J02br": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16765,
+                "id_plantio": 17265,
                 "plantio_descontinuado": false
             },
             "L01": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15726,
+                "finalizado_colheita": false,
+                "id_plantio": 17256,
                 "plantio_descontinuado": false
             },
             "L02": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15727,
+                "finalizado_colheita": false,
+                "id_plantio": 17257,
                 "plantio_descontinuado": false
             },
             "L03": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15728,
-                "plantio_descontinuado": false
-            },
-            "L04": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 15729,
+                "id_plantio": 17260,
                 "plantio_descontinuado": false
             },
             "L05": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16778,
-                "plantio_descontinuado": false
-            }
-        },
-        "Projeto Capivara": {
-            "A01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
                 "finalizado_colheita": false,
-                "id_plantio": 15852,
-                "plantio_descontinuado": false
-            },
-            "A01a": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16802,
-                "plantio_descontinuado": false
-            },
-            "B01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 15853,
-                "plantio_descontinuado": false
-            },
-            "C01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 15854,
-                "plantio_descontinuado": false
-            },
-            "D01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 15855,
-                "plantio_descontinuado": false
-            },
-            "E01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15836,
-                "plantio_descontinuado": false
-            },
-            "E02": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15837,
-                "plantio_descontinuado": false
-            },
-            "E03": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15838,
-                "plantio_descontinuado": false
-            },
-            "E04": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15839,
-                "plantio_descontinuado": false
-            },
-            "E05": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15840,
-                "plantio_descontinuado": false
-            },
-            "F01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15841,
-                "plantio_descontinuado": false
-            },
-            "F02": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15842,
-                "plantio_descontinuado": false
-            },
-            "F03": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15843,
-                "plantio_descontinuado": false
-            },
-            "F04": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15844,
-                "plantio_descontinuado": false
-            },
-            "F05": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15845,
-                "plantio_descontinuado": false
-            },
-            "F06": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15846,
-                "plantio_descontinuado": false
-            },
-            "F07": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15847,
-                "plantio_descontinuado": false
-            },
-            "F08": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15848,
-                "plantio_descontinuado": false
-            },
-            "F09": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15849,
-                "plantio_descontinuado": false
-            },
-            "F10": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15850,
-                "plantio_descontinuado": false
-            },
-            "F11": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15851,
+                "id_plantio": 17259,
                 "plantio_descontinuado": false
             }
         },
         "Projeto Cervo": {
-            "A01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15954,
-                "plantio_descontinuado": false
-            },
-            "A02": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15955,
-                "plantio_descontinuado": false
-            },
-            "A03": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15956,
-                "plantio_descontinuado": false
-            },
-            "A04": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15957,
-                "plantio_descontinuado": false
-            },
-            "A05": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15958,
-                "plantio_descontinuado": false
-            },
-            "A06": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15959,
-                "plantio_descontinuado": false
-            },
-            "A07": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 15960,
-                "plantio_descontinuado": false
-            },
-            "A08": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15961,
-                "plantio_descontinuado": false
-            },
-            "A09": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15962,
-                "plantio_descontinuado": false
-            },
-            "A10": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15963,
-                "plantio_descontinuado": false
-            },
-            "A11": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15964,
-                "plantio_descontinuado": false
-            },
-            "A12": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15965,
-                "plantio_descontinuado": false
-            },
-            "B01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15966,
-                "plantio_descontinuado": false
-            },
-            "B02": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15967,
-                "plantio_descontinuado": false
-            },
-            "B03": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15968,
-                "plantio_descontinuado": false
-            },
-            "B04": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15969,
-                "plantio_descontinuado": false
-            },
-            "B05": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15970,
-                "plantio_descontinuado": false
-            },
-            "B06": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15971,
-                "plantio_descontinuado": false
-            },
-            "B07": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15972,
-                "plantio_descontinuado": false
-            },
-            "B08": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15973,
-                "plantio_descontinuado": false
-            },
-            "B09": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15974,
-                "plantio_descontinuado": false
-            },
-            "B10": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15975,
-                "plantio_descontinuado": false
-            },
-            "B11": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15976,
-                "plantio_descontinuado": false
-            },
-            "B12": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15977,
-                "plantio_descontinuado": false
-            },
-            "B13": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15978,
-                "plantio_descontinuado": false
-            },
-            "B14": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15979,
-                "plantio_descontinuado": false
-            },
-            "B15": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15980,
-                "plantio_descontinuado": false
-            },
-            "B16": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15981,
-                "plantio_descontinuado": false
-            },
-            "B17": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15982,
-                "plantio_descontinuado": false
-            },
-            "B18": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15983,
-                "plantio_descontinuado": false
-            },
-            "B19": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15984,
-                "plantio_descontinuado": false
-            },
-            "B20": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 15985,
-                "plantio_descontinuado": false
-            },
-            "C01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15986,
-                "plantio_descontinuado": false
-            },
-            "C02": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15987,
-                "plantio_descontinuado": false
-            },
-            "C03": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15988,
-                "plantio_descontinuado": false
-            },
-            "C04": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15989,
-                "plantio_descontinuado": false
-            },
-            "C05": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15990,
-                "plantio_descontinuado": false
-            },
-            "C06": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15991,
-                "plantio_descontinuado": false
-            },
-            "C07": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15992,
-                "plantio_descontinuado": false
-            },
-            "C08": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15993,
-                "plantio_descontinuado": false
-            },
-            "C09": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15994,
-                "plantio_descontinuado": false
-            },
-            "C10": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15995,
-                "plantio_descontinuado": false
-            },
             "C11": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15996,
+                "finalizado_colheita": false,
+                "id_plantio": 17334,
                 "plantio_descontinuado": false
             },
             "C12": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15997,
-                "plantio_descontinuado": false
-            },
-            "D01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 15998,
-                "plantio_descontinuado": false
-            },
-            "D02": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15999,
-                "plantio_descontinuado": false
-            },
-            "D03": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16000,
-                "plantio_descontinuado": false
-            },
-            "D04": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16001,
-                "plantio_descontinuado": false
-            },
-            "D05": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16002,
-                "plantio_descontinuado": false
-            },
-            "D06": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16003,
-                "plantio_descontinuado": false
-            },
-            "D07": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16004,
-                "plantio_descontinuado": false
-            },
-            "D08": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16005,
-                "plantio_descontinuado": false
-            },
-            "D09": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16006,
-                "plantio_descontinuado": false
-            },
-            "D10": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16007,
-                "plantio_descontinuado": false
-            },
-            "D11": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16008,
-                "plantio_descontinuado": false
-            },
-            "D12": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16009,
-                "plantio_descontinuado": false
-            },
-            "D13": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16010,
+                "id_plantio": 17335,
                 "plantio_descontinuado": false
             },
             "D14": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16011,
+                "finalizado_colheita": false,
+                "id_plantio": 17337,
                 "plantio_descontinuado": false
             },
             "D15": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16012,
+                "finalizado_colheita": false,
+                "id_plantio": 17336,
                 "plantio_descontinuado": false
             },
             "E01": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16013,
-                "plantio_descontinuado": true
-            },
-            "E01r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16793,
+                "finalizado_colheita": false,
+                "id_plantio": 17338,
                 "plantio_descontinuado": false
             },
             "E02": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16014,
-                "plantio_descontinuado": true
-            },
-            "E02r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16794,
+                "finalizado_colheita": false,
+                "id_plantio": 17339,
                 "plantio_descontinuado": false
             },
             "E03": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16015,
-                "plantio_descontinuado": true
-            },
-            "E03r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16795,
+                "finalizado_colheita": false,
+                "id_plantio": 17340,
                 "plantio_descontinuado": false
             },
             "E04": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16016,
-                "plantio_descontinuado": true
-            },
-            "E04r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16796,
+                "finalizado_colheita": false,
+                "id_plantio": 17341,
                 "plantio_descontinuado": false
             },
             "E05": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16017,
-                "plantio_descontinuado": true
-            },
-            "E05r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16797,
+                "finalizado_colheita": false,
+                "id_plantio": 17342,
                 "plantio_descontinuado": false
             },
             "E06": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16018,
-                "plantio_descontinuado": true
-            },
-            "E06r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16798,
+                "finalizado_colheita": false,
+                "id_plantio": 17343,
                 "plantio_descontinuado": false
             },
             "E07": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16019,
-                "plantio_descontinuado": true
-            },
-            "E07r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16799,
+                "finalizado_colheita": false,
+                "id_plantio": 17344,
                 "plantio_descontinuado": false
             },
             "E08": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16020,
-                "plantio_descontinuado": false
-            },
-            "E09": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
                 "finalizado_colheita": false,
-                "id_plantio": 16021,
-                "plantio_descontinuado": false
-            },
-            "E10": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16022,
-                "plantio_descontinuado": false
-            },
-            "E11": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16023,
-                "plantio_descontinuado": false
-            },
-            "E12": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16024,
-                "plantio_descontinuado": false
-            },
-            "E13": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16025,
+                "id_plantio": 17546,
                 "plantio_descontinuado": false
             },
             "E14": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16026,
-                "plantio_descontinuado": true
+                "id_plantio": 17345,
+                "plantio_descontinuado": false
             },
             "F01": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16027,
+                "finalizado_colheita": false,
+                "id_plantio": 17346,
                 "plantio_descontinuado": false
             },
             "F02": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16028,
+                "finalizado_colheita": false,
+                "id_plantio": 17347,
                 "plantio_descontinuado": false
             },
             "F03": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16029,
+                "finalizado_colheita": false,
+                "id_plantio": 17348,
                 "plantio_descontinuado": false
             },
             "F04": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16030,
+                "finalizado_colheita": false,
+                "id_plantio": 17349,
                 "plantio_descontinuado": false
             },
             "F05": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16031,
+                "finalizado_colheita": false,
+                "id_plantio": 17353,
                 "plantio_descontinuado": false
             },
             "F06": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16032,
+                "finalizado_colheita": false,
+                "id_plantio": 17350,
                 "plantio_descontinuado": false
             },
             "F07": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16033,
+                "finalizado_colheita": false,
+                "id_plantio": 17351,
                 "plantio_descontinuado": false
             },
             "F08": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16034,
+                "finalizado_colheita": false,
+                "id_plantio": 17352,
+                "plantio_descontinuado": false
+            }
+        },
+        "Projeto Eldorado": {
+            "A01": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17300,
+                "plantio_descontinuado": false
+            },
+            "A02": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17301,
+                "plantio_descontinuado": false
+            },
+            "A03": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17302,
+                "plantio_descontinuado": false
+            },
+            "A04": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17434,
+                "plantio_descontinuado": false
+            },
+            "A05": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17435,
+                "plantio_descontinuado": false
+            },
+            "A06": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17303,
+                "plantio_descontinuado": false
+            },
+            "A07": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17304,
+                "plantio_descontinuado": false
+            },
+            "A08": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17305,
+                "plantio_descontinuado": false
+            },
+            "A09": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17432,
+                "plantio_descontinuado": false
+            },
+            "A10": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17433,
+                "plantio_descontinuado": false
+            },
+            "A11": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17306,
+                "plantio_descontinuado": false
+            },
+            "A12": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17307,
+                "plantio_descontinuado": false
+            },
+            "A13": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17308,
+                "plantio_descontinuado": false
+            },
+            "A15": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17309,
+                "plantio_descontinuado": false
+            },
+            "A16": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17310,
+                "plantio_descontinuado": false
+            },
+            "B01": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17311,
+                "plantio_descontinuado": false
+            },
+            "B02": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17312,
+                "plantio_descontinuado": false
+            },
+            "B03": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17313,
+                "plantio_descontinuado": false
+            },
+            "B04": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17314,
+                "plantio_descontinuado": false
+            },
+            "B05": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17426,
+                "plantio_descontinuado": false
+            },
+            "B06": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17315,
+                "plantio_descontinuado": false
+            },
+            "B07": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17316,
+                "plantio_descontinuado": false
+            },
+            "B08": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17317,
+                "plantio_descontinuado": false
+            },
+            "B09": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17430,
+                "plantio_descontinuado": false
+            },
+            "B10": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17427,
+                "plantio_descontinuado": false
+            },
+            "B12": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17318,
+                "plantio_descontinuado": false
+            },
+            "B13": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17319,
+                "plantio_descontinuado": false
+            },
+            "B14": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17320,
+                "plantio_descontinuado": false
+            },
+            "B15": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17429,
+                "plantio_descontinuado": false
+            },
+            "C01": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17437,
+                "plantio_descontinuado": false
+            },
+            "C01a": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17462,
+                "plantio_descontinuado": false
+            },
+            "C02": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17438,
+                "plantio_descontinuado": false
+            },
+            "C03": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17439,
+                "plantio_descontinuado": false
+            },
+            "C06": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17442,
+                "plantio_descontinuado": false
+            },
+            "C07": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17443,
                 "plantio_descontinuado": false
             }
         },
         "Projeto Jacaré": {
             "14": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 89109",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15882,
-                "plantio_descontinuado": false
-            },
-            "14a": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 16774,
-                "plantio_descontinuado": false
-            },
-            "14b": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 16790,
+                "id_plantio": 17360,
                 "plantio_descontinuado": false
             },
             "15": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 89109",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15883,
-                "plantio_descontinuado": false
-            },
-            "15a": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
-                "finalizado_colheita": false,
-                "id_plantio": 16762,
+                "id_plantio": 17359,
                 "plantio_descontinuado": false
             },
             "16": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15885,
+                "id_plantio": 17358,
                 "plantio_descontinuado": false
             },
             "17": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15884,
+                "id_plantio": 17357,
                 "plantio_descontinuado": false
             },
             "18": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15886,
+                "id_plantio": 17356,
                 "plantio_descontinuado": false
             },
             "19": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15887,
+                "id_plantio": 17355,
                 "plantio_descontinuado": false
             },
             "20": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15888,
-                "plantio_descontinuado": false
-            },
-            "A02": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
                 "finalizado_colheita": false,
-                "id_plantio": 15857,
+                "id_plantio": 17354,
                 "plantio_descontinuado": false
-            },
-            "A03": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15858,
-                "plantio_descontinuado": true
             },
             "A04": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja ANsc 84 141",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15862,
+                "id_plantio": 17484,
                 "plantio_descontinuado": false
             },
             "A05": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja ANsc 84 141",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15863,
+                "id_plantio": 17485,
                 "plantio_descontinuado": false
             },
             "A06": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja ANsc 84 141",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15864,
+                "id_plantio": 17486,
                 "plantio_descontinuado": false
             },
             "A07": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 80111",
-                "finalizado_colheita": true,
-                "id_plantio": 15865,
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17487,
                 "plantio_descontinuado": false
             },
             "A08": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 80111",
-                "finalizado_colheita": true,
-                "id_plantio": 15866,
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17488,
                 "plantio_descontinuado": false
             },
             "A09": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 89109",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15867,
+                "id_plantio": 17489,
                 "plantio_descontinuado": false
             },
             "A10": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 89109",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15868,
+                "id_plantio": 17490,
                 "plantio_descontinuado": false
             },
             "A11": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 89109",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15869,
+                "id_plantio": 17491,
                 "plantio_descontinuado": false
             },
             "A12": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 89109",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15870,
+                "id_plantio": 17479,
                 "plantio_descontinuado": false
             },
             "A13": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 89109",
-                "finalizado_colheita": false,
-                "id_plantio": 15871,
-                "plantio_descontinuado": false
-            },
-            "B02": {
-                "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15860,
-                "plantio_descontinuado": false
-            },
-            "B03": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15861,
+                "id_plantio": 17480,
                 "plantio_descontinuado": false
             },
             "B04": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 89109",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15872,
+                "id_plantio": 17495,
                 "plantio_descontinuado": false
             },
             "B05": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 89109",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15873,
+                "id_plantio": 17496,
                 "plantio_descontinuado": false
             },
             "B06": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 89109",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15874,
+                "id_plantio": 17497,
                 "plantio_descontinuado": false
             },
             "B07": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 89109",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15875,
+                "id_plantio": 17499,
                 "plantio_descontinuado": false
             },
             "B08": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 89109",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15876,
+                "id_plantio": 17498,
                 "plantio_descontinuado": false
             },
             "B09": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 89109",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15877,
+                "id_plantio": 17500,
                 "plantio_descontinuado": false
             },
             "B10": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 89109",
-                "finalizado_colheita": false,
-                "id_plantio": 15878,
-                "plantio_descontinuado": false
-            },
-            "B10a": {
-                "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16791,
+                "id_plantio": 17501,
                 "plantio_descontinuado": false
             },
             "B11": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 89109",
-                "finalizado_colheita": false,
-                "id_plantio": 15879,
-                "plantio_descontinuado": false
-            },
-            "B11a": {
-                "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 16801,
+                "finalizado_colheita": false,
+                "id_plantio": 17502,
                 "plantio_descontinuado": false
             },
             "B12": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 89109",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15881,
+                "id_plantio": 17363,
                 "plantio_descontinuado": false
             },
             "B12a": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16781,
+                "id_plantio": 17361,
                 "plantio_descontinuado": false
             },
             "B13": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 89109",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15880,
+                "id_plantio": 17365,
                 "plantio_descontinuado": false
             },
             "B13a": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16764,
+                "id_plantio": 17364,
                 "plantio_descontinuado": false
             },
             "B13b": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16766,
+                "id_plantio": 17362,
                 "plantio_descontinuado": false
             }
         },
         "Projeto Lago Verde": {
             "A01": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16057,
+                "id_plantio": 17898,
                 "plantio_descontinuado": false
             },
             "A02": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16058,
+                "id_plantio": 17899,
                 "plantio_descontinuado": false
             },
             "A03": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16059,
+                "id_plantio": 17900,
                 "plantio_descontinuado": false
             },
             "A04": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16060,
+                "id_plantio": 17901,
                 "plantio_descontinuado": false
             },
             "A05": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16061,
+                "id_plantio": 17902,
                 "plantio_descontinuado": false
             },
             "A06": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16062,
+                "id_plantio": 17903,
                 "plantio_descontinuado": false
             },
             "A07": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16063,
+                "id_plantio": 17904,
                 "plantio_descontinuado": false
             },
             "A08": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16064,
+                "id_plantio": 17905,
                 "plantio_descontinuado": false
             },
             "A09": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": true,
-                "id_plantio": 16065,
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17906,
                 "plantio_descontinuado": false
             },
             "A10": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": true,
-                "id_plantio": 16066,
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17907,
                 "plantio_descontinuado": false
             },
             "A11": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16067,
+                "id_plantio": 17908,
                 "plantio_descontinuado": false
             },
             "A12": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16068,
+                "id_plantio": 17909,
                 "plantio_descontinuado": false
             },
             "A13": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16069,
+                "id_plantio": 17910,
                 "plantio_descontinuado": false
             },
             "A14": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "FTR 4262 IPRO",
-                "finalizado_colheita": true,
-                "id_plantio": 16090,
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17911,
                 "plantio_descontinuado": false
             },
             "A15": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "FTR 4262 IPRO",
-                "finalizado_colheita": true,
-                "id_plantio": 16091,
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17912,
                 "plantio_descontinuado": false
             },
             "A16": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": true,
-                "id_plantio": 16092,
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17913,
                 "plantio_descontinuado": false
             },
             "A17": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16070,
+                "id_plantio": 17914,
                 "plantio_descontinuado": false
             },
             "A18": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16071,
+                "id_plantio": 17915,
                 "plantio_descontinuado": false
             },
             "A19": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": true,
-                "id_plantio": 16072,
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17916,
                 "plantio_descontinuado": false
             },
             "A20": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16073,
+                "id_plantio": 17917,
                 "plantio_descontinuado": false
             },
             "A21": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16074,
+                "id_plantio": 17918,
                 "plantio_descontinuado": false
             },
             "A22": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": true,
-                "id_plantio": 16088,
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17919,
                 "plantio_descontinuado": false
             },
             "A23": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": true,
-                "id_plantio": 16089,
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17920,
                 "plantio_descontinuado": false
             },
             "A24": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "FTR 4262 IPRO",
-                "finalizado_colheita": true,
-                "id_plantio": 16085,
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17921,
                 "plantio_descontinuado": false
             },
             "A25": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "FTR 4262 IPRO",
-                "finalizado_colheita": true,
-                "id_plantio": 16086,
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17922,
                 "plantio_descontinuado": false
             },
             "A26": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "FTR 4262 IPRO",
-                "finalizado_colheita": true,
-                "id_plantio": 16087,
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17923,
                 "plantio_descontinuado": false
             },
             "A27": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16075,
+                "id_plantio": 17924,
                 "plantio_descontinuado": false
             },
             "A28": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16076,
+                "id_plantio": 17925,
                 "plantio_descontinuado": false
             },
             "A29": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "FTR 4262 IPRO",
-                "finalizado_colheita": true,
-                "id_plantio": 16082,
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17926,
                 "plantio_descontinuado": false
             },
             "A30": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "FTR 4262 IPRO",
-                "finalizado_colheita": true,
-                "id_plantio": 16083,
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17927,
                 "plantio_descontinuado": false
             },
             "A31": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "FTR 4262 IPRO",
-                "finalizado_colheita": true,
-                "id_plantio": 16084,
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17928,
                 "plantio_descontinuado": false
             },
             "B01": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16093,
+                "id_plantio": 17929,
                 "plantio_descontinuado": false
             },
             "B02": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16094,
-                "plantio_descontinuado": false
-            },
-            "B02a": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": true,
-                "id_plantio": 16753,
+                "id_plantio": 17930,
                 "plantio_descontinuado": false
             },
             "B03": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16095,
+                "id_plantio": 17931,
                 "plantio_descontinuado": false
             },
             "B04": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": true,
-                "id_plantio": 16096,
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17932,
                 "plantio_descontinuado": false
             },
             "B05": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": true,
-                "id_plantio": 16097,
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17933,
                 "plantio_descontinuado": false
             },
             "B06": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "FTR 4262 IPRO",
-                "finalizado_colheita": true,
-                "id_plantio": 16101,
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17934,
                 "plantio_descontinuado": false
             },
             "B07": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": true,
-                "id_plantio": 16098,
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17935,
                 "plantio_descontinuado": false
             },
             "B08": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": true,
-                "id_plantio": 16099,
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17936,
                 "plantio_descontinuado": false
             },
             "B09": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "FTR 4262 IPRO",
-                "finalizado_colheita": true,
-                "id_plantio": 16100,
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17937,
                 "plantio_descontinuado": false
             },
             "B10": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16077,
-                "plantio_descontinuado": false
-            },
-            "B10a": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "FTR 4262 IPRO",
-                "finalizado_colheita": true,
-                "id_plantio": 16754,
+                "id_plantio": 17938,
                 "plantio_descontinuado": false
             },
             "B11": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": true,
-                "id_plantio": 16079,
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17939,
                 "plantio_descontinuado": false
             },
             "B12": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": true,
-                "id_plantio": 16755,
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17941,
                 "plantio_descontinuado": false
             },
             "B13": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": true,
-                "id_plantio": 16078,
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17940,
                 "plantio_descontinuado": false
             }
         },
-        "Projeto Safira": {
-            "A01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15817,
-                "plantio_descontinuado": true
-            },
-            "A01r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 16780,
-                "plantio_descontinuado": false
-            },
+        "Projeto Ouro Verde": {
             "A02": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15818,
-                "plantio_descontinuado": true
-            },
-            "A02r": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 16779,
-                "plantio_descontinuado": false
-            },
-            "B01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15819,
-                "plantio_descontinuado": false
-            },
-            "B01a": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 16803,
-                "plantio_descontinuado": false
-            },
-            "B02": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15820,
-                "plantio_descontinuado": false
-            },
-            "B02a": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": false,
-                "id_plantio": 16804,
-                "plantio_descontinuado": false
-            },
-            "C01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15821,
-                "plantio_descontinuado": false
-            },
-            "C02": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15822,
-                "plantio_descontinuado": false
-            },
-            "D01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15823,
-                "plantio_descontinuado": false
-            },
-            "D02": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15824,
-                "plantio_descontinuado": false
-            },
-            "E01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Verde",
-                "finalizado_colheita": true,
-                "id_plantio": 15825,
-                "plantio_descontinuado": false
-            },
-            "F01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15827,
-                "plantio_descontinuado": false
-            },
-            "G01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15829,
-                "plantio_descontinuado": false
-            },
-            "H01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 15831,
-                "plantio_descontinuado": false
-            }
-        },
-        "Projeto Santa Maria": {
-            "A01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Soja",
-                "variedade": "Soja SDC 25",
-                "finalizado_colheita": true,
-                "id_plantio": 16035,
-                "plantio_descontinuado": false
-            },
-            "A02": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja SDC 25",
-                "finalizado_colheita": true,
-                "id_plantio": 16036,
+                "variedade": "Soja Guepardo IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17707,
                 "plantio_descontinuado": false
             },
             "A03": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16037,
+                "id_plantio": 17708,
                 "plantio_descontinuado": false
             },
             "A04": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16038,
+                "id_plantio": 17709,
                 "plantio_descontinuado": false
             },
             "A05": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Soja",
-                "variedade": "Comp 192",
-                "finalizado_colheita": true,
-                "id_plantio": 16039,
-                "plantio_descontinuado": false
-            },
-            "A05a": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "variedade": "Soja Guepardo IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16757,
+                "id_plantio": 17710,
                 "plantio_descontinuado": false
             },
             "A06": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Soja",
-                "variedade": "Comp 192",
-                "finalizado_colheita": true,
-                "id_plantio": 16040,
-                "plantio_descontinuado": false
-            },
-            "A06a": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "variedade": "Soja Guepardo IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16756,
+                "id_plantio": 17711,
                 "plantio_descontinuado": false
             },
             "A07": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": true,
-                "id_plantio": 16041,
-                "plantio_descontinuado": false
-            },
-            "A07a": {
-                "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Soja",
-                "variedade": "Comp 192",
-                "finalizado_colheita": true,
-                "id_plantio": 16752,
+                "variedade": "Soja Guepardo IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17712,
                 "plantio_descontinuado": false
             },
             "A08": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 16042,
-                "plantio_descontinuado": false
-            },
-            "B11": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16043,
-                "plantio_descontinuado": false
-            },
-            "B12": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16044,
-                "plantio_descontinuado": false
-            },
-            "B13": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16045,
-                "plantio_descontinuado": false
-            },
-            "B14": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16046,
-                "plantio_descontinuado": false
-            },
-            "B21": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 16047,
-                "plantio_descontinuado": false
-            },
-            "B22": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 16048,
-                "plantio_descontinuado": false
-            },
-            "B22a": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16751,
-                "plantio_descontinuado": false
-            },
-            "B23": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
-                "finalizado_colheita": false,
-                "id_plantio": 16049,
-                "plantio_descontinuado": false
-            },
-            "B24": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": true,
-                "id_plantio": 16050,
-                "plantio_descontinuado": false
-            },
-            "B25": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": true,
-                "id_plantio": 16051,
-                "plantio_descontinuado": false
-            },
-            "B31": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 16052,
-                "plantio_descontinuado": false
-            },
-            "B32": {
-                "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Soja",
-                "variedade": "Comp 192",
-                "finalizado_colheita": true,
-                "id_plantio": 16053,
-                "plantio_descontinuado": false
-            },
-            "B33": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Comp 192",
-                "finalizado_colheita": true,
-                "id_plantio": 16054,
-                "plantio_descontinuado": false
-            },
-            "B33a": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja SDC 25",
-                "finalizado_colheita": true,
-                "id_plantio": 16760,
-                "plantio_descontinuado": false
-            },
-            "B33b": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "variedade": "Soja Guepardo IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 16761,
+                "id_plantio": 17713,
                 "plantio_descontinuado": false
             },
+            "A09": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17714,
+                "plantio_descontinuado": false
+            },
+            "A10": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17715,
+                "plantio_descontinuado": false
+            },
+            "B04": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17701,
+                "plantio_descontinuado": false
+            },
+            "B05": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17702,
+                "plantio_descontinuado": false
+            },
+            "B06": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17703,
+                "plantio_descontinuado": false
+            },
+            "B07": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17704,
+                "plantio_descontinuado": false
+            },
+            "B08": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17705,
+                "plantio_descontinuado": false
+            },
+            "D05": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17720,
+                "plantio_descontinuado": false
+            },
+            "D07": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17722,
+                "plantio_descontinuado": false
+            },
+            "D09": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17724,
+                "plantio_descontinuado": false
+            },
+            "D10": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17725,
+                "plantio_descontinuado": false
+            },
+            "D11": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17726,
+                "plantio_descontinuado": false
+            },
+            "D12": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17727,
+                "plantio_descontinuado": false
+            },
+            "D13": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17728,
+                "plantio_descontinuado": false
+            },
+            "D14": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17729,
+                "plantio_descontinuado": false
+            },
+            "D15": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17730,
+                "plantio_descontinuado": false
+            },
+            "D16": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "Soja Guepardo IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17731,
+                "plantio_descontinuado": false
+            }
+        },
+        "Projeto Safira": {
             "C01": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16055,
+                "id_plantio": 17148,
                 "plantio_descontinuado": false
             },
             "C02": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16056,
+                "id_plantio": 17149,
                 "plantio_descontinuado": false
             },
-            "C02a": {
+            "D01": {
                 "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16759,
+                "id_plantio": 17150,
+                "plantio_descontinuado": false
+            },
+            "D02": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17151,
+                "plantio_descontinuado": false
+            },
+            "E01": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17152,
+                "plantio_descontinuado": false
+            },
+            "E02": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17153,
+                "plantio_descontinuado": false
+            },
+            "F02": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17155,
+                "plantio_descontinuado": false
+            },
+            "G02": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17157,
+                "plantio_descontinuado": false
+            },
+            "H02": {
+                "safra": "2025/2026",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
+                "finalizado_colheita": false,
+                "id_plantio": 17159,
                 "plantio_descontinuado": false
             }
         },
         "Projeto Tucano": {
             "A02": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83011 RR",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15926,
+                "id_plantio": 17371,
                 "plantio_descontinuado": false
             },
             "A03": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83011 RR",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15927,
+                "id_plantio": 17372,
                 "plantio_descontinuado": false
             },
             "A04": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83011 RR",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15928,
+                "id_plantio": 17373,
                 "plantio_descontinuado": false
             },
             "A05": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83011 RR",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15929,
+                "id_plantio": 17374,
                 "plantio_descontinuado": false
             },
             "A06": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83011 RR",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15930,
+                "id_plantio": 17375,
                 "plantio_descontinuado": false
             },
             "A08": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83011 RR",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15938,
+                "id_plantio": 17376,
                 "plantio_descontinuado": false
             },
             "A09": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83011 RR",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15939,
+                "id_plantio": 17377,
                 "plantio_descontinuado": false
             },
             "A10": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83011 RR",
-                "finalizado_colheita": false,
-                "id_plantio": 15931,
-                "plantio_descontinuado": false
-            },
-            "A11": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 79029 RR",
-                "finalizado_colheita": false,
-                "id_plantio": 15932,
-                "plantio_descontinuado": false
-            },
-            "A11a": {
-                "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16723,
+                "id_plantio": 17378,
                 "plantio_descontinuado": false
             },
             "A19": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 79029 RR",
-                "finalizado_colheita": false,
-                "id_plantio": 15940,
-                "plantio_descontinuado": false
-            },
-            "A19a": {
-                "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16729,
-                "plantio_descontinuado": true
+                "id_plantio": 17380,
+                "plantio_descontinuado": false
             },
             "A20": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 79029 RR",
-                "finalizado_colheita": false,
-                "id_plantio": 15941,
-                "plantio_descontinuado": false
-            },
-            "A20a": {
-                "safra": "2025/2026",
-                "ciclo": 1,
+                "ciclo": 2,
                 "cultura": "Feijão",
                 "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 16731,
-                "plantio_descontinuado": true
+                "id_plantio": 17381,
+                "plantio_descontinuado": false
             },
             "A21": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 79029 RR",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15942,
+                "id_plantio": 17382,
                 "plantio_descontinuado": false
             },
             "B01": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83011 RR",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15943,
+                "id_plantio": 17383,
                 "plantio_descontinuado": false
             },
             "B02": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83011 RR",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15944,
+                "id_plantio": 17384,
                 "plantio_descontinuado": false
             },
             "B03": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83011 RR",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15945,
+                "id_plantio": 17385,
                 "plantio_descontinuado": false
             },
             "B04": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83011 RR",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15933,
+                "id_plantio": 17386,
                 "plantio_descontinuado": false
             },
             "B05": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83011 RR",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15934,
+                "id_plantio": 17387,
                 "plantio_descontinuado": false
             },
             "B06": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15935,
+                "id_plantio": 17388,
                 "plantio_descontinuado": false
             },
             "B07": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15950,
+                "id_plantio": 17389,
                 "plantio_descontinuado": false
             },
             "B09": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15951,
+                "id_plantio": 17390,
                 "plantio_descontinuado": false
             },
             "B10": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 79029 RR",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15946,
+                "id_plantio": 17391,
                 "plantio_descontinuado": false
             },
             "B11": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15936,
+                "id_plantio": 17392,
                 "plantio_descontinuado": false
             },
             "B12": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 79029 RR",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15947,
+                "id_plantio": 17393,
                 "plantio_descontinuado": false
             },
             "B13": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 83022",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15937,
+                "id_plantio": 17394,
                 "plantio_descontinuado": false
             },
             "B14": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 79029 RR",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15948,
+                "id_plantio": 17395,
                 "plantio_descontinuado": false
             },
             "B15": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 79029 RR",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15949,
+                "id_plantio": 17396,
                 "plantio_descontinuado": false
             },
             "B16": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 79029 RR",
+                "ciclo": 2,
+                "cultura": "Feijão",
+                "variedade": "Mungo Verde",
                 "finalizado_colheita": false,
-                "id_plantio": 15952,
-                "plantio_descontinuado": false
-            },
-            "B17": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Soja",
-                "variedade": "Soja 79029 RR",
-                "finalizado_colheita": false,
-                "id_plantio": 15953,
+                "id_plantio": 17397,
                 "plantio_descontinuado": false
             }
         },
         "Projeto Tuiuiu": {
             "A01": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15889,
+                "id_plantio": 17782,
                 "plantio_descontinuado": false
             },
             "A02": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15890,
-                "plantio_descontinuado": true
+                "id_plantio": 17783,
+                "plantio_descontinuado": false
             },
             "A03": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15891,
-                "plantio_descontinuado": true
+                "id_plantio": 17784,
+                "plantio_descontinuado": false
             },
             "A04": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15895,
+                "id_plantio": 17785,
                 "plantio_descontinuado": false
             },
             "A05": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15894,
-                "plantio_descontinuado": true
+                "id_plantio": 17786,
+                "plantio_descontinuado": false
             },
             "A06": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15892,
-                "plantio_descontinuado": true
+                "id_plantio": 17787,
+                "plantio_descontinuado": false
             },
             "A08": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": true,
-                "id_plantio": 15896,
-                "plantio_descontinuado": false
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17789,
+                "plantio_descontinuado": true
             },
             "A09": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15897,
+                "id_plantio": 17790,
                 "plantio_descontinuado": false
             },
             "A10": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15898,
-                "plantio_descontinuado": false
-            },
-            "B01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15920,
-                "plantio_descontinuado": true
-            },
-            "B02": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": false,
-                "id_plantio": 15921,
+                "id_plantio": 17791,
                 "plantio_descontinuado": false
             },
             "B03": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15925,
+                "id_plantio": 17737,
                 "plantio_descontinuado": false
             },
             "B04": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15922,
+                "id_plantio": 17734,
                 "plantio_descontinuado": false
             },
             "B05": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15923,
+                "id_plantio": 17735,
                 "plantio_descontinuado": false
             },
             "B06": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15924,
+                "id_plantio": 17736,
                 "plantio_descontinuado": false
             },
             "C01": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15913,
+                "id_plantio": 17738,
                 "plantio_descontinuado": false
             },
             "C02": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15914,
+                "id_plantio": 17739,
                 "plantio_descontinuado": false
             },
             "C03": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15915,
+                "id_plantio": 17740,
                 "plantio_descontinuado": false
             },
             "C04": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15916,
+                "id_plantio": 17741,
                 "plantio_descontinuado": false
             },
             "C05": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15917,
+                "id_plantio": 17742,
                 "plantio_descontinuado": false
             },
             "C06": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15918,
+                "id_plantio": 17743,
                 "plantio_descontinuado": false
             },
             "C07": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15919,
+                "id_plantio": 17744,
                 "plantio_descontinuado": false
             },
             "D01": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15906,
-                "plantio_descontinuado": false
+                "id_plantio": 17745,
+                "plantio_descontinuado": true
             },
             "D02": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15907,
+                "id_plantio": 17746,
                 "plantio_descontinuado": false
             },
             "D03": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15908,
+                "id_plantio": 17747,
                 "plantio_descontinuado": false
             },
             "D04": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15909,
+                "id_plantio": 17748,
                 "plantio_descontinuado": false
             },
             "D05": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15912,
+                "id_plantio": 17751,
                 "plantio_descontinuado": false
             },
             "D06": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15910,
+                "id_plantio": 17749,
                 "plantio_descontinuado": false
             },
             "D07": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15911,
-                "plantio_descontinuado": false
-            },
-            "E01": {
-                "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": true,
-                "id_plantio": 15899,
+                "id_plantio": 17750,
                 "plantio_descontinuado": false
             },
             "E02": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Caupi",
-                "finalizado_colheita": true,
-                "id_plantio": 15900,
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
+                "finalizado_colheita": false,
+                "id_plantio": 17753,
                 "plantio_descontinuado": false
             },
             "E03": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15901,
+                "id_plantio": 17754,
                 "plantio_descontinuado": false
             },
             "E04": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15902,
+                "id_plantio": 17755,
                 "plantio_descontinuado": false
             },
             "E05": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15903,
+                "id_plantio": 17756,
                 "plantio_descontinuado": false
             },
             "E06": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15904,
+                "id_plantio": 17757,
                 "plantio_descontinuado": false
             },
             "E07": {
                 "safra": "2025/2026",
-                "ciclo": 1,
-                "cultura": "Feijão",
-                "variedade": "Mungo Preto",
+                "ciclo": 2,
+                "cultura": "Soja",
+                "variedade": "FTR 4262 IPRO",
                 "finalizado_colheita": false,
-                "id_plantio": 15905,
-                "plantio_descontinuado": true
+                "id_plantio": 17758,
+                "plantio_descontinuado": false
             }
         }
     }
 }
-
 export default parcelas
