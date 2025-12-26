@@ -423,16 +423,16 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 
 	const sortResult = formatedArr.sort((a, b) => {
 		// 1️⃣ ordenar por data (mais recente primeiro)
-		const dateA = new Date(a.dateAp);
-		const dateB = new Date(b.dateAp);
+		const dateB = new Date(a.dateAp);
+		const dateA = new Date(b.dateAp);
 
 		if (dateA.getTime() !== dateB.getTime()) {
 			return dateB - dateA;
 		}
 
 		// 2️⃣ ordenar pelo número do código (AP2, AP10, AP100...)
-		const codeB = getCodeNumber(a.code);
-		const codeA = getCodeNumber(b.code);
+		const codeA = getCodeNumber(a.code);
+		const codeB = getCodeNumber(b.code);
 
 		return codeA - codeB;
 	});
