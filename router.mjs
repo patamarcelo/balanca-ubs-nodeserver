@@ -422,30 +422,29 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 	// 	.sort((a, b) => a.farmName.localeCompare(b.farmName))
 
 	const sortResult = formatedArr.sort((a, b) => {
-		// 1️⃣ Agrupar por fazenda
-		const farmCompare = a.farmName.localeCompare(b.farmName);
-		if (farmCompare !== 0) return farmCompare;
-
-		// 2️⃣ Dentro da fazenda → data (mais recente primeiro)
+		// 1️⃣ ordenar por data (mais recente primeiro)
 		const dateA = new Date(a.dateAp);
 		const dateB = new Date(b.dateAp);
+
 		if (dateA.getTime() !== dateB.getTime()) {
 			return dateB - dateA;
 		}
 
-		// 3️⃣ Dentro da mesma data → número do código (AP2, AP10, etc.)
+		// 2️⃣ ordenar pelo número do código (AP2, AP10, AP100...)
 		const codeB = getCodeNumber(a.code);
 		const codeA = getCodeNumber(b.code);
+
 		return codeA - codeB;
 	});
 
+	const newSortResult = sortResult.sort((a, b) => a.farmName.localeCompare(b.farmName))
 
-	const onlyFarms = sortResult.map((data) => data.farmName)
+	const onlyFarms = newSortResult.map((data) => data.farmName)
 	const setFarms = [...new Set(onlyFarms)]
 
 	const response = {
 		farms: setFarms,
-		data: sortResult
+		data: newSortResult
 	}
 
 	res.send(response).status(200)
