@@ -110,6 +110,13 @@ function isAuth(req, res, next) {
 
 
 
+const getCodeNumber = (code) => {
+	if (!code) return 0;
+	const match = code.match(/\d+/);
+	return match ? parseInt(match[0], 10) : 0;
+};
+
+
 // This section will help you get a list of all the records.
 // router.get("/", [appCheckVerification], async (req, res) => {
 router.get("/", async (req, res) => {
@@ -191,7 +198,7 @@ router.get("/datadetail", async (req, res) => {
 	const safra_2023_2024 = "2023/2024"
 	const safra_2024_2025 = "2024/2025"
 	const safra_2025_2026 = "2025/2026"
-	
+
 	const {
 		safra,
 		ciclo
@@ -200,12 +207,12 @@ router.get("/datadetail", async (req, res) => {
 	let results = await collection
 		.find({
 			$or: [
-			// 	{
-			// 	"plantations.plantation.harvest_name": safra_2024_2025
-			// },
-			{
-				"plantations.plantation.harvest_name": safra
-			},
+				// 	{
+				// 	"plantations.plantation.harvest_name": safra_2024_2025
+				// },
+				{
+					"plantations.plantation.harvest_name": safra
+				},
 			],
 			// $and: [
 			// {
@@ -409,10 +416,26 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 			prods: products,
 		})
 	})
-	const sortResult = formatedArr
-		.sort((a, b) => a.idAp - b.idAp)
-		.sort((a, b) => a.safraCicloOrder - b.safraCicloOrder)
-		.sort((a, b) => a.farmName.localeCompare(b.farmName))
+	// const sortResult = formatedArr
+	// 	.sort((a, b) => a.idAp - b.idAp)
+	// 	.sort((a, b) => a.safraCicloOrder - b.safraCicloOrder)
+	// 	.sort((a, b) => a.farmName.localeCompare(b.farmName))
+
+	const sortResult = formatedArr.sort((a, b) => {
+		// 1️⃣ ordenar por data (mais recente primeiro)
+		const dateA = new Date(a.dateAp);
+		const dateB = new Date(b.dateAp);
+
+		if (dateA.getTime() !== dateB.getTime()) {
+			return dateB - dateA;
+		}
+
+		// 2️⃣ ordenar pelo número do código (AP2, AP10, AP100...)
+		const codeA = getCodeNumber(a.code);
+		const codeB = getCodeNumber(b.code);
+
+		return codeA - codeB;
+	});
 
 	const onlyFarms = sortResult.map((data) => data.farmName)
 	const setFarms = [...new Set(onlyFarms)]
