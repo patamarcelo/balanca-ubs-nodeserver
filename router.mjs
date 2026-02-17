@@ -132,6 +132,7 @@ router.get("/", async (req, res) => {
 	console.log("Safra: ", safra, "Ciclo: ", ciclo);
 	let collection = db.collection("aplicacoes");
 	const safra_2025_2026 = "2025/2026"
+	const safra_2026_2027 = "2026/2027"
 	let results = await collection
 		.find({
 			$and: [
@@ -141,6 +142,8 @@ router.get("/", async (req, res) => {
 							"plantations.plantation.harvest_name": safra
 						}, {
 							"plantations.plantation.harvest_name": safra_2025_2026
+						}, {
+							"plantations.plantation.harvest_name": safra_2026_2027
 						}
 					]
 				}, {
@@ -307,6 +310,7 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 	const safra_2023_2024 = "2023/2024"
 	const safra_2024_2025 = "2024/2025"
 	const safra_2025_2026 = "2025/2026"
+	const safra_2026_2027 = "2026/2027"
 
 	let results = await collection
 		.find({
@@ -315,6 +319,9 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 			},
 			{
 				"plantations.plantation.harvest_name": safra_2025_2026
+			},
+			{
+				"plantations.plantation.harvest_name": safra_2026_2027
 			},
 			],
 			status: "sought"
