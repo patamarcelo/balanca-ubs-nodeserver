@@ -372,8 +372,8 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 			const areaAplicada = plantation.applied_area
 			const parcelaId = plantation.id
 			const parcelaAppPlantationId = plantation?.plantation?.id
-			const variedade = plantation.plantation.variety_name
-			const cultura = plantation.plantation.culture_name
+			const variedade = plantation.plantation.variety_name || plantation.plantation.planned_variety_name
+			const cultura = plantation.plantation.culture_name || plantation.plantation.planned_culture_name
 			const date = plantation.plantation.date
 			const date_prev_colheita = plantation.plantation.harvest_prediction_date
 
