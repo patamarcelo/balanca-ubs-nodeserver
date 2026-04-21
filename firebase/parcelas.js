@@ -1822,6 +1822,15 @@ const parcelas = {
                 "id_plantio": 17969,
                 "plantio_descontinuado": false
             },
+            "J01": {
+                "safra": "2025/2026",
+                "ciclo": 3,
+                "cultura": "Arroz",
+                "variedade": "Pampeira",
+                "finalizado_colheita": false,
+                "id_plantio": 16268,
+                "plantio_descontinuado": false
+            },
             "J02": {
                 "safra": "2025/2026",
                 "ciclo": 3,
