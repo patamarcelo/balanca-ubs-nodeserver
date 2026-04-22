@@ -10,8 +10,12 @@ import { getAndGenerateIdFirebase, getAndGenerateIdFirebaseBeforeLast } from "./
 import fetch from "node-fetch";
 import https from 'https'
 
-import dataParcelas from './parcelas.js'
-const { projetos, dados } = dataParcelas
+// import dataParcelas from './parcelas.js'
+// const { projetos, dados } = dataParcelas
+
+import { getParcelasData, refreshParcelasData, getParcelasMeta } from "../services/parcelas.service.js";
+
+
 
 
 const router = express.Router();
@@ -52,6 +56,8 @@ router.get("/", isAuth, async (req, res) => {
 });
 
 router.post("/upload-romaneio", isAuth, async (req, res) => {
+	const { projetos, dados } = await getParcelasData();
+
 	const dataId = await req.body.id;
 	const docRef = doc(db, TABLES_FIREBASE.truckmove, dataId);
 	const docSend = await getDoc(docRef);
@@ -328,7 +334,7 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 				if (repsonseFromProtheus.status === 201) {
 					const { peso_tara, peso_bruto, porcentagem_umidade, porcentagem_impureza, porcentagemimpureza, porcentagemumidade } = dataFrom
 
-					if(porcentagem_umidade > 0 || porcentagemumidade > 0){
+					if (porcentagem_umidade > 0 || porcentagemumidade > 0) {
 						updates.umidade = porcentagem_umidade ?? porcentagemumidade ?? ""
 						updates.impureza = porcentagem_impureza ?? porcentagemimpureza ?? ""
 					}
@@ -372,6 +378,8 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 );
 
 router.post("/resend-to-protheus", isAuth, async (req, res) => {
+	const { projetos, dados } = await getParcelasData();
+
 	const dataId = await req.body.id;
 	const docRef = doc(db, TABLES_FIREBASE.truckmove, dataId);
 	const docSend = await getDoc(docRef);
@@ -1078,7 +1086,7 @@ router.post("/update-romaneio-from-protheus", isAuth, async (req, res) => {
 
 		if (Number(pesoTara) > 0 && Number(pesoBruto) > 0) {
 			pesoLiquido = pesoBruto - pesoTara;
-			if(!oldDocData.saida){
+			if (!oldDocData.saida) {
 				dataSaida = true
 				saida = new Date();
 				console.log('Novo Peso Líquido e Data de saída atualizado')
@@ -1171,4 +1179,44 @@ router.post('/delete-romaneio-from-protheus', isAuth, async (req, res) => {
 	}
 })
 
+
+
+router.post("/refresh-parcelas", isAuth, async (req, res) => {
+	try {
+		const result = await refreshParcelasData();
+
+		return res.status(200).json({
+			msg: "Parcelas atualizadas com sucesso",
+			...result,
+		});
+	} catch (error) {
+		console.log("Erro ao atualizar parcelas:", error);
+		return res.status(500).json({
+			error: "Erro ao atualizar parcelas",
+			details: error.message,
+		});
+	}
+});
+
+
+router.get("/parcelas-status", isAuth, async (req, res) => {
+	try {
+		const data = await getParcelasData();
+
+		return res.status(200).json({
+			...getParcelasMeta(),
+			data,
+		});
+	} catch (error) {
+		console.log("Erro ao obter status das parcelas:", error);
+		return res.status(500).json({
+			error: "Erro ao obter status das parcelas",
+			details: error.message,
+		});
+	}
+});
+
+
 export default router;
+
+

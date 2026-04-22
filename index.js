@@ -7,6 +7,8 @@ import romaneios from './firebase/routerRomaneios.mjs'
 import users from './firebase/users.mjs'
 import bodyParser from 'body-parser';
 
+import { initParcelasCache } from "./services/parcelas.service.js";
+
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -17,6 +19,8 @@ app.use(bodyParser.urlencoded({
 	extended: true
 }));
 app.use(bodyParser.json());
+
+await initParcelasCache();
 
 app.use("/defensivos", defensivos);
 app.use("/romaneios", romaneios);
