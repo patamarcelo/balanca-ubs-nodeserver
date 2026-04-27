@@ -496,7 +496,19 @@ router.get("/data-open-apps-only-bio", async (req, res) => {
 
 router.get("/parcel-applications/:plantioId", isAuth, async (req, res) => {
 	try {
+		console.log("======================================");
+		console.log("ROTA /parcel-applications CHAMADA");
+		console.log("params:", req.params);
+		console.log("query:", req.query);
+		console.log("authorization:", req.headers.authorization);
+		console.log("======================================");
+
 		const plantioId = Number(req.params.plantioId);
+
+		console.log("plantioId recebido:", req.params.plantioId);
+		console.log("plantioId convertido:", plantioId);
+		console.log("tipo:", typeof plantioId);
+
 
 		if (!plantioId || Number.isNaN(plantioId)) {
 			return res.status(400).json({
