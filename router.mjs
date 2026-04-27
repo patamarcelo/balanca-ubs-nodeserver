@@ -493,6 +493,351 @@ router.get("/data-open-apps-only-bio", async (req, res) => {
 	res.send(results).status(200)
 })
 
+
+router.get("/parcel-applications/:plantioId", isAuth, async (req, res) => {
+	try {
+		const plantioId = Number(req.params.plantioId);
+
+		if (!plantioId || Number.isNaN(plantioId)) {
+			return res.status(400).json({
+				error: "plantioId inválido",
+			});
+		}
+
+		console.log("Buscando aplicações da parcela/plantio:", plantioId);
+
+		const collection = db.collection("aplicacoes");
+
+		const results = await collection
+			.find(
+				{
+					plantations: {
+						$elemMatch: {
+							"plantation.id": plantioId,
+						},
+					},
+				},
+				{
+					projection: {
+						charge: 0,
+						finisher: 0,
+						responsible: 0,
+						operator: 0,
+						mixer: 0,
+						input_movimentations: 0,
+						equipments: 0,
+						"inputs.plantations_costs": 0,
+						"plantations.plantation.plot": 0,
+						"plantations.plantation.geo_points": 0,
+						"plantations.plantation.farm": 0,
+					},
+				}
+			)
+			.sort({
+				date: -1,
+				code: -1,
+			})
+			.toArray();
+
+		const unitDict = {
+			l_ha: "L/ha",
+			kg_ha: "Kg/ha",
+			un_ha: "Un/ha",
+			sc_ha: "Sc/ha",
+			l: "L",
+			kg: "Kg",
+			un: "Un",
+		};
+
+		const normalizeDate = (value) => {
+			if (!value) return null;
+			return String(value).split("T")[0];
+		};
+
+		const getCodeNumberSafe = (code) => {
+			if (!code) return 0;
+			const match = String(code).match(/\d+/);
+			return match ? parseInt(match[0], 10) : 0;
+		};
+
+		const diffDays = (fromDate, toDate) => {
+			if (!fromDate || !toDate) return null;
+
+			const start = new Date(fromDate);
+			const end = new Date(toDate);
+
+			if (Number.isNaN(start.getTime()) || Number.isNaN(end.getTime())) {
+				return null;
+			}
+
+			const startClean = new Date(
+				start.getFullYear(),
+				start.getMonth(),
+				start.getDate()
+			);
+
+			const endClean = new Date(
+				end.getFullYear(),
+				end.getMonth(),
+				end.getDate()
+			);
+
+			return Math.floor((endClean - startClean) / 86400000);
+		};
+
+		const getStatusLabel = (status) => {
+			if (status === "finalized") return "Finalizada";
+			if (status === "sought") return "Aberta";
+			if (status === "canceled") return "Cancelada";
+			return status || "—";
+		};
+
+		const formatInput = (input) => {
+			const type = input?.input?.input_type_name || "Produto";
+			const product = input?.input?.name || "Produto não informado";
+
+			const appliedDoseRaw = input?.applied_dosage_value;
+			const soughtDoseRaw = input?.sought_dosage_value;
+
+			const appliedDose =
+				appliedDoseRaw === null || appliedDoseRaw === undefined
+					? null
+					: Number(appliedDoseRaw);
+
+			const soughtDose =
+				soughtDoseRaw === null || soughtDoseRaw === undefined
+					? null
+					: Number(soughtDoseRaw);
+
+			const hasAppliedDose =
+				appliedDose !== null && !Number.isNaN(appliedDose) && appliedDose > 0;
+
+			const displayDose = hasAppliedDose ? appliedDose : soughtDose;
+
+			const appliedUnit =
+				unitDict[input?.applied_dosage_unit] ||
+				unitDict[input?.input?.dosage_unit] ||
+				input?.applied_dosage_unit ||
+				input?.input?.dosage_unit ||
+				"";
+
+			const soughtUnit =
+				unitDict[input?.sought_dosage_unit] ||
+				unitDict[input?.input?.dosage_unit] ||
+				input?.sought_dosage_unit ||
+				input?.input?.dosage_unit ||
+				"";
+
+			const displayUnit = hasAppliedDose ? appliedUnit : soughtUnit;
+
+			return {
+				id: input?.id,
+				position: input?.position || 0,
+
+				product,
+				type,
+				type_id: input?.input?.input_type_id,
+				colorChip: getColorChip(type),
+
+				appliedDose,
+				appliedUnit,
+				soughtDose,
+				soughtUnit,
+
+				displayDose,
+				displayUnit,
+				doseSource: hasAppliedDose ? "applied" : "sought",
+
+				appliedQuantity: input?.applied || 0,
+				consumedQuantity: input?.consumed || 0,
+				soughtQuantity: input?.sought_quantity || 0,
+				soughtQuantityUnit:
+					unitDict[input?.sought_quantity_unit] ||
+					input?.sought_quantity_unit ||
+					"",
+
+				register: input?.input?.register || null,
+				manufacturer: input?.input?.manufacturer || null,
+				formulation: input?.input?.formulation || null,
+				classification: input?.input?.input_classification || null,
+			};
+		};
+
+		const formatApplication = (ap) => {
+			const matchedPlantation =
+				ap?.plantations?.find(
+					(item) => Number(item?.plantation?.id) === plantioId
+				) || null;
+
+			const plantation = matchedPlantation?.plantation || {};
+
+			const operationInput =
+				ap?.inputs?.find(
+					(input) => input?.input?.input_type_name === "Operação"
+				) || null;
+
+			const products = (ap?.inputs || [])
+				.map(formatInput)
+				.sort((a, b) => Number(a.position || 0) - Number(b.position || 0));
+
+			const applicationDate = normalizeDate(ap?.date);
+
+			const plantingDate =
+				normalizeDate(plantation?.date) ||
+				normalizeDate(plantation?.activation_date) ||
+				normalizeDate(plantation?.planned_date);
+
+			const plannedDate = normalizeDate(plantation?.planned_date);
+			const harvestPredictionDate = normalizeDate(
+				plantation?.harvest_prediction_date
+			);
+
+			const dapOnApplication = diffDays(plantingDate, applicationDate);
+			const dapToday = diffDays(plantingDate, new Date());
+
+			const progressForParcel =
+				ap?.progresses?.find((progress) =>
+					(progress?.plantations || []).some(
+						(plantationProgress) =>
+							Number(plantationProgress?.plantation_id) === plantioId
+					)
+				) || null;
+
+			return {
+				id: ap?.id,
+				mongoId: ap?._id,
+				code: ap?.code,
+				codeNumber: getCodeNumberSafe(ap?.code),
+
+				status: ap?.status,
+				statusLabel: getStatusLabel(ap?.status),
+
+				date: applicationDate,
+				endDate: normalizeDate(ap?.end_date),
+				closedDate: normalizeDate(ap?.closed_date),
+				createdAt: ap?.created_at,
+				updatedAt: ap?.updated_at,
+
+				operation: operationInput?.input?.name?.trim() || "Sem operação",
+				operationType: ap?.operation_type || null,
+				observations: ap?.observations || "",
+
+				parcel: {
+					plantioId,
+					name: plantation?.name || null,
+					farmName: plantation?.farm_name || null,
+
+					area: plantation?.area || null,
+					soughtArea: matchedPlantation?.sought_area || 0,
+					appliedArea: matchedPlantation?.applied_area || 0,
+
+					culture:
+						plantation?.culture_name ||
+						plantation?.planned_culture_name ||
+						"",
+
+					variety:
+						plantation?.variety_name ||
+						plantation?.planned_variety_name ||
+						"",
+
+					safra: plantation?.harvest_name || null,
+					ciclo: plantation?.cycle || null,
+
+					plantingDate,
+					plannedDate,
+					activationDate: normalizeDate(plantation?.activation_date),
+					harvestPredictionDate,
+
+					dapOnApplication,
+					dapToday,
+				},
+
+				progress: progressForParcel
+					? {
+							id: progressForParcel?.id,
+							date: progressForParcel?.date,
+							area: progressForParcel?.area,
+							equipment: progressForParcel?.equipment?.name || null,
+							equipmentType: progressForParcel?.equipment?.type || null,
+					  }
+					: null,
+
+				products,
+				totalProducts: products.length,
+			};
+		};
+
+		const applications = results
+			.map(formatApplication)
+			.sort((a, b) => {
+				const dateA = new Date(a.date || 0);
+				const dateB = new Date(b.date || 0);
+
+				if (dateA.getTime() !== dateB.getTime()) {
+					return dateB - dateA;
+				}
+
+				return b.codeNumber - a.codeNumber;
+			});
+
+		const applicationsByDateMap = {};
+
+		applications.forEach((ap) => {
+			const key = ap.date || "Sem data";
+
+			if (!applicationsByDateMap[key]) {
+				applicationsByDateMap[key] = {
+					date: key,
+					applications: [],
+				};
+			}
+
+			applicationsByDateMap[key].applications.push(ap);
+		});
+
+		const applicationsByDate = Object.values(applicationsByDateMap).sort(
+			(a, b) => new Date(b.date || 0) - new Date(a.date || 0)
+		);
+
+		const firstApplication = applications[0] || null;
+
+		const totals = applications.reduce(
+			(acc, ap) => {
+				if (ap.status === "finalized") acc.finalized += 1;
+				if (ap.status === "sought") acc.open += 1;
+
+				acc.products += ap.totalProducts || 0;
+
+				return acc;
+			},
+			{
+				total: applications.length,
+				open: 0,
+				finalized: 0,
+				products: 0,
+			}
+		);
+
+		return res.status(200).json({
+			plantioId,
+			total: applications.length,
+			totals,
+			parcel: firstApplication?.parcel || null,
+			applications,
+			applicationsByDate,
+		});
+	} catch (error) {
+		console.log("Erro em /parcel-applications/:plantioId:", error);
+
+		return res.status(500).json({
+			error: "Erro ao buscar aplicações da parcela",
+			detail: error.message,
+		});
+	}
+});
+
+
 // This section will help you get a single record by id
 router.get("/:id", async (req, res) => {
 	let collection = await db.collection("records");
