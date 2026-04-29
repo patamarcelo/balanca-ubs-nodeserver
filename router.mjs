@@ -725,6 +725,19 @@ router.get("/parcel-applications/:plantioId", isAuth, async (req, res) => {
 				return ap?.status;
 			})();
 
+
+			console.log("DEBUG AP STATUS", {
+				code: ap?.code,
+				id: ap?.id,
+				plantioId,
+				rawStatus: ap?.status,
+				hasProgressForParcel,
+				progressId: progressForParcel?.id || null,
+				effectiveStatus,
+				statusLabel: getStatusLabel(effectiveStatus),
+				closedDate: ap?.closed_date,
+			});
+
 			return {
 				id: ap?.id,
 				mongoId: ap?._id,
