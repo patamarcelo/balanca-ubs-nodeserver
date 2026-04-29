@@ -599,6 +599,7 @@ router.get("/parcel-applications/:plantioId", isAuth, async (req, res) => {
 
 		const getStatusLabel = (status) => {
 			if (status === "finalized") return "Finalizada";
+			if (status === "applied") return "Aplicada";
 			if (status === "sought") return "Aberta";
 			if (status === "canceled") return "Cancelada";
 			return status || "—";
@@ -715,14 +716,21 @@ router.get("/parcel-applications/:plantioId", isAuth, async (req, res) => {
 					)
 				) || null;
 
+			const hasProgressForParcel = !!progressForParcel;
+
+			const effectiveStatus = hasProgressForParcel
+				? "applied"
+				: ap?.status;
+
 			return {
 				id: ap?.id,
 				mongoId: ap?._id,
 				code: ap?.code,
 				codeNumber: getCodeNumberSafe(ap?.code),
 
-				status: ap?.status,
-				statusLabel: getStatusLabel(ap?.status),
+				status: effectiveStatus,
+				originalStatus: ap?.status,
+				statusLabel: getStatusLabel(effectiveStatus),
 
 				date: applicationDate,
 				endDate: normalizeDate(ap?.end_date),
@@ -767,12 +775,12 @@ router.get("/parcel-applications/:plantioId", isAuth, async (req, res) => {
 
 				progress: progressForParcel
 					? {
-							id: progressForParcel?.id,
-							date: progressForParcel?.date,
-							area: progressForParcel?.area,
-							equipment: progressForParcel?.equipment?.name || null,
-							equipmentType: progressForParcel?.equipment?.type || null,
-					  }
+						id: progressForParcel?.id,
+						date: progressForParcel?.date,
+						area: progressForParcel?.area,
+						equipment: progressForParcel?.equipment?.name || null,
+						equipmentType: progressForParcel?.equipment?.type || null,
+					}
 					: null,
 
 				products,
@@ -817,7 +825,9 @@ router.get("/parcel-applications/:plantioId", isAuth, async (req, res) => {
 		const totals = applications.reduce(
 			(acc, ap) => {
 				if (ap.status === "finalized") acc.finalized += 1;
+				if (ap.status === "applied") acc.applied += 1;
 				if (ap.status === "sought") acc.open += 1;
+				if (ap.status === "canceled") acc.canceled += 1;
 
 				acc.products += ap.totalProducts || 0;
 
@@ -826,7 +836,9 @@ router.get("/parcel-applications/:plantioId", isAuth, async (req, res) => {
 			{
 				total: applications.length,
 				open: 0,
+				applied: 0,
 				finalized: 0,
+				canceled: 0,
 				products: 0,
 			}
 		);
