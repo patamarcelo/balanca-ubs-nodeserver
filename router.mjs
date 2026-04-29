@@ -718,9 +718,12 @@ router.get("/parcel-applications/:plantioId", isAuth, async (req, res) => {
 
 			const hasProgressForParcel = !!progressForParcel;
 
-			const effectiveStatus = hasProgressForParcel
-				? "applied"
-				: ap?.status;
+			const effectiveStatus = (() => {
+				if (ap?.status === "finalized") return "finalized";
+				if (ap?.status === "canceled") return "canceled";
+				if (hasProgressForParcel) return "applied";
+				return ap?.status;
+			})();
 
 			return {
 				id: ap?.id,
