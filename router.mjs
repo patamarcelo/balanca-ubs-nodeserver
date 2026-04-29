@@ -708,13 +708,21 @@ router.get("/parcel-applications/:plantioId", isAuth, async (req, res) => {
 			const dapOnApplication = diffDays(plantingDate, applicationDate);
 			const dapToday = diffDays(plantingDate, new Date());
 
-			const progressForParcel =
-				ap?.progresses?.find((progress) =>
-					(progress?.plantations || []).some(
-						(plantationProgress) =>
-							Number(plantationProgress?.plantation_id) === plantioId
-					)
-				) || null;
+			let progressForParcel = null;
+			let progressPlantationForParcel = null;
+
+			for (const progress of ap?.progresses || []) {
+				const matchedProgressPlantation = (progress?.plantations || []).find(
+					(plantationProgress) =>
+						Number(plantationProgress?.plantation_id) === plantioId
+				);
+
+				if (matchedProgressPlantation) {
+					progressForParcel = progress;
+					progressPlantationForParcel = matchedProgressPlantation;
+					break;
+				}
+			}
 
 			const hasProgressForParcel = !!progressForParcel;
 
@@ -793,7 +801,16 @@ router.get("/parcel-applications/:plantioId", isAuth, async (req, res) => {
 					? {
 						id: progressForParcel?.id,
 						date: progressForParcel?.date,
-						area: progressForParcel?.area,
+
+						area:
+							progressPlantationForParcel?.area ??
+							matchedPlantation?.applied_area ??
+							matchedPlantation?.sought_area ??
+							progressForParcel?.area ??
+							null,
+
+						totalArea: progressForParcel?.area ?? null,
+
 						equipment: progressForParcel?.equipment?.name || null,
 						equipmentType: progressForParcel?.equipment?.type || null,
 					}
