@@ -117,6 +117,44 @@ const getCodeNumber = (code) => {
 };
 
 
+const LOCAL_TIMEZONE_OFFSET = "-03:00";
+
+const toLocalDateTime = (value) => {
+	if (!value) return null;
+
+	const str = String(value).trim();
+
+	// Se vier só YYYY-MM-DD, transforma em datetime local seguro.
+	if (/^\d{4}-\d{2}-\d{2}$/.test(str)) {
+		return `${str}T12:00:00.000${LOCAL_TIMEZONE_OFFSET}`;
+	}
+
+	// Se já vier com timezone, mantém como está.
+	if (/[zZ]$|[+-]\d{2}:\d{2}$/.test(str)) {
+		return str;
+	}
+
+	// Se vier datetime sem timezone, fixa timezone local.
+	if (/^\d{4}-\d{2}-\d{2}T/.test(str)) {
+		return `${str}${LOCAL_TIMEZONE_OFFSET}`;
+	}
+
+	return str;
+};
+
+const toDateKey = (value) => {
+	if (!value) return "";
+
+	const str = String(value).trim();
+
+	// Mantém somente a parte YYYY-MM-DD para ordenação e agrupamento.
+	if (/^\d{4}-\d{2}-\d{2}/.test(str)) {
+		return str.slice(0, 10);
+	}
+
+	return str;
+};
+
 // This section will help you get a list of all the records.
 // router.get("/", [appCheckVerification], async (req, res) => {
 router.get("/", async (req, res) => {
@@ -351,8 +389,11 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 		const safra = data.plantations[0].plantation.harvest_name
 		const ciclo = data.plantations[0].plantation.cycle
 		const safraCicloOrder = Number(safra.replace('/', '') + ciclo)
-		const dateAp = data.date
-		const endDateAp = data.end_date
+		const dateAp = toLocalDateTime(data.date);
+		const dateApKey = toDateKey(data.date);
+
+		const endDateAp = toLocalDateTime(data.end_date);
+		const endDateApKey = toDateKey(data.end_date);
 		const operationResult = operation ? operation[0]?.input?.name.trim() : 'Sem Operação'
 		const products = data.inputs.map((input) => {
 			const colorChip = getColorChip(input.input.input_type_name)
@@ -375,8 +416,11 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 			// Substitua o seu trecho original por este:
 			const variedade = plantation?.plantation?.variety_name || plantation?.plantation?.planned_variety_name || ""
 			const cultura = plantation?.plantation?.culture_name || plantation?.plantation?.planned_culture_name || ""
-			const date = plantation.plantation.date
-			const date_prev_colheita = plantation.plantation.harvest_prediction_date
+			const date = toLocalDateTime(plantation?.plantation?.date);
+			const dateKey = toDateKey(plantation?.plantation?.date);
+
+			const date_prev_colheita = toLocalDateTime(plantation?.plantation?.harvest_prediction_date);
+			const date_prev_colheita_key = toDateKey(plantation?.plantation?.harvest_prediction_date);
 
 			const fillColorParce = fillColor(areaSolicitada, areaAplicada)
 
@@ -389,7 +433,9 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 				variedade,
 				cultura,
 				date,
+				dateKey,
 				date_prev_colheita,
+				date_prev_colheita_key,
 				parcelaAppPlantationId
 			})
 		})
@@ -400,7 +446,9 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 		const areaTotalAplicada = parcelas.reduce((acc, curr) => acc += curr.areaAplicada, 0)
 		const saldoAplicar = areaTotalSolicitada - areaTotalAplicada
 
-		const percent = parseFloat((areaTotalAplicada / areaTotalSolicitada).toFixed(2))
+		const percent = areaTotalSolicitada > 0
+			? parseFloat((areaTotalAplicada / areaTotalSolicitada).toFixed(2))
+			: 0;
 
 		const percentColor = dictColor(percent)
 
@@ -414,7 +462,9 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 			farmId,
 			cultura,
 			dateAp,
+			dateApKey,
 			endDateAp,
+			endDateApKey,
 			operation: operationResult,
 			areaSolicitada: areaTotalSolicitada,
 			areaAplicada: areaTotalAplicada,
@@ -430,23 +480,23 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 	// 	.sort((a, b) => a.safraCicloOrder - b.safraCicloOrder)
 	// 	.sort((a, b) => a.farmName.localeCompare(b.farmName))
 
-	const sortResult = formatedArr.sort((a, b) => {
-		// 1️⃣ ordenar por data (mais recente primeiro)
-		const dateB = new Date(a.dateAp);
-		const dateA = new Date(b.dateAp);
 
-		if (dateA.getTime() !== dateB.getTime()) {
-			return dateB - dateA;
+	const newSortResult = formatedArr.sort((a, b) => {
+		const farmCompare = String(a.farmName || "").localeCompare(String(b.farmName || ""));
+		if (farmCompare !== 0) return farmCompare;
+
+		const dateA = String(a.dateApKey || "");
+		const dateB = String(b.dateApKey || "");
+
+		if (dateA !== dateB) {
+			return dateB.localeCompare(dateA);
 		}
 
-		// 2️⃣ ordenar pelo número do código (AP2, AP10, AP100...)
 		const codeA = getCodeNumber(a.code);
 		const codeB = getCodeNumber(b.code);
 
 		return codeA - codeB;
 	});
-
-	const newSortResult = sortResult.sort((a, b) => a.farmName.localeCompare(b.farmName))
 
 	const onlyFarms = newSortResult.map((data) => data.farmName)
 	const setFarms = [...new Set(onlyFarms)]
