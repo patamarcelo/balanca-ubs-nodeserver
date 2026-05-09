@@ -55,125 +55,277 @@ router.get("/", isAuth, async (req, res) => {
 	}
 });
 
-router.post("/upload-romaneio", isAuth, async (req, res) => {
-	const { projetos, dados } = await getParcelasData();
+const sendRomaneioToProtheusInBackground = ({
+	docRef,
+	docSendData,
+	responseToSend,
+	response,
+	source = "unknown",
+}) => {
+	process.nextTick(async () => {
+		let updates = {};
 
-	const dataId = await req.body.id;
-	const docRef = doc(db, TABLES_FIREBASE.truckmove, dataId);
-	const docSend = await getDoc(docRef);
-	let docSendData = docSend.data();
+		try {
+			if (!responseToSend?.filialPro || !responseToSend?.codTicketPro) {
+				updates = {
+					protheusSyncStatus: "error",
+					protheusLastError: "Romaneio sem filialPro ou codTicketPro",
+					protheusErrorPayload: {
+						message: "Romaneio sem filialPro ou codTicketPro",
+						source,
+						receivedAt: new Date(),
+					},
+				};
 
-	const newParcelas = docSendData?.parcelasObjFiltered?.map((data) => data.parcela)
-	const variedadeCultura = docSendData?.parcelasObjFiltered.map((data) => {
-		return ({
-			cultura: data.cultura || null,
-			variedade: data.variedade || null
-		})
-	})
+				await updateDoc(docRef, updates);
+				return;
+			}
 
-	docSendData = {
-		...docSendData,
-		parcelasNovas: newParcelas,
-		mercadoria: variedadeCultura[0]?.variedade || null,
-		cultura: variedadeCultura[0]?.cultura || null
-	}
-
-	const updateParcelasNovas = {
-		parcelasNovas: newParcelas,
-		mercadoria: variedadeCultura[0]?.variedade || null,
-		cultura: variedadeCultura[0]?.cultura || null
-	}
-
-	const resultParcelasNovas = await updateDoc(docRef, updateParcelasNovas);
-	console.log("reult of update parcelasNovas: ", resultParcelasNovas);
-
-	if (docSendData.parcelasNovas.length === 1) {
-		const parcela = docSendData.parcelasNovas[0]
-		const newParcelaObj = dados[docSendData.fazendaOrigem][parcela]
-		const newAdjust = { ...newParcelaObj, parcela }
-		docSendData = { ...docSendData, parcelasObjFiltered: [newAdjust] }
-	} else {
-		console.log('mais de 1 parcela')
-		// logic here to handle when update value of obj comparing two arrays and if it is diff
-		const one = docSendData.parcelasNovas
-		console.log('Parcelas Novas: ', one)
-		const two = docSendData.parcelasObjFiltered.map((data) => data.parcela)
-		console.log('parcelasObjFilt', two)
-
-		// // Sort both arrays
-		const sortedOne = one.sort((a, b) => a.localeCompare(b))
-		const sortedTwo = two.sort((a, b) => a.localeCompare(b));
-
-		// // Convert arrays to strings and compare them
-		const stringOne = sortedOne.toString();
-		const stringTwo = sortedTwo.toString();
-
-		// // Check if the strings are equal
-		const areEqual = stringOne === stringTwo;
-
-		if (areEqual) {
-			console.log("The arrays contain the same elements.");
-		} else {
-			console.log("Os Arrays Enviados não são iguais, vamos corrigilos...");
-			const newArrayToAdd = []
-			one.forEach(element => {
-				const getCorretObjs = dados[docSendData.fazendaOrigem][element]
-				newArrayToAdd.push({ ...getCorretObjs, parcela: element })
+			const httpsAgent = new https.Agent({
+				rejectUnauthorized: false,
 			});
-			docSendData = { ...docSendData, parcelasObjFiltered: newArrayToAdd }
+
+			const requestOptions = {
+				method: "POST",
+				headers: {
+					Accept: "application/json",
+					"Content-Type": "application/json",
+					Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
+					"Access-Control-Allow-Origin": "*",
+					tenantid: "02",
+				},
+				body: JSON.stringify(responseToSend),
+				redirect: "follow",
+				agent: httpsAgent,
+			};
+
+			console.log(`[${source}] Dados enviados ao Protheus:`, responseToSend);
+
+			const responseFromProtheus = await fetch(
+				"https://api.diamanteagricola.com.br:8089/rest/TICKETAPI/attTicket/",
+				requestOptions
+			);
+
+			const dataFrom = await responseFromProtheus.json();
+
+			console.log(`[${source}] resposta do Protheus`, responseFromProtheus.status);
+			console.log(`[${source}] payload Protheus`, dataFrom);
+
+			if (responseFromProtheus.status !== 201 || Number(dataFrom?.codigo) !== 200) {
+				const errorMessage =
+					dataFrom?.message ||
+					dataFrom?.erro ||
+					dataFrom?.error ||
+					"Protheus não confirmou o envio";
+
+				updates = {
+					protheusSyncStatus: "error",
+					protheusLastError: errorMessage,
+					protheusErrorPayload: {
+						httpStatus: responseFromProtheus.status,
+						codigo: dataFrom?.codigo ?? null,
+						message: errorMessage,
+						payload: dataFrom ?? null,
+						source,
+						receivedAt: new Date(),
+					},
+				};
+
+				await updateDoc(docRef, updates);
+				return;
+			}
+
+			const {
+				peso_tara,
+				peso_bruto,
+				porcentagem_umidade,
+				porcentagem_impureza,
+				porcentagemimpureza,
+				porcentagemumidade,
+			} = dataFrom;
+
+			updates = {
+				protheusSyncStatus: "success",
+				protheusReceipt: {
+					codigo: dataFrom?.codigo ?? null,
+					filial: dataFrom?.filial ?? "",
+					cod_ticket: dataFrom?.cod_ticket ?? "",
+					romaneio: dataFrom?.romaneio ? String(dataFrom.romaneio).trim() : "",
+					cod_planejamento: dataFrom?.cod_planejamento ?? "",
+					cod_projeto: dataFrom?.cod_projeto ?? null,
+					desc_projeto: dataFrom?.desc_projeto
+						? String(dataFrom.desc_projeto).trim()
+						: "",
+					source,
+					receivedAt: new Date(),
+				},
+				protheusLastError: "",
+			};
+
+			if (porcentagem_umidade > 0 || porcentagemumidade > 0) {
+				updates.umidade = porcentagem_umidade ?? porcentagemumidade ?? "";
+				updates.impureza = porcentagem_impureza ?? porcentagemimpureza ?? "";
+			}
+
+			if (peso_tara && peso_tara > 0) {
+				updates.tara = peso_tara;
+			}
+
+			if (peso_bruto && peso_bruto > 0) {
+				updates.pesoBruto = peso_bruto;
+			}
+
+			if (peso_bruto > 0 && peso_tara > 0) {
+				updates.liquido = peso_bruto - peso_tara;
+
+				if (!docSendData?.saida) {
+					updates.saida = new Date();
+				}
+			}
+
+			if (response?.codTicketPro) {
+				updates.ticket = parseInt(response.codTicketPro);
+			}
+
+			await updateDoc(docRef, updates);
+
+			const updatedSnap = await getDoc(docRef);
+
+			if (updatedSnap.exists()) {
+				console.log(`[${source}] Updated data Serverhandler:`, updatedSnap.data());
+			} else {
+				console.log(`[${source}] Documento não encontrado depois do envio`);
+			}
+		} catch (error) {
+			console.log(`[${source}] Erro ao enviar os dados para o Protheus`, error);
+
+			updates = {
+				protheusSyncStatus: "error",
+				protheusLastError: error?.message || "Erro ao enviar para o Protheus",
+				protheusErrorPayload: {
+					message: error?.message || "Erro ao enviar para o Protheus",
+					source,
+					receivedAt: new Date(),
+				},
+			};
+
+			await updateDoc(docRef, updates);
 		}
-	}
+	});
+};
 
+router.post("/upload-romaneio", isAuth, async (req, res) => {
+	try {
+		const { projetos, dados } = await getParcelasData();
 
+		const dataId = req.body.id;
+		const docRef = doc(db, TABLES_FIREBASE.truckmove, dataId);
+		const docSend = await getDoc(docRef);
 
+		if (!docSend.exists()) {
+			return res.status(404).json({
+				ok: false,
+				message: `Documento não encontrado: ${dataId}`,
+			});
+		}
 
-	// const lastOne = await getAndGenerateIdFirebase();
-	const { beforeLastElement, lastElement } = await getAndGenerateIdFirebase(5);
+		let docSendData = docSend.data();
 
-	// lastOne.forEach((e) => {
-	// 	console.log('últimos ROmaneios: ', e.relatorioColheita, e.syncDate.toDate().toLocaleTimeString())
-	// })
+		const newParcelas =
+			docSendData?.parcelasObjFiltered?.map((data) => data.parcela) || [];
 
-	let formatSendData = {};
-	if (!docSendData) {
-		res.status(404).send(`Documento não encontrando: ${dataId}`);
-	} else {
-		const getData = docSendData.parcelasObjFiltered;
-		console.log("getData: ", getData);
-		const exist = data => data.caixas === undefined || data.caixas === 0;
-		const som0eUndefined = getData.some(exist);
+		const variedadeCultura =
+			docSendData?.parcelasObjFiltered?.map((data) => ({
+				cultura: data.cultura || null,
+				variedade: data.variedade || null,
+			})) || [];
 
-		if (som0eUndefined) {
+		docSendData = {
+			...docSendData,
+			parcelasNovas: newParcelas,
+			mercadoria: variedadeCultura[0]?.variedade || null,
+			cultura: variedadeCultura[0]?.cultura || null,
+		};
+
+		await updateDoc(docRef, {
+			parcelasNovas: newParcelas,
+			mercadoria: variedadeCultura[0]?.variedade || null,
+			cultura: variedadeCultura[0]?.cultura || null,
+		});
+
+		if (docSendData.parcelasNovas.length === 1) {
+			const parcela = docSendData.parcelasNovas[0];
+			const newParcelaObj = dados?.[docSendData.fazendaOrigem]?.[parcela];
+
+			if (newParcelaObj) {
+				const newAdjust = { ...newParcelaObj, parcela };
+				docSendData = { ...docSendData, parcelasObjFiltered: [newAdjust] };
+			}
+		} else {
+			const one = docSendData.parcelasNovas;
+			const two = docSendData.parcelasObjFiltered.map((data) => data.parcela);
+
+			const sortedOne = [...one].sort((a, b) => a.localeCompare(b));
+			const sortedTwo = [...two].sort((a, b) => a.localeCompare(b));
+
+			const areEqual = sortedOne.toString() === sortedTwo.toString();
+
+			if (!areEqual) {
+				const newArrayToAdd = [];
+
+				one.forEach((element) => {
+					const correctObj = dados?.[docSendData.fazendaOrigem]?.[element];
+
+					if (correctObj) {
+						newArrayToAdd.push({ ...correctObj, parcela: element });
+					}
+				});
+
+				docSendData = {
+					...docSendData,
+					parcelasObjFiltered: newArrayToAdd,
+				};
+			}
+		}
+
+		const { beforeLastElement, lastElement } = await getAndGenerateIdFirebase(5);
+
+		let formatSendData = {};
+		const getData = docSendData.parcelasObjFiltered || [];
+
+		const hasSomeUndefinedCaixas = getData.some(
+			(data) => data.caixas === undefined || data.caixas === 0
+		);
+
+		if (hasSomeUndefinedCaixas) {
 			const totalLen = getData.length;
-			let adjustPercent;
 
-			if (totalLen % 2 !== 0 && getData.length > 1) {
+			if (totalLen % 2 !== 0 && totalLen > 1) {
 				let total = 0;
-				adjustPercent = getData.map((data, i) => {
+
+				const adjustPercent = getData.map((data, i) => {
 					let parcePercent;
-					if (i + 1 === getData.length) {
-						console.log("último elemento", data);
+
+					if (i + 1 === totalLen) {
 						parcePercent = Number(100 - total);
 					} else {
 						parcePercent = (1 / totalLen * 100).toFixed(0);
 						total += Number(parcePercent);
 					}
+
 					return { ...data, parcePercent: Number(parcePercent) };
 				});
 
 				formatSendData = {
 					...docSendData,
-					parcelasObjFiltered: adjustPercent
+					parcelasObjFiltered: adjustPercent,
 				};
 
-
-				const updates = {
-					parcelasObjFiltered: adjustPercent
-				};
-				const result = await updateDoc(docRef, updates);
-
+				await updateDoc(docRef, {
+					parcelasObjFiltered: adjustPercent,
+				});
 			} else {
-				const adjustPercent = getData.map((data, i) => {
+				const adjustPercent = getData.map((data) => {
 					const parcePercent = (1 / totalLen * 100).toFixed(0);
 
 					return { ...data, parcePercent: Number(parcePercent) };
@@ -181,323 +333,210 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 
 				formatSendData = {
 					...docSendData,
-					parcelasObjFiltered: adjustPercent
+					parcelasObjFiltered: adjustPercent,
 				};
 
-				console.log("adjust PercentHereL ", adjustPercent);
-				const updates = {
-					parcelasObjFiltered: adjustPercent
-				};
-				const result = await updateDoc(docRef, updates);
+				await updateDoc(docRef, {
+					parcelasObjFiltered: adjustPercent,
+				});
 			}
 		} else {
 			const totalCaixas = getData.reduce((acc, curr) => acc + curr.caixas, 0);
-			const adjustPercent = getData.map(data => {
+
+			const adjustPercent = getData.map((data) => {
 				const parcePercent = (data.caixas / totalCaixas * 100).toFixed(2);
+
 				return { ...data, parcePercent: Number(parcePercent) };
 			});
-			console.log("adjust PercentHereL ", adjustPercent);
+
 			formatSendData = {
 				...docSendData,
-				parcelasObjFiltered: adjustPercent
+				parcelasObjFiltered: adjustPercent,
 			};
-
 		}
 
 		const response = {
 			...formatSendData,
-			id: dataId
+			id: dataId,
 		};
-
-		// let newNumber;
-		// // AJUSTE PARA REGULAR O NUMERO DO ROMANEIO
-		// console.log("response :", response.relatorioColheita);
-		// console.log("lastNumber :", lastOne.relatorioColheita);
-
-		// if (process.env.NODE_ENV === "production") {
-		// 	console.log('estamos na producao')
-		// 	if (
-		// 		Number(response.relatorioColheita) == Number(lastOne.relatorioColheita)
-		// 	) {
-		// 		console.log(
-		// 			"tudo certo, romaneio registrado corretamente com o número : ",
-		// 			response.relatorioColheita
-		// 		);
-		// 		newNumber = Number(response.relatorioColheita);
-		// 	} else {
-		// 		console.log("Gerando os últimos resultados de romaneios, para ajustar o número")
-		// 		const beforelastOne = await getAndGenerateIdFirebaseBeforeLast();
-		// 		const newNumberAdjust = Number(beforelastOne.relatorioColheita) + 1;
-		// 		console.log("novo número Ajustado", newNumberAdjust);
-		// 		const updates = {
-		// 			relatorioColheita: newNumberAdjust
-		// 		};
-		// 		const result = await updateDoc(docRef, updates);
-		// 		console.log('reult of Serverhandler: ', result)
-		// 		newNumber = newNumberAdjust;
-		// 	}
-		// } else {
-		// 	console.log('estamos na desenvolvimento')
-		// }
-
-		// Depois, ajuste do número do romaneio
-		console.log("response.relatorioColheita :", response.relatorioColheita);
-		console.log("lastElement.relatorioColheita :", lastElement?.relatorioColheita);
 
 		let newNumber;
 
 		if (process.env.NODE_ENV === "production") {
 			if (Number(response.relatorioColheita) === Number(lastElement?.relatorioColheita)) {
-				console.log("Romaneio registrado corretamente com o número: ", response.relatorioColheita);
 				newNumber = Number(response.relatorioColheita);
 			} else {
-				console.log("Ajustando número do romaneio...");
 				const newNumberAdjust = beforeLastElement
 					? Number(beforeLastElement.relatorioColheita) + 1
 					: Number(lastElement?.relatorioColheita || 0) + 1;
 
-				const updates = { relatorioColheita: newNumberAdjust };
-				const result = await updateDoc(docRef, updates);
-				console.log("Resultado do ajuste no banco: ", result);
+				await updateDoc(docRef, {
+					relatorioColheita: newNumberAdjust,
+				});
 
 				newNumber = newNumberAdjust;
 			}
 		} else {
-			console.log("Estamos em desenvolvimento, não ajustando número");
+			newNumber = response.relatorioColheita;
 		}
 
+		const getProjName = (data) => data.nome === response.fazendaOrigem;
+		const newData = projetos.find(getProjName);
 
-		if (process.env.NODE_ENV !== "production") {
-			newNumber = response.relatorioColheita
-		}
-
-
-		// AJUSTE PARA INCLUIR ID DO PROJETO
-		const getProjName = (data) => data.nome === response.fazendaOrigem
-		const newData = projetos.find(getProjName)
 		if (newData) {
-			console.log('Projeto Origem : ', newData?.nome)
-			console.log('Projeto Origem id: ', newData?.id_d)
-			const updates = {
-				fazendaOrigemProtheusId: newData?.id_d
-			};
-
-			const result = await updateDoc(docRef, updates);
-			console.log("reult of Serverhandler: ", result);
+			await updateDoc(docRef, {
+				fazendaOrigemProtheusId: newData?.id_d,
+			});
 		}
 
-
-		// AJUSTE PARA REGULAR O NUMERO DO ROMANEIO
 		const responseToSend = {
 			...response,
 			relatorioColheita: newNumber,
-			fazendaOrigemProtheusId: newData?.id_d
-
+			fazendaOrigemProtheusId: newData?.id_d,
 		};
 
-		//response OBJ TO SEND TO PROTHEUS
-		res.send(responseToSend).status(200);
+		await updateDoc(docRef, {
+			protheusSyncStatus: "processing",
+			protheusLastAttemptAt: new Date(),
+			protheusLastError: "",
+			...(response.codTicketPro && { ticket: parseInt(response.codTicketPro) }),
+		});
 
-		console.log('Dados enviados ao Protheus: ', responseToSend)
+		res.status(202).json({
+			ok: true,
+			processing: true,
+			message: "Romaneio recebido. Envio ao Protheus em processamento.",
+			data: responseToSend,
+		});
 
-		let updates = {};
-		if (responseToSend?.filialPro && responseToSend?.codTicketPro) {
-			try {
-				const httpsAgent = new https.Agent({
-					rejectUnauthorized: false,
+		sendRomaneioToProtheusInBackground({
+			docRef,
+			docSendData,
+			responseToSend,
+			response,
+			source: "upload-romaneio",
+		});
+	} catch (error) {
+		console.log("Erro no endpoint upload-romaneio:", error);
+
+		return res.status(500).json({
+			ok: false,
+			message: error?.message || "Erro ao processar upload-romaneio",
+		});
+	}
+});
+
+
+router.post("/resend-to-protheus", isAuth, async (req, res) => {
+	try {
+		const { projetos, dados } = await getParcelasData();
+
+		const dataId = req.body.id;
+		const docRef = doc(db, TABLES_FIREBASE.truckmove, dataId);
+		const docSend = await getDoc(docRef);
+
+		if (!docSend.exists()) {
+			return res.status(404).json({
+				ok: false,
+				message: `Documento não encontrado: ${dataId}`,
+			});
+		}
+
+		let docSendData = docSend.data();
+
+		const newParcelas =
+			docSendData?.parcelasObjFiltered?.map((data) => data.parcela) || [];
+
+		const variedadeCultura =
+			docSendData?.parcelasObjFiltered?.map((data) => ({
+				cultura: data.cultura || null,
+				variedade: data.variedade || null,
+			})) || [];
+
+		docSendData = {
+			...docSendData,
+			parcelasNovas: newParcelas,
+			mercadoria: variedadeCultura[0]?.variedade || null,
+			cultura: variedadeCultura[0]?.cultura || null,
+		};
+
+		await updateDoc(docRef, {
+			parcelasNovas: newParcelas,
+			mercadoria: variedadeCultura[0]?.variedade || null,
+			cultura: variedadeCultura[0]?.cultura || null,
+		});
+
+		if (docSendData.parcelasNovas.length === 1) {
+			const parcela = docSendData.parcelasNovas[0];
+			const newParcelaObj = dados?.[docSendData.fazendaOrigem]?.[parcela];
+
+			if (newParcelaObj) {
+				const newAdjust = { ...newParcelaObj, parcela };
+				docSendData = { ...docSendData, parcelasObjFiltered: [newAdjust] };
+			}
+		} else {
+			const one = docSendData.parcelasNovas;
+			const two = docSendData.parcelasObjFiltered.map((data) => data.parcela);
+
+			const sortedOne = [...one].sort((a, b) => a.localeCompare(b));
+			const sortedTwo = [...two].sort((a, b) => a.localeCompare(b));
+
+			const areEqual = sortedOne.toString() === sortedTwo.toString();
+
+			if (!areEqual) {
+				const newArrayToAdd = [];
+
+				one.forEach((element) => {
+					const correctObj = dados?.[docSendData.fazendaOrigem]?.[element];
+
+					if (correctObj) {
+						newArrayToAdd.push({ ...correctObj, parcela: element });
+					}
 				});
-				var requestOptions = {
-					method: "POST",
-					headers: {
-						Accept: "application/json",
-						"Content-Type": "application/json",
-						Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
-						"Access-Control-Allow-Origin": "*",
-						"tenantid": "02"
-					},
-					body: JSON.stringify(responseToSend),
-					redirect: "follow",
-					agent: httpsAgent,
+
+				docSendData = {
+					...docSendData,
+					parcelasObjFiltered: newArrayToAdd,
 				};
-
-				const repsonseFromProtheus = await fetch(
-					"https://api.diamanteagricola.com.br:8089/rest/TICKETAPI/attTicket/",
-					requestOptions
-				);
-				const dataFrom = await repsonseFromProtheus.json()
-				console.log("resposta do Protheus", repsonseFromProtheus.status)
-				console.log('resposta do Protheus', dataFrom)
-				if (repsonseFromProtheus.status !== 201) {
-					console.log('Erro ao salvar os dados no Protheus, ')
-					return
-				}
-				if (repsonseFromProtheus.status === 201) {
-					const { peso_tara, peso_bruto, porcentagem_umidade, porcentagem_impureza, porcentagemimpureza, porcentagemumidade } = dataFrom
-
-					if (porcentagem_umidade > 0 || porcentagemumidade > 0) {
-						updates.umidade = porcentagem_umidade ?? porcentagemumidade ?? ""
-						updates.impureza = porcentagem_impureza ?? porcentagemimpureza ?? ""
-					}
-					if (peso_tara && peso_tara > 0) {
-						console.log('pesoTara from Protheus: ', peso_tara)
-						updates.tara = peso_tara
-					}
-					if (peso_bruto && peso_bruto > 0) {
-						console.log('pesoBruto from Protheus: ', peso_bruto)
-						updates.pesoBruto = peso_bruto
-					}
-					if (peso_bruto > 0 && peso_tara > 0) {
-						const liquido = peso_bruto - peso_tara
-						updates.liquido = liquido
-						if (!docSendData.saida) {
-							console.log('sem saída informada : ', docSendData)
-							updates.saida = new Date()
-						}
-					}
-				}
-			} catch (error) {
-				console.log("Erro ao enviar os dados para o protheus", error);
 			}
 		}
 
-		if (response.codTicketPro) {
-			const forTicket = parseInt(response.codTicketPro);
-			updates.ticket = forTicket
-		}
-		await updateDoc(docRef, updates);
+		let formatSendData = {};
+		const getData = docSendData.parcelasObjFiltered || [];
 
-		const result = await getDoc(docRef);
+		const hasSomeUndefinedCaixas = getData.some(
+			(data) => data.caixas === undefined || data.caixas === 0
+		);
 
-		if (result.exists()) {
-			console.log("Updated data Serverhandler upload-romaneio:", result.data());
-		} else {
-			console.log("No such document Serverhandler  upload-romaneio!");
-		}
-	}
-}
-);
-
-router.post("/resend-to-protheus", isAuth, async (req, res) => {
-	const { projetos, dados } = await getParcelasData();
-
-	const dataId = await req.body.id;
-	const docRef = doc(db, TABLES_FIREBASE.truckmove, dataId);
-	const docSend = await getDoc(docRef);
-	let docSendData = docSend.data();
-
-	const newParcelas = docSendData?.parcelasObjFiltered?.map((data) => data.parcela)
-	const variedadeCultura = docSendData?.parcelasObjFiltered.map((data) => {
-		return ({
-			cultura: data.cultura || null,
-			variedade: data.variedade || null
-		})
-	})
-
-	docSendData = {
-		...docSendData,
-		parcelasNovas: newParcelas,
-		mercadoria: variedadeCultura[0]?.variedade || null,
-		cultura: variedadeCultura[0]?.cultura || null
-	}
-
-	const updateParcelasNovas = {
-		parcelasNovas: newParcelas,
-		mercadoria: variedadeCultura[0]?.variedade || null,
-		cultura: variedadeCultura[0]?.cultura || null
-	}
-
-
-	await updateDoc(docRef, updateParcelasNovas);
-
-	const resultParcelasNovas = await getDoc(docRef);
-
-	if (resultParcelasNovas.exists()) {
-		console.log("reult of update parcelasNovas:", resultParcelasNovas.data());
-	} else {
-		console.log("No such document of reult of update parcelasNovas!");
-	}
-
-	if (docSendData.parcelasNovas.length === 1) {
-		const parcela = docSendData.parcelasNovas[0]
-		const newParcelaObj = dados[docSendData.fazendaOrigem][parcela]
-		const newAdjust = { ...newParcelaObj, parcela }
-		docSendData = { ...docSendData, parcelasObjFiltered: [newAdjust] }
-	} else {
-		console.log('mais de 1 parcela')
-		// logic here to handle when update value of obj comparing two arrays and if it is diff
-		const one = docSendData.parcelasNovas
-		console.log('Parcelas Novas: ', one)
-		const two = docSendData.parcelasObjFiltered.map((data) => data.parcela)
-		console.log('parcelasObjFilt', two)
-
-		// // Sort both arrays
-		const sortedOne = one.sort((a, b) => a.localeCompare(b))
-		const sortedTwo = two.sort((a, b) => a.localeCompare(b));
-
-		// // Convert arrays to strings and compare them
-		const stringOne = sortedOne.toString();
-		const stringTwo = sortedTwo.toString();
-
-		// // Check if the strings are equal
-		const areEqual = stringOne === stringTwo;
-
-		if (areEqual) {
-			console.log("The arrays contain the same elements.");
-		} else {
-			console.log("Os Arrays Enviados não são iguais, vamos corrigilos...");
-			const newArrayToAdd = []
-			one.forEach(element => {
-				const getCorretObjs = dados[docSendData.fazendaOrigem][element]
-				newArrayToAdd.push({ ...getCorretObjs, parcela: element })
-			});
-			docSendData = { ...docSendData, parcelasObjFiltered: newArrayToAdd }
-		}
-	}
-
-
-
-
-
-	let formatSendData = {};
-	if (!docSendData) {
-		res.status(404).send(`Documento não encontrando: ${dataId}`);
-	} else {
-		const getData = docSendData.parcelasObjFiltered;
-		console.log("getData: ", getData);
-		const exist = data => data.caixas === undefined || data.caixas === 0;
-		const som0eUndefined = getData.some(exist);
-
-		if (som0eUndefined) {
+		if (hasSomeUndefinedCaixas) {
 			const totalLen = getData.length;
-			let adjustPercent;
 
-			if (totalLen % 2 !== 0 && getData.length > 1) {
+			if (totalLen % 2 !== 0 && totalLen > 1) {
 				let total = 0;
-				adjustPercent = getData.map((data, i) => {
+
+				const adjustPercent = getData.map((data, i) => {
 					let parcePercent;
-					if (i + 1 === getData.length) {
-						console.log("último elemento", data);
+
+					if (i + 1 === totalLen) {
 						parcePercent = Number(100 - total);
 					} else {
 						parcePercent = (1 / totalLen * 100).toFixed(0);
 						total += Number(parcePercent);
 					}
+
 					return { ...data, parcePercent: Number(parcePercent) };
 				});
 
 				formatSendData = {
 					...docSendData,
-					parcelasObjFiltered: adjustPercent
+					parcelasObjFiltered: adjustPercent,
 				};
 
-
-				const updates = {
-					parcelasObjFiltered: adjustPercent
-				};
-				const result = await updateDoc(docRef, updates);
-
+				await updateDoc(docRef, {
+					parcelasObjFiltered: adjustPercent,
+				});
 			} else {
-				const adjustPercent = getData.map((data, i) => {
+				const adjustPercent = getData.map((data) => {
 					const parcePercent = (1 / totalLen * 100).toFixed(0);
 
 					return { ...data, parcePercent: Number(parcePercent) };
@@ -505,136 +544,78 @@ router.post("/resend-to-protheus", isAuth, async (req, res) => {
 
 				formatSendData = {
 					...docSendData,
-					parcelasObjFiltered: adjustPercent
+					parcelasObjFiltered: adjustPercent,
 				};
 
-				console.log("adjust PercentHereL ", adjustPercent);
-				const updates = {
-					parcelasObjFiltered: adjustPercent
-				};
-				const result = await updateDoc(docRef, updates);
+				await updateDoc(docRef, {
+					parcelasObjFiltered: adjustPercent,
+				});
 			}
 		} else {
 			const totalCaixas = getData.reduce((acc, curr) => acc + curr.caixas, 0);
-			const adjustPercent = getData.map(data => {
+
+			const adjustPercent = getData.map((data) => {
 				const parcePercent = (data.caixas / totalCaixas * 100).toFixed(2);
+
 				return { ...data, parcePercent: Number(parcePercent) };
 			});
-			console.log("adjust PercentHereL ", adjustPercent);
+
 			formatSendData = {
 				...docSendData,
-				parcelasObjFiltered: adjustPercent
+				parcelasObjFiltered: adjustPercent,
 			};
-
 		}
 
 		const response = {
 			...formatSendData,
-			id: dataId
+			id: dataId,
 		};
 
+		const getProjName = (data) => data.nome === response.fazendaOrigem;
+		const newData = projetos.find(getProjName);
 
-		// AJUSTE PARA INCLUIR ID DO PROJETO
-		const getProjName = (data) => data.nome === response.fazendaOrigem
-		const newData = projetos.find(getProjName)
 		if (newData) {
-			console.log('Projeto Origem : ', newData?.nome)
-			console.log('Projeto Origem id: ', newData?.id_d)
-			const updates = {
-				fazendaOrigemProtheusId: newData?.id_d
-			};
-
-			const result = await updateDoc(docRef, updates);
-			console.log("reult of Serverhandler: ", result);
+			await updateDoc(docRef, {
+				fazendaOrigemProtheusId: newData?.id_d,
+			});
 		}
 
-
-		// AJUSTE PARA REGULAR O NUMERO DO ROMANEIO
 		const responseToSend = {
 			...response,
-			fazendaOrigemProtheusId: newData?.id_d
-
+			fazendaOrigemProtheusId: newData?.id_d,
 		};
 
-		//response OBJ TO SEND TO PROTHEUS
-		res.send(responseToSend).status(200);
+		await updateDoc(docRef, {
+			protheusSyncStatus: "processing",
+			protheusLastAttemptAt: new Date(),
+			protheusLastError: "",
+			...(response.codTicketPro && { ticket: parseInt(response.codTicketPro) }),
+		});
 
-		console.log('Dados enviados ao Protheus: ', responseToSend)
+		res.status(202).json({
+			ok: true,
+			processing: true,
+			message: "Reenvio ao Protheus em processamento.",
+			data: responseToSend,
+		});
 
-		let updates = {};
-		if (responseToSend?.filialPro && responseToSend?.codTicketPro) {
-			try {
-				const httpsAgent = new https.Agent({
-					rejectUnauthorized: false,
-				});
-				var requestOptions = {
-					method: "POST",
-					headers: {
-						Accept: "application/json",
-						"Content-Type": "application/json",
-						Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
-						"Access-Control-Allow-Origin": "*",
-						"tenantid": "02"
-					},
-					body: JSON.stringify(responseToSend),
-					redirect: "follow",
-					agent: httpsAgent,
-				};
+		sendRomaneioToProtheusInBackground({
+			docRef,
+			docSendData,
+			responseToSend,
+			response,
+			source: "resend-to-protheus",
+		});
+	} catch (error) {
+		console.log("Erro no endpoint resend-to-protheus:", error);
 
-				const repsonseFromProtheus = await fetch(
-					"https://api.diamanteagricola.com.br:8089/rest/TICKETAPI/attTicket/",
-					requestOptions
-				);
-				const dataFrom = await repsonseFromProtheus.json()
-				console.log("resposta do Protheus", repsonseFromProtheus.status)
-				console.log('resposta do Protheus', dataFrom)
-				if (repsonseFromProtheus.status !== 201) {
-					console.log('Erro ao salvar os dados no Protheus, ')
-					return
-				}
-				if (repsonseFromProtheus.status === 201) {
-					const { peso_tara, peso_bruto, porcentagem_umidade, porcentagem_impureza, porcentagemimpureza, porcentagemumidade } = dataFrom
-					updates.umidade = porcentagem_umidade ?? porcentagemumidade ?? ""
-					updates.impureza = porcentagem_impureza ?? porcentagemimpureza ?? ""
-
-					if (peso_tara && peso_tara > 0) {
-						console.log('pesoTara from Protheus: ', peso_tara)
-						updates.tara = peso_tara
-					}
-					if (peso_bruto && peso_bruto > 0) {
-						console.log('pesoBruto from Protheus: ', peso_bruto)
-						updates.pesoBruto = peso_bruto
-					}
-					if (peso_bruto > 0 && peso_tara > 0) {
-						const liquido = peso_bruto - peso_tara
-						updates.liquido = liquido
-						if (!docSendData.saida) {
-							console.log('sem saída informada : ', docSendData)
-							updates.saida = new Date()
-						}
-					}
-				}
-			} catch (error) {
-				console.log("Erro ao enviar os dados para o protheus", error);
-			}
-		}
-
-		if (response.codTicketPro) {
-			const forTicket = parseInt(response.codTicketPro);
-			updates.ticket = forTicket
-		}
-		await updateDoc(docRef, updates);
-
-		const updatedSnap = await getDoc(docRef);
-
-		if (updatedSnap.exists()) {
-			console.log("Updated data Serverhandler:", updatedSnap.data());
-		} else {
-			console.log("No such document Serverhandler!");
-		}
+		return res.status(500).json({
+			ok: false,
+			message: error?.message || "Erro ao processar resend-to-protheus",
+		});
 	}
-}
-);
+});
+
 router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 	console.log('Editando o documento pela nova opção do sistema, direto para o protheus')
 	const dataId = await req.body.id;
