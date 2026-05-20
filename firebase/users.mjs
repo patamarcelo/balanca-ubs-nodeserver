@@ -110,7 +110,8 @@ router.post("/check-user", async (req, res) => {
 		if (!uid) {
 			return res.status(400).json({
 				success: false,
-				error: "UID is required",
+				code: "UID_REQUIRED",
+				message: "UID is required",
 			});
 		}
 
@@ -122,26 +123,38 @@ router.post("/check-user", async (req, res) => {
 		if (user.disabled) {
 			return res.status(403).json({
 				success: false,
-				message: "User is not active.",
+				code: "USER_DISABLED",
+				message: "Usuário desativado.",
 				user,
 			});
 		}
 
 		return res.status(200).json({
 			success: true,
-			message: "User is active.",
+			code: "USER_ACTIVE",
+			message: "Usuário ativo.",
 			user,
 		});
 	} catch (error) {
 		console.error("Error fetching user data:", error);
 
+		if (error?.code === "auth/user-not-found") {
+			return res.status(404).json({
+				success: false,
+				code: "USER_NOT_FOUND",
+				message: "Usuário não existe.",
+			});
+		}
+
 		return res.status(500).json({
 			success: false,
+			code: "INTERNAL_SERVER_ERROR",
 			error: "Internal Server Error",
 			message: error.message,
 		});
 	}
 });
+
 
 router.get("/get-all-users", isAuth, async (req, res) => {
 	try {

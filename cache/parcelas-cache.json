@@ -1,8 +1,8 @@
 {
-  "updatedAt": "2026-05-14T11:33:34.076Z",
+  "updatedAt": "2026-05-18T13:04:10.092Z",
   "data": {
     "msg": "Consulta realizada com sucesso!!",
-    "total_return": 439,
+    "total_return": 442,
     "resumo_safra": [
       {
         "talhao__fazenda__nome": "Projeto Benção de Deus",
@@ -47,7 +47,7 @@
       {
         "talhao__fazenda__nome": "Projeto Safira",
         "variedade__cultura__cultura": "Arroz",
-        "area_total": 810.67
+        "area_total": 937.67
       },
       {
         "talhao__fazenda__nome": "Projeto Tucano",
@@ -317,7 +317,7 @@
       {
         "talhao__fazenda__nome": "Projeto Safira",
         "talhao__fazenda__fazenda__nome": "Fazenda Campo Guapo",
-        "count": 12
+        "count": 15
       },
       {
         "talhao__fazenda__nome": "Projeto Tucano",
@@ -331,7 +331,7 @@
       }
     ],
     "Area Total dos Talhoes Plantados": {
-      "area_colheita__sum": 12766.54
+      "area_colheita__sum": 12893.54
     },
     "dados": {
       "Projeto Benção de Deus": {
@@ -529,7 +529,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "424",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 16669,
           "plantio_descontinuado": false
         },
@@ -736,7 +736,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "Pampeira",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 16712,
           "plantio_descontinuado": false
         },
@@ -817,7 +817,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "424",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 16722,
           "plantio_descontinuado": false
         },
@@ -835,7 +835,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "Pampeira",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 17974,
           "plantio_descontinuado": false
         },
@@ -1856,7 +1856,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "424",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 16266,
           "plantio_descontinuado": false
         },
@@ -1874,7 +1874,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "424",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 16270,
           "plantio_descontinuado": false
         },
@@ -1883,7 +1883,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "424",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 16272,
           "plantio_descontinuado": false
         },
@@ -2193,7 +2193,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "424",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 16492,
           "plantio_descontinuado": false
         },
@@ -2337,7 +2337,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "424",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 16508,
           "plantio_descontinuado": false
         },
@@ -2346,7 +2346,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "424",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 16509,
           "plantio_descontinuado": false
         },
@@ -3077,7 +3077,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "424",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 16439,
           "plantio_descontinuado": false
         },
@@ -3277,7 +3277,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "424",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 16369,
           "plantio_descontinuado": false
         },
@@ -3286,7 +3286,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "424",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 16361,
           "plantio_descontinuado": false
         },
@@ -3295,7 +3295,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "424",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 16362,
           "plantio_descontinuado": false
         },
@@ -3304,7 +3304,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "424",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 16363,
           "plantio_descontinuado": false
         },
@@ -3376,7 +3376,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "424",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 16372,
           "plantio_descontinuado": false
         },
@@ -3493,7 +3493,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "424",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 16385,
           "plantio_descontinuado": false
         }
@@ -3699,6 +3699,24 @@
           "id_plantio": 16308,
           "plantio_descontinuado": false
         },
+        "D01": {
+          "safra": "2025/2026",
+          "ciclo": 3,
+          "cultura": "Arroz",
+          "variedade": "424",
+          "finalizado_colheita": false,
+          "id_plantio": 16309,
+          "plantio_descontinuado": false
+        },
+        "D02": {
+          "safra": "2025/2026",
+          "ciclo": 3,
+          "cultura": "Arroz",
+          "variedade": "424",
+          "finalizado_colheita": false,
+          "id_plantio": 16310,
+          "plantio_descontinuado": false
+        },
         "E01": {
           "safra": "2025/2026",
           "ciclo": 3,
@@ -3724,6 +3742,15 @@
           "variedade": "424",
           "finalizado_colheita": false,
           "id_plantio": 16313,
+          "plantio_descontinuado": false
+        },
+        "F02": {
+          "safra": "2025/2026",
+          "ciclo": 3,
+          "cultura": "Arroz",
+          "variedade": "BRS 902",
+          "finalizado_colheita": false,
+          "id_plantio": 16314,
           "plantio_descontinuado": false
         },
         "G01": {
@@ -3886,7 +3913,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "424",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 16623,
           "plantio_descontinuado": false
         },
@@ -3940,7 +3967,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "424",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 16628,
           "plantio_descontinuado": false
         },
@@ -3958,7 +3985,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "424",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 16630,
           "plantio_descontinuado": false
         },
@@ -3967,7 +3994,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "424",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 16632,
           "plantio_descontinuado": false
         },
@@ -3976,7 +4003,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "424",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 16633,
           "plantio_descontinuado": false
         },
@@ -4113,7 +4140,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "424",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 16459,
           "plantio_descontinuado": false
         },
