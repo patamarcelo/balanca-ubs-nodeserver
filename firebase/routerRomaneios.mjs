@@ -444,61 +444,69 @@ router.post("/resend-to-protheus", isAuth, async (req, res) => {
 
 		let docSendData = docSend.data();
 
-		const newParcelas =
-			docSendData?.parcelasObjFiltered?.map((data) => data.parcela) || [];
+		const parcelasOriginais =
+			Array.isArray(docSendData?.parcelasObjFiltered)
+				? docSendData.parcelasObjFiltered.map((data) => data.parcela).filter(Boolean)
+				: [];
 
-		const variedadeCultura =
-			docSendData?.parcelasObjFiltered?.map((data) => ({
-				cultura: data.cultura || null,
-				variedade: data.variedade || null,
-			})) || [];
+		const parcelasEditadas =
+			Array.isArray(docSendData?.parcelasNovas)
+				? docSendData.parcelasNovas.filter(Boolean)
+				: [];
 
-		docSendData = {
-			...docSendData,
-			parcelasNovas: newParcelas,
-			mercadoria: variedadeCultura[0]?.variedade || null,
-			cultura: variedadeCultura[0]?.cultura || null,
-		};
+		const parcelasBase = parcelasEditadas.length > 0
+			? parcelasEditadas
+			: parcelasOriginais;
 
-		await updateDoc(docRef, {
-			parcelasNovas: newParcelas,
-			mercadoria: variedadeCultura[0]?.variedade || null,
-			cultura: variedadeCultura[0]?.cultura || null,
+		let parcelasObjFilteredAtualizado = [];
+
+		parcelasBase.forEach((parcela) => {
+			const correctObj = dados?.[docSendData.fazendaOrigem]?.[parcela];
+
+			if (correctObj) {
+				parcelasObjFilteredAtualizado.push({
+					...correctObj,
+					parcela,
+				});
+			}
 		});
 
-		if (docSendData.parcelasNovas.length === 1) {
-			const parcela = docSendData.parcelasNovas[0];
-			const newParcelaObj = dados?.[docSendData.fazendaOrigem]?.[parcela];
+		if (parcelasObjFilteredAtualizado.length > 0) {
+			const firstParcelaObj = parcelasObjFilteredAtualizado[0];
 
-			if (newParcelaObj) {
-				const newAdjust = { ...newParcelaObj, parcela };
-				docSendData = { ...docSendData, parcelasObjFiltered: [newAdjust] };
-			}
+			docSendData = {
+				...docSendData,
+				parcelasNovas: parcelasBase,
+				parcelasObjFiltered: parcelasObjFilteredAtualizado,
+				mercadoria: firstParcelaObj?.variedade || null,
+				cultura: firstParcelaObj?.cultura || null,
+			};
+
+			await updateDoc(docRef, {
+				parcelasNovas: parcelasBase,
+				parcelasObjFiltered: parcelasObjFilteredAtualizado,
+				mercadoria: firstParcelaObj?.variedade || null,
+				cultura: firstParcelaObj?.cultura || null,
+			});
 		} else {
-			const one = docSendData.parcelasNovas;
-			const two = docSendData.parcelasObjFiltered.map((data) => data.parcela);
+			const variedadeCultura =
+				docSendData?.parcelasObjFiltered?.map((data) => ({
+					cultura: data.cultura || null,
+					variedade: data.variedade || null,
+				})) || [];
 
-			const sortedOne = [...one].sort((a, b) => a.localeCompare(b));
-			const sortedTwo = [...two].sort((a, b) => a.localeCompare(b));
+			docSendData = {
+				...docSendData,
+				parcelasNovas: parcelasBase,
+				mercadoria: variedadeCultura[0]?.variedade || null,
+				cultura: variedadeCultura[0]?.cultura || null,
+			};
 
-			const areEqual = sortedOne.toString() === sortedTwo.toString();
-
-			if (!areEqual) {
-				const newArrayToAdd = [];
-
-				one.forEach((element) => {
-					const correctObj = dados?.[docSendData.fazendaOrigem]?.[element];
-
-					if (correctObj) {
-						newArrayToAdd.push({ ...correctObj, parcela: element });
-					}
-				});
-
-				docSendData = {
-					...docSendData,
-					parcelasObjFiltered: newArrayToAdd,
-				};
-			}
+			await updateDoc(docRef, {
+				parcelasNovas: parcelasBase,
+				mercadoria: variedadeCultura[0]?.variedade || null,
+				cultura: variedadeCultura[0]?.cultura || null,
+			});
 		}
 
 		let formatSendData = {};
