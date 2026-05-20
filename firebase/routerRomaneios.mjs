@@ -625,52 +625,80 @@ router.post("/resend-to-protheus", isAuth, async (req, res) => {
 });
 
 router.post("/updated-romaneio-data", isAuth, async (req, res) => {
-	console.log('Editando o documento pela nova opção do sistema, direto para o protheus')
-	const dataId = await req.body.id;
+	console.log("Editando o documento pela nova opção do sistema, direto para o protheus");
+
+	const { projetos, dados } = await getParcelasData();
+
+	const dataId = req.body.id;
 	const docRef = doc(db, TABLES_FIREBASE.truckmove, dataId);
 	const docSend = await getDoc(docRef);
 	let docSendData = docSend.data();
+
 	if (!docSendData) {
-		console.log('documento não encontrado: ', dataId)
-	} else {
-		if (docSendData?.parcelasNovas.length === 1) {
-			const parcela = docSendData.parcelasNovas[0]
-			const newParcelaObj = dados[docSendData.fazendaOrigem][parcela]
-			const newAdjust = { ...newParcelaObj, parcela }
-			docSendData = { ...docSendData, parcelasObjFiltered: [newAdjust] }
-		} else {
-			console.log('mais de 1 parcela')
-			// logic here to handle when update value of obj comparing two arrays and if it is diff
-			const one = docSendData?.parcelasNovas
-			console.log('Parcelas Novas: ', one)
-			const two = docSendData.parcelasObjFiltered.map((data) => data.parcela)
-			console.log('parcelasObjFilt', two)
+		console.log("documento não encontrado: ", dataId);
 
-			// // Sort both arrays
-			const sortedOne = one.sort((a, b) => a.localeCompare(b))
-			const sortedTwo = two.sort((a, b) => a.localeCompare(b));
-
-			// // Convert arrays to strings and compare them
-			const stringOne = sortedOne.toString();
-			const stringTwo = sortedTwo.toString();
-
-			// // Check if the strings are equal
-			const areEqual = stringOne === stringTwo;
-
-			if (areEqual) {
-				console.log("The arrays contain the same elements.");
-			} else {
-				console.log("Os Arrays Enviados não são iguais, vamos corrigilos...");
-				const newArrayToAdd = []
-				one.forEach(element => {
-					const getCorretObjs = dados[docSendData.fazendaOrigem][element]
-					newArrayToAdd.push({ ...getCorretObjs, parcela: element })
-				});
-				docSendData = { ...docSendData, parcelasObjFiltered: newArrayToAdd }
-			}
-		}
+		return res.status(404).send(`Documento não encontrando: ${dataId}`);
 	}
 
+	const parcelasOriginais =
+		Array.isArray(docSendData?.parcelasObjFiltered)
+			? docSendData.parcelasObjFiltered.map((data) => data.parcela).filter(Boolean)
+			: [];
+
+	const parcelasEditadas =
+		Array.isArray(docSendData?.parcelasNovas)
+			? docSendData.parcelasNovas.filter(Boolean)
+			: [];
+
+	const parcelasBase = parcelasEditadas.length > 0
+		? parcelasEditadas
+		: parcelasOriginais;
+
+	const parcelasObjFilteredAtualizado = [];
+
+	parcelasBase.forEach((parcela) => {
+		const correctObj = dados?.[docSendData.fazendaOrigem]?.[parcela];
+
+		if (correctObj) {
+			parcelasObjFilteredAtualizado.push({
+				...correctObj,
+				parcela,
+			});
+		}
+	});
+
+	if (parcelasObjFilteredAtualizado.length > 0) {
+		const firstParcelaObj = parcelasObjFilteredAtualizado[0];
+
+		docSendData = {
+			...docSendData,
+			parcelasNovas: parcelasBase,
+			parcelasObjFiltered: parcelasObjFilteredAtualizado,
+			mercadoria: firstParcelaObj?.variedade || docSendData?.mercadoria || null,
+			cultura: firstParcelaObj?.cultura || docSendData?.cultura || null,
+		};
+
+		await updateDoc(docRef, {
+			parcelasNovas: parcelasBase,
+			parcelasObjFiltered: parcelasObjFilteredAtualizado,
+			mercadoria: firstParcelaObj?.variedade || docSendData?.mercadoria || null,
+			cultura: firstParcelaObj?.cultura || docSendData?.cultura || null,
+		});
+	} else {
+		console.log("Não foi possível reconstruir parcelasObjFiltered. Mantendo objeto atual.", {
+			fazendaOrigem: docSendData?.fazendaOrigem,
+			parcelasBase,
+		});
+
+		docSendData = {
+			...docSendData,
+			parcelasNovas: parcelasBase,
+		};
+
+		await updateDoc(docRef, {
+			parcelasNovas: parcelasBase,
+		});
+	}
 
 	let formatSendData = {};
 	if (!docSendData) {
