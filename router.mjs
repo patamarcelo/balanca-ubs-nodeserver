@@ -396,16 +396,22 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 		const endDateApKey = toDateKey(data.end_date);
 		const operationResult = operation ? operation[0]?.input?.name.trim() : 'Sem Operação'
 		const products = data.inputs.map((input) => {
-			const colorChip = getColorChip(input.input.input_type_name)
-			return ({
-				product: input.input.name,
-				type: input.input.input_type_name,
-				quantidadeSolicitada: input.sought_quantity,
-				doseSolicitada: input.sought_dosage_value,
-				unit: getUnitFormat[input.input.dosage_unit] || '',
-				colorChip
-			})
-		})
+			const colorChip = getColorChip(input?.input?.input_type_name);
+
+			return {
+				idFarmbox: input?.input?.id ?? null,
+				id_farmbox: input?.input?.id ?? null,
+
+				product: input?.input?.name || "",
+				type: input?.input?.input_type_name || "",
+				inputTypeId: input?.input?.input_type_id ?? null,
+
+				quantidadeSolicitada: input?.sought_quantity ?? 0,
+				doseSolicitada: input?.sought_dosage_value ?? 0,
+				unit: getUnitFormat[input?.input?.dosage_unit] || "",
+				colorChip,
+			};
+		});
 
 		const parcelas = data.plantations.map((plantation) => {
 			const parcela = plantation.plantation.name
