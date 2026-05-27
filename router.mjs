@@ -343,58 +343,76 @@ router.get("/data-open-apps", async (req, res) => {
 })
 
 router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
-	console.log('pegando dados das aplicacoes em aberto')
-	let collection = db.collection('aplicacoes');
-	const safra_2023_2024 = "2023/2024"
-	const safra_2024_2025 = "2024/2025"
-	const safra_2025_2026 = "2025/2026"
-	const safra_2026_2027 = "2026/2027"
+	console.log("pegando dados das aplicacoes em aberto");
+
+	let collection = db.collection("aplicacoes");
+
+	const safra_2023_2024 = "2023/2024";
+	const safra_2024_2025 = "2024/2025";
+	const safra_2025_2026 = "2025/2026";
+	const safra_2026_2027 = "2026/2027";
 
 	let results = await collection
-		.find({
-			$or: [{
-				"plantations.plantation.harvest_name": safra_2024_2025
+		.find(
+			{
+				$or: [
+					{
+						"plantations.plantation.harvest_name": safra_2024_2025,
+					},
+					{
+						"plantations.plantation.harvest_name": safra_2025_2026,
+					},
+					{
+						"plantations.plantation.harvest_name": safra_2026_2027,
+					},
+				],
+				status: "sought",
 			},
 			{
-				"plantations.plantation.harvest_name": safra_2025_2026
-			},
-			{
-				"plantations.plantation.harvest_name": safra_2026_2027
-			},
-			],
-			status: "sought"
-		}, {
-			projection: {
-				charge: 0, // Exclude the 'charge' field from the result,
-				"inputs.plantations_costs": 0,
-				"plantations.plantation.plot": 0,
-				"plantations.plantation.geo_points": 0,
+				projection: {
+					charge: 0,
+					"inputs.plantations_costs": 0,
+					"plantations.plantation.plot": 0,
+					"plantations.plantation.geo_points": 0,
+				},
 			}
-		})
+		)
 		.toArray();
-	// const results = dataFetch
 
 	const getUnitFormat = {
-		'l_ha': 'L/Ha',
-		'kg_ha': "Kg/Ha",
-		"un_ha": 'Un/Ha'
-	}
+		l_ha: "L/Ha",
+		kg_ha: "Kg/Ha",
+		un_ha: "Un/Ha",
+	};
+
 	const formatedArr = results.map((data) => {
-		const operation = data.inputs.filter((input) => input.input.input_type_name === 'Operação')
-		const apNumber = data.code
-		const idAp = data.id
-		const farmName = data.plantations[0].plantation.farm_name
-		const farmId = data.plantations[0].plantation.farm.id
-		const cultura = data.plantations[0]?.plantation?.culture_name || data.plantations[0]?.plantation?.planned_culture_name || ""
-		const safra = data.plantations[0].plantation.harvest_name
-		const ciclo = data.plantations[0].plantation.cycle
-		const safraCicloOrder = Number(safra.replace('/', '') + ciclo)
+		const operation = data.inputs.filter(
+			(input) => input.input.input_type_name === "Operação"
+		);
+
+		const apNumber = data.code;
+		const idAp = data.id;
+		const farmName = data.plantations[0].plantation.farm_name;
+		const farmId = data.plantations[0].plantation.farm.id;
+		const cultura =
+			data.plantations[0]?.plantation?.culture_name ||
+			data.plantations[0]?.plantation?.planned_culture_name ||
+			"";
+
+		const safra = data.plantations[0].plantation.harvest_name;
+		const ciclo = data.plantations[0].plantation.cycle;
+		const safraCicloOrder = Number(safra.replace("/", "") + ciclo);
+
 		const dateAp = toLocalDateTime(data.date);
 		const dateApKey = toDateKey(data.date);
 
 		const endDateAp = toLocalDateTime(data.end_date);
 		const endDateApKey = toDateKey(data.end_date);
-		const operationResult = operation ? operation[0]?.input?.name.trim() : 'Sem Operação'
+
+		const operationResult = operation
+			? operation[0]?.input?.name.trim()
+			: "Sem Operação";
+
 		const products = data.inputs.map((input) => {
 			const colorChip = getColorChip(input?.input?.input_type_name);
 
@@ -414,23 +432,35 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 		});
 
 		const parcelas = data.plantations.map((plantation) => {
-			const parcela = plantation.plantation.name
-			const areaSolicitada = plantation.sought_area
-			const areaAplicada = plantation.applied_area
-			const parcelaId = plantation.id
-			const parcelaAppPlantationId = plantation?.plantation?.id
-			// Substitua o seu trecho original por este:
-			const variedade = plantation?.plantation?.variety_name || plantation?.plantation?.planned_variety_name || ""
-			const cultura = plantation?.plantation?.culture_name || plantation?.plantation?.planned_culture_name || ""
+			const parcela = plantation.plantation.name;
+			const areaSolicitada = plantation.sought_area;
+			const areaAplicada = plantation.applied_area;
+			const parcelaId = plantation.id;
+			const parcelaAppPlantationId = plantation?.plantation?.id;
+
+			const variedade =
+				plantation?.plantation?.variety_name ||
+				plantation?.plantation?.planned_variety_name ||
+				"";
+
+			const cultura =
+				plantation?.plantation?.culture_name ||
+				plantation?.plantation?.planned_culture_name ||
+				"";
+
 			const date = toLocalDateTime(plantation?.plantation?.date);
 			const dateKey = toDateKey(plantation?.plantation?.date);
 
-			const date_prev_colheita = toLocalDateTime(plantation?.plantation?.harvest_prediction_date);
-			const date_prev_colheita_key = toDateKey(plantation?.plantation?.harvest_prediction_date);
+			const date_prev_colheita = toLocalDateTime(
+				plantation?.plantation?.harvest_prediction_date
+			);
+			const date_prev_colheita_key = toDateKey(
+				plantation?.plantation?.harvest_prediction_date
+			);
 
-			const fillColorParce = fillColor(areaSolicitada, areaAplicada)
+			const fillColorParce = fillColor(areaSolicitada, areaAplicada);
 
-			return ({
+			return {
 				parcela,
 				areaSolicitada,
 				areaAplicada,
@@ -442,24 +472,35 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 				dateKey,
 				date_prev_colheita,
 				date_prev_colheita_key,
-				parcelaAppPlantationId
-			})
-		})
+				parcelaAppPlantationId,
+			};
+		});
 
+		const sortedParcelas = parcelas
+			.sort((a, b) => a.parcela.localeCompare(b.parcela))
+			.sort((a, b) => a.fillColorParce.localeCompare(b.fillColorParce));
 
-		const sortedParcelas = parcelas.sort((a, b) => a.parcela.localeCompare(b.parcela)).sort((a, b) => a.fillColorParce.localeCompare(b.fillColorParce))
-		const areaTotalSolicitada = parcelas.reduce((acc, curr) => acc += curr.areaSolicitada, 0)
-		const areaTotalAplicada = parcelas.reduce((acc, curr) => acc += curr.areaAplicada, 0)
-		const saldoAplicar = areaTotalSolicitada - areaTotalAplicada
+		const areaTotalSolicitada = parcelas.reduce(
+			(acc, curr) => (acc += curr.areaSolicitada),
+			0
+		);
 
-		const percent = areaTotalSolicitada > 0
-			? parseFloat((areaTotalAplicada / areaTotalSolicitada).toFixed(2))
-			: 0;
+		const areaTotalAplicada = parcelas.reduce(
+			(acc, curr) => (acc += curr.areaAplicada),
+			0
+		);
 
-		const percentColor = dictColor(percent)
+		const saldoAplicar = areaTotalSolicitada - areaTotalAplicada;
 
-		return ({
-			idAp: idAp,
+		const percent =
+			areaTotalSolicitada > 0
+				? parseFloat((areaTotalAplicada / areaTotalSolicitada).toFixed(2))
+				: 0;
+
+		const percentColor = dictColor(percent);
+
+		return {
+			idAp,
 			code: apNumber,
 			safra,
 			ciclo,
@@ -479,13 +520,8 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 			percentColor,
 			parcelas: sortedParcelas,
 			prods: products,
-		})
-	})
-	// const sortResult = formatedArr
-	// 	.sort((a, b) => a.idAp - b.idAp)
-	// 	.sort((a, b) => a.safraCicloOrder - b.safraCicloOrder)
-	// 	.sort((a, b) => a.farmName.localeCompare(b.farmName))
-
+		};
+	});
 
 	const getCodeNumber = (code) => {
 		const match = String(code || "").match(/\d+/);
@@ -498,6 +534,7 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 			"pt-BR",
 			{ sensitivity: "base" }
 		);
+
 		if (farmCompare !== 0) return farmCompare;
 
 		const dateA = String(a.dateApKey || "");
@@ -524,17 +561,16 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 		);
 	});
 
-	const onlyFarms = newSortResult.map((data) => data.farmName)
-	const setFarms = [...new Set(onlyFarms)]
+	const onlyFarms = newSortResult.map((data) => data.farmName);
+	const setFarms = [...new Set(onlyFarms)];
 
 	const response = {
 		farms: setFarms,
-		data: newSortResult
-	}
+		data: newSortResult,
+	};
 
-	res.send(response).status(200)
-})
-
+	return res.status(200).send(response);
+});
 
 router.get("/data-open-apps-only-bio", async (req, res) => {
 	console.log('pegando dados das aplicacoes em aberto de biológicos')
