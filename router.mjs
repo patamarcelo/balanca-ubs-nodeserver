@@ -511,14 +511,14 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 		const codeA = getCodeNumber(a.code);
 		const codeB = getCodeNumber(b.code);
 
-		// dentro da mesma data, AP menor primeiro
+		// dentro da mesma data, AP maior primeiro
 		if (codeA !== codeB) {
-			return codeA - codeB;
+			return codeB - codeA;
 		}
 
-		// fallback para manter ordenação estável caso o número seja igual
-		return String(a.code || "").localeCompare(
-			String(b.code || ""),
+		// fallback caso o número seja igual
+		return String(b.code || "").localeCompare(
+			String(a.code || ""),
 			"pt-BR",
 			{ numeric: true, sensitivity: "base" }
 		);
