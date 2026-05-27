@@ -503,22 +503,22 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 		const dateA = String(a.dateApKey || "");
 		const dateB = String(b.dateApKey || "");
 
-		// data mais recente primeiro
+		// data mais antiga primeiro
 		if (dateA !== dateB) {
-			return dateB.localeCompare(dateA);
+			return dateA.localeCompare(dateB);
 		}
 
 		const codeA = getCodeNumber(a.code);
 		const codeB = getCodeNumber(b.code);
 
-		// dentro da mesma data, AP maior primeiro
+		// dentro da mesma data, AP menor primeiro
 		if (codeA !== codeB) {
-			return codeB - codeA;
+			return codeA - codeB;
 		}
 
 		// fallback caso o número seja igual
-		return String(b.code || "").localeCompare(
-			String(a.code || ""),
+		return String(a.code || "").localeCompare(
+			String(b.code || ""),
 			"pt-BR",
 			{ numeric: true, sensitivity: "base" }
 		);
