@@ -487,13 +487,23 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 	// 	.sort((a, b) => a.farmName.localeCompare(b.farmName))
 
 
+	const getCodeNumber = (code) => {
+		const match = String(code || "").match(/\d+/);
+		return match ? Number(match[0]) : Number.MAX_SAFE_INTEGER;
+	};
+
 	const newSortResult = formatedArr.sort((a, b) => {
-		const farmCompare = String(a.farmName || "").localeCompare(String(b.farmName || ""));
+		const farmCompare = String(a.farmName || "").localeCompare(
+			String(b.farmName || ""),
+			"pt-BR",
+			{ sensitivity: "base" }
+		);
 		if (farmCompare !== 0) return farmCompare;
 
 		const dateA = String(a.dateApKey || "");
 		const dateB = String(b.dateApKey || "");
 
+		// data mais recente primeiro
 		if (dateA !== dateB) {
 			return dateB.localeCompare(dateA);
 		}
@@ -501,7 +511,17 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 		const codeA = getCodeNumber(a.code);
 		const codeB = getCodeNumber(b.code);
 
-		return codeA - codeB;
+		// dentro da mesma data, AP menor primeiro
+		if (codeA !== codeB) {
+			return codeA - codeB;
+		}
+
+		// fallback para manter ordenação estável caso o número seja igual
+		return String(a.code || "").localeCompare(
+			String(b.code || ""),
+			"pt-BR",
+			{ numeric: true, sensitivity: "base" }
+		);
 	});
 
 	const onlyFarms = newSortResult.map((data) => data.farmName)
