@@ -416,10 +416,10 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 		const ciclo = data.plantations[0].plantation.cycle;
 		const safraCicloOrder = Number(safra.replace("/", "") + ciclo);
 
-		const dateAp = toDateOnly(data.date);
+		const dateAp = toLocalDateTime(data.date);
 		const dateApKey = toDateKey(data.date);
 
-		const endDateAp = toDateOnly(data.end_date);
+		const endDateAp = toLocalDateTime(data.end_date);
 		const endDateApKey = toDateKey(data.end_date);
 
 		const operationResult = operation
