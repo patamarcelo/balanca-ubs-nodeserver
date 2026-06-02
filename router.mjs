@@ -155,6 +155,19 @@ const toDateKey = (value) => {
 	return str;
 };
 
+const toDateOnly = (value) => {
+	if (!value) return null;
+
+	const str = String(value).trim();
+
+	// Se vier YYYY-MM-DD ou datetime ISO, mantém somente a data.
+	if (/^\d{4}-\d{2}-\d{2}/.test(str)) {
+		return str.slice(0, 10);
+	}
+
+	return str;
+};
+
 // This section will help you get a list of all the records.
 // router.get("/", [appCheckVerification], async (req, res) => {
 router.get("/", async (req, res) => {
@@ -403,10 +416,10 @@ router.get("/data-open-apps-fetch-app", isAuth, async (req, res) => {
 		const ciclo = data.plantations[0].plantation.cycle;
 		const safraCicloOrder = Number(safra.replace("/", "") + ciclo);
 
-		const dateAp = toLocalDateTime(data.date);
+		const dateAp = toDateOnly(data.date);
 		const dateApKey = toDateKey(data.date);
 
-		const endDateAp = toLocalDateTime(data.end_date);
+		const endDateAp = toDateOnly(data.end_date);
 		const endDateApKey = toDateKey(data.end_date);
 
 		const operationResult = operation

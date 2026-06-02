@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-05-27T12:01:47.179Z",
+  "updatedAt": "2026-05-28T18:16:04.216Z",
   "data": {
     "msg": "Consulta realizada com sucesso!!",
     "total_return": 443,
@@ -3376,7 +3376,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "424",
-          "finalizado_colheita": true,
+          "finalizado_colheita": false,
           "id_plantio": 16370,
           "plantio_descontinuado": false
         },
@@ -3394,7 +3394,7 @@
           "ciclo": 3,
           "cultura": "Arroz",
           "variedade": "431",
-          "finalizado_colheita": true,
+          "finalizado_colheita": false,
           "id_plantio": 16374,
           "plantio_descontinuado": false
         },
