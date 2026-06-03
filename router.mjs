@@ -95,17 +95,25 @@ const getColorChip = (data) => {
 };
 
 function isAuth(req, res, next) {
-	if (
-		req.headers.authorization ===
-		"Token " + process.env.NODE_APP_DJANGO_TOKEN
-	) {
+	const authHeader = req.headers.authorization || "";
+
+	const allowedTokens = [
+		process.env.NODE_APP_DJANGO_TOKEN,
+		process.env.NODE_APP_DJANGO_TOKEN_VITOR,
+	].filter(Boolean);
+
+	const isAllowed = allowedTokens.some(
+		(token) => authHeader === `Token ${token}`
+	);
+
+	if (isAllowed) {
 		console.log("usuário permitido");
-		next();
-	} else {
-		return res.status(401).json({
-			error: "Sem Permissão"
-		});
+		return next();
 	}
+
+	return res.status(401).json({
+		error: "Sem Permissão",
+	});
 }
 
 
