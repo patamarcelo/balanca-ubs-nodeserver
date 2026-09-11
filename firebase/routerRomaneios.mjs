@@ -92,7 +92,7 @@ const sendRomaneioToProtheusInBackground = ({
 					"Content-Type": "application/json",
 					Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
 					"Access-Control-Allow-Origin": "*",
-					tenantid: "02",
+					tenantId: "02,0201",
 				},
 				body: JSON.stringify(responseToSend),
 				redirect: "follow",
@@ -213,6 +213,29 @@ const sendRomaneioToProtheusInBackground = ({
 		}
 	});
 };
+
+function adjustProjetoProtheusId({
+	filialPro,
+	projetoId
+}) {
+	const filial = Number(filialPro);
+	const projeto = Number(projetoId);
+
+	/*
+	 * Regra específica Protheus:
+	 *
+	 * Filial 1101 + Projeto 11
+	 * deve ser enviado como Projeto 1.
+	 */
+	if (
+		filial === 1101 &&
+		projeto === 11
+	) {
+		return 1;
+	}
+
+	return projetoId;
+}
 
 router.post("/upload-romaneio", isAuth, async (req, res) => {
 	try {
@@ -380,20 +403,41 @@ router.post("/upload-romaneio", isAuth, async (req, res) => {
 			newNumber = response.relatorioColheita;
 		}
 
-		const getProjName = (data) => data.nome === response.fazendaOrigem;
+		const getProjName = (data) =>
+			data.nome === response.fazendaOrigem;
+
 		const newData = projetos.find(getProjName);
+
+		const projetoProtheusId =
+			newData?.id_d !== undefined &&
+				newData?.id_d !== null
+				? adjustProjetoProtheusId({
+					filialPro: response.filialPro,
+					projetoId: newData.id_d,
+				})
+				: undefined;
 
 		if (newData) {
 			await updateDoc(docRef, {
-				fazendaOrigemProtheusId: newData?.id_d,
+				fazendaOrigemProtheusId: projetoProtheusId,
 			});
 		}
+
+		/*
+		 * Mantém também o objeto utilizado pelo processamento
+		 * em background com o mesmo ID efetivamente enviado.
+		 */
+		docSendData = {
+			...docSendData,
+			fazendaOrigemProtheusId: projetoProtheusId,
+		};
 
 		const responseToSend = {
 			...response,
 			relatorioColheita: newNumber,
-			fazendaOrigemProtheusId: newData?.id_d,
+			fazendaOrigemProtheusId: projetoProtheusId,
 		};
+
 
 		await updateDoc(docRef, {
 			protheusSyncStatus: "processing",
@@ -579,19 +623,36 @@ router.post("/resend-to-protheus", isAuth, async (req, res) => {
 			id: dataId,
 		};
 
-		const getProjName = (data) => data.nome === response.fazendaOrigem;
+		const getProjName = (data) =>
+			data.nome === response.fazendaOrigem;
+
 		const newData = projetos.find(getProjName);
+
+		const projetoProtheusId =
+			newData?.id_d !== undefined &&
+				newData?.id_d !== null
+				? adjustProjetoProtheusId({
+					filialPro: response.filialPro,
+					projetoId: newData.id_d,
+				})
+				: undefined;
 
 		if (newData) {
 			await updateDoc(docRef, {
-				fazendaOrigemProtheusId: newData?.id_d,
+				fazendaOrigemProtheusId: projetoProtheusId,
 			});
 		}
 
+		docSendData = {
+			...docSendData,
+			fazendaOrigemProtheusId: projetoProtheusId,
+		};
+
 		const responseToSend = {
 			...response,
-			fazendaOrigemProtheusId: newData?.id_d,
+			fazendaOrigemProtheusId: projetoProtheusId,
 		};
+
 
 		await updateDoc(docRef, {
 			protheusSyncStatus: "processing",
@@ -776,25 +837,46 @@ router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 		};
 
 		// AJUSTE PARA INCLUIR ID DO PROJETO
-		const getProjName = (data) => data.nome === response.fazendaOrigem
-		const newData = projetos.find(getProjName)
-		if (newData) {
-			console.log('Projeto Origem : ', newData?.nome)
-			console.log('Projeto Origem id: ', newData?.id_d)
-			const updates = {
-				fazendaOrigemProtheusId: newData?.id_d
-			};
+		const getProjName = (data) =>
+			data.nome === response.fazendaOrigem;
 
-			const result = await updateDoc(docRef, updates);
-			console.log("reult of Serverhandler: ", result);
+		const newData = projetos.find(getProjName);
+
+		const projetoProtheusId =
+			newData?.id_d !== undefined &&
+				newData?.id_d !== null
+				? adjustProjetoProtheusId({
+					filialPro: response.filialPro,
+					projetoId: newData.id_d,
+				})
+				: undefined;
+
+		if (newData) {
+			console.log(
+				"Projeto Origem:",
+				newData?.nome
+			);
+
+			console.log(
+				"Projeto Origem ID original:",
+				newData?.id_d
+			);
+
+			console.log(
+				"Projeto Origem ID Protheus:",
+				projetoProtheusId
+			);
+
+			await updateDoc(docRef, {
+				fazendaOrigemProtheusId: projetoProtheusId,
+			});
 		}
 
 
-		// AJUSTE PARA REGULAR O NUMERO DO ROMANEIO
+		// OBJETO A SER ENVIADO AO PROTHEUS
 		const responseToSend = {
 			...response,
-			fazendaOrigemProtheusId: newData?.id_d
-
+			fazendaOrigemProtheusId: projetoProtheusId,
 		};
 
 		//response OBJ TO SEND TO PROTHEUS
@@ -816,7 +898,7 @@ router.post("/updated-romaneio-data", isAuth, async (req, res) => {
 						"Content-Type": "application/json",
 						Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
 						"Access-Control-Allow-Origin": "*",
-						"tenantid": "02"
+						"tenantId": "02,0201"
 					},
 					body: JSON.stringify(responseToSend),
 					redirect: "follow",
@@ -896,7 +978,7 @@ router.get("/get-from-srd", isAuth, async (req, res) => {
 				"Content-Type": "application/json",
 				Authorization: `Basic ${process.env.NODE_APP_PROTHEUS_TOKEN}`,
 				"Access-Control-Allow-Origin": "*",
-				"tenantId": "02"
+				"tenantId": "02,0201"
 			},
 			redirect: "follow",
 			agent: httpsAgent,
