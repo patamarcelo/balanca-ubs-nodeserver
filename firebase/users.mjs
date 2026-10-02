@@ -73,6 +73,10 @@ function sanitizeClaimsPayload(payload = {}) {
 		allowedClaims.isVendas = payload.isVendas;
 	}
 
+	if (typeof payload.canClassify === "boolean") {
+		allowedClaims.canClassify = payload.canClassify;
+	}
+
 	if (typeof payload.unidadeOp === "string") {
 		allowedClaims.unidadeOp = payload.unidadeOp;
 	}
@@ -265,6 +269,7 @@ router.post("/create-user", isAuth, async (req, res) => {
 			isBalanca: false,
 			isDefensivos: false,
 			isVendas: false,
+			canClassify: false,
 			category: "admin",
 			projetosLiberados: [],
 			...customClaims,
@@ -390,9 +395,9 @@ router.patch("/update-claims/:uid", isAuth, async (req, res) => {
 		const nextClaims = replace
 			? cleanClaims
 			: {
-					...currentClaims,
-					...cleanClaims,
-			  };
+				...currentClaims,
+				...cleanClaims,
+			};
 
 		await getAuth().setCustomUserClaims(uid, nextClaims);
 

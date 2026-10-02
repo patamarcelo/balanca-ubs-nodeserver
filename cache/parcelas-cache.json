@@ -1,5 +1,5 @@
 {
-  "updatedAt": "2026-09-08T20:00:46.436Z",
+  "updatedAt": "2026-10-02T13:34:03.679Z",
   "data": {
     "msg": "Consulta realizada com sucesso!!",
     "total_return": 475,
@@ -362,7 +362,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18006,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 44.11,
+          "area_parcial": 10
         },
         "A10": {
           "safra": "2026/2027",
@@ -371,7 +374,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18007,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 38.2,
+          "area_parcial": 38.2
         },
         "A11": {
           "safra": "2026/2027",
@@ -380,7 +386,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18008,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 17.69,
+          "area_parcial": 17.69
         },
         "A12": {
           "safra": "2026/2027",
@@ -389,7 +398,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18009,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 36.05,
+          "area_parcial": 36.05
         },
         "A13": {
           "safra": "2026/2027",
@@ -398,16 +410,22 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18010,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 36.42,
+          "area_parcial": 36.42
         },
         "B28": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18069,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 57.59,
+          "area_parcial": 57.59
         },
         "C02": {
           "safra": "2026/2027",
@@ -416,7 +434,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": true,
           "id_plantio": 18017,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 38.46,
+          "area_parcial": 38.46
         },
         "C02a": {
           "safra": "2026/2027",
@@ -425,7 +446,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18558,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 13.83,
+          "area_parcial": 13.83
         },
         "C03": {
           "safra": "2026/2027",
@@ -434,7 +458,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": true,
           "id_plantio": 18018,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 50.03,
+          "area_parcial": 50.03
         },
         "C04": {
           "safra": "2026/2027",
@@ -443,7 +470,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": true,
           "id_plantio": 18019,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 96.99,
+          "area_parcial": 96.99
         },
         "C05": {
           "safra": "2026/2027",
@@ -452,7 +482,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": true,
           "id_plantio": 18020,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 51.42,
+          "area_parcial": 51.42
         },
         "C05a": {
           "safra": "2026/2027",
@@ -461,25 +494,34 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18559,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 27.31,
+          "area_parcial": 27.31
         },
         "C09": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18024,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 84.18,
+          "area_parcial": 84.18
         },
         "C10": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18025,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 75.51,
+          "area_parcial": 75.51
         },
         "C11": {
           "safra": "2026/2027",
@@ -488,34 +530,46 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": true,
           "id_plantio": 18026,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 55.29,
+          "area_parcial": 55.29
         },
         "C15": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18054,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 86.85,
+          "area_parcial": 86.85
         },
         "C16": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18055,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 78,
+          "area_parcial": 78
         },
         "C17": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18056,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 47.81,
+          "area_parcial": 47.81
         },
         "C21": {
           "safra": "2026/2027",
@@ -524,25 +578,34 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18060,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 67.49,
+          "area_parcial": 67.49
         },
         "D01": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18061,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 56.49,
+          "area_parcial": 56.49
         },
         "D03": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18063,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 84.76,
+          "area_parcial": 84.76
         },
         "D04": {
           "safra": "2026/2027",
@@ -551,16 +614,22 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18064,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 66.47,
+          "area_parcial": 66.47
         },
         "D05": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18065,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 19.89,
+          "area_parcial": 19.89
         },
         "D05a": {
           "safra": "2026/2027",
@@ -569,16 +638,22 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18556,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 49.16,
+          "area_parcial": 49.16
         },
         "D05b": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18903,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 37.93,
+          "area_parcial": 37.93
         },
         "D05c": {
           "safra": "2026/2027",
@@ -587,25 +662,34 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 19022,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 1.5,
+          "area_parcial": null
         },
         "D06": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18066,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 83.22,
+          "area_parcial": 83.22
         },
         "D07": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18067,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 75.31,
+          "area_parcial": 75.31
         },
         "D07a": {
           "safra": "2026/2027",
@@ -614,7 +698,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18885,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 66.31,
+          "area_parcial": 66.31
         },
         "D10": {
           "safra": "2026/2027",
@@ -623,16 +710,22 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18031,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 85.43,
+          "area_parcial": null
         },
         "D11": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18032,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 21.57,
+          "area_parcial": 21.57
         },
         "E02": {
           "safra": "2026/2027",
@@ -641,16 +734,22 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18035,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 106.05,
+          "area_parcial": 96.3
         },
         "E02a": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18880,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 109.02,
+          "area_parcial": 109.02
         }
       },
       "Projeto Cacíque": {
@@ -659,27 +758,36 @@
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18105,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 9.2,
+          "area_parcial": 9.2
         },
         "A02": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18106,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 8.92,
+          "area_parcial": 8.92
         },
         "A03": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18107,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 12.74,
+          "area_parcial": 12.74
         },
         "A04": {
           "safra": "2026/2027",
@@ -688,7 +796,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18108,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 14.32,
+          "area_parcial": 14.32
         },
         "A05": {
           "safra": "2026/2027",
@@ -697,7 +808,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18109,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 16.09,
+          "area_parcial": 16.09
         },
         "A06": {
           "safra": "2026/2027",
@@ -706,7 +820,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18110,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 16.84,
+          "area_parcial": 16.84
         },
         "A07": {
           "safra": "2026/2027",
@@ -715,7 +832,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18111,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 16.69,
+          "area_parcial": 16.69
         },
         "A08": {
           "safra": "2026/2027",
@@ -724,7 +844,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18112,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 18.4,
+          "area_parcial": 18.4
         },
         "A09": {
           "safra": "2026/2027",
@@ -733,7 +856,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18150,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 17.94,
+          "area_parcial": 17.94
         },
         "A10": {
           "safra": "2026/2027",
@@ -742,7 +868,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18113,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 17.49,
+          "area_parcial": 17.49
         },
         "A11": {
           "safra": "2026/2027",
@@ -751,7 +880,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18151,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 18.4,
+          "area_parcial": 18.4
         },
         "A12": {
           "safra": "2026/2027",
@@ -760,34 +892,46 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18152,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 17.75,
+          "area_parcial": 17.75
         },
         "A13": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18153,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 18.1,
+          "area_parcial": 18.1
         },
         "A14": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18154,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 17.07,
+          "area_parcial": 17.07
         },
         "A15": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18155,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 7.04,
+          "area_parcial": 7.04
         },
         "B01": {
           "safra": "2026/2027",
@@ -796,7 +940,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18156,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 6.46,
+          "area_parcial": 6.46
         },
         "B02": {
           "safra": "2026/2027",
@@ -805,7 +952,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18157,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 18.74,
+          "area_parcial": 18.74
         },
         "B03": {
           "safra": "2026/2027",
@@ -814,7 +964,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18158,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 12.04,
+          "area_parcial": 12.04
         },
         "B04": {
           "safra": "2026/2027",
@@ -823,7 +976,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18159,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 12.91,
+          "area_parcial": 12.91
         },
         "B05": {
           "safra": "2026/2027",
@@ -832,7 +988,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18161,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 13.63,
+          "area_parcial": 13.63
         },
         "B06": {
           "safra": "2026/2027",
@@ -841,7 +1000,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18160,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 13.25,
+          "area_parcial": 13.25
         },
         "B07": {
           "safra": "2026/2027",
@@ -850,7 +1012,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18162,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 16.79,
+          "area_parcial": 16.79
         },
         "B08": {
           "safra": "2026/2027",
@@ -859,43 +1024,58 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18163,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 17,
+          "area_parcial": 17
         },
         "B09": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18164,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 16.04,
+          "area_parcial": 16.04
         },
         "B10": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18114,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 19.05,
+          "area_parcial": 19.05
         },
         "B11": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18116,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 17.34,
+          "area_parcial": 17.34
         },
         "B12": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18115,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 18,
+          "area_parcial": 18
         },
         "B13": {
           "safra": "2026/2027",
@@ -904,25 +1084,34 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18118,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 17.27,
+          "area_parcial": 17.27
         },
         "B14": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18117,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 18.28,
+          "area_parcial": 18.28
         },
         "B15": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18119,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 17.19,
+          "area_parcial": 17.19
         }
       },
       "Projeto Campo Guapo": {
@@ -933,16 +1122,22 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18084,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 28.46,
+          "area_parcial": 18.93
         },
         "A02": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18085,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 30.55,
+          "area_parcial": 30.55
         },
         "A03": {
           "safra": "2026/2027",
@@ -951,7 +1146,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18093,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 24.52,
+          "area_parcial": 20
         },
         "A04": {
           "safra": "2026/2027",
@@ -960,7 +1158,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18086,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 37.86,
+          "area_parcial": 30
         },
         "B01": {
           "safra": "2026/2027",
@@ -969,7 +1170,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18087,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 28.45,
+          "area_parcial": 14.99
         },
         "B02": {
           "safra": "2026/2027",
@@ -978,7 +1182,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18088,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 32.66,
+          "area_parcial": 25
         },
         "B03": {
           "safra": "2026/2027",
@@ -987,7 +1194,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18089,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 33.69,
+          "area_parcial": 33.69
         },
         "B04": {
           "safra": "2026/2027",
@@ -996,25 +1206,34 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18090,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 32.94,
+          "area_parcial": 32.94
         },
         "B05": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18091,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 28.97,
+          "area_parcial": 28.97
         },
         "B06": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18092,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 18.81,
+          "area_parcial": 18.81
         },
         "C01": {
           "safra": "2026/2027",
@@ -1023,7 +1242,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18094,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 33.69,
+          "area_parcial": null
         },
         "C02": {
           "safra": "2026/2027",
@@ -1032,16 +1254,22 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18095,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 33.38,
+          "area_parcial": 25
         },
         "C03": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18096,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 31.94,
+          "area_parcial": 31.94
         },
         "C04": {
           "safra": "2026/2027",
@@ -1050,7 +1278,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18097,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 30.94,
+          "area_parcial": 22.24
         },
         "C05": {
           "safra": "2026/2027",
@@ -1059,7 +1290,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18098,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 26.32,
+          "area_parcial": 20
         },
         "C06": {
           "safra": "2026/2027",
@@ -1068,7 +1302,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18165,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 32.51,
+          "area_parcial": 20.12
         },
         "D01": {
           "safra": "2026/2027",
@@ -1077,16 +1314,22 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18166,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 48.56,
+          "area_parcial": 17.48
         },
         "D02": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18167,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 24.92,
+          "area_parcial": 24.92
         },
         "D03": {
           "safra": "2026/2027",
@@ -1095,70 +1338,94 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18168,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 24.45,
+          "area_parcial": 4
         },
         "D04": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18169,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 14.62,
+          "area_parcial": 14.62
         },
         "D05": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18170,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 20.52,
+          "area_parcial": 20.52
         },
         "D06": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18171,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 23.89,
+          "area_parcial": 23.89
         },
         "D07": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18172,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 20.72,
+          "area_parcial": 20.72
         },
         "D08": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18173,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 24.32,
+          "area_parcial": 24.32
         },
         "D09": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18174,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 25.25,
+          "area_parcial": 25.25
         },
         "D10": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18175,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 44.79,
+          "area_parcial": 44.79
         },
         "E01": {
           "safra": "2026/2027",
@@ -1167,7 +1434,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18176,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 19.78,
+          "area_parcial": 5.62
         },
         "E02": {
           "safra": "2026/2027",
@@ -1176,7 +1446,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18177,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 16.47,
+          "area_parcial": 12.47
         },
         "E03": {
           "safra": "2026/2027",
@@ -1185,70 +1458,94 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18178,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 21.89,
+          "area_parcial": null
         },
         "E04": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18179,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 21.89,
+          "area_parcial": 21.89
         },
         "E05": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18120,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 21.57,
+          "area_parcial": 21.57
         },
         "E06": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18121,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 21.54,
+          "area_parcial": 21.54
         },
         "E07": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18122,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 19.67,
+          "area_parcial": 19.67
         },
         "E08": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18123,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 21.06,
+          "area_parcial": 21.06
         },
         "E09": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18124,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 25.01,
+          "area_parcial": 25.01
         },
         "E10": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18125,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 24.38,
+          "area_parcial": 24.38
         },
         "F01": {
           "safra": "2026/2027",
@@ -1257,7 +1554,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18126,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 16.63,
+          "area_parcial": null
         },
         "F02": {
           "safra": "2026/2027",
@@ -1266,7 +1566,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18127,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 26.34,
+          "area_parcial": null
         },
         "F03": {
           "safra": "2026/2027",
@@ -1275,7 +1578,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18128,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 14.38,
+          "area_parcial": null
         },
         "F04": {
           "safra": "2026/2027",
@@ -1284,7 +1590,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18129,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 16.38,
+          "area_parcial": null
         },
         "F05": {
           "safra": "2026/2027",
@@ -1293,7 +1602,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18130,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 19.72,
+          "area_parcial": 5.67
         },
         "F06": {
           "safra": "2026/2027",
@@ -1302,7 +1614,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18131,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 18.42,
+          "area_parcial": null
         },
         "F07": {
           "safra": "2026/2027",
@@ -1311,7 +1626,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18132,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 17.69,
+          "area_parcial": null
         },
         "F08": {
           "safra": "2026/2027",
@@ -1320,7 +1638,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18133,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 19.49,
+          "area_parcial": null
         },
         "F09": {
           "safra": "2026/2027",
@@ -1329,7 +1650,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18134,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 19.54,
+          "area_parcial": null
         },
         "F10": {
           "safra": "2026/2027",
@@ -1338,7 +1662,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18180,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 10.8,
+          "area_parcial": null
         },
         "F11": {
           "safra": "2026/2027",
@@ -1347,7 +1674,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18181,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 8.11,
+          "area_parcial": null
         },
         "F12": {
           "safra": "2026/2027",
@@ -1356,7 +1686,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18182,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 3.81,
+          "area_parcial": null
         },
         "F13": {
           "safra": "2026/2027",
@@ -1365,7 +1698,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18183,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 5.82,
+          "area_parcial": null
         },
         "G01": {
           "safra": "2026/2027",
@@ -1374,7 +1710,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18184,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 15.71,
+          "area_parcial": 15.71
         },
         "G02": {
           "safra": "2026/2027",
@@ -1383,7 +1722,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18185,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 17.81,
+          "area_parcial": null
         },
         "G03": {
           "safra": "2026/2027",
@@ -1392,7 +1734,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18186,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 19.2,
+          "area_parcial": null
         },
         "G04": {
           "safra": "2026/2027",
@@ -1401,7 +1746,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18187,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 15.41,
+          "area_parcial": null
         },
         "G05": {
           "safra": "2026/2027",
@@ -1410,7 +1758,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18188,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 21.06,
+          "area_parcial": null
         },
         "G06": {
           "safra": "2026/2027",
@@ -1419,7 +1770,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18189,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 23.15,
+          "area_parcial": null
         },
         "G07": {
           "safra": "2026/2027",
@@ -1428,7 +1782,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18190,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 18.31,
+          "area_parcial": null
         },
         "G08": {
           "safra": "2026/2027",
@@ -1437,7 +1794,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18191,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 10.61,
+          "area_parcial": null
         },
         "H01": {
           "safra": "2026/2027",
@@ -1446,7 +1806,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18192,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 7.45,
+          "area_parcial": 7.45
         },
         "H02": {
           "safra": "2026/2027",
@@ -1455,7 +1818,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18193,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 10.82,
+          "area_parcial": 10.82
         },
         "H03": {
           "safra": "2026/2027",
@@ -1464,7 +1830,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18194,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 11.16,
+          "area_parcial": 11.16
         },
         "H04": {
           "safra": "2026/2027",
@@ -1473,7 +1842,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18135,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 11.33,
+          "area_parcial": null
         },
         "H05": {
           "safra": "2026/2027",
@@ -1482,7 +1854,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18136,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 10.79,
+          "area_parcial": null
         },
         "H06": {
           "safra": "2026/2027",
@@ -1491,7 +1866,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18137,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 10.46,
+          "area_parcial": null
         },
         "H07": {
           "safra": "2026/2027",
@@ -1500,7 +1878,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18138,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 10.09,
+          "area_parcial": null
         },
         "H08": {
           "safra": "2026/2027",
@@ -1509,7 +1890,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18139,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 10.63,
+          "area_parcial": null
         },
         "H09": {
           "safra": "2026/2027",
@@ -1518,7 +1902,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18140,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 10.02,
+          "area_parcial": null
         },
         "H10": {
           "safra": "2026/2027",
@@ -1527,7 +1914,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18141,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 4.42,
+          "area_parcial": null
         },
         "H11": {
           "safra": "2026/2027",
@@ -1536,7 +1926,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18142,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 2.95,
+          "area_parcial": null
         },
         "H12": {
           "safra": "2026/2027",
@@ -1545,7 +1938,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18143,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 8.87,
+          "area_parcial": null
         },
         "H13": {
           "safra": "2026/2027",
@@ -1554,7 +1950,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18144,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 10.65,
+          "area_parcial": null
         },
         "H14": {
           "safra": "2026/2027",
@@ -1563,34 +1962,46 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18145,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 10.47,
+          "area_parcial": null
         },
         "H15": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18146,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 9.62,
+          "area_parcial": 9.62
         },
         "H16": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18147,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 9.4,
+          "area_parcial": 9.4
         },
         "I": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18148,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 90,
+          "area_parcial": 90
         },
         "Ia": {
           "safra": "2026/2027",
@@ -1599,7 +2010,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18560,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 32.43,
+          "area_parcial": 32.43
         },
         "Ib": {
           "safra": "2026/2027",
@@ -1608,7 +2022,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18882,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 100.09,
+          "area_parcial": 100.09
         },
         "Ic": {
           "safra": "2026/2027",
@@ -1617,7 +2034,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 19044,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 19.74,
+          "area_parcial": null
         },
         "J01": {
           "safra": "2026/2027",
@@ -1626,7 +2046,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18149,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 225,
+          "area_parcial": 48.68
         },
         "J02": {
           "safra": "2026/2027",
@@ -1635,7 +2058,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18099,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 95.46,
+          "area_parcial": 29.93
         },
         "J02a": {
           "safra": "2026/2027",
@@ -1644,7 +2070,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18881,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 73.16,
+          "area_parcial": null
         },
         "J02b": {
           "safra": "2026/2027",
@@ -1653,7 +2082,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 19034,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 77.66,
+          "area_parcial": null
         },
         "L01": {
           "safra": "2026/2027",
@@ -1662,7 +2094,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18104,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 97.24,
+          "area_parcial": 80.52
         },
         "L02": {
           "safra": "2026/2027",
@@ -1671,7 +2106,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18100,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 70.69,
+          "area_parcial": 47.53
         },
         "L03": {
           "safra": "2026/2027",
@@ -1680,25 +2118,34 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18101,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 43.17,
+          "area_parcial": 18.66
         },
         "L04": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18102,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 41.27,
+          "area_parcial": 41.27
         },
         "L05": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18103,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 47.52,
+          "area_parcial": 47.52
         }
       },
       "Projeto Capivara": {
@@ -1709,7 +2156,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18296,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 72.9,
+          "area_parcial": 38
         },
         "B01": {
           "safra": "2026/2027",
@@ -1718,7 +2168,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18297,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 112.48,
+          "area_parcial": null
         },
         "B02": {
           "safra": "2026/2027",
@@ -1727,7 +2180,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18907,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 5.39,
+          "area_parcial": null
         },
         "C01": {
           "safra": "2026/2027",
@@ -1736,7 +2192,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18298,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 90.23,
+          "area_parcial": 90.23
         },
         "D01": {
           "safra": "2026/2027",
@@ -1745,142 +2204,190 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18299,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 108.57,
+          "area_parcial": 108.57
         },
         "E01": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18300,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 50.61,
+          "area_parcial": 50.61
         },
         "E02": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18301,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": true,
+          "ativo": false,
+          "area": 16.1,
+          "area_parcial": null
         },
         "E03": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18302,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": true,
+          "ativo": false,
+          "area": 20.64,
+          "area_parcial": null
         },
         "E04": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18303,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 45.74,
+          "area_parcial": 45.74
         },
         "E05": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18304,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": true,
+          "ativo": false,
+          "area": 5.79,
+          "area_parcial": null
         },
         "E06": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18908,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 11.64,
+          "area_parcial": 11.64
         },
         "F01": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18356,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 85.56,
+          "area_parcial": 85.56
         },
         "F02": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18357,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": true,
+          "ativo": false,
+          "area": 14.3,
+          "area_parcial": null
         },
         "F03": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18358,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": true,
+          "ativo": false,
+          "area": 15.73,
+          "area_parcial": null
         },
         "F04": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18359,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": true,
+          "ativo": false,
+          "area": 10.23,
+          "area_parcial": null
         },
         "F05": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18360,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": true,
+          "ativo": false,
+          "area": 14.67,
+          "area_parcial": null
         },
         "F06": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18361,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": true,
+          "ativo": false,
+          "area": 18.61,
+          "area_parcial": null
         },
         "F07": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18362,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 56.78,
+          "area_parcial": 56.78
         },
         "F08": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18363,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": true,
+          "ativo": false,
+          "area": 13.27,
+          "area_parcial": null
         },
         "F09": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18364,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": true,
+          "ativo": false,
+          "area": 10.29,
+          "area_parcial": null
         }
       },
       "Projeto Cervo": {
@@ -1891,7 +2398,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18386,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 40.89,
+          "area_parcial": 40.89
         },
         "A02": {
           "safra": "2026/2027",
@@ -1900,358 +2410,478 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18387,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 51.31,
+          "area_parcial": 51.31
         },
         "A05": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18390,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 82.27,
+          "area_parcial": 82.27
         },
         "A06": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18391,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 65.27,
+          "area_parcial": 65.27
         },
         "A07": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18392,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 19.26,
+          "area_parcial": null
         },
         "A08": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18393,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 21.35,
+          "area_parcial": null
         },
         "A09": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18394,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 21.59,
+          "area_parcial": null
         },
         "A10": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18395,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 21.99,
+          "area_parcial": null
         },
         "A11": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18396,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 43.22,
+          "area_parcial": 43.22
         },
         "B01": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18428,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 99.56,
+          "area_parcial": 99.56
         },
         "B02": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18429,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 33.55,
+          "area_parcial": 33.55
         },
         "B03": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18430,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 13,
+          "area_parcial": null
         },
         "B04": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18431,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 9.72,
+          "area_parcial": null
         },
         "B05": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18432,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 9.14,
+          "area_parcial": null
         },
         "B06": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18433,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 16.05,
+          "area_parcial": null
         },
         "B07": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18434,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 12.07,
+          "area_parcial": null
         },
         "B08": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18435,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 18.39,
+          "area_parcial": null
         },
         "B09": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18436,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 96.71,
+          "area_parcial": 96.71
         },
         "B10": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18437,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 44.03,
+          "area_parcial": 44.03
         },
         "B11": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18438,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 17.67,
+          "area_parcial": null
         },
         "B12": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18439,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 17.28,
+          "area_parcial": null
         },
         "B13": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18440,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 32.72,
+          "area_parcial": null
         },
         "B14": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18441,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 20.84,
+          "area_parcial": null
         },
         "B15": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18412,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 23.91,
+          "area_parcial": null
         },
         "B16": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18413,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 18.15,
+          "area_parcial": null
         },
         "B17": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18414,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 38.24,
+          "area_parcial": 38.24
         },
         "B18": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18415,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 35.4,
+          "area_parcial": 35.4
         },
         "B19": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18416,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 11.78,
+          "area_parcial": null
         },
         "B20": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18417,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 12.19,
+          "area_parcial": null
         },
         "C01": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18418,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 90.03,
+          "area_parcial": 90.03
         },
         "C02": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18419,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 22.73,
+          "area_parcial": null
         },
         "C03": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18420,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 26.49,
+          "area_parcial": 26.49
         },
         "C04": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18421,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 32.23,
+          "area_parcial": null
         },
         "C05": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18422,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 30.97,
+          "area_parcial": null
         },
         "C06": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18423,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 80.56,
+          "area_parcial": 80.56
         },
         "C07": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18424,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 21.47,
+          "area_parcial": null
         },
         "C08": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18425,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 19.72,
+          "area_parcial": null
         },
         "C09": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18426,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 17.24,
+          "area_parcial": null
         },
         "C10": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18442,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 50.64,
+          "area_parcial": 50.64
         },
         "C11": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18443,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 30,
+          "area_parcial": null
         },
         "C12": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18444,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 31.09,
+          "area_parcial": 31.09
         },
         "D01": {
           "safra": "2026/2027",
@@ -2260,88 +2890,118 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18445,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 83.86,
+          "area_parcial": 83.86
         },
         "D02": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18446,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 15.73,
+          "area_parcial": null
         },
         "D03": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18447,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 17.75,
+          "area_parcial": null
         },
         "D04": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18448,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 29.52,
+          "area_parcial": null
         },
         "D05": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18449,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 68.97,
+          "area_parcial": 68.97
         },
         "D06": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18450,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 17.66,
+          "area_parcial": null
         },
         "D07": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18451,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 13.41,
+          "area_parcial": null
         },
         "D08": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18452,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 13.03,
+          "area_parcial": null
         },
         "D09": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18453,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 82.45,
+          "area_parcial": 82.45
         },
         "D10": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18473,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 14.62,
+          "area_parcial": null
         },
         "D11": {
           "safra": "2026/2027",
@@ -2350,151 +3010,202 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18474,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 6.95,
+          "area_parcial": 6.95
         },
         "D12": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18454,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 17.65,
+          "area_parcial": null
         },
         "D13": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18455,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 28.1,
+          "area_parcial": null
         },
         "D14": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18472,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 63.93,
+          "area_parcial": 63.93
         },
         "D15": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18456,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 36.92,
+          "area_parcial": null
         },
         "E01": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18475,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 46.43,
+          "area_parcial": 46.43
         },
         "E06": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18481,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 71.75,
+          "area_parcial": 71.75
         },
         "E09": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18484,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 54.42,
+          "area_parcial": 54.42
         },
         "E11": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18485,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 28.17,
+          "area_parcial": 28.17
         },
         "F01": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18399,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 15.95,
+          "area_parcial": 15.95
         },
         "F02": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18400,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 22.55,
+          "area_parcial": 22.55
         },
         "F03": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18401,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 51.07,
+          "area_parcial": 51.07
         },
         "F04": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18402,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 7.29,
+          "area_parcial": null
         },
         "F05": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18403,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 10.39,
+          "area_parcial": null
         },
         "F06": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18404,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 15,
+          "area_parcial": null
         },
         "F07": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18405,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 16.61,
+          "area_parcial": null
         },
         "F08": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18406,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": false,
+          "area": 29,
+          "area_parcial": null
         }
       },
       "Projeto Eldorado": {
@@ -2505,7 +3216,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18496,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 11.51,
+          "area_parcial": null
         },
         "A02": {
           "safra": "2026/2027",
@@ -2514,7 +3228,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18497,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 9.12,
+          "area_parcial": null
         },
         "A06": {
           "safra": "2026/2027",
@@ -2523,7 +3240,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18501,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 9.62,
+          "area_parcial": 9.62
         },
         "A07": {
           "safra": "2026/2027",
@@ -2532,7 +3252,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18502,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 9.61,
+          "area_parcial": 9.61
         },
         "A11": {
           "safra": "2026/2027",
@@ -2541,7 +3264,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18506,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 3.8,
+          "area_parcial": 3.8
         },
         "A12": {
           "safra": "2026/2027",
@@ -2550,7 +3276,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18507,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 1.18,
+          "area_parcial": 1.18
         },
         "A15": {
           "safra": "2026/2027",
@@ -2559,7 +3288,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18510,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 1.47,
+          "area_parcial": 1.47
         },
         "A16": {
           "safra": "2026/2027",
@@ -2568,7 +3300,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18511,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 10.56,
+          "area_parcial": 10.56
         },
         "B01": {
           "safra": "2026/2027",
@@ -2577,7 +3312,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18514,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 6.84,
+          "area_parcial": 6.84
         },
         "B02": {
           "safra": "2026/2027",
@@ -2586,7 +3324,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18515,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 1.01,
+          "area_parcial": 1.01
         },
         "B03": {
           "safra": "2026/2027",
@@ -2595,16 +3336,22 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18516,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 2.61,
+          "area_parcial": 2.61
         },
         "B05": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18519,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 9.67,
+          "area_parcial": 9.67
         },
         "B06": {
           "safra": "2026/2027",
@@ -2613,7 +3360,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": true,
           "id_plantio": 18518,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 11.74,
+          "area_parcial": 11.74
         },
         "B07": {
           "safra": "2026/2027",
@@ -2622,7 +3372,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": true,
           "id_plantio": 18520,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 11.05,
+          "area_parcial": 11.05
         },
         "B08": {
           "safra": "2026/2027",
@@ -2631,25 +3384,34 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": true,
           "id_plantio": 18521,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 10.96,
+          "area_parcial": 10.96
         },
         "B09": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18522,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 3.97,
+          "area_parcial": 3.97
         },
         "B10": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18523,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 11.07,
+          "area_parcial": 11.07
         },
         "B12": {
           "safra": "2026/2027",
@@ -2658,7 +3420,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": true,
           "id_plantio": 18525,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 12.84,
+          "area_parcial": 12.84
         },
         "B13": {
           "safra": "2026/2027",
@@ -2667,7 +3432,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": true,
           "id_plantio": 18526,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 12.52,
+          "area_parcial": 12.52
         },
         "B14": {
           "safra": "2026/2027",
@@ -2676,16 +3444,22 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": true,
           "id_plantio": 18527,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 11.77,
+          "area_parcial": 11.77
         },
         "B15": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18539,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 20.68,
+          "area_parcial": 20.68
         },
         "C01": {
           "safra": "2026/2027",
@@ -2694,7 +3468,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18528,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 20.48,
+          "area_parcial": null
         },
         "C01a": {
           "safra": "2026/2027",
@@ -2703,34 +3480,46 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18906,
-          "plantio_descontinuado": true
+          "plantio_descontinuado": true,
+          "ativo": true,
+          "area": 1.7,
+          "area_parcial": null
         },
         "C02": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18542,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 22.64,
+          "area_parcial": 22.64
         },
         "C03": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18530,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 9.38,
+          "area_parcial": 9.38
         },
         "C04": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18529,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 13.75,
+          "area_parcial": 13.75
         },
         "C04a": {
           "safra": "2026/2027",
@@ -2739,7 +3528,10 @@
           "variedade": "Feijão Carioca",
           "finalizado_colheita": false,
           "id_plantio": 19024,
-          "plantio_descontinuado": true
+          "plantio_descontinuado": true,
+          "ativo": false,
+          "area": 4.49,
+          "area_parcial": null
         },
         "C05": {
           "safra": "2026/2027",
@@ -2748,7 +3540,10 @@
           "variedade": "Feijão Carioca",
           "finalizado_colheita": false,
           "id_plantio": 18541,
-          "plantio_descontinuado": true
+          "plantio_descontinuado": true,
+          "ativo": false,
+          "area": 20.45,
+          "area_parcial": null
         },
         "C05r": {
           "safra": "2026/2027",
@@ -2757,34 +3552,46 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 19331,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 24.95,
+          "area_parcial": null
         },
         "C06": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18543,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 22.74,
+          "area_parcial": 22.74
         },
         "C07": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18544,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 23.01,
+          "area_parcial": 23.01
         },
         "C08": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18545,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 21.62,
+          "area_parcial": 21.62
         },
         "D01": {
           "safra": "2026/2027",
@@ -2793,7 +3600,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18538,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 30.42,
+          "area_parcial": null
         },
         "D03": {
           "safra": "2026/2027",
@@ -2802,7 +3612,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18547,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 19.52,
+          "area_parcial": 14.52
         },
         "D07": {
           "safra": "2026/2027",
@@ -2811,61 +3624,82 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18552,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 10.55,
+          "area_parcial": null
         },
         "D08": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18551,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 6.08,
+          "area_parcial": 6.08
         },
         "D09": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18553,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 28.69,
+          "area_parcial": 28.69
         },
         "D12": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18533,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 14.42,
+          "area_parcial": 14.42
         },
         "D13": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18531,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 2.52,
+          "area_parcial": 2.52
         },
         "D14": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18532,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 6.71,
+          "area_parcial": 6.71
         },
         "D15": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18534,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 1.99,
+          "area_parcial": 1.99
         },
         "D18": {
           "safra": "2026/2027",
@@ -2874,7 +3708,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18537,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 2.9,
+          "area_parcial": null
         }
       },
       "Projeto Jacaré": {
@@ -2885,7 +3722,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18367,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 88.81,
+          "area_parcial": null
         },
         "15": {
           "safra": "2026/2027",
@@ -2894,7 +3734,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18368,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 70.15,
+          "area_parcial": null
         },
         "16": {
           "safra": "2026/2027",
@@ -2903,7 +3746,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18369,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 86.63,
+          "area_parcial": null
         },
         "17": {
           "safra": "2026/2027",
@@ -2912,7 +3758,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18370,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 38.73,
+          "area_parcial": null
         },
         "18": {
           "safra": "2026/2027",
@@ -2921,7 +3770,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18326,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 49.16,
+          "area_parcial": null
         },
         "19": {
           "safra": "2026/2027",
@@ -2930,7 +3782,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18327,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 18.76,
+          "area_parcial": null
         },
         "20": {
           "safra": "2026/2027",
@@ -2939,7 +3794,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18328,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 39.14,
+          "area_parcial": null
         },
         "A02": {
           "safra": "2026/2027",
@@ -2948,7 +3806,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18330,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 19.7,
+          "area_parcial": 19.7
         },
         "A03": {
           "safra": "2026/2027",
@@ -2957,7 +3818,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18331,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 19.8,
+          "area_parcial": 19.8
         },
         "A04": {
           "safra": "2026/2027",
@@ -2966,7 +3830,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18332,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 12.4,
+          "area_parcial": 12.4
         },
         "A05": {
           "safra": "2026/2027",
@@ -2975,7 +3842,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18333,
-          "plantio_descontinuado": true
+          "plantio_descontinuado": true,
+          "ativo": false,
+          "area": 15.5,
+          "area_parcial": null
         },
         "A05a": {
           "safra": "2026/2027",
@@ -2984,7 +3854,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 19023,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 34.3,
+          "area_parcial": 5
         },
         "A06": {
           "safra": "2026/2027",
@@ -2993,7 +3866,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18334,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 36.75,
+          "area_parcial": null
         },
         "A07": {
           "safra": "2026/2027",
@@ -3002,7 +3878,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18335,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 38.45,
+          "area_parcial": null
         },
         "A08": {
           "safra": "2026/2027",
@@ -3011,7 +3890,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18336,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 40.57,
+          "area_parcial": null
         },
         "A09": {
           "safra": "2026/2027",
@@ -3020,7 +3902,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18338,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 45.98,
+          "area_parcial": null
         },
         "A10": {
           "safra": "2026/2027",
@@ -3029,7 +3914,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18337,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 45.97,
+          "area_parcial": null
         },
         "A11": {
           "safra": "2026/2027",
@@ -3038,7 +3926,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18339,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 41.62,
+          "area_parcial": null
         },
         "A12": {
           "safra": "2026/2027",
@@ -3047,7 +3938,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18340,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 37.14,
+          "area_parcial": null
         },
         "A13": {
           "safra": "2026/2027",
@@ -3056,7 +3950,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18341,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 18.02,
+          "area_parcial": null
         },
         "B02": {
           "safra": "2026/2027",
@@ -3065,16 +3962,22 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18343,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 32.39,
+          "area_parcial": 32.39
         },
         "B04": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18345,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 22.71,
+          "area_parcial": 22.71
         },
         "B05": {
           "safra": "2026/2027",
@@ -3083,7 +3986,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18346,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 41.75,
+          "area_parcial": 18
         },
         "B06": {
           "safra": "2026/2027",
@@ -3092,7 +3998,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18347,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 42.73,
+          "area_parcial": null
         },
         "B07": {
           "safra": "2026/2027",
@@ -3101,7 +4010,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18348,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 40.33,
+          "area_parcial": null
         },
         "B08": {
           "safra": "2026/2027",
@@ -3110,7 +4022,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18349,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 46.34,
+          "area_parcial": null
         },
         "B09": {
           "safra": "2026/2027",
@@ -3119,7 +4034,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18350,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 41.6,
+          "area_parcial": null
         },
         "B10": {
           "safra": "2026/2027",
@@ -3128,7 +4046,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18351,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 43.13,
+          "area_parcial": null
         },
         "B11": {
           "safra": "2026/2027",
@@ -3137,7 +4058,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18352,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 45.13,
+          "area_parcial": null
         },
         "B12": {
           "safra": "2026/2027",
@@ -3146,7 +4070,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18353,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 111.61,
+          "area_parcial": null
         },
         "B13": {
           "safra": "2026/2027",
@@ -3155,7 +4082,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18354,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 81,
+          "area_parcial": null
         }
       },
       "Projeto Lago Verde": {
@@ -3164,9 +4094,12 @@
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18271,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 16,
+          "area_parcial": 16
         },
         "A12": {
           "safra": "2026/2027",
@@ -3175,7 +4108,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18277,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 7.88,
+          "area_parcial": null
         },
         "A13": {
           "safra": "2026/2027",
@@ -3184,7 +4120,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18278,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 11.89,
+          "area_parcial": null
         },
         "A14": {
           "safra": "2026/2027",
@@ -3193,7 +4132,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18279,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 12.59,
+          "area_parcial": null
         },
         "A15": {
           "safra": "2026/2027",
@@ -3202,7 +4144,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18280,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 10.87,
+          "area_parcial": null
         },
         "A16": {
           "safra": "2026/2027",
@@ -3211,7 +4156,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18222,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 12.4,
+          "area_parcial": null
         },
         "A17": {
           "safra": "2026/2027",
@@ -3220,7 +4168,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18223,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 14.39,
+          "area_parcial": null
         },
         "A22": {
           "safra": "2026/2027",
@@ -3229,7 +4180,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18227,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 16.12,
+          "area_parcial": null
         },
         "A23": {
           "safra": "2026/2027",
@@ -3238,7 +4192,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18228,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 18.35,
+          "area_parcial": null
         },
         "A24": {
           "safra": "2026/2027",
@@ -3247,7 +4204,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18229,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 17.19,
+          "area_parcial": null
         },
         "A25": {
           "safra": "2026/2027",
@@ -3256,7 +4216,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18230,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 13.35,
+          "area_parcial": null
         },
         "A26": {
           "safra": "2026/2027",
@@ -3265,7 +4228,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18231,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 11.88,
+          "area_parcial": null
         },
         "A29": {
           "safra": "2026/2027",
@@ -3274,7 +4240,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18232,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 8.28,
+          "area_parcial": null
         },
         "A30": {
           "safra": "2026/2027",
@@ -3283,7 +4252,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18235,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 11.49,
+          "area_parcial": null
         },
         "A31": {
           "safra": "2026/2027",
@@ -3292,16 +4264,22 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18236,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 12.5,
+          "area_parcial": null
         },
         "B02": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18254,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 20.09,
+          "area_parcial": 20.09
         },
         "B03": {
           "safra": "2026/2027",
@@ -3310,7 +4288,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18255,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 9.98,
+          "area_parcial": 9.98
         },
         "B04": {
           "safra": "2026/2027",
@@ -3319,7 +4300,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18256,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 13.57,
+          "area_parcial": 13.57
         },
         "B05": {
           "safra": "2026/2027",
@@ -3328,7 +4312,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18257,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 37.6,
+          "area_parcial": 37.6
         },
         "B05a": {
           "safra": "2026/2027",
@@ -3337,7 +4324,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18883,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 10.26,
+          "area_parcial": 10.26
         },
         "B06": {
           "safra": "2026/2027",
@@ -3346,16 +4336,22 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18260,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 30.24,
+          "area_parcial": 30.24
         },
         "B07": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18258,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 20.27,
+          "area_parcial": 20.27
         },
         "B08": {
           "safra": "2026/2027",
@@ -3364,7 +4360,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18259,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 37.47,
+          "area_parcial": 37.47
         },
         "B09": {
           "safra": "2026/2027",
@@ -3373,7 +4372,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18261,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 22.2,
+          "area_parcial": 22.2
         },
         "B10": {
           "safra": "2026/2027",
@@ -3382,7 +4384,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18263,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 60.25,
+          "area_parcial": 38
         },
         "B11": {
           "safra": "2026/2027",
@@ -3391,7 +4396,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18262,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 22.27,
+          "area_parcial": 19
         },
         "B11a": {
           "safra": "2026/2027",
@@ -3400,7 +4408,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18902,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 9.56,
+          "area_parcial": 9.56
         },
         "B12": {
           "safra": "2026/2027",
@@ -3409,16 +4420,22 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18264,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 14.24,
+          "area_parcial": null
         },
         "B13": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18265,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 20.93,
+          "area_parcial": 20.93
         }
       },
       "Projeto Ouro Verde": {
@@ -3429,7 +4446,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18195,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 4.8,
+          "area_parcial": 4.8
         },
         "A02": {
           "safra": "2026/2027",
@@ -3438,7 +4458,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": true,
           "id_plantio": 18196,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 13.35,
+          "area_parcial": 13.35
         },
         "A03": {
           "safra": "2026/2027",
@@ -3447,34 +4470,46 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": true,
           "id_plantio": 18197,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 19,
+          "area_parcial": 19
         },
         "A04": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18198,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 31,
+          "area_parcial": 31
         },
         "A05": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18199,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 11.7,
+          "area_parcial": 11.7
         },
         "A06": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18200,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 10,
+          "area_parcial": 10
         },
         "A07": {
           "safra": "2026/2027",
@@ -3483,61 +4518,82 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": true,
           "id_plantio": 18201,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 28.45,
+          "area_parcial": 28.45
         },
         "A08": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18202,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 24.6,
+          "area_parcial": 24.6
         },
         "A09": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18203,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 24.3,
+          "area_parcial": 24.3
         },
         "A10": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18204,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 28.6,
+          "area_parcial": 28.6
         },
         "A11": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18205,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 28.88,
+          "area_parcial": 28.88
         },
         "A12": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18206,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 27.7,
+          "area_parcial": 27.7
         },
         "A13": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18557,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 26.45,
+          "area_parcial": 26.45
         },
         "B01": {
           "safra": "2026/2027",
@@ -3546,7 +4602,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18281,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 27.2,
+          "area_parcial": 27.2
         },
         "B02": {
           "safra": "2026/2027",
@@ -3555,115 +4614,154 @@
           "variedade": "Caupi",
           "finalizado_colheita": true,
           "id_plantio": 18282,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 16.45,
+          "area_parcial": 16.45
         },
         "B03": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18283,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 40.4,
+          "area_parcial": 40.4
         },
         "B04": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18284,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 29.7,
+          "area_parcial": 29.7
         },
         "B05": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18285,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 19.2,
+          "area_parcial": 19.2
         },
         "B06": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18286,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 34.4,
+          "area_parcial": 34.4
         },
         "B07": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18287,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 25.1,
+          "area_parcial": 25.1
         },
         "B08": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18288,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 31,
+          "area_parcial": 31
         },
         "B09": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18289,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 29.15,
+          "area_parcial": 29.15
         },
         "B10": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18290,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 28.6,
+          "area_parcial": 28.6
         },
         "B11": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18291,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 29.3,
+          "area_parcial": 29.3
         },
         "B12": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18292,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 30.45,
+          "area_parcial": 30.45
         },
         "B13": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18293,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 21.2,
+          "area_parcial": 21.2
         },
         "D01": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18221,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 7.15,
+          "area_parcial": 7.15
         },
         "D02": {
           "safra": "2026/2027",
@@ -3672,7 +4770,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": true,
           "id_plantio": 18237,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 3,
+          "area_parcial": 3
         },
         "D03": {
           "safra": "2026/2027",
@@ -3681,7 +4782,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": true,
           "id_plantio": 18238,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 5.95,
+          "area_parcial": 5.95
         },
         "D04": {
           "safra": "2026/2027",
@@ -3690,43 +4794,58 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": true,
           "id_plantio": 18239,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 6.55,
+          "area_parcial": 6.55
         },
         "D05": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18240,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 14.5,
+          "area_parcial": 14.5
         },
         "D06": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18241,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 19.6,
+          "area_parcial": 19.6
         },
         "D07": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18242,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 20.35,
+          "area_parcial": 20.35
         },
         "D08": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18243,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 3,
+          "area_parcial": 3
         },
         "D09": {
           "safra": "2026/2027",
@@ -3735,7 +4854,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": true,
           "id_plantio": 18244,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 5.25,
+          "area_parcial": 5.25
         },
         "D10": {
           "safra": "2026/2027",
@@ -3744,7 +4866,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": true,
           "id_plantio": 18245,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 9.25,
+          "area_parcial": 9.25
         },
         "D11": {
           "safra": "2026/2027",
@@ -3753,7 +4878,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": true,
           "id_plantio": 18246,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 12.7,
+          "area_parcial": 12.7
         },
         "D12": {
           "safra": "2026/2027",
@@ -3762,16 +4890,22 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": true,
           "id_plantio": 18247,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 15.6,
+          "area_parcial": 15.6
         },
         "D13": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18248,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 22.25,
+          "area_parcial": 22.25
         },
         "D14": {
           "safra": "2026/2027",
@@ -3780,7 +4914,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": true,
           "id_plantio": 18249,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 18.5,
+          "area_parcial": 18.5
         }
       },
       "Projeto Safira": {
@@ -3791,7 +4928,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18896,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 41.34,
+          "area_parcial": 41.34
         },
         "A02": {
           "safra": "2026/2027",
@@ -3800,7 +4940,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18897,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 48.31,
+          "area_parcial": 41
         },
         "A03": {
           "safra": "2026/2027",
@@ -3809,7 +4952,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 19032,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 5.84,
+          "area_parcial": null
         },
         "B01": {
           "safra": "2026/2027",
@@ -3818,7 +4964,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18898,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 37.28,
+          "area_parcial": 20.73
         },
         "B02": {
           "safra": "2026/2027",
@@ -3827,7 +4976,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18899,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 48.19,
+          "area_parcial": 48.19
         },
         "C01": {
           "safra": "2026/2027",
@@ -3836,7 +4988,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18901,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 40.49,
+          "area_parcial": 32.41
         },
         "C02": {
           "safra": "2026/2027",
@@ -3845,7 +5000,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18900,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 43.81,
+          "area_parcial": 31.94
         },
         "C03": {
           "safra": "2026/2027",
@@ -3854,7 +5012,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 19033,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 9.49,
+          "area_parcial": null
         },
         "D01": {
           "safra": "2026/2027",
@@ -3863,7 +5024,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18886,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 97.49,
+          "area_parcial": 81.18
         },
         "D02": {
           "safra": "2026/2027",
@@ -3872,7 +5036,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18887,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 51.25,
+          "area_parcial": 43.43
         },
         "E01": {
           "safra": "2026/2027",
@@ -3881,7 +5048,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18888,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 80.15,
+          "area_parcial": 80.15
         },
         "E02": {
           "safra": "2026/2027",
@@ -3890,7 +5060,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18889,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 29.91,
+          "area_parcial": 29.91
         },
         "F01": {
           "safra": "2026/2027",
@@ -3899,7 +5072,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18890,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 56.41,
+          "area_parcial": 16.99
         },
         "F02": {
           "safra": "2026/2027",
@@ -3908,7 +5084,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18891,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 60.56,
+          "area_parcial": 60.56
         },
         "G01": {
           "safra": "2026/2027",
@@ -3917,7 +5096,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18893,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 60.02,
+          "area_parcial": 47.24
         },
         "G02": {
           "safra": "2026/2027",
@@ -3926,7 +5108,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18892,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 95.68,
+          "area_parcial": 11.97
         },
         "H01": {
           "safra": "2026/2027",
@@ -3935,7 +5120,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18894,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 67.47,
+          "area_parcial": 55.74
         },
         "H02": {
           "safra": "2026/2027",
@@ -3944,7 +5132,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18895,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 108.18,
+          "area_parcial": 108.18
         }
       },
       "Projeto Santa Maria": {
@@ -3955,7 +5146,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 17977,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 20.93,
+          "area_parcial": 20.93
         },
         "A02": {
           "safra": "2026/2027",
@@ -3964,7 +5158,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 17978,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 33.11,
+          "area_parcial": 33.11
         },
         "A02a": {
           "safra": "2026/2027",
@@ -3973,7 +5170,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 19035,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 2.29,
+          "area_parcial": 2.29
         },
         "A03": {
           "safra": "2026/2027",
@@ -3982,7 +5182,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 17979,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 47.19,
+          "area_parcial": 47.19
         },
         "A04": {
           "safra": "2026/2027",
@@ -3991,7 +5194,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 17980,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 42.11,
+          "area_parcial": 42.11
         },
         "A07": {
           "safra": "2026/2027",
@@ -4000,25 +5206,34 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 17983,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 58.95,
+          "area_parcial": 58.95
         },
         "A08": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 17984,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 15.01,
+          "area_parcial": 15.01
         },
         "B11": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 17985,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 33.07,
+          "area_parcial": 33.07
         },
         "B12": {
           "safra": "2026/2027",
@@ -4027,7 +5242,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 17986,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 20.18,
+          "area_parcial": 20.18
         },
         "B13": {
           "safra": "2026/2027",
@@ -4036,25 +5254,34 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 17987,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 17.74,
+          "area_parcial": 17.74
         },
         "B14": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18493,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 11.67,
+          "area_parcial": 11.67
         },
         "B21": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 17990,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 9.12,
+          "area_parcial": 9.12
         },
         "B22": {
           "safra": "2026/2027",
@@ -4063,16 +5290,22 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 17989,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 31.82,
+          "area_parcial": 31.82
         },
         "B23": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 17988,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 23.94,
+          "area_parcial": 23.94
         },
         "B24": {
           "safra": "2026/2027",
@@ -4081,16 +5314,22 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 17991,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 9.01,
+          "area_parcial": 9.01
         },
         "B25": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 17992,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 9.87,
+          "area_parcial": 9.87
         },
         "B31": {
           "safra": "2026/2027",
@@ -4099,7 +5338,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 17994,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 15.41,
+          "area_parcial": null
         },
         "B31a": {
           "safra": "2026/2027",
@@ -4108,7 +5350,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18884,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 6.34,
+          "area_parcial": null
         },
         "B32": {
           "safra": "2026/2027",
@@ -4117,7 +5362,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 17993,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 6.76,
+          "area_parcial": null
         },
         "B33": {
           "safra": "2026/2027",
@@ -4126,7 +5374,10 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18494,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 14.96,
+          "area_parcial": null
         },
         "C01": {
           "safra": "2026/2027",
@@ -4135,16 +5386,22 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 17995,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 37.9,
+          "area_parcial": 37.9
         },
         "C02": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18495,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 27.26,
+          "area_parcial": 27.26
         }
       },
       "Projeto Tucano": {
@@ -4155,7 +5412,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18407,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 19.73,
+          "area_parcial": null
         },
         "A03": {
           "safra": "2026/2027",
@@ -4164,7 +5424,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18408,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 23.09,
+          "area_parcial": null
         },
         "A04": {
           "safra": "2026/2027",
@@ -4173,7 +5436,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18409,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 13.11,
+          "area_parcial": 5
         },
         "A05": {
           "safra": "2026/2027",
@@ -4182,7 +5448,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18410,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 12.17,
+          "area_parcial": null
         },
         "A06": {
           "safra": "2026/2027",
@@ -4191,7 +5460,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18411,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 26.81,
+          "area_parcial": 19.75
         },
         "A08": {
           "safra": "2026/2027",
@@ -4200,7 +5472,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18457,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 12.92,
+          "area_parcial": null
         },
         "A09": {
           "safra": "2026/2027",
@@ -4209,7 +5484,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18458,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 10.96,
+          "area_parcial": null
         },
         "A10": {
           "safra": "2026/2027",
@@ -4218,7 +5496,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18459,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 17.51,
+          "area_parcial": 10.52
         },
         "A19": {
           "safra": "2026/2027",
@@ -4227,7 +5508,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18460,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 17.13,
+          "area_parcial": null
         },
         "A20": {
           "safra": "2026/2027",
@@ -4236,7 +5520,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18461,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 24.37,
+          "area_parcial": null
         },
         "A21": {
           "safra": "2026/2027",
@@ -4245,7 +5532,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18462,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 32.8,
+          "area_parcial": null
         },
         "B01": {
           "safra": "2026/2027",
@@ -4254,7 +5544,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18463,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 17.72,
+          "area_parcial": null
         },
         "B02": {
           "safra": "2026/2027",
@@ -4263,7 +5556,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18464,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 9.29,
+          "area_parcial": null
         },
         "B03": {
           "safra": "2026/2027",
@@ -4272,7 +5568,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18465,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 14.36,
+          "area_parcial": null
         },
         "B04": {
           "safra": "2026/2027",
@@ -4281,7 +5580,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18466,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 30.48,
+          "area_parcial": null
         },
         "B05": {
           "safra": "2026/2027",
@@ -4290,7 +5592,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18467,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 9.35,
+          "area_parcial": null
         },
         "B06": {
           "safra": "2026/2027",
@@ -4299,7 +5604,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18468,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 13.91,
+          "area_parcial": null
         },
         "B07": {
           "safra": "2026/2027",
@@ -4308,7 +5616,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18469,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 16.31,
+          "area_parcial": null
         },
         "B09": {
           "safra": "2026/2027",
@@ -4317,7 +5628,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18470,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 21.4,
+          "area_parcial": null
         },
         "B10": {
           "safra": "2026/2027",
@@ -4326,7 +5640,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18471,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 20.68,
+          "area_parcial": null
         },
         "B11": {
           "safra": "2026/2027",
@@ -4335,7 +5652,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18488,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 15.56,
+          "area_parcial": null
         },
         "B12": {
           "safra": "2026/2027",
@@ -4344,7 +5664,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18487,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 16.47,
+          "area_parcial": null
         },
         "B13": {
           "safra": "2026/2027",
@@ -4353,7 +5676,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18489,
-          "plantio_descontinuado": true
+          "plantio_descontinuado": true,
+          "ativo": true,
+          "area": 2.59,
+          "area_parcial": null
         },
         "B14": {
           "safra": "2026/2027",
@@ -4362,7 +5688,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18490,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 23.57,
+          "area_parcial": null
         },
         "B15": {
           "safra": "2026/2027",
@@ -4371,7 +5700,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18491,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 13.03,
+          "area_parcial": null
         },
         "B16": {
           "safra": "2026/2027",
@@ -4380,7 +5712,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18492,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 21.32,
+          "area_parcial": null
         }
       },
       "Projeto Tuiuiu": {
@@ -4391,16 +5726,22 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18372,
-          "plantio_descontinuado": true
+          "plantio_descontinuado": true,
+          "ativo": true,
+          "area": 2.09,
+          "area_parcial": null
         },
         "A04": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18373,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 27.8,
+          "area_parcial": 27.8
         },
         "A05": {
           "safra": "2026/2027",
@@ -4409,25 +5750,34 @@
           "variedade": "Caupi",
           "finalizado_colheita": false,
           "id_plantio": 18374,
-          "plantio_descontinuado": true
+          "plantio_descontinuado": true,
+          "ativo": true,
+          "area": 3.47,
+          "area_parcial": null
         },
         "A09": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18378,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 27.79,
+          "area_parcial": 27.79
         },
         "A10": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Caupi",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18379,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 13.81,
+          "area_parcial": 13.81
         },
         "B02": {
           "safra": "2026/2027",
@@ -4436,7 +5786,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18381,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 1.59,
+          "area_parcial": 1.59
         },
         "B03": {
           "safra": "2026/2027",
@@ -4445,7 +5798,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18305,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 18.71,
+          "area_parcial": 18.71
         },
         "B04": {
           "safra": "2026/2027",
@@ -4454,25 +5810,34 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18382,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 17.04,
+          "area_parcial": 17.04
         },
         "B05": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18383,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 15.94,
+          "area_parcial": 15.94
         },
         "B06": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18384,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 16.43,
+          "area_parcial": 16.43
         },
         "C01": {
           "safra": "2026/2027",
@@ -4481,7 +5846,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18385,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 13.4,
+          "area_parcial": 13.4
         },
         "C02": {
           "safra": "2026/2027",
@@ -4490,7 +5858,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18306,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 19.61,
+          "area_parcial": 19.61
         },
         "C03": {
           "safra": "2026/2027",
@@ -4499,7 +5870,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18307,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 11.47,
+          "area_parcial": 11.47
         },
         "C04": {
           "safra": "2026/2027",
@@ -4508,7 +5882,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18308,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 17.47,
+          "area_parcial": 17.47
         },
         "C05": {
           "safra": "2026/2027",
@@ -4517,7 +5894,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18309,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 16.46,
+          "area_parcial": 16.46
         },
         "C06": {
           "safra": "2026/2027",
@@ -4526,7 +5906,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18310,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 14.28,
+          "area_parcial": 14.28
         },
         "C07": {
           "safra": "2026/2027",
@@ -4535,7 +5918,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18311,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 17.39,
+          "area_parcial": 17.39
         },
         "D01": {
           "safra": "2026/2027",
@@ -4544,7 +5930,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18312,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 10.33,
+          "area_parcial": 5
         },
         "D02": {
           "safra": "2026/2027",
@@ -4553,7 +5942,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18313,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 15.21,
+          "area_parcial": 15.21
         },
         "D03": {
           "safra": "2026/2027",
@@ -4562,7 +5954,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18314,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 12.89,
+          "area_parcial": 12.89
         },
         "D04": {
           "safra": "2026/2027",
@@ -4571,7 +5966,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18315,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 8.26,
+          "area_parcial": 8.26
         },
         "D05": {
           "safra": "2026/2027",
@@ -4580,7 +5978,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18318,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 7,
+          "area_parcial": 7
         },
         "D06": {
           "safra": "2026/2027",
@@ -4589,7 +5990,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18316,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 10.8,
+          "area_parcial": 10.8
         },
         "D07": {
           "safra": "2026/2027",
@@ -4598,34 +6002,46 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18317,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 13.14,
+          "area_parcial": 13.14
         },
         "E02": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18320,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 7.89,
+          "area_parcial": 7.89
         },
         "E03": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18321,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 16.56,
+          "area_parcial": 16.56
         },
         "E04": {
           "safra": "2026/2027",
           "ciclo": 1,
           "cultura": "Feijão",
           "variedade": "Mungo Preto",
-          "finalizado_colheita": false,
+          "finalizado_colheita": true,
           "id_plantio": 18322,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 10.19,
+          "area_parcial": 10.19
         },
         "E05": {
           "safra": "2026/2027",
@@ -4634,7 +6050,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18323,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 6.56,
+          "area_parcial": 6.56
         },
         "E06": {
           "safra": "2026/2027",
@@ -4643,7 +6062,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18324,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 9.56,
+          "area_parcial": 9.56
         },
         "E07": {
           "safra": "2026/2027",
@@ -4652,7 +6074,10 @@
           "variedade": "Mungo Preto",
           "finalizado_colheita": false,
           "id_plantio": 18325,
-          "plantio_descontinuado": false
+          "plantio_descontinuado": false,
+          "ativo": true,
+          "area": 10.63,
+          "area_parcial": 10.63
         }
       }
     }
